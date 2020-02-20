@@ -43,6 +43,11 @@
 */
 
 /**
+ * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
+ * Released under MIT license, http://github.com/requirejs/almond/LICENSE
+ */
+
+/**
 * Customized version of iScroll.js 0.1.3
 * It fixes bugs affecting its integration with fullpage.js
 * @license

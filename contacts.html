@@ -45,6 +45,7 @@
 		<!--[if lt IE 9]>
 <p class="browsehappy">Данный сайт построен на передовых, современных технологиях и не поддерживает Ваш браузер. Настоятельно рекомендуем выбрать и установить любой из &nbsp;<a href="http://browsehappy.com/" target="_blank">современных браузеров.</a> Это бесплатно и займет всего несколько минут.</p><![endif]-->
 		<div class="mfp-hide popup-block zoom-anim-dialog" id="call">
+			<div class="background"></div>
 			<div class="container relative">
 				<div class="close-popup popup-modal-dismiss"><i class="icon-close"></i></div>
 				<h2>заказать звонок</h2>
@@ -156,7 +157,7 @@
 		<div class="searchBar">
 			<div class="container relative">
 				<div class="searchBar__close"><i class="icon-close"></i></div>
-				<form class="searchBar__input" method="POST">
+				<form class="searchBar__input" method="POST" action="">
 					<label for="searchID"></label>
 					<input class="control" type="text" name="search" id="searchID" placeholder="Что вы хотите найти?" required="required" />
 					<button type="submit"><a class="arrowLine" href="#">
@@ -465,7 +466,8 @@
 				</div>
 				<div class="page-header-right"><a class="page-header__search page-header__addphone popup-modal popup-with-zoom-anim" href="#call"><i class="icon-phone"></i></a><a class="page-header__search search--js" href="#"><i class="icon-search"></i></a><a class="page-header__menu menu--js" href="#"><span></span><span></span><span></span></a></div>
 			</header>
-			<div class="menuBar">
+			<div class="menuBar" role="navigation">
+				<div class="background"></div>
 				<div class="menuBar-top">
 					<div class="container">
 						<div class="row between__xs">
@@ -727,10 +729,10 @@
 			<div class="googleMap" id="googleMap" data-aos="fade-up"></div>
 			<div class="contact marquee" data-aos="fade-up">эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте —</div>
 			<div class="container" data-aos="fade-up">
-				<form class="contacts-form">
+				<form class="contacts-form" action="">
 					<h3>Остались вопросы?</h3>
 					<div class="row">
-						<div class="col col__md-6 col__xs-12">
+						<div class="col col__md-6 col__xs-12" data-aos="fade-up">
 							<div class="form__group">
 								<div class="input">
 									<input class="input__field" type="text" id="name55" name="name" />
@@ -760,7 +762,7 @@
 								<div class="input-error">Пожалуйста, заполните поле правильно</div>
 							</div>
 						</div>
-						<div class="col col__md-6 col__xs-12">
+						<div class="col col__md-6 col__xs-12" data-aos="fade-up">
 							<div class="form__group">
 								<select class="select" style="width:100%">
 									<option value="" disabled selected>Отрасль*</option>
@@ -784,18 +786,18 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col col__md-6 col__xs-12">
+						<div class="col col__md-6 col__xs-12" data-aos="fade-up">
 							<div class="checkbox form__group">
 								<input type="checkbox" id="faqId55">
 								<label class="label" for="faqId55"><span>Вы даете согласие на обработку Ваших персональных данных в соответствии с <a href="#">регламентирующими документами сайта</a></span></label>
 							</div>
 						</div>
-						<div class="col col__md-6 col__xs-12">
+						<div class="col col__md-6 col__xs-12" data-aos="fade-up">
 							<div class="form__group"><a class="btn btn--full btn--primary send--js btn-arrow" href="#"><i class="icons-left icon-arrow-med-right"></i><span>Отправить</span><i class="icons-right icon-arrow-mini-right"></i></a></div>
 						</div>
 					</div>
 				</form>
-				<form class="contacts-form return-form">
+				<form class="contacts-form return-form" action="">
 					<h3>Задать вопрос или оставить пожелание?</h3>
 					<div class="return-inner form__group">
 						<h5>Мы приняли ваш запрос <br> и обработаем его как только сможем.</h5>

@@ -45,6 +45,7 @@
 		<!--[if lt IE 9]>
 <p class="browsehappy">Данный сайт построен на передовых, современных технологиях и не поддерживает Ваш браузер. Настоятельно рекомендуем выбрать и установить любой из &nbsp;<a href="http://browsehappy.com/" target="_blank">современных браузеров.</a> Это бесплатно и займет всего несколько минут.</p><![endif]-->
 		<div class="mfp-hide popup-block zoom-anim-dialog" id="call">
+			<div class="background"></div>
 			<div class="container relative">
 				<div class="close-popup popup-modal-dismiss"><i class="icon-close"></i></div>
 				<h2>заказать звонок</h2>
@@ -156,7 +157,7 @@
 		<div class="searchBar">
 			<div class="container relative">
 				<div class="searchBar__close"><i class="icon-close"></i></div>
-				<form class="searchBar__input" method="POST">
+				<form class="searchBar__input" method="POST" action="">
 					<label for="searchID"></label>
 					<input class="control" type="text" name="search" id="searchID" placeholder="Что вы хотите найти?" required="required" />
 					<button type="submit"><a class="arrowLine" href="#">
@@ -337,7 +338,8 @@
 							</div>
 							<div class="page-header-right"><a class="page-header__search page-header__addphone popup-modal popup-with-zoom-anim" href="#call"><i class="icon-phone"></i></a><a class="page-header__search search--js" href="#"><i class="icon-search"></i></a><a class="page-header__menu menu--js" href="#"><span></span><span></span><span></span></a></div>
 						</header>
-						<div class="menuBar">
+						<div class="menuBar" role="navigation">
+							<div class="background"></div>
 							<div class="menuBar-top">
 								<div class="container">
 									<div class="row between__xs">
@@ -711,7 +713,7 @@
 						</svg>
 					</div>
 				</div>
-				<div class="section section__bottom">
+				<div class="section section__bottom fp-auto-height">
 					<div class="section__bottom__inner">
 						<div class="container relative">
 							<h3 class="click">
@@ -719,7 +721,7 @@
 								<div class="revealOut"><span class="revealIn aos-act" data-aos="">объединение «ЭРГА» ведёт</span></div>
 								<div class="revealOut"><span class="revealIn aos-act" data-aos="">свою историю с 1991 года</span></div>
 							</h3>
-							<div class="text--center rellax"><img src="assets/images/index/planet.svg" alt="" />
+							<div class="text--center aos-act" data-aos="fade-up"><img src="assets/images/index/planet.svg" alt="" />
 							</div>
 							<div class="row between__xs">
 								<div class="col col__lg-5 col__md-6 col__xs-12">

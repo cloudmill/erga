@@ -186,12 +186,20 @@
 						<nav class="navbar">
 							<ul class="main-nav">
 								<li class="main-nav__item"><a class="main-nav__link" href="about.html" title="О компании">О компании</a>
+									<ul class="sub-nav">
+									</ul>
 								</li>
 								<li class="main-nav__item"><a class="main-nav__link" href="services.html" title="Услуги">Услуги</a>
+									<ul class="sub-nav">
+									</ul>
 								</li>
 								<li class="main-nav__item"><a class="main-nav__link" href="news.html" title="Новости">Новости</a>
+									<ul class="sub-nav">
+									</ul>
 								</li>
 								<li class="main-nav__item"><a class="main-nav__link" href="contacts.html" title="Контакты">Контакты</a>
+									<ul class="sub-nav">
+									</ul>
 								</li>
 							</ul>
 						</nav>
@@ -468,11 +476,34 @@
 			</header>
 			<div class="menuBar" role="navigation">
 				<div class="background"></div>
+				<div class="menuBar-header">
+					<div class="page-header__logo"><a href="/"></a></div>
+					<div class="header-content">
+						<div class="header-content__top">
+							<nav class="navbar"></nav>
+							<div class="page-header__phone"><a href="tel:84842922199">8 4842 922-199</a></div>
+							<div class="page-header__link popup-modal popup-with-zoom-anim" href="#call"><a class="arrowLine" href="#">
+									<div class="the-arrow the-arrow-left"><i class="shaft icon-arrow-med-right"></i></div><span class="arrowLine-main">Заказать звонок</span>
+									<div class="the-arrow the-arrow-right"><i class="shaft icon-arrow-mini-right"></i></div>
+								</a>
+							</div>
+						</div>
+						<div class="header-content__bottom">
+							<nav class="navbar"></nav>
+							<div class="page-header__phone"><a href="mailto:info@erga.ru">info@erga.ru</a></div>
+							<div class="page-header__link"><a class="arrowLine" href="config.html">
+									<div class="the-arrow the-arrow-left"><i class="shaft icon-arrow-med-right"></i></div><span class="arrowLine-main">Подбор оборудования</span>
+									<div class="the-arrow the-arrow-right"><i class="shaft icon-arrow-mini-right"></i></div>
+								</a></div>
+						</div>
+					</div>
+					<div class="page-header-right"><a class="page-header__menu menu--js open" href="#"><span></span><span></span><span></span></a></div>
+				</div>
 				<div class="menuBar-top">
 					<div class="container">
 						<div class="row between__xs">
 							<div class="col col__md-6 col__xs-12 mobileMenu--js">
-								<h3><i class="icon-menu-right"></i><a href="#">продукция</a>
+								<h3><i class="icon-menu-right"></i><a class="revealOut" href="#"><span class="revealIn">продукция</span></a>
 									<ul class="dropdown-menu">
 										<li class="dropdown-menu__item dropdown-menu__item--parent"><a href="#"><span>Сепараторы</span></a>
 											<ul class="dropdownDeep">
@@ -519,7 +550,7 @@
 										<li class="dropdown-menu__item"><a href="#"><span>Оборудование для лабораторий</span></a></li>
 									</ul>
 								</h3>
-								<h3><i class="icon-menu-right"></i><a href="#">отрасли применения</a>
+								<h3><i class="icon-menu-right"></i><a class="revealOut" href="#"><span class="revealIn">отрасли применения</span></a>
 									<ul class="dropdown-menu">
 										<li class="dropdown-menu__item"><a href="#"><span>Горная отрасль</span></a></li>
 										<li class="dropdown-menu__item"><a href="#"><span>Металлургия</span></a></li>
@@ -532,7 +563,7 @@
 										<li class="dropdown-menu__item"><a href="#"><span>Нефтегазовая отрасль</span></a></li>
 									</ul>
 								</h3>
-								<h3><i class="icon-menu-right"></i><a href="#">сервис</a>
+								<h3><i class="icon-menu-right"></i><a class="revealOut" href="#"><span class="revealIn">сервис</span></a>
 									<ul class="dropdown-menu">
 										<li class="dropdown-menu-title"><a href="#">Сервисные услуги</a></li>
 										<li class="dropdown-menu__item"><a href="#"><span>Пусконаладочные работы</span></a></li>
@@ -556,11 +587,11 @@
 							</div>
 							<div class="col col__md-6 col__xs-12 menuBar-right">
 								<ul class="list--unstyled">
-									<li><a href="#">О компании</a></li>
-									<li><a href="#">Услуги</a></li>
-									<li><a href="#">Новости</a></li>
-									<li><a href="#">Публикации</a></li>
-									<li><a href="#">Контакты</a></li>
+									<li class="revealOut"><a class="revealIn" href="#">О компании</a></li>
+									<li class="revealOut"><a class="revealIn" href="#">Услуги</a></li>
+									<li class="revealOut"><a class="revealIn" href="#">Новости</a></li>
+									<li class="revealOut"><a class="revealIn" href="#">Публикации</a></li>
+									<li class="revealOut"><a class="revealIn" href="#">Контакты</a></li>
 								</ul>
 								<div class="visible__sm visible__xs">
 									<div class="flex between__xs margtop40 margbot40">
@@ -1075,14 +1106,14 @@
 													</div>
 												</div>
 												<div class="row">
-													<div class="col col__lg-6 col__xs-12 form__group">
+													<div class="col col__md-6 col__xs-12 form__group">
 														<div class="input">
 															<input class="input__field" type="text" id="temp1" name="temp1" />
 															<label class="input__label" for="temp1"><span class="input__label-content input__label-content">Количество изделий на ширину ленты, шт.</span></label>
 														</div>
 														<div class="input-error">Пожалуйста, заполните поле правильно</div>
 													</div>
-													<div class="col col__lg-6 col__xs-12 form__group">
+													<div class="col col__md-6 col__xs-12 form__group">
 														<div class="input">
 															<input class="input__field" type="text" id="pprod1" name="pprod1" />
 															<label class="input__label" for="pprod1"><span class="input__label-content input__label-content">Расстояние между изделиями (на ленте), мм</span></label>

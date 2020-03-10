@@ -1040,7 +1040,7 @@
 								</div>
 								<div class="tabs-content" id="list" data-aos="fade-up">
 									<div class="stepper-btn"><a class="btn btn--default" href="#"><span>Скачать опросный лист<br><small>.PDF&nbsp;&nbsp;235 KB.</small></span><i class="icon-download"></i></a></div>
-									<form class="steps-form" action="#">
+									<form class="steps-form stepper-fourth" action="#">
 										<div>
 											<h3>1</h3>
 											<section>
@@ -1052,31 +1052,24 @@
 													</div>
 													<div class="input-error">Пожалуйста, заполните поле правильно</div>
 												</div>
-												<h5>Свойства продукта</h5>
-												<div class="form__group">
-													<div class="checkbox checkbox--inline">
-														<input type="checkbox" id="attr1" />
-														<label for="attr1">Сухой</label>
+												<label class="form__group">Свойства продукта</label>
+												<div class="row">
+													<div class="col col__md-6 col__xs-12 form__group">
+														<div class="checkbox checkbox--inline">
+															<input type="checkbox" id="attr1" />
+															<label for="attr1">Вязкость</label>
+														</div>
+														<div class="checkbox checkbox--inline">
+															<input type="checkbox" id="attr2" />
+															<label for="attr2">Прочие свойства</label>
+														</div>
 													</div>
-													<div class="checkbox checkbox--inline">
-														<input type="checkbox" id="attr2" />
-														<label for="attr2">Влажный</label>
-													</div>
-													<div class="checkbox checkbox--inline">
-														<input type="checkbox" id="attr3" />
-														<label for="attr3">Жидкий</label>
-													</div>
-													<div class="checkbox checkbox--inline">
-														<input type="checkbox" id="attr4" />
-														<label for="attr4">Липкий</label>
-													</div>
-													<div class="checkbox checkbox--inline">
-														<input type="checkbox" id="attr5" />
-														<label for="attr5">Частично замороженный</label>
-													</div>
-													<div class="checkbox checkbox--inline">
-														<input type="checkbox" id="attr6" />
-														<label for="attr6">Полностью замороженный</label>
+													<div class="col col__md-6 col__xs-12 form__group">
+														<div class="input">
+															<input class="input__field" type="text" id="temp999" name="temp999" />
+															<label class="input__label" for="temp999"><span class="input__label-content input__label-content">Опишите свойства</span></label>
+														</div>
+														<div class="input-error">Пожалуйста, заполните поле правильно</div>
 													</div>
 												</div>
 												<div class="row">
@@ -1094,170 +1087,101 @@
 														</div>
 														<div class="input-error">Пожалуйста, заполните поле правильно</div>
 													</div>
+													<div class="col col__xs-12 form__group">
+														<div class="input">
+															<input class="input__field" type="text" id="mc" name="mc" />
+															<label class="input__label" for="mc"><span class="input__label-content input__label-content">Другой способ подачи</span></label>
+														</div>
+														<div class="input-error">Пожалуйста, заполните поле правильно</div>
+													</div>
+													<div class="col col__md-6 col__xs-12 form__group">
+														<div class="input">
+															<input class="input__field" type="text" id="temp2" name="temp2" />
+															<label class="input__label" for="temp2"><span class="input__label-content input__label-content">Диаметр трубопровода, мм</span></label>
+														</div>
+														<div class="input-error">Пожалуйста, заполните поле правильно</div>
+													</div>
+													<div class="col col__md-6 col__xs-12 form__group">
+														<div class="input">
+															<input class="input__field" type="text" id="pprod2" name="pprod2" />
+															<label class="input__label" for="pprod2"><span class="input__label-content input__label-content">Производительность, кг/ч</span></label>
+														</div>
+														<div class="input-error">Пожалуйста, заполните поле правильно</div>
+													</div>
 												</div>
-												<h5>Упаковка</h5>
-												<div class="form__group">
-													<div class="checkbox checkbox--inline">
-														<input type="checkbox" id="pack1" />
-														<label for="pack1">Без упаковки</label>
-													</div>
-													<div class="checkbox checkbox--inline">
-														<input type="checkbox" id="pack2" />
-														<label for="pack2">Металлизированная</label>
-													</div>
-													<div class="checkbox checkbox--inline">
-														<input type="checkbox" id="pack3" />
-														<label for="pack3">Не металлизированная</label>
-													</div>
-												</div>
-												<h5>Способ подачи пр-та на конвейер детектора</h5>
+												<h5>Способ подачи продукта</h5>
 												<div class="form__group">
 													<div class="checkbox checkbox--inline">
 														<input type="checkbox" id="man" />
-														<label for="man">Вручную</label>
+														<label for="man">Подача непрерывная</label>
+													</div>
+													<div class="checkbox checkbox--inline">
+														<input type="checkbox" id="man1" />
+														<label for="man1">Подача с интервалом</label>
+													</div>
+													<div class="checkbox checkbox--inline">
+														<input type="checkbox" id="man2" />
+														<label for="man2">Подача порционно</label>
 													</div>
 												</div>
-												<div class="form__group">
-													<div class="input">
-														<input class="input__field" type="text" id="mc" name="mc" />
-														<label class="input__label" for="mc"><span class="input__label-content input__label-content">С конвеера (укажите скорость движения ленты конвеера, м/с)</span></label>
-													</div>
-													<div class="input-error">Пожалуйста, заполните поле правильно</div>
-												</div>
-												<div class="form__group">
-													<div class="input">
-														<input class="input__field" type="text" id="del" name="del" />
-														<label class="input__label" for="del"><span class="input__label-content input__label-content">Другой способ подачи</span></label>
-													</div>
-													<div class="input-error">Пожалуйста, заполните поле правильно</div>
-												</div>
-												<h5>Для продуктов, транспортируемых россыпью/внавалку</h5>
 												<div class="row">
 													<div class="col col__md-6 col__xs-12 form__group">
 														<div class="input">
+															<input class="input__field" type="text" id="temp99" name="temp99" />
+															<label class="input__label" for="temp99"><span class="input__label-content input__label-content">Давление в трубопроводе</span></label>
+														</div>
+														<div class="input-error">Пожалуйста, заполните поле правильно</div>
+													</div>
+													<div class="col col__md-6 col__xs-12 form__group">
+														<div class="input">
+															<input class="input__field" type="text" id="temp88" name="temp88" />
+															<label class="input__label" for="temp88"><span class="input__label-content input__label-content">Скорость потока</span></label>
+														</div>
+														<div class="input-error">Пожалуйста, заполните поле правильно</div>
+													</div>
+												</div>
+												<h5>Характеристика продукта при порционной подачи</h5>
+												<label class="form__group">Размер пр-та, мм</label>
+												<div class="row">
+													<div class="col col__lg-3 col__md-6 col__xs-12 form__group">
+														<div class="input">
+															<input class="input__field" type="text" id="max" name="max" />
+															<label class="input__label" for="max"><span class="input__label-content input__label-content">max</span></label>
+														</div>
+														<div class="input-error">Пожалуйста, заполните поле правильно</div>
+													</div>
+													<div class="col col__lg-3 col__md-6 col__xs-12 form__group">
+														<div class="input">
+															<input class="input__field" type="text" id="min" name="min" />
+															<label class="input__label" for="min"><span class="input__label-content input__label-content">min</span></label>
+														</div>
+														<div class="input-error">Пожалуйста, заполните поле правильно</div>
+													</div>
+													<div class="col col__md-6 col__xs-12 form__group">
+														<div class="input">
 															<input class="input__field" type="text" id="wid1" name="wid1" />
-															<label class="input__label" for="wid1"><span class="input__label-content input__label-content">Ширина конвейерной ленты, мм</span></label>
+															<label class="input__label" for="wid1"><span class="input__label-content input__label-content">Количество, шт</span></label>
 														</div>
 														<div class="input-error">Пожалуйста, заполните поле правильно</div>
 													</div>
 													<div class="col col__md-6 col__xs-12 form__group">
 														<div class="input">
 															<input class="input__field" type="text" id="wid2" name="wid2" />
-															<label class="input__label" for="wid2"><span class="input__label-content input__label-content">Ширина слоя продукта, мм</span></label>
+															<label class="input__label" for="wid2"><span class="input__label-content input__label-content">Длина, мм</span></label>
 														</div>
 														<div class="input-error">Пожалуйста, заполните поле правильно</div>
 													</div>
 													<div class="col col__md-6 col__xs-12 form__group">
 														<div class="input">
-															<input class="input__field" type="text" id="hei1" name="hei1" />
-															<label class="input__label" for="hei1"><span class="input__label-content input__label-content">Высота слоя продукта, мм</span></label>
+															<input class="input__field" type="text" id="wid3" name="wid3" />
+															<label class="input__label" for="wid3"><span class="input__label-content input__label-content">Диаметр, мм</span></label>
 														</div>
 														<div class="input-error">Пожалуйста, заполните поле правильно</div>
 													</div>
-													<div class="col col__md-6 col__xs-12 form__group">
+													<div class="col col__xs-12 form__group">
 														<div class="input">
-															<input class="input__field" type="text" id="hei2" name="hei2" />
-															<label class="input__label" for="hei2"><span class="input__label-content input__label-content">Производительность, кг/ч</span></label>
-														</div>
-														<div class="input-error">Пожалуйста, заполните поле правильно</div>
-													</div>
-												</div>
-												<h5>Для продуктов, транспортируемых поштучно</h5>
-												<div class="row middle__xs">
-													<div class="col col__lg-3 col__md-6 col__xs-6 form__group">
-														<label>Размеры продукта, мм</label>
-													</div>
-													<div class="col col__lg-3 col__md-6 col__xs-6 form__group">
-														<div class="input">
-															<input class="input__field" type="text" id="a" name="a" />
-															<label class="input__label" for="a"><span class="input__label-content input__label-content">A</span></label>
-														</div>
-														<div class="input-error">Пожалуйста, заполните поле правильно</div>
-													</div>
-													<div class="col col__lg-3 col__md-6 col__xs-6 form__group">
-														<div class="input">
-															<input class="input__field" type="text" id="b" name="b" />
-															<label class="input__label" for="b"><span class="input__label-content input__label-content">B</span></label>
-														</div>
-														<div class="input-error">Пожалуйста, заполните поле правильно</div>
-													</div>
-													<div class="col col__lg-3 col__md-6 col__xs-6 form__group">
-														<div class="input">
-															<input class="input__field" type="text" id="c" name="c" />
-															<label class="input__label" for="c"><span class="input__label-content input__label-content">C</span></label>
-														</div>
-														<div class="input-error">Пожалуйста, заполните поле правильно</div>
-													</div>
-												</div>
-												<label class="form__group">Вдоль направления движения ленты расположена сторона</label>
-												<div class="radio radio--inline">
-													<input type="radio" id="radio1" value="radio1" name="radioabc" />
-													<label for="radio1">A</label>
-												</div>
-												<div class="radio radio--inline">
-													<input type="radio" id="radio2" value="radio2" name="radioabc" />
-													<label for="radio2">B</label>
-												</div>
-												<div class="radio radio--inline">
-													<input type="radio" id="radio3" value="radio3" name="radioabc" />
-													<label for="radio3">C</label>
-												</div>
-												<label class="form__group">Вес продукта (брутто), кг</label>
-												<div class="row middle__xs">
-													<div class="col col__lg-3 col__md-6 col__xs-6 form__group">
-														<div class="input">
-															<input class="input__field" type="text" id="from" name="from" />
-															<label class="input__label" for="from"><span class="input__label-content input__label-content">от</span></label>
-														</div>
-														<div class="input-error">Пожалуйста, заполните поле правильно</div>
-													</div>
-													<div class="col col__lg-3 col__md-6 col__xs-6 form__group">
-														<div class="input">
-															<input class="input__field" type="text" id="to" name="to" />
-															<label class="input__label" for="to"><span class="input__label-content input__label-content">до</span></label>
-														</div>
-														<div class="input-error">Пожалуйста, заполните поле правильно</div>
-													</div>
-												</div>
-												<label class="form__group">Высота продукта на ленте равна стороне</label>
-												<div class="radio radio--inline">
-													<input type="radio" id="radio11" value="radio11" name="radioabc1" />
-													<label for="radio11">A</label>
-												</div>
-												<div class="radio radio--inline">
-													<input type="radio" id="radio21" value="radio21" name="radioabc1" />
-													<label for="radio21">B</label>
-												</div>
-												<div class="radio radio--inline">
-													<input type="radio" id="radio31" value="radio31" name="radioabc1" />
-													<label for="radio31">C</label>
-												</div>
-												<div class="row">
-													<div class="col col__md-6 col__xs-12 form__group">
-														<div class="input">
-															<input class="input__field" type="text" id="wid11" name="wid11" />
-															<label class="input__label" for="wid11"><span class="input__label-content input__label-content">Ширина конвейерной ленты, мм</span></label>
-														</div>
-														<div class="input-error">Пожалуйста, заполните поле правильно</div>
-													</div>
-													<div class="col col__md-6 col__xs-12 form__group">
-														<div class="input">
-															<input class="input__field" type="text" id="wid21" name="wid21" />
-															<label class="input__label" for="wid21"><span class="input__label-content input__label-content">Расстояние между рядами упаковок (по длине ленты), мм:</span></label>
-														</div>
-														<div class="input-error">Пожалуйста, заполните поле правильно</div>
-													</div>
-													<div class="col col__md-6 col__xs-12 form__group">
-														<div class="input">
-															<input class="input__field" type="text" id="hei11" name="hei11" />
-															<label class="input__label" for="hei11"><span class="input__label-content input__label-content">Производительность, шт/мин</span></label>
-														</div>
-														<div class="input-error">Пожалуйста, заполните поле правильно</div>
-													</div>
-													<div class="col col__md-6 col__xs-12 form__group">
-														<div class="input">
-															<input class="input__field" type="text" id="hei21" name="hei21" />
-															<label class="input__label" for="hei21"><span class="input__label-content input__label-content">Кол-во упаковок в ряду (по ширине ленты), шт:</span></label>
+															<input class="input__field" type="text" id="wid4" name="wid4" />
+															<label class="input__label" for="wid4"><span class="input__label-content input__label-content">Количество пр-та в мин</span></label>
 														</div>
 														<div class="input-error">Пожалуйста, заполните поле правильно</div>
 													</div>
@@ -1268,38 +1192,37 @@
 											</section>
 											<h3>2</h3>
 											<section>
-												<h4>Место установки <br> металлодетектора/окружающая среда/чистка</h4>
+												<h4>Место установки металлодетектора/окружающая среда/чистка</h4>
 												<div class="form__group">
 													<div class="input">
 														<input class="input__field" type="text" id="desc" name="desc" />
-														<label class="input__label" for="desc"><span class="input__label-content input__label-content">Краткое описание места установки</span></label>
+														<label class="input__label" for="desc"><span class="input__label-content input__label-content">Краткое описание места установки: (цех/участок, какие технологические операции выполняются)</span></label>
 													</div>
 													<div class="input-error">Пожалуйста, заполните поле правильно</div>
 												</div>
-												<div class="form__group">
-													<div class="input">
-														<input class="input__field" type="text" id="desc" name="desc" />
-														<label class="input__label" for="desc"><span class="input__label-content input__label-content">Краткое описание места установки<small>(цех/участок, какие технологические операции выполняются)</small></span></label>
+												<label class="form__group">Окружающая среда на месте установки</label>
+												<div class="row middle__xs">
+													<div class="col col__md-7 col__xs-12 form__group">
+														<div class="checkbox checkbox--inline">
+															<input type="checkbox" id="attr01" />
+															<label for="attr01">Сухая</label>
+														</div>
+														<div class="checkbox checkbox--inline">
+															<input type="checkbox" id="attr02" />
+															<label for="attr02">Влажная</label>
+														</div>
+														<div class="checkbox checkbox--inline">
+															<input type="checkbox" id="attr02" />
+															<label for="attr02">Другая</label>
+														</div>
 													</div>
-													<div class="input-error">Пожалуйста, заполните поле правильно</div>
-												</div>
-												<h5>Окружающая среда на месте установки</h5>
-												<div class="form__group">
-													<div class="checkbox checkbox--inline">
-														<input type="checkbox" id="attr01" />
-														<label for="attr01">Сухая</label>
+													<div class="col col__md-5 col__xs-12 form__group">
+														<div class="input">
+															<input class="input__field" type="text" id="desc0" name="desc0" />
+															<label class="input__label" for="desc0"><span class="input__label-content input__label-content">Опишите</span></label>
+														</div>
+														<div class="input-error">Пожалуйста, заполните поле правильно</div>
 													</div>
-													<div class="checkbox checkbox--inline">
-														<input type="checkbox" id="attr02" />
-														<label for="attr02">Влажная</label>
-													</div>
-												</div>
-												<div class="form__group">
-													<div class="input">
-														<input class="input__field" type="text" id="desc0" name="desc0" />
-														<label class="input__label" for="desc0"><span class="input__label-content input__label-content">Другая (опишите)</span></label>
-													</div>
-													<div class="input-error">Пожалуйста, заполните поле правильно</div>
 												</div>
 												<div class="form__group">
 													<div class="input">
@@ -1311,37 +1234,47 @@
 												<div class="form__group">
 													<div class="input">
 														<input class="input__field" type="text" id="check0" name="check0" />
-														<label class="input__label" for="check0"><span class="input__label-content input__label-content">Требования к классу защиты металлодетектора</span></label>
+														<label class="input__label" for="check0"><span class="input__label-content input__label-content">Требования к классу защиты металлодетектора: IP</span></label>
 													</div>
 													<div class="input-error">Пожалуйста, заполните поле правильно</div>
 												</div>
 												<div class="form__group">
-													<div class="checkbox checkbox--inline">
+													<div class="checkbox checkbox--inline checkbox--inline-sm">
 														<input type="checkbox" id="attr001" />
 														<label for="attr001">Сухая</label>
 													</div>
-													<div class="checkbox checkbox--inline">
+													<div class="checkbox checkbox--inline checkbox--inline-sm">
 														<input type="checkbox" id="attr002" />
 														<label for="attr002">Влажная</label>
 													</div>
-													<div class="checkbox checkbox--inline">
+													<div class="checkbox checkbox--inline checkbox--inline-sm">
 														<input type="checkbox" id="attr003" />
 														<label for="attr003">Мойка, низкое давление</label>
 													</div>
-													<div class="checkbox checkbox--inline">
+													<div class="checkbox checkbox--inline checkbox--inline-sm">
 														<input type="checkbox" id="attr004" />
 														<label for="attr004">Мойка, высокое давление</label>
 													</div>
 												</div>
-												<h5>Предполагаемый способ чистки металлодетектора</h5>
-												<div class="form__group">
-													<div class="checkbox">
-														<input type="checkbox" id="clean1" />
-														<label for="clean1">С применением агрессивных растворов</label>
+												<div class="row middle__xs">
+													<div class="col col__md-6 col__xs-12 form__group">
+														<div class="checkbox">
+															<input type="checkbox" id="clean1" />
+															<label for="clean1">С применением агрессивных растворов</label>
+														</div>
 													</div>
-													<div class="checkbox">
-														<input type="checkbox" id="clean2" />
-														<label for="clean2">Без применения агрессивных растворов</label>
+													<div class="col col__md-6 col__xs-12 form__group">
+														<div class="input">
+															<input class="input__field" type="text" id="check09" name="check09" />
+															<label class="input__label" for="check09"><span class="input__label-content input__label-content">Растворы</span></label>
+														</div>
+														<div class="input-error">Пожалуйста, заполните поле правильно</div>
+													</div>
+													<div class="col col__md-6 col__xs-12 form__group">
+														<div class="checkbox">
+															<input type="checkbox" id="clean2" />
+															<label for="clean2">Без применения агрессивных растворов</label>
+														</div>
 													</div>
 												</div><br>
 												<div class="stepper-next">
@@ -1355,14 +1288,14 @@
 												<div class="form__group">
 													<div class="checkbox checkbox--inline">
 														<input type="checkbox" id="cont1" />
-														<label for="cont1">Изготовить без конвеера</label>
+														<label for="cont1">Изготовить без</label>
 													</div>
 													<div class="checkbox checkbox--inline">
 														<input type="checkbox" id="cont2" />
-														<label for="cont2">Изготовить вместе с падающим ковеером</label>
+														<label for="cont2">Изготовить на раме</label>
 													</div>
 												</div>
-												<h5>Материал конвейера</h5>
+												<h5>Материал</h5>
 												<div class="form__group">
 													<div class="checkbox checkbox--inline">
 														<input type="checkbox" id="mat01" />
@@ -1373,35 +1306,10 @@
 														<label for="mat02">Нержавеющая сталь</label>
 													</div>
 												</div>
-												<h5>Прочие параметры изготавливаемого конвейера</h5>
 												<div class="form__group">
-													<div class="input">
-														<input class="input__field" type="text" id="width0" name="width0" />
-														<label class="input__label" for="width0"><span class="input__label-content input__label-content">Требуемая ширина ленты, мм<small>(ширина ленты всегда на 50 мм уже ширины апертуры металлодетектора)</small></span></label>
-													</div>
-													<div class="input-error">Пожалуйста, заполните поле правильно</div>
-												</div>
-												<div class="row">
-													<div class="col col__md-6 col__xs-12 form__group">
-														<div class="input">
-															<input class="input__field" type="text" id="leng1" name="leng1" />
-															<label class="input__label" for="leng1"><span class="input__label-content input__label-content">Требуемая длина конвейера, мм</span></label>
-														</div>
-														<div class="input-error">Пожалуйста, заполните поле правильно</div>
-													</div>
-													<div class="col col__md-6 col__xs-12 form__group">
-														<div class="input">
-															<input class="input__field" type="text" id="leng2" name="leng2" />
-															<label class="input__label" for="leng2"><span class="input__label-content input__label-content">Высота начальной секции конвейера (по уровню ленты), мм</span></label>
-														</div>
-														<div class="input-error">Пожалуйста, заполните поле правильно</div>
-													</div>
-													<div class="col col__md-6 col__xs-12 form__group">
-														<div class="input">
-															<input class="input__field" type="text" id="leng3" name="leng3" />
-															<label class="input__label" for="leng3"><span class="input__label-content input__label-content">Высота конечной секции конвейера (по уровню ленты), мм</span></label>
-														</div>
-														<div class="input-error">Пожалуйста, заполните поле правильно</div>
+													<div class="checkbox checkbox--inline">
+														<input type="checkbox" id="mat02" />
+														<label for="mat02">Другой</label>
 													</div>
 												</div>
 												<h5>Электропитание детектора</h5>
@@ -1412,22 +1320,27 @@
 													</div>
 													<div class="checkbox checkbox--inline">
 														<input type="checkbox" id="380" />
-														<label for="380">Трехфазное 380В ± 10%, частота 50 Гц</label>
+														<label for="380">Трёхфазное 380В ± 10%, частота 50 Гц</label>
 													</div>
 												</div>
-												<div class="form__group">
-													<div class="input">
-														<input class="input__field" type="text" id="width9" name="width9" />
-														<label class="input__label" for="width9"><span class="input__label-content input__label-content">Необх. длина сетевого кабеля, м</span></label>
+												<div class="row">
+													<div class="col col__md-6 col__xs-12 form__group">
+														<div class="input">
+															<input class="input__field" type="text" id="width9" name="width9" />
+															<label class="input__label" for="width9"><span class="input__label-content input__label-content">Необх. длина сетевого кабеля, м</span></label>
+														</div>
+														<div class="input-error">Пожалуйста, заполните поле правильно</div>
 													</div>
-													<div class="input-error">Пожалуйста, заполните поле правильно</div>
+													<div class="col col__md-6 col__xs-12 form__group">
+														<div class="input">
+															<input class="input__field" type="text" id="width19" name="width19" />
+															<label class="input__label" for="width19"><span class="input__label-content input__label-content">Передача данных в АСУ</span></label>
+														</div>
+														<div class="input-error">Пожалуйста, заполните поле правильно</div>
+													</div>
 												</div>
 												<h5>Необходимые системы сигнализации/отбраковки</h5>
 												<div class="form__group">
-													<div class="checkbox checkbox--inline">
-														<input type="checkbox" id="sig1" />
-														<label for="sig1">Остановка конвеера</label>
-													</div>
 													<div class="checkbox checkbox--inline">
 														<input type="checkbox" id="sig2" />
 														<label for="sig2">Световая сигнализация</label>
@@ -1436,6 +1349,8 @@
 														<input type="checkbox" id="sig3" />
 														<label for="sig3">Звуковая сигнализация</label>
 													</div>
+												</div>
+												<div class="form__group">
 													<div class="checkbox checkbox--inline">
 														<input type="checkbox" id="sig4" />
 														<label for="sig4">Система автоматической отбраковки</label>
@@ -1447,46 +1362,76 @@
 														<label class="input__label" for="other"><span class="input__label-content input__label-content">Другое</span></label>
 													</div>
 													<div class="input-error">Пожалуйста, заполните поле правильно</div>
-												</div><br>
-												<div class="stepper-next">
-													<button class="btn btn--primary btn-arrow btn--full" type="submit"><i class="icons-left icon-arrow-med-right"></i><span>Шаг 4</span><i class="icons-right icon-arrow-mini-right"></i></button>
 												</div>
-											</section>
-											<h3>4</h3>
-											<section>
-												<h4>Размещение панели оператора</h4><img src="assets/images/card/stepper.svg" alt="" />
-												<p class="text__sm text--grey">Варианты расположения панели оператора и направления отбраковки <br> (относительно направления движения ленты)</p>
-												<h5>Размещение панели оператора</h5>
+												<label class="form__group">Подключение металлодетектора установленного на раму (рис.B):</label>
 												<div class="form__group">
-													<div class="checkbox">
-														<input type="checkbox" id="cor1" />
-														<label for="cor1">1 – на корпусе блока металлодетектора, слева</label>
+													<div class="checkbox checkbox--inline">
+														<input type="checkbox" id="nas" />
+														<label for="nas">Подключение к насосу</label>
 													</div>
-													<div class="checkbox">
-														<input type="checkbox" id="cor2" />
-														<label for="cor2">2 – на корпусе блока металлодетектора, справа</label>
+													<div class="checkbox checkbox--inline">
+														<input type="checkbox" id="nas1" />
+														<label for="nas1">Подключение к шприцу</label>
 													</div>
-													<div class="checkbox">
-														<input type="checkbox" id="cor3" />
-														<label for="cor3">3 – на выносном пульте управления (ПУ)</label>
+													<div class="checkbox checkbox--inline">
+														<input type="checkbox" id="nas2" />
+														<label for="nas2">Автономная работа</label>
 													</div>
 												</div>
 												<div class="form__group">
 													<div class="input">
-														<input class="input__field" type="text" id="var" name="var" />
-														<label class="input__label" for="var"><span class="input__label-content input__label-content">Для варианта 3 укажите предполагаемое расстояние <br> от металлодетектора до выносного ПУ, м</span></label>
+														<input class="input__field" type="text" id="other1" name="other1" />
+														<label class="input__label" for="other1"><span class="input__label-content input__label-content">Материал отбраковывающего устройства</span></label>
 													</div>
 													<div class="input-error">Пожалуйста, заполните поле правильно</div>
 												</div>
-												<h5>Размещение панели оператора</h5>
+												<h4>Варианты расположения панели оператора и <br> отбраковывающего устройства – см. схему:</h4>
+												<div class="form__group"><img src="assets/images/card/card-2.svg" alt="" />
+												</div>
+												<div class="form__group"><img src="assets/images/card/card-3.svg" alt="" />
+												</div>
+												<h5>Монтаж панели оператора</h5>
 												<div class="form__group">
-													<div class="checkbox">
-														<input type="checkbox" id="cor4" />
-														<label for="cor4">А - отбраковка на правую сторону конвеера</label>
+													<div class="checkbox checkbox--inline">
+														<input type="checkbox" id="sig26" />
+														<label for="sig26">А - на выносном пульте управления</label>
 													</div>
-													<div class="checkbox">
-														<input type="checkbox" id="cor5" />
-														<label for="cor5">В - отбраковка на левую сторону конвеера</label>
+													<div class="checkbox checkbox--inline">
+														<input type="checkbox" id="sig36" />
+														<label for="sig36">В - на раме</label>
+													</div>
+												</div>
+												<div class="form__group">
+													<div class="input">
+														<input class="input__field" type="text" id="other2" name="other2" />
+														<label class="input__label" for="other2"><span class="input__label-content input__label-content">Для варианта А укажите предполагаемое расстояние от металлодетектора до выносного ПУ, м</span></label>
+													</div>
+													<div class="input-error">Пожалуйста, заполните поле правильно</div>
+												</div>
+												<h5>Монтаж панели оператора</h5>
+												<div class="form__group">
+													<div class="checkbox checkbox--inline">
+														<input type="checkbox" id="sig27" />
+														<label for="sig27">А - отдельно</label>
+													</div>
+													<div class="checkbox checkbox--inline">
+														<input type="checkbox" id="sig37" />
+														<label for="sig37">В - на раме</label>
+													</div>
+												</div>
+												<h5>Направление отбраковки относительно корпуса металлодетектора (рисунок А)</h5>
+												<div class="form__group">
+													<div class="checkbox checkbox--inline">
+														<input type="checkbox" id="sig28" />
+														<label for="sig28">1 влево</label>
+													</div>
+													<div class="checkbox checkbox--inline">
+														<input type="checkbox" id="sig38" />
+														<label for="sig38">2 вниз</label>
+													</div>
+													<div class="checkbox checkbox--inline">
+														<input type="checkbox" id="sig39" />
+														<label for="sig39">3 вправо</label>
 													</div>
 												</div>
 												<div class="form__group">
@@ -1496,10 +1441,10 @@
 													</div>
 												</div><br>
 												<div class="stepper-next">
-													<button class="btn btn--primary btn-arrow btn--full" type="submit"><i class="icons-left icon-arrow-med-right"></i><span>Шаг 5</span><i class="icons-right icon-arrow-mini-right"></i></button>
+													<button class="btn btn--primary btn-arrow btn--full" type="submit"><i class="icons-left icon-arrow-med-right"></i><span>Шаг 4</span><i class="icons-right icon-arrow-mini-right"></i></button>
 												</div>
 											</section>
-											<h3>5</h3>
+											<h3>4</h3>
 											<section>
 												<h4>Контактная информация</h4>
 												<div class="form__group">

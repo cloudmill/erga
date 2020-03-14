@@ -48,8 +48,10 @@
 			<div class="background"></div>
 			<div class="container relative">
 				<div class="close-popup popup-modal-dismiss"><i class="icon-close"></i></div>
-				<h2>заказать звонок</h2>
-				<div class="row">
+				<h2>
+					<div class="revealOut"><span class="revealIn" data-aos="">заказать звонок</span></div>
+				</h2>
+				<div class="row" data-aos="fade-up" data-aos-delay="1000">
 					<div class="col col__md-6 col__xs-12">
 						<div class="form__group">
 							<div class="input">
@@ -92,14 +94,15 @@
 							<select class="select" style="width:100%">
 								<option value="" disabled selected>Отрасль*</option>
 								<option>Горная отрасль</option>
-								<option>Рециклинг</option>
 								<option>Металлургия</option>
+								<option>Рециклинг</option>
 								<option>Пищевая отрасль</option>
 								<option>Машиностроение</option>
 								<option>Стекольная отрасль</option>
 								<option>Химическая отрасль</option>
 								<option>Строительная отрасль</option>
 								<option>Нефтегазовая отрасль</option>
+								<option>Огнеупорная отрасль</option>
 							</select>
 						</div>
 						<div class="form__group">
@@ -110,7 +113,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row" data-aos="fade-up" data-aos-delay="1000">
 					<div class="col col__md-6 col__xs-12">
 						<div class="checkbox form__group">
 							<input type="checkbox" id="faqId22">
@@ -120,6 +123,14 @@
 					<div class="col col__md-6 col__xs-12">
 						<div class="form__group"><a class="btn btn--full btn--primary send--js btn-arrow" href="#"><i class="icons-left icon-arrow-med-right"></i><span>Отправить</span><i class="icons-right icon-arrow-mini-right"></i></a></div>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mfp-hide popup-block zoom-anim-dialog popup-block--grey" id="patent">
+			<div class="background"></div>
+			<div class="close-popup popup-modal-dismiss"><i class="icon-close"></i></div>
+			<div class="container relative" data-aos="fade-up" data-aos-delay="1000">
+				<div class="text--center"><img src="assets/images/patent.png" alt="" />
 				</div>
 			</div>
 		</div>
@@ -220,7 +231,6 @@
 									<li class="main-nav__item main-nav__item--parent"><a class="main-nav__link" href="#" title="Продукция">Продукция</a>
 										<div class="dropdown" style="background: url(&quot;assets/images/menu/back1.jpg&quot;) no-repeat right bottom, #F6F6F6">
 											<div class="container relative">
-												<div class="liners"><span class="liner"></span><span class="liner"></span><span class="liner"></span></div>
 												<ul class="dropdown-menu">
 													<li class="dropdown-menu__item dropdown-menu__item--parent"><a href="#"><span>Сепараторы</span></a>
 														<ul class="dropdownDeep">
@@ -247,6 +257,7 @@
 													<li class="dropdown-menu__item"><a href="#"><span>Оборудование для лабораторий</span></a></li>
 													<li class="dropdown-menu__item"><a href="#"><span>Постоянные магниты</span></a></li>
 												</ul>
+												<div class="liners"><span class="liner"></span><span class="liner"></span><span class="liner"></span></div>
 											</div>
 										</div>
 									</li>
@@ -333,7 +344,6 @@
 									<li class="main-nav__item main-nav__item--parent"><a class="main-nav__link" href="#" title="Продукция">Продукция</a>
 										<div class="dropdown" style="background: url(&quot;assets/images/menu/back1.jpg&quot;) no-repeat right bottom, #F6F6F6">
 											<div class="container relative">
-												<div class="liners"><span class="liner"></span><span class="liner"></span><span class="liner"></span></div>
 												<ul class="dropdown-menu">
 													<li class="dropdown-menu__item dropdown-menu__item--parent"><a href="#"><span>Сепараторы</span></a>
 														<ul class="dropdownDeep">
@@ -360,6 +370,7 @@
 													<li class="dropdown-menu__item"><a href="#"><span>Оборудование для лабораторий</span></a></li>
 													<li class="dropdown-menu__item"><a href="#"><span>Постоянные магниты</span></a></li>
 												</ul>
+												<div class="liners"><span class="liner"></span><span class="liner"></span><span class="liner"></span></div>
 											</div>
 										</div>
 									</li>
@@ -439,7 +450,7 @@
 							</a></div>
 					</div>
 				</div>
-				<div class="page-header-right"><a class="page-header__search page-header__addphone popup-modal popup-with-zoom-anim" href="#call"><i class="icon-phone"></i></a><a class="page-header__search search--js" href="#"><i class="icon-search"></i></a><a class="page-header__menu hideme" href="#"><span></span><span></span><span></span></a></div>
+				<div class="page-header-right"><a class="page-header__search page-header__addphone popup-modal popup-with-zoom-anim" href="#call"><img src="assets/images/icons/phone.svg" alt="" /></a><a class="page-header__search search--js" href="#"><i class="icon-search"></i></a><a class="page-header__menu hideme" href="#"><span></span><span></span><span></span></a></div>
 			</header>
 			<div class="menuBar" role="navigation">
 				<div class="background"></div>
@@ -722,15 +733,15 @@
 												<circle class="masker" r="150" fill="url(#maskGradient)" cx="800" cy="450"></circle>
 											</mask>
 										</defs>
-										<image id="lines" xlink:href="assets/images/about/zoom-3.png" x="0" y="0" width="517" height="517"></image>
+										<image id="lines" xlink:href="assets/images/about/zoom-3.svg" x="0" y="0" width="517" height="517"></image>
 										<g id="maskReveal" mask="url(#theMask)">
-											<image id="regular" xlink:href="assets/images/about/zoom-r3.png" x="0" y="0" width="517" height="517"></image>
+											<image id="regular" xlink:href="assets/images/about/zoom-3r.svg" x="0" y="0" width="517" height="517"></image>
 										</g>
 										<circle class="ring" cy="935" cx="577"></circle>
 									</svg>
 								</div>
 							</div>
-							<div class="col col__lg-6 col__md-8 col__xs-12">
+							<div class="col col__lg-6 col__md-8 col__xs-12 trademark-svg-content">
 								<h4>
 									<div class="revealOut"><span class="revealIn" data-aos="">В сжатые сроки разрабатываем эффективные</span></div>
 									<div class="revealOut"><span class="revealIn" data-aos="">решения сложных инжиниринговых задач,</span></div>
@@ -852,10 +863,10 @@
 							</div>
 							<div class="tabs-content" id="resoline" data-aos="fade-up">
 								<div class="swiper-button">
-									<div class="swiper-btnS-prev"><i class="icon-arrow-right"></i></div>
-									<div class="swiper-btnS-next"><i class="icon-arrow-right"></i></div>
+									<div class="swiper-btnS1-prev"><i class="icon-arrow-right"></i></div>
+									<div class="swiper-btnS1-next"><i class="icon-arrow-right"></i></div>
 								</div>
-								<div class="trademark-carousel trademark-carousel--js">
+								<div class="trademark-carousel trademark-carousel1--js">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide"><a class="catalog-content__item" href="#">
 												<div class="catalog-content__item-inner">
@@ -952,10 +963,10 @@
 							</div>
 							<div class="tabs-content" id="erguard" data-aos="fade-up">
 								<div class="swiper-button">
-									<div class="swiper-btnS-prev"><i class="icon-arrow-right"></i></div>
-									<div class="swiper-btnS-next"><i class="icon-arrow-right"></i></div>
+									<div class="swiper-btnS7-prev"><i class="icon-arrow-right"></i></div>
+									<div class="swiper-btnS7-next"><i class="icon-arrow-right"></i></div>
 								</div>
-								<div class="trademark-carousel trademark-carousel--js">
+								<div class="trademark-carousel trademark-carousel7--js">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide"><a class="catalog-content__item" href="#">
 												<div class="catalog-content__item-inner">
@@ -1052,10 +1063,10 @@
 							</div>
 							<div class="tabs-content" id="elkron" data-aos="fade-up">
 								<div class="swiper-button">
-									<div class="swiper-btnS-prev"><i class="icon-arrow-right"></i></div>
-									<div class="swiper-btnS-next"><i class="icon-arrow-right"></i></div>
+									<div class="swiper-btnS3-prev"><i class="icon-arrow-right"></i></div>
+									<div class="swiper-btnS3-next"><i class="icon-arrow-right"></i></div>
 								</div>
-								<div class="trademark-carousel trademark-carousel--js">
+								<div class="trademark-carousel trademark-carousel3--js">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide"><a class="catalog-content__item" href="#">
 												<div class="catalog-content__item-inner">
@@ -1152,10 +1163,10 @@
 							</div>
 							<div class="tabs-content" id="armag" data-aos="fade-up">
 								<div class="swiper-button">
-									<div class="swiper-btnS-prev"><i class="icon-arrow-right"></i></div>
-									<div class="swiper-btnS-next"><i class="icon-arrow-right"></i></div>
+									<div class="swiper-btnS4-prev"><i class="icon-arrow-right"></i></div>
+									<div class="swiper-btnS4-next"><i class="icon-arrow-right"></i></div>
 								</div>
-								<div class="trademark-carousel trademark-carousel--js">
+								<div class="trademark-carousel trademark-carousel4--js">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide"><a class="catalog-content__item" href="#">
 												<div class="catalog-content__item-inner">
@@ -1252,10 +1263,10 @@
 							</div>
 							<div class="tabs-content" id="velma" data-aos="fade-up">
 								<div class="swiper-button">
-									<div class="swiper-btnS-prev"><i class="icon-arrow-right"></i></div>
-									<div class="swiper-btnS-next"><i class="icon-arrow-right"></i></div>
+									<div class="swiper-btnS5-prev"><i class="icon-arrow-right"></i></div>
+									<div class="swiper-btnS5-next"><i class="icon-arrow-right"></i></div>
 								</div>
-								<div class="trademark-carousel trademark-carousel--js">
+								<div class="trademark-carousel trademark-carousel5--js">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide"><a class="catalog-content__item" href="#">
 												<div class="catalog-content__item-inner">
@@ -1352,10 +1363,10 @@
 							</div>
 							<div class="tabs-content" id="wecont" data-aos="fade-up">
 								<div class="swiper-button">
-									<div class="swiper-btnS-prev"><i class="icon-arrow-right"></i></div>
-									<div class="swiper-btnS-next"><i class="icon-arrow-right"></i></div>
+									<div class="swiper-btnS6-prev"><i class="icon-arrow-right"></i></div>
+									<div class="swiper-btnS6-next"><i class="icon-arrow-right"></i></div>
 								</div>
-								<div class="trademark-carousel trademark-carousel--js">
+								<div class="trademark-carousel trademark-carousel6--js">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide"><a class="catalog-content__item" href="#">
 												<div class="catalog-content__item-inner">
@@ -1463,7 +1474,10 @@
 								<div class="revealOut"><span class="revealIn" data-aos="">оборудования</span></div>
 							</h2>
 						</div>
-						<div class="col" data-aos="fade-up"><i class="icon-card-right"></i></div>
+						<div class="col" data-aos="fade-up">
+							<div class="img"><img src="assets/images/icons/arrow.svg" alt="" />
+							</div>
+						</div>
 					</div>
 				</div>
 				<div data-aos="fade-up">
@@ -1543,9 +1557,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="copyright marquee-rtl">© 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены —&nbsp;</div><a class="copyright marquee" href="https://cloudmill.ru" target="_blank">сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> —&nbsp;</a>
+			<div class="copyright marquee-rtl">© 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены —&nbsp;</div><a class="copyright marquee marquees" href="https://cloudmill.ru" target="_blank">сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> —&nbsp;</a>
 		</footer>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoOHU9S0Ohhctt2VS6Qu3JrmaIjqFQNYk"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoOHU9S0Ohhctt2VS6Qu3JrmaIjqFQNYk&amp;language=ru"></script>
 		<script src="assets/vendor.js"></script>
 		<script src="assets/app.js"></script>
 	</body>

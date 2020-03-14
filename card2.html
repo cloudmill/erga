@@ -48,8 +48,10 @@
 			<div class="background"></div>
 			<div class="container relative">
 				<div class="close-popup popup-modal-dismiss"><i class="icon-close"></i></div>
-				<h2>заказать звонок</h2>
-				<div class="row">
+				<h2>
+					<div class="revealOut"><span class="revealIn" data-aos="">заказать звонок</span></div>
+				</h2>
+				<div class="row" data-aos="fade-up" data-aos-delay="1000">
 					<div class="col col__md-6 col__xs-12">
 						<div class="form__group">
 							<div class="input">
@@ -92,14 +94,15 @@
 							<select class="select" style="width:100%">
 								<option value="" disabled selected>Отрасль*</option>
 								<option>Горная отрасль</option>
-								<option>Рециклинг</option>
 								<option>Металлургия</option>
+								<option>Рециклинг</option>
 								<option>Пищевая отрасль</option>
 								<option>Машиностроение</option>
 								<option>Стекольная отрасль</option>
 								<option>Химическая отрасль</option>
 								<option>Строительная отрасль</option>
 								<option>Нефтегазовая отрасль</option>
+								<option>Огнеупорная отрасль</option>
 							</select>
 						</div>
 						<div class="form__group">
@@ -110,7 +113,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row" data-aos="fade-up" data-aos-delay="1000">
 					<div class="col col__md-6 col__xs-12">
 						<div class="checkbox form__group">
 							<input type="checkbox" id="faqId22">
@@ -120,6 +123,14 @@
 					<div class="col col__md-6 col__xs-12">
 						<div class="form__group"><a class="btn btn--full btn--primary send--js btn-arrow" href="#"><i class="icons-left icon-arrow-med-right"></i><span>Отправить</span><i class="icons-right icon-arrow-mini-right"></i></a></div>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mfp-hide popup-block zoom-anim-dialog popup-block--grey" id="patent">
+			<div class="background"></div>
+			<div class="close-popup popup-modal-dismiss"><i class="icon-close"></i></div>
+			<div class="container relative" data-aos="fade-up" data-aos-delay="1000">
+				<div class="text--center"><img src="assets/images/patent.png" alt="" />
 				</div>
 			</div>
 		</div>
@@ -220,7 +231,6 @@
 									<li class="main-nav__item main-nav__item--parent"><a class="main-nav__link" href="#" title="Продукция">Продукция</a>
 										<div class="dropdown" style="background: url(&quot;assets/images/menu/back1.jpg&quot;) no-repeat right bottom, #F6F6F6">
 											<div class="container relative">
-												<div class="liners"><span class="liner"></span><span class="liner"></span><span class="liner"></span></div>
 												<ul class="dropdown-menu">
 													<li class="dropdown-menu__item dropdown-menu__item--parent"><a href="#"><span>Сепараторы</span></a>
 														<ul class="dropdownDeep">
@@ -247,6 +257,7 @@
 													<li class="dropdown-menu__item"><a href="#"><span>Оборудование для лабораторий</span></a></li>
 													<li class="dropdown-menu__item"><a href="#"><span>Постоянные магниты</span></a></li>
 												</ul>
+												<div class="liners"><span class="liner"></span><span class="liner"></span><span class="liner"></span></div>
 											</div>
 										</div>
 									</li>
@@ -333,7 +344,6 @@
 									<li class="main-nav__item main-nav__item--parent"><a class="main-nav__link" href="#" title="Продукция">Продукция</a>
 										<div class="dropdown" style="background: url(&quot;assets/images/menu/back1.jpg&quot;) no-repeat right bottom, #F6F6F6">
 											<div class="container relative">
-												<div class="liners"><span class="liner"></span><span class="liner"></span><span class="liner"></span></div>
 												<ul class="dropdown-menu">
 													<li class="dropdown-menu__item dropdown-menu__item--parent"><a href="#"><span>Сепараторы</span></a>
 														<ul class="dropdownDeep">
@@ -360,6 +370,7 @@
 													<li class="dropdown-menu__item"><a href="#"><span>Оборудование для лабораторий</span></a></li>
 													<li class="dropdown-menu__item"><a href="#"><span>Постоянные магниты</span></a></li>
 												</ul>
+												<div class="liners"><span class="liner"></span><span class="liner"></span><span class="liner"></span></div>
 											</div>
 										</div>
 									</li>
@@ -439,7 +450,7 @@
 							</a></div>
 					</div>
 				</div>
-				<div class="page-header-right"><a class="page-header__search page-header__addphone popup-modal popup-with-zoom-anim" href="#call"><i class="icon-phone"></i></a><a class="page-header__search search--js" href="#"><i class="icon-search"></i></a><a class="page-header__menu hideme" href="#"><span></span><span></span><span></span></a></div>
+				<div class="page-header-right"><a class="page-header__search page-header__addphone popup-modal popup-with-zoom-anim" href="#call"><img src="assets/images/icons/phone.svg" alt="" /></a><a class="page-header__search search--js" href="#"><i class="icon-search"></i></a><a class="page-header__menu hideme" href="#"><span></span><span></span><span></span></a></div>
 			</header>
 			<div class="menuBar" role="navigation">
 				<div class="background"></div>
@@ -614,7 +625,7 @@
 				</div>
 				<div class="card-top">
 					<div class="card-top__left">
-						<div class="sticky">
+						<div class="sidebar__inner">
 							<div class="card-logo"><img src="assets/images/card/elkron.svg " alt="" />
 							</div>
 							<div class="card-tags">
@@ -634,7 +645,9 @@
 							<div class="revealOut"><span class="revealIn" data-aos="">для динамического взвешивания</span></div>
 							<div class="revealOut"><span class="revealIn" data-aos="">продуктов (Чеквейеры) WECONT®</span></div>
 						</h3>
-						<p>Динамические весы (чеквейер) WECONT позволяют с высокой точностью определять отклонение продукции по весу (недовес/перевес), сочетая в себе функции контроля, классификации, сортировки и отбраковки продукции, вес которой не соответствует заданному значению.</p>
+						<div class="col__xl-9 col__lg-11">
+							<p>Динамические весы (чеквейер) WECONT позволяют с высокой точностью определять отклонение продукции по весу (недовес/перевес), сочетая в себе функции контроля, классификации, сортировки и отбраковки продукции, вес которой не соответствует заданному значению.</p>
+						</div>
 						<hr>
 						<ul class="list--unstyled">
 							<li>
@@ -663,19 +676,27 @@
 							</li>
 						</ul>
 						<div class="card-btns">
-							<div class="card-btn"><a class="btn btn--default btn--full" href="#"><span>Скачать листовку</span><i class="icon-download"></i></a></div>
-							<div class="card-btn"><a class="btn btn--default btn--full" href="#"><span>Скачать <br> отраслевой каталог</span><i class="icon-download"></i></a></div>
+							<div class="card-btn"><a class="btn btn--default btn--full popup-modal popup-with-zoom-anim" href="#call"><span>Скачать листовку</span><i class="icon-download"></i></a></div>
+							<div class="card-btn"><a class="btn btn--default btn--full popup-modal popup-with-zoom-anim" href="#call"><span>Скачать <br> отраслевой каталог</span><i class="icon-download"></i></a></div>
+							<div class="card-btn card-btn--full"><a class="btn btn--default btn--full popup-modal popup-with-zoom-anim" href="#patent"><span>Посмотреть патент</span><i class="icon-eye"></i></a></div>
 						</div>
 						<div class="form__group visible__sm visible__xs">
 							<button class="btn btn--primary btn-arrow btn--full" type="submit"><i class="icons-left icon-arrow-med-right"></i><span>Пробная сепарация</span><i class="icons-right icon-arrow-mini-right"></i></button>
 						</div>
 					</div>
 				</div>
-				<div class="card-desc sticky-stopper">
+				<div class="card-desc">
 					<div class="container">
 						<div class="card-scheme row stretch__xs">
-							<div class="col col__xs-12" data-aos="fade-up">
-								<div class="card-scheme__item card-scheme__item--full">
+							<div class="col col__md-6 col__xs-12" data-aos="fade-up">
+								<div class="card-scheme__item">
+									<h3>
+										<div class="revealOut"><span class="revealIn" data-aos="">Схема работы</span></div>
+									</h3><img src="assets/images/card/scheme.svg" alt="" />
+								</div>
+							</div>
+							<div class="col col__md-6 col__xs-12" data-aos="fade-up">
+								<div class="card-scheme__item">
 									<h3>
 										<div class="revealOut"><span class="revealIn" data-aos="">Отрасли применения</span></div>
 									</h3>
@@ -742,14 +763,15 @@
 										<select class="select" style="width:100%">
 											<option value="" disabled selected>Отрасль*</option>
 											<option>Горная отрасль</option>
-											<option>Рециклинг</option>
 											<option>Металлургия</option>
+											<option>Рециклинг</option>
 											<option>Пищевая отрасль</option>
 											<option>Машиностроение</option>
 											<option>Стекольная отрасль</option>
 											<option>Химическая отрасль</option>
 											<option>Строительная отрасль</option>
 											<option>Нефтегазовая отрасль</option>
+											<option>Огнеупорная отрасль</option>
 										</select>
 									</div>
 									<div class="form__group">
@@ -772,20 +794,22 @@
 								</div>
 							</div>
 						</form>
-						<div class="row tabs">
-							<div class="col col__lg-3 col__md-4 col__xs-12" data-aos="fade-up">
-								<ul class="aside-menu tabs-list">
-									<li><a class="tab active" href="#desc">Описание</a></li>
-									<li><a class="tab" href="#tech">Технические характеристики</a></li>
-									<li><a class="tab" href="#zip">ЗИП</a></li>
-									<li><a class="tab" href="#list">Опросный лист</a></li>
-									<li><a class="popup-modal popup-with-zoom-anim" href="#call">Заказать звонок</a></li>
-								</ul>
+						<div class="row tabs relative card-tabs">
+							<div class="col col__lg-3 col__md-4 col__xs-12 card-tabs__left">
+								<div class="sidebar__inner">
+									<ul class="aside-menu tabs-list" data-aos="fade-up">
+										<li><a class="tab active" href="#desc">Описание</a></li>
+										<li><a class="tab" href="#tech">Технические характеристики</a></li>
+										<li><a class="tab" href="#zip">ЗИП</a></li>
+										<li><a class="tab" href="#list">Опросный лист</a></li>
+										<li><a class="popup-modal popup-with-zoom-anim" href="#call">Заказать звонок</a></li>
+									</ul>
+								</div>
 							</div>
 							<div class="col col__lg-9 col__md-8 col__xs-12">
 								<div class="tabs-content show" id="desc" data-aos="fade-up">
 									<div class="basecontent">
-										<h5>Динамические весы (чеквейер) WECONT позволяют с высокой точностью определять отклонение продукции по весу (недовес/перевес), сочетая в себе функции контроля, классификации, сортировки и отбраковки продукции, вес которой не соответствует заданному значению.</h5>
+										<h5 class="firstTitle">Динамические весы (чеквейер) WECONT позволяют с высокой точностью определять отклонение продукции по весу (недовес/перевес), сочетая в себе функции контроля, классификации, сортировки и отбраковки продукции, вес которой не соответствует заданному значению.</h5>
 										<ul class="list--dots">
 											<li>Высокая точность взвешивания и скорость обработки данных позволяют увеличить объём производства качественной продукции, уменьшая и исключая брак и рекламации.</li>
 											<li>Применение контрольно-динамических весов WECONT способствует повышению прибыльности Вашего производства, в том числе за счет устранения перевеса готовой продукции.</li>
@@ -957,12 +981,12 @@
 												</tbody>
 											</table>
 										</div>
-										<p>Динамические весы (чеквейер) WECONT позволяют с высокой точностью определять отклонение продукции по весу (недовес/перевес), сочетая в себе функции контроля, классификации, сортировки и отбраковки продукции, вес которой не соответствует заданному значению.</p>
+										<h5>Динамические весы (чеквейер) WECONT позволяют с высокой точностью определять отклонение продукции по весу (недовес/перевес), сочетая в себе функции контроля, классификации, сортировки и отбраковки продукции, вес которой не соответствует заданному значению.</h5>
 									</div>
 								</div>
 								<div class="tabs-content" id="zip" data-aos="fade-up">
 									<div class="basecontent">
-										<h5>Динамические весы (чеквейер) WECONT позволяют с высокой точностью определять отклонение продукции по весу (недовес/перевес), сочетая в себе функции контроля, классификации, сортировки и отбраковки продукции, вес которой не соответствует заданному значению.</h5>
+										<h5 class="firstTitle">Динамические весы (чеквейер) WECONT позволяют с высокой точностью определять отклонение продукции по весу (недовес/перевес), сочетая в себе функции контроля, классификации, сортировки и отбраковки продукции, вес которой не соответствует заданному значению.</h5>
 										<ul class="list--dots">
 											<li>Высокая точность взвешивания и скорость обработки данных позволяют увеличить объём производства качественной продукции, уменьшая и исключая брак и рекламации.</li>
 											<li>Применение контрольно-динамических весов WECONT способствует повышению прибыльности Вашего производства, в том числе за счет устранения перевеса готовой продукции.</li>
@@ -973,7 +997,7 @@
 									</div>
 								</div>
 								<div class="tabs-content" id="list" data-aos="fade-up">
-									<div class="stepper-btn"><a class="btn btn--default" href="#"><span>Скачать опросный лист<br><small>.PDF&nbsp;&nbsp;235 KB.</small></span><i class="icon-download"></i></a></div>
+									<div class="stepper-btn"><a class="btn btn--default popup-modal popup-with-zoom-anim" href="#call"><span>Скачать опросный лист<br><small>.PDF&nbsp;&nbsp;235 KB.</small></span><i class="icon-download"></i></a></div>
 									<form class="steps-form" action="#">
 										<div>
 											<h3>1</h3>
@@ -1567,6 +1591,9 @@
 												<div class="stepper-submit">
 													<button class="btn btn--primary btn-arrow btn--full" type="submit"><i class="icons-left icon-arrow-med-right"></i><span>Отправить</span><i class="icons-right icon-arrow-mini-right"></i></button>
 												</div>
+												<div class="finishContent">
+													<h4>Мы получили опросный лист <br> и свяжемся с вами после его обработки.</h4>
+												</div>
 											</section>
 										</div>
 									</form>
@@ -1642,7 +1669,7 @@
 										</div>
 									</div>
 								</div>
-								<div data-aos="fade-up">
+								<div>
 									<div class="marquee marquees">Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА —</div>
 								</div>
 							</div>
@@ -1928,14 +1955,15 @@
 										<select class="select" style="width:100%">
 											<option value="" disabled selected>Отрасль*</option>
 											<option>Горная отрасль</option>
-											<option>Рециклинг</option>
 											<option>Металлургия</option>
+											<option>Рециклинг</option>
 											<option>Пищевая отрасль</option>
 											<option>Машиностроение</option>
 											<option>Стекольная отрасль</option>
 											<option>Химическая отрасль</option>
 											<option>Строительная отрасль</option>
 											<option>Нефтегазовая отрасль</option>
+											<option>Огнеупорная отрасль</option>
 										</select>
 									</div>
 									<div class="form__group">
@@ -2034,9 +2062,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="copyright marquee-rtl">© 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены —&nbsp;</div><a class="copyright marquee" href="https://cloudmill.ru" target="_blank">сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> —&nbsp;</a>
+			<div class="copyright marquee-rtl">© 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены —&nbsp;</div><a class="copyright marquee marquees" href="https://cloudmill.ru" target="_blank">сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> —&nbsp;</a>
 		</footer>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoOHU9S0Ohhctt2VS6Qu3JrmaIjqFQNYk"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoOHU9S0Ohhctt2VS6Qu3JrmaIjqFQNYk&amp;language=ru"></script>
 		<script src="assets/vendor.js"></script>
 		<script src="assets/app.js"></script>
 	</body>

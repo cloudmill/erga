@@ -48,8 +48,10 @@
 			<div class="background"></div>
 			<div class="container relative">
 				<div class="close-popup popup-modal-dismiss"><i class="icon-close"></i></div>
-				<h2>заказать звонок</h2>
-				<div class="row">
+				<h2>
+					<div class="revealOut"><span class="revealIn" data-aos="">заказать звонок</span></div>
+				</h2>
+				<div class="row" data-aos="fade-up" data-aos-delay="1000">
 					<div class="col col__md-6 col__xs-12">
 						<div class="form__group">
 							<div class="input">
@@ -92,14 +94,15 @@
 							<select class="select" style="width:100%">
 								<option value="" disabled selected>Отрасль*</option>
 								<option>Горная отрасль</option>
-								<option>Рециклинг</option>
 								<option>Металлургия</option>
+								<option>Рециклинг</option>
 								<option>Пищевая отрасль</option>
 								<option>Машиностроение</option>
 								<option>Стекольная отрасль</option>
 								<option>Химическая отрасль</option>
 								<option>Строительная отрасль</option>
 								<option>Нефтегазовая отрасль</option>
+								<option>Огнеупорная отрасль</option>
 							</select>
 						</div>
 						<div class="form__group">
@@ -110,7 +113,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row" data-aos="fade-up" data-aos-delay="1000">
 					<div class="col col__md-6 col__xs-12">
 						<div class="checkbox form__group">
 							<input type="checkbox" id="faqId22">
@@ -120,6 +123,14 @@
 					<div class="col col__md-6 col__xs-12">
 						<div class="form__group"><a class="btn btn--full btn--primary send--js btn-arrow" href="#"><i class="icons-left icon-arrow-med-right"></i><span>Отправить</span><i class="icons-right icon-arrow-mini-right"></i></a></div>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mfp-hide popup-block zoom-anim-dialog popup-block--grey" id="patent">
+			<div class="background"></div>
+			<div class="close-popup popup-modal-dismiss"><i class="icon-close"></i></div>
+			<div class="container relative" data-aos="fade-up" data-aos-delay="1000">
+				<div class="text--center"><img src="assets/images/patent.png" alt="" />
 				</div>
 			</div>
 		</div>
@@ -220,7 +231,6 @@
 									<li class="main-nav__item main-nav__item--parent"><a class="main-nav__link" href="#" title="Продукция">Продукция</a>
 										<div class="dropdown" style="background: url(&quot;assets/images/menu/back1.jpg&quot;) no-repeat right bottom, #F6F6F6">
 											<div class="container relative">
-												<div class="liners"><span class="liner"></span><span class="liner"></span><span class="liner"></span></div>
 												<ul class="dropdown-menu">
 													<li class="dropdown-menu__item dropdown-menu__item--parent"><a href="#"><span>Сепараторы</span></a>
 														<ul class="dropdownDeep">
@@ -247,6 +257,7 @@
 													<li class="dropdown-menu__item"><a href="#"><span>Оборудование для лабораторий</span></a></li>
 													<li class="dropdown-menu__item"><a href="#"><span>Постоянные магниты</span></a></li>
 												</ul>
+												<div class="liners"><span class="liner"></span><span class="liner"></span><span class="liner"></span></div>
 											</div>
 										</div>
 									</li>
@@ -333,7 +344,6 @@
 									<li class="main-nav__item main-nav__item--parent"><a class="main-nav__link" href="#" title="Продукция">Продукция</a>
 										<div class="dropdown" style="background: url(&quot;assets/images/menu/back1.jpg&quot;) no-repeat right bottom, #F6F6F6">
 											<div class="container relative">
-												<div class="liners"><span class="liner"></span><span class="liner"></span><span class="liner"></span></div>
 												<ul class="dropdown-menu">
 													<li class="dropdown-menu__item dropdown-menu__item--parent"><a href="#"><span>Сепараторы</span></a>
 														<ul class="dropdownDeep">
@@ -360,6 +370,7 @@
 													<li class="dropdown-menu__item"><a href="#"><span>Оборудование для лабораторий</span></a></li>
 													<li class="dropdown-menu__item"><a href="#"><span>Постоянные магниты</span></a></li>
 												</ul>
+												<div class="liners"><span class="liner"></span><span class="liner"></span><span class="liner"></span></div>
 											</div>
 										</div>
 									</li>
@@ -439,7 +450,7 @@
 							</a></div>
 					</div>
 				</div>
-				<div class="page-header-right"><a class="page-header__search page-header__addphone popup-modal popup-with-zoom-anim" href="#call"><i class="icon-phone"></i></a><a class="page-header__search search--js" href="#"><i class="icon-search"></i></a><a class="page-header__menu hideme" href="#"><span></span><span></span><span></span></a></div>
+				<div class="page-header-right"><a class="page-header__search page-header__addphone popup-modal popup-with-zoom-anim" href="#call"><img src="assets/images/icons/phone.svg" alt="" /></a><a class="page-header__search search--js" href="#"><i class="icon-search"></i></a><a class="page-header__menu hideme" href="#"><span></span><span></span><span></span></a></div>
 			</header>
 			<div class="menuBar" role="navigation">
 				<div class="background"></div>
@@ -622,7 +633,7 @@
 							<div class="col col__lg-5 col__md-4 col__xs-12">
 								<div class="contacts-info" data-aos="fade-up">
 									<p>Россия, г. Калуга, ул. Хрустальная, 22 (а/я 65)</p><br>
-									<p class="text__sm">8:30 — 17:30 по МСК<br>Суббота, воскресенье — выходной</p><a class="btn btn--info adr--js" href="#" data-mapx="59.91701049" data-mapy="30.31812429"><i class="icon-location"></i><span>Посмотреть на карте</span></a>
+									<p class="text__sm">8:30 — 17:30 по МСК<br>Суббота, воскресенье — выходной</p><a class="btn btn--info" href="#"><i class="icon-location"></i><span>Посмотреть на карте</span></a>
 								</div>
 							</div>
 							<div class="col col__lg-3 col__md-4 col__xs-12">
@@ -634,7 +645,7 @@
 								</div>
 							</div>
 							<div class="col col__lg-3 col__md-4 col__xs-12">
-								<div class="contacts-info" data-aos="fade-up">
+								<div class="contacts-info contacts-info--last" data-aos="fade-up">
 									<p><a class="text--primary" href="mailto:info@erga.ru"><b>info@erga.ru</b></a></p>
 									<div class="margtop-auto">
 										<div><a class="arrowLine" href="#">
@@ -664,7 +675,7 @@
 									<div class="margtop-auto">
 										<p><a class="text--primary" href="tel:83833638789"><b>8 383 36-38-789</b></a></p>
 										<p><a class="text--primary" href="tel:89105223016"><b>+7 910-522-30-16</b></a></p><br>
-										<p><a class="text--primary" href="mailto:sibir@erga.ru"><b>sibir@erga.ru</b></a></p><br><a class="btn btn--info adr--js" href="#" data-mapx="59.91916157" data-mapy="30.3251195"><i class="icon-location"></i><span>Посмотреть на карте</span></a>
+										<p><a class="text--primary" href="mailto:sibir@erga.ru"><b>sibir@erga.ru</b></a></p><br><a class="btn btn--info" href="#"><i class="icon-location"></i><span>Посмотреть на карте</span></a>
 									</div>
 								</div>
 							</div>
@@ -677,7 +688,7 @@
 									<div class="margtop-auto">
 										<p><a class="text--primary" href="tel:83532260775"><b>8 3532 26-07-75</b></a></p>
 										<p><a class="text--primary" href="tel:83532572130"><b>8 3532 57-21-30</b></a></p><br>
-										<p><a class="text--primary" href="mailto:ural@erga.ru"><b>ural@erga.ru</b></a></p><br><a class="btn btn--info adr--js" href="#" data-mapx="59.91756978" data-mapy="30.31812429"><i class="icon-location"></i><span>Посмотреть на карте</span></a>
+										<p><a class="text--primary" href="mailto:ural@erga.ru"><b>ural@erga.ru</b></a></p><br><a class="btn btn--info" href="#"><i class="icon-location"></i><span>Посмотреть на карте</span></a>
 									</div>
 								</div>
 							</div>
@@ -690,7 +701,7 @@
 									<div class="margtop-auto">
 										<p><a class="text--primary" href="tel:87212513096"><b>8 7212 51-30-96</b></a></p>
 										<p><a class="text--primary" href="tel:87212512426"><b>8 7212 51-24-26</b></a></p><br>
-										<p><a class="text--primary" href="mailto:erga-kazakhstan@inbox.ru"><b>erga-kazakhstan@inbox.ru</b></a></p><br><a class="btn btn--info adr--js" href="#" data-mapx="59.92049517" data-mapy="30.33250093"><i class="icon-location"></i><span>Посмотреть на карте</span></a>
+										<p><a class="text--primary" href="mailto:erga-kazakhstan@inbox.ru"><b>erga-kazakhstan@inbox.ru</b></a></p><br><a class="btn btn--info" href="#"><i class="icon-location"></i><span>Посмотреть на карте</span></a>
 									</div>
 								</div>
 							</div>
@@ -699,76 +710,76 @@
 				</div>
 			</div>
 			<div class="googleMap" id="googleMap" data-aos="fade-up"></div>
-			<div class="contact marquee" data-aos="fade-up">эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте —</div>
+			<div class="contact marquee marquees">эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте — эрга на карте —</div>
 			<div class="container" data-aos="fade-up">
 				<form class="contacts-form" action="">
-					<h3>Остались вопросы?
-						<div class="row">
-							<div class="col col__md-6 col__xs-12" data-aos="fade-up">
-								<div class="form__group">
-									<div class="input">
-										<input class="input__field" type="text" id="name5577" name="name" />
-										<label class="input__label" for="name5577"><span class="input__label-content input__label-content">Имя</span></label>
-									</div>
-									<div class="input-error">Пожалуйста, заполните поле правильно</div>
+					<h3>Остались вопросы?</h3>
+					<div class="row">
+						<div class="col col__md-6 col__xs-12" data-aos="fade-up">
+							<div class="form__group">
+								<div class="input">
+									<input class="input__field" type="text" id="name5577" name="name" />
+									<label class="input__label" for="name5577"><span class="input__label-content input__label-content">Имя</span></label>
 								</div>
-								<div class="form__group">
-									<div class="input">
-										<input class="input__field" type="text" id="company5577" name="company" />
-										<label class="input__label" for="company5577"><span class="input__label-content input__label-content">Название компании</span></label>
-									</div>
-									<div class="input-error">Пожалуйста, заполните поле правильно</div>
-								</div>
-								<div class="form__group">
-									<div class="input">
-										<input class="input__field" type="text" id="phone5577" name="phone" required="required" />
-										<label class="input__label" for="phone5577"><span class="input__label-content input__label-content">Телефон*</span></label>
-									</div>
-									<div class="input-error">Пожалуйста, заполните поле правильно</div>
-								</div>
-								<div class="form__group">
-									<div class="input">
-										<input class="input__field" type="email" id="email5577" name="email" required="required" />
-										<label class="input__label" for="email5577"><span class="input__label-content input__label-content">E-mail*</span></label>
-									</div>
-									<div class="input-error">Пожалуйста, заполните поле правильно</div>
-								</div>
+								<div class="input-error">Пожалуйста, заполните поле правильно</div>
 							</div>
-							<div class="col col__md-6 col__xs-12" data-aos="fade-up">
-								<div class="form__group">
-									<select class="select" style="width:100%">
-										<option value="" disabled selected>Отрасль*</option>
-										<option>Горная отрасль</option>
-										<option>Рециклинг</option>
-										<option>Металлургия</option>
-										<option>Пищевая отрасль</option>
-										<option>Машиностроение</option>
-										<option>Стекольная отрасль</option>
-										<option>Химическая отрасль</option>
-										<option>Строительная отрасль</option>
-										<option>Нефтегазовая отрасль</option>
-									</select>
+							<div class="form__group">
+								<div class="input">
+									<input class="input__field" type="text" id="company5577" name="company" />
+									<label class="input__label" for="company5577"><span class="input__label-content input__label-content">Название компании</span></label>
 								</div>
-								<div class="form__group">
-									<div class="input textarea">
-										<textarea class="input__field" name="text" id="text5577"></textarea>
-										<label class="input__label" for="text5577"><span class="input__label-content input__label-content">Опишите задачу</span></label>
-									</div>
+								<div class="input-error">Пожалуйста, заполните поле правильно</div>
+							</div>
+							<div class="form__group">
+								<div class="input">
+									<input class="input__field" type="text" id="phone5577" name="phone" required="required" />
+									<label class="input__label" for="phone5577"><span class="input__label-content input__label-content">Телефон*</span></label>
+								</div>
+								<div class="input-error">Пожалуйста, заполните поле правильно</div>
+							</div>
+							<div class="form__group">
+								<div class="input">
+									<input class="input__field" type="email" id="email5577" name="email" required="required" />
+									<label class="input__label" for="email5577"><span class="input__label-content input__label-content">E-mail*</span></label>
+								</div>
+								<div class="input-error">Пожалуйста, заполните поле правильно</div>
+							</div>
+						</div>
+						<div class="col col__md-6 col__xs-12" data-aos="fade-up">
+							<div class="form__group">
+								<select class="select" style="width:100%">
+									<option value="" disabled selected>Отрасль*</option>
+									<option>Горная отрасль</option>
+									<option>Металлургия</option>
+									<option>Рециклинг</option>
+									<option>Пищевая отрасль</option>
+									<option>Машиностроение</option>
+									<option>Стекольная отрасль</option>
+									<option>Химическая отрасль</option>
+									<option>Строительная отрасль</option>
+									<option>Нефтегазовая отрасль</option>
+									<option>Огнеупорная отрасль</option>
+								</select>
+							</div>
+							<div class="form__group">
+								<div class="input textarea">
+									<textarea class="input__field" name="text" id="text5577"></textarea>
+									<label class="input__label" for="text5577"><span class="input__label-content input__label-content">Опишите задачу</span></label>
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col col__md-6 col__xs-12" data-aos="fade-up">
-								<div class="checkbox form__group">
-									<input type="checkbox" id="faqId5577">
-									<label class="label" for="faqId5577"><span>Вы даете согласие на обработку Ваших персональных данных в соответствии с <a href="#">регламентирующими документами сайта</a></span></label>
-								</div>
-							</div>
-							<div class="col col__md-6 col__xs-12" data-aos="fade-up">
-								<div class="form__group"><a class="btn btn--full btn--primary send--js btn-arrow" href="#"><i class="icons-left icon-arrow-med-right"></i><span>Отправить</span><i class="icons-right icon-arrow-mini-right"></i></a></div>
+					</div>
+					<div class="row">
+						<div class="col col__md-6 col__xs-12" data-aos="fade-up">
+							<div class="checkbox form__group">
+								<input type="checkbox" id="faqId5577">
+								<label class="label" for="faqId5577"><span>Вы даете согласие на обработку Ваших персональных данных в соответствии с <a href="#">регламентирующими документами сайта</a></span></label>
 							</div>
 						</div>
-					</h3>
+						<div class="col col__md-6 col__xs-12" data-aos="fade-up">
+							<div class="form__group"><a class="btn btn--full btn--primary send--js btn-arrow" href="#"><i class="icons-left icon-arrow-med-right"></i><span>Отправить</span><i class="icons-right icon-arrow-mini-right"></i></a></div>
+						</div>
+					</div>
 				</form>
 				<form class="contacts-form return-form" action="">
 					<h3>Задать вопрос или оставить пожелание?</h3>
@@ -851,9 +862,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="copyright marquee-rtl">© 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены —&nbsp;</div><a class="copyright marquee" href="https://cloudmill.ru" target="_blank">сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> —&nbsp;</a>
+			<div class="copyright marquee-rtl">© 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены — © 2019 ЭРГА. Все права защищены —&nbsp;</div><a class="copyright marquee marquees" href="https://cloudmill.ru" target="_blank">сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> — сделано в <span>cloudmill</span> —&nbsp;</a>
 		</footer>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoOHU9S0Ohhctt2VS6Qu3JrmaIjqFQNYk"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoOHU9S0Ohhctt2VS6Qu3JrmaIjqFQNYk&amp;language=ru"></script>
 		<script src="assets/vendor.js"></script>
 		<script src="assets/app.js"></script>
 	</body>

@@ -560,12 +560,6 @@
             )) < 768 &&
               t("#fullpage").length &&
               fullpage_api.destroy("all");
-              (e = Math.max(
-                document.documentElement.clientWidth,
-                window.innerWidth || 0
-              )) < 1024 && window.innerHeight < 450 &&
-                t("#fullpage").length &&
-                fullpage_api.destroy("all");
           }),
           window.addEventListener(
             "resize",
@@ -597,9 +591,6 @@
                         horizontal: !1,
                       });
                     e < 768 &&
-                      t("#fullpage").length &&
-                      fullpage_api.destroy("all");
-                    e < 1024 && window.innerHeight < 450 &&
                       t("#fullpage").length &&
                       fullpage_api.destroy("all");
                   }, 1e3);
@@ -7602,7 +7593,7 @@
                 "background",
                 'url("assets/images/menu/'.concat(
                   e,
-                  '") no-repeat right bottom 30px, #F6F6F6'
+                  '") no-repeat right bottom 15px, #F6F6F6'
                 )
               );
           }),
@@ -7783,17 +7774,17 @@
                 return s.a.refresh({ offset: -80 });
               }, 500);
           }),
-          // t(".catalog-content__item").mouseover(function (t) {
-          //   var e = this.getBoundingClientRect(),
-          //     i = t.clientX - e.left,
-          //     s = t.clientY - e.top,
-          //     r = this.offsetWidth / 2,
-          //     n = this.offsetHeight / 2,
-          //     a = ((i - r) / r) * -1 * 5,
-          //     o = ((s - n) / n) * 5;
-          //   this.style.setProperty("--mouseY", a + "deg"),
-          //     this.style.setProperty("--mouseX", o + "deg");
-          // }),
+          t(".catalog-content__item").mouseover(function (t) {
+            var e = this.getBoundingClientRect(),
+              i = t.clientX - e.left,
+              s = t.clientY - e.top,
+              r = this.offsetWidth / 2,
+              n = this.offsetHeight / 2,
+              a = ((i - r) / r) * -1 * 5,
+              o = ((s - n) / n) * 5;
+            this.style.setProperty("--mouseY", a + "deg"),
+              this.style.setProperty("--mouseX", o + "deg");
+          }),
           t(".sliderTab--js .sliderTab-item").click(function () {
             t(".sliderTab-item").removeClass("active"),
               t(this).addClass("active"),
@@ -9259,7 +9250,7 @@
           }),
           t(".tabs-list").on("click", ".tab", function (i) {
             i.preventDefault();
-            var s = t(this).attr("data-target");
+            var s = t(this).attr("href");
             t(this)
               .closest(".tabs")
               .find(".tabs-list .tab")

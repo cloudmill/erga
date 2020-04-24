@@ -1,0 +1,292 @@
+//
+// Modules -> Navs
+// --------------------------------------------------
+
+
+@mixin dropdownContent() {
+  opacity: 0;
+  left: 100%;
+  width: 50%;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: opacity .5s, height .5s;
+}
+@mixin dropdownLine() {
+  content: '';
+  width: 1px;
+  border-left: 1px dashed #A8A8A8;
+  position: absolute;
+  top: 6px;
+  bottom: 20px;
+  z-index: 0;
+}
+
+.main-nav {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__item {
+    display: block;
+    &.hidden {
+      display: none;
+    }
+    &--parent {
+      &:hover {
+        .dropdown {
+          display: block;
+        }
+      }
+    }
+  }
+  &__link {
+    position: relative;
+    padding: 0;
+    display: block;
+
+    &:hover {
+      color: $color-type-2a;
+    }
+  }
+
+  &-mega {
+    font-size: 18px;
+    .main-nav__item {
+      > a {
+        display: flex;
+        align-items: baseline;
+      }
+      &:hover {
+        > a {
+          color: $color-type-2a;
+        }
+      }
+      &--parent {
+        > a {
+          &:after {
+            content: "\e905";
+            font-family: icomoon;
+            color: $base-color-main;
+            font-size: 10px;
+            margin-left: 8px;
+            transform: rotate(0);
+            transition: transform .5s, color .5s;
+          }
+        }
+        &:hover {
+          > a {
+            &:after {
+              //content: "\e906";
+              //font-size: 9px;
+              color: $color-type-2a;
+              transform: rotate(180deg);
+            }
+          }
+          .dropdown {
+            max-height: 610px;
+            @include transition(max-height .5s, background .5s);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 90%;
+  z-index: 99;
+  max-height: 0;
+  overflow: hidden;
+  @include transition(max-height .5s, background .5s);
+
+  .container {
+    padding: 40px 0 60px 100px;
+  }
+
+  .liners {
+    margin-left: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    top: 60px;
+    z-index: -1;
+  }
+  .liner {
+    @include dropdownLine;
+    transition: opacity .5s;
+    &:first-child {
+      left: -30px;
+    }
+    &:nth-child(2) {
+      left: 32%;
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      left: 64%;
+      opacity: 0;
+    }
+
+  }
+
+  &-menu {
+    //margin-left: 180px;
+    position: relative;
+    width: 32.4%;
+    &__item {
+      padding-right: 80px;
+      &--parent {
+        > a {
+          position: relative;
+          display: block;
+          &:after {
+            content: "\e903";
+            font-family: icomoon;
+            color: $color-type-2a;
+            font-size: 10px;
+            position: absolute;
+            top: 5px;
+            right: -50px;
+          }
+        }
+        &:hover {
+          .dropdownDeep {
+            opacity: 1;
+            height: 100%;
+            overflow: visible;
+          }
+        }
+      }
+    }
+    &-title {
+      min-height: 60px;
+      margin-bottom: 10px;
+      padding-right: 15px;
+      a {
+        @media screen and (min-width: $screen-md-min) {
+          font-size: 20px !important;
+          line-height: 1.3 !important;
+        }
+      }
+    }
+  }
+
+  li {
+    margin: 20px 0;
+    &:hover {
+      > a span {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+    &:active {
+      > a span {
+        &:after {
+          width: 100%;
+          height: 4px;
+        }
+      }
+    }
+  }
+
+  a {
+    font-size: 16px;
+    line-height: 1.6;
+    span {
+      padding-bottom: 3px;
+      position: relative;
+      &:after {
+        content: '';
+        height: 2px;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        background-color: $color-type-2a;
+        transition: width .5s, height .5s;
+      }
+    }
+  }
+  .dropdownDeep {
+    @include dropdownContent;
+    top: -20px;
+    padding-left: 30px;
+    &__item {
+      padding-right: 80px;
+      &--parent {
+        > a {
+          position: relative;
+          display: block;
+          &:after {
+            content: "\e903";
+            font-family: icomoon;
+            color: $color-type-2a;
+            font-size: 10px;
+            position: absolute;
+            top: 5px;
+            right: -50px;
+          }
+        }
+        &:hover {
+          .dropdownDeeper {
+            opacity: 1;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .dropdownDeeper {
+    @include dropdownContent;
+    top: 0;
+    padding-left: 30px;
+  }
+
+  &-column {
+    background-color: $white;
+
+    .dropdown-menu {
+      max-width: inherit;
+      display: flex;
+      flex-wrap: wrap;
+      > li {
+        margin: 10px 0;
+        width: 33%;
+        &:not(:nth-child(3n+1)) {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+
+  &-services {
+    background-color: $white;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      .dropdownList {
+        width: 32.4%;
+        position: relative;
+        &:nth-child(3),
+        &:nth-child(4) {
+          padding-left: 30px;
+        }
+
+        .dropdown-menu {
+          width: auto;
+        }
+      }
+    }
+  }
+}

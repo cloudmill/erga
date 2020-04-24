@@ -1,0 +1,709 @@
+.about {
+  .fp-tableCell {
+    display: block;
+  }
+  .section {
+    background-color: white;
+    .container {
+      padding-top: 40px;
+      @media screen and (min-width: $screen-md) {
+        min-height: 100vh;
+        padding-top: 180px;
+      }
+      @media screen and (min-height: 600px) and (max-height: 799px)  {
+        padding-top: 115px;
+      }
+    }
+  }
+  h3 {
+    margin-top: 0;
+    font-family: 'HalvarBreit-XBd';
+    font-weight: 800;
+    text-transform: uppercase;
+    @media screen and (max-width: $screen-sm-max) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  h4 {
+    margin-top: 0;
+    font-size: 25px;
+    line-height: 37px;
+    @media screen and (max-width: $screen-sm-max) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .revealOut {
+      padding-bottom: 0;
+    }
+  }
+
+  .section {
+    &__main {
+      h4 {
+        margin-bottom: 40px;
+        @media screen and (min-width: $screen-md) {
+          margin-bottom: 80px;
+        }
+        .revealOut {
+          padding-bottom: 0;
+        }
+      }
+    }
+    &__trademark {
+      h3 {
+        margin-bottom: 30px;
+        @media screen and (min-width: $screen-md) {
+          margin-bottom: 70px;
+        }
+      }
+    }
+    &__mat {
+      h3 {
+        margin-bottom: 20px;
+        @media screen and (min-width: $screen-md) {
+          margin-bottom: 80px;
+        }
+      }
+      h4 {
+        margin-bottom: 30px;
+        @media screen and (min-width: $screen-md) {
+          margin-bottom: 50px;
+        }
+      }
+      .list--dots {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        @media screen and (min-width: $screen-xl) {
+          padding: 0 40px;
+        }
+        @media screen and (min-width: $screen-md) {
+          &:after {
+            content: '';
+            height: 1px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            background-color: $black;
+          }
+        }
+        li {
+          width: 100%;
+          padding: 20px 0 20px 55px;
+          border-bottom: 1px solid $black;
+          font-size: 14px;
+          line-height: 21px;
+          @media screen and (min-width: $screen-md) {
+            border-bottom: none;
+            width: 50%;
+            font-size: 18px;
+            line-height: 30px;
+            padding: 19px 0 28px 55px;
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+          &:before {
+            top: 22px;
+            @media screen and (min-width: $screen-md) {
+              top: 27px;
+            }
+          }
+        }
+      }
+    }
+    &__support {
+      h3 {
+        margin-bottom: 30px;
+      }
+      h4 {
+        margin-bottom: 50px;
+      }
+    }
+    &__history {
+      h3 {
+        @media screen and (min-width: $screen-xl) {
+          margin-bottom: 80px;
+        }
+        @media screen and (min-height: 600px) and (max-height: 799px)  {
+          margin-bottom: 20px;
+        }
+      }
+      .historyPic {
+        display: inline-block;
+        position: relative;
+        z-index: 10;
+        &-num {
+          line-height: 30px;
+          text-transform: uppercase;
+          transform: rotate(-90deg);
+          color: white;
+          position: absolute;
+          bottom: 30px;
+          right: 10px;
+        }
+        &-ico {
+          position: absolute;
+          top: 30px;
+          left: -20px;
+          z-index: -1;
+        }
+        &--left {
+          @media screen and (min-width: $screen-xl) {
+            left: -100px;
+          }
+          @media screen and (min-height: 600px) and (max-height: 799px)  {
+            left: 0;
+          }
+        }
+        &--right {
+          @media screen and (min-width: $screen-md) {
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+          @media screen and (min-width: $screen-xl) {
+            right: -130px;
+          }
+        }
+      }
+    }
+    &__sert {
+      h3 {
+        margin-bottom: 30px;
+        @media screen and (min-width: $screen-md) {
+          margin-bottom: 85px;
+        }
+      }
+      .about-inner {
+        margin-bottom: 450px;
+        @media screen and (min-width: $screen-md) {
+          margin-bottom: 0;
+        }
+      }
+      background: url(../images/about/back.jpg) no-repeat right 38% bottom 72% / auto 66%, white;
+      @media screen and (min-width: $screen-md) {
+        background: url(../images/about/back.jpg) no-repeat right 50% bottom / auto 100%, $white;
+      }
+      @media screen and (min-width: $screen-lg) {
+        background: url("../images/about/back.jpg") no-repeat right 30% bottom / cover, $white;
+      }
+      @media screen and (min-width: $screen-xl) {
+        background: url("../images/about/back.jpg") no-repeat right bottom / cover, $white;
+      }
+      .list--dots {
+        position: relative;
+        &:after {
+          content: '';
+          height: 1px;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          background-color: $black;
+        }
+        li {
+          width: 100%;
+          padding: 20px 0 20px 50px;
+          font-size: 14px;
+          line-height: 21px;
+          @media screen and (min-width: $screen-md) {
+            font-size: 25px;
+            line-height: 37px;
+            padding: 28px 0 32px 55px;
+          }
+          &::before {
+            top: 30px;
+            @media screen and (min-width: $screen-md) {
+              top: 44px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-inner {
+    position: relative;
+    @media screen and (min-width: $screen-md) {
+      padding-left: 60px;
+    }
+    @media screen and (min-width: $screen-lg) {
+      padding-left: 135px;
+    }
+    @media screen and (min-width: $screen-xl) {
+      padding-left: 151px;
+    }
+    @media screen and (min-width: $screen-xxl) {
+      padding-left: 84px;
+    }
+    .revealOut {
+      padding-bottom: 0;
+    }
+    h3 {
+      font-size: 16px;
+      line-height: 24px;
+      @media screen and (min-width: $screen-md) {
+        font-size: 35px;
+        line-height: 46px;
+      }
+    }
+    h4 {
+      font-size: 16px;
+      line-height: 24px;
+      @media screen and (min-width: $screen-md) {
+        font-size: 25px;
+        line-height: 37px;
+      }
+    }
+    .aboutZoom2,
+    .aboutZoom {
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      text-align: right;
+      svg {
+        width: 60%;
+        height: 80%;
+        @media screen and (min-width: $screen-md) {
+          width: auto;
+          height: auto;
+        }
+      }
+      //background: url("../images/about/zoom.svg") no-repeat right bottom / cover, $color-type-2a;
+      //background-blend-mode: multiply;
+      @media screen and (min-width: $screen-md) {
+        right: 50px;
+      }
+    }
+    .aboutZoom2 {
+      @media screen and (min-width: $screen-md) {
+        right: -200px;
+        top: -100px;
+      }
+    }
+  }
+}
+
+.historyIcoList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+  @media screen and (min-width: $screen-md) {
+    margin-top: 0;
+  }
+  &__item {
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 21px;
+    @media screen and (min-width: $screen-md) {
+      width: 50%;
+      font-size: 18px;
+      line-height: 30px;
+    }
+    @media screen and (min-width: $screen-xl) {
+      width: 50%;
+      margin-bottom: 60px;
+    }
+    @media screen and (min-height: 600px) and (max-height: 799px)  {
+      margin-bottom: 10px;
+    }
+    &-img {
+      height: 90px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+    &-title {
+
+    }
+  }
+}
+
+.aboutList {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    width: 100%;
+    margin-bottom: 40px;
+    @media screen and (min-width: $screen-md) {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: $screen-lg) {
+      width: 30%;
+      margin-bottom: 60px;
+    }
+    &:nth-child(3) {
+      align-self: flex-end;
+    }
+    &-num {
+      font-family: 'HalvarBreit-XBd';
+      font-weight: 800;
+      font-size: 35px;
+      line-height: 46px;
+      text-transform: uppercase;
+      color: $base-color-main;
+      white-space: nowrap;
+      margin-bottom: 0;
+      @media screen and (min-width: $screen-md) {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+    }
+    &-desc {
+      font-size: 14px;
+      line-height: 21px;
+      @media screen and (min-width: $screen-md) {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+    @media screen and (min-width: $screen-lg) {
+      &:nth-child(3) {
+        width: auto;
+        margin-left: auto;
+      }
+    }
+    &:last-child {
+      width: 100%;
+      @media screen and (min-width: $screen-lg) {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.aboutLogo {
+  border-top: 1px solid $input-border;
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    border-bottom: 1px solid $input-border;
+    padding: 20px 0;
+    width: 50%;
+    @media screen and (min-width: $screen-md) {
+      width: 25%;
+      padding: 24px 10px 20px 50px;
+    }
+    &-img {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      @media screen and (min-width: $screen-md) {
+        height: 95px;
+      }
+    }
+    &-title {
+      line-height: 30px;
+    }
+    &:last-child {
+      position: relative;
+      &:after {
+        content: '';
+        height: 1px;
+        width: 200%;
+        background-color: $input-border;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        @media screen and (min-width: $screen-md) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.descList {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    position: relative;
+    border: 1px solid $black;
+    padding: 20px;
+    height: 160px;
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+    @media screen and (min-width: $screen-md) {
+      padding: 40px 30px;
+      height: 250px;
+      width: 30%;
+      margin-right: 20px;
+    }
+    @media screen and (min-width: $screen-xl) {
+      height: 325px;
+      width: 295px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 0;
+      transition: height .5s;
+      background-color: $white;
+    }
+    > * {
+      position: relative;
+      z-index: 9;
+    }
+    &-title {
+      padding-top: 20px;
+      border-top: 1px solid $base-color-main;
+      line-height: 30px;
+      font-family: 'StratosLCWeb-Medium';
+      @media screen and (max-width: $screen-sm-max) {
+        padding-top: 10px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    &-img {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      @media screen and (min-width: $screen-md) {
+        left: 30px;
+        bottom: 40px;
+      }
+      img {
+        transition: transform .5s;
+      }
+    }
+    &:hover {
+      color: $color-type-2a;
+      .descList__item-title {
+        border-color: $color-type-2a;
+      }
+      &:after {
+        height: 100%;
+      }
+      img {
+        transform: scale(1.2) rotate(180deg);
+      }
+    }
+  }
+}
+
+
+// helpers
+.icons-arrow {
+  position: fixed;
+  left: 20px;
+  bottom: 40px;
+  color: $black;
+  z-index: 9;
+  display: none;
+  @media screen and (min-width: $screen-md) {
+    display: block;
+  }
+  @media screen and (min-width: $screen-lg) {
+    left: 85px;
+  }
+
+  i {
+    font-size: 50px;
+    display: block;
+    cursor: pointer;
+    transition: color .5s;
+
+    + i {
+      margin-top: 30px;
+    }
+    &:hover {
+      color: $color-type-2a;
+    }
+  }
+}
+
+.paginNumber {
+  position: absolute;
+  left: 80px;
+  bottom: 40px;
+  color: $black;
+  z-index: 9;
+  font-size: 35px;
+  line-height: 30px;
+  width: 86px;
+  height: 76px;
+  display: none;
+  @media screen and (min-width: $screen-md) {
+    display: block;
+  }
+  @media screen and (min-width: $screen-lg) {
+    left: 300px;
+  }
+  @media screen and (min-height: 600px) and (max-height: 799px)  {
+    width: 46px;
+    left: 20px;
+  }
+
+  span {
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+#fp-nav {
+  ul li {
+    width: 35px;
+    height: 20px;
+
+    a {
+      span {
+        width: 17px;
+        height: 2px;
+        border-radius: 0;
+        margin: 0;
+        left: 0;
+        top: 0;
+        transition: width .5s, height .5s, background-color .5s;
+      }
+
+      &.active span {
+        width: 35px;
+        height: 3px;
+        background-color: $color-type-2a;
+        margin: 0;
+        border-radius: 0;
+      }
+    }
+
+    &:hover {
+      a {
+        span,
+        &.active span {
+          width: 35px;
+          height: 3px;
+          background-color: $color-type-2a;
+          margin: 0;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  &.fp-left {
+    left: 20px;
+    @media screen and (min-width: $screen-lg) {
+      left: 80px;
+    }
+  }
+}
+
+.roundLink {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 300px;
+  border: 1px solid $color-type-2a;
+  line-height: 23px;
+  text-align: center;
+  overflow: hidden;
+  margin: 20px auto;
+  transform: scale(1);
+  transition: transform .5s;
+  @media screen and (min-width: $screen-md) {
+    margin: 0;
+  }
+
+  @media screen and (min-height: 600px) and (max-height: 799px)  {
+    width: 170px;
+    height: 170px;
+  }
+  @media screen and (min-height: 800px) and (min-width: $screen-xl) {
+    width: 248px;
+    height: 248px;
+  }
+
+  &-body {
+    @media screen and (min-width: $screen-md) {
+      position: absolute;
+      right: 20px;
+      bottom: 40px;
+    }
+    @media screen and (min-width: $screen-xl) {
+      right: 85px;
+    }
+    @media screen and (min-height: 600px) and (max-height: 799px)  {
+      bottom: 20px;
+      right: 30px;
+    }
+  }
+  &:after {
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    transition: height .5s;
+    background-color: $color-type-2a;
+  }
+
+  .arrowLine {
+    color: $black;
+    display: block;
+    transition: color .5s;
+  }
+
+  span, i {
+    display: block;
+    position: relative;
+    z-index: 9;
+  }
+
+  i {
+    margin-top: 10px;
+    color: $color-type-2a;
+    transition: color .5s;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    &:after {
+      height: 100%;
+    }
+
+    .arrowLine, i {
+      color: white !important;
+    }
+  }
+}
+
+.mouseHover {
+  width: 360px;
+  height: 360px;
+  border-radius: 400px;
+  background: radial-gradient(50% 50% at 50% 50%, #DF0112 0%, rgba(223, 1, 18, 0) 81.25%);
+  background-blend-mode: multiply;
+  position: fixed;
+  opacity: 0;
+}
+
+.fp-viewing-one,
+.fp-viewing-two,
+.fp-viewing-three,
+.fp-viewing-four,
+.fp-viewing-five,
+.fp-viewing-six {
+  header {
+    background-color: transparent;
+  }
+}

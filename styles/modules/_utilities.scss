@@ -1,0 +1,27 @@
+//
+// Modules -> Utility classes
+// --------------------------------------------------
+
+
+.centered-block {
+  @include center-block;
+}
+.pulled-right {
+  float: right;
+}
+.pulled-left {
+  float: left;
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  @include text-hide;
+}

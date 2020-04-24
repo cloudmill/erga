@@ -1,0 +1,71 @@
+.agreement {
+  margin-bottom: 40px;
+  @media screen and (min-width: $screen-md-min) {
+    margin-bottom: 130px;
+  }
+  h4 {
+    font-size: 19px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $screen-md-min) {
+      margin-top: 80px;
+      margin-bottom: 35px;
+      font-size: 25px;
+    }
+  }
+
+  ol {
+    counter-reset: item;
+    p {
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 20px;
+      font-size: 16px;
+      padding-left: 30px;
+      position: relative;
+      line-height: 25px;
+      @media screen and (min-width: $screen-md-min) {
+        line-height: 30px;
+        margin-bottom: 40px;
+        font-size: 18px;
+      }
+
+      &::before {
+        content: counters(item, ".") ". ";
+        counter-increment: item;
+        font-family: $headings-font-family;
+        font-size: 19px;
+        position: absolute;
+        left: 0;
+        top: 2px;
+        @media screen and (min-width: $screen-md-min) {
+          font-size: 25px;
+        }
+      }
+
+      ol {
+        @media screen and (min-width: $screen-md-min) {
+          margin-left: 220px;
+        }
+        li {
+          padding-left: 35px;
+          @media screen and (min-width: $screen-md-min) {
+            padding-left: 60px;
+          }
+
+          &::before {
+            font-size: 16px;
+            line-height: 25px;
+            font-family: 'StratosLCWeb-Regular';
+            @media screen and (min-width: $screen-md-min) {
+              font-size: 18px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

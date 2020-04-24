@@ -1,0 +1,56 @@
+//
+// Partials -> Main
+// ------------------------------------
+
+body.index #fp-nav {
+  display: none !important;
+}
+
+
+//
+// Main container
+//
+.main {
+  @media screen and (min-width: $screen-lg) {
+    min-height: calc(100vh - 132px);
+  }
+}
+
+.page-fxindex {
+  overflow: hidden;
+  @media screen and (min-width: $screen-md) {
+    padding-top: 170px;
+  }
+  h1 {
+    text-transform: uppercase;
+    position: relative;
+  z-index: 1;
+    @media screen and (max-width: $screen-sm-max) {
+      margin-bottom: 30px;
+      //margin-top: 0;
+    }
+  }
+}
+
+.showMoreLink {
+  position: relative;
+  padding-bottom: 10px;
+  display: inline-block;
+  @media screen and (max-width: $screen-sm-max) {
+    margin-bottom: 50px;
+  }
+  &:after {
+    content: '';
+    height: 1.5px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #5757FF;
+    transition: left .5s;
+  }
+  &:hover:after {
+    left: 100%;
+  }
+}

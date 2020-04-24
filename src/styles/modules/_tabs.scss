@@ -1,0 +1,17 @@
+.tabs {
+  &-list {
+    display: flex;
+  }
+  .tab {
+    &.active,
+    &:hover {
+      color: $base-color-main;
+    }
+  }
+  &-content {
+    display: none;
+    &.show {
+      display: block;
+    }
+  }
+}

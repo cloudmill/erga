@@ -2,6 +2,10 @@
 // Pages -> Index
 // ------------------------------------
 
+a {
+  cursor: pointer;
+}
+
 .arrowLine {
   color: $base-color-main;
   display: inline-flex;
@@ -158,9 +162,11 @@ body.index {
   #valentines {
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 10%;
+    right: 10%;
     bottom: 0;
+    margin: auto;
+    width: 80%;
   }
   canvas {
     position: absolute;

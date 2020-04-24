@@ -2,6 +2,26 @@ import './plugins/nextparticle.min';
 
 const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 800;
 
+const userAgent = navigator.userAgent.toLowerCase();
+
+let Safari = false;
+let google = false;
+const ua = navigator.userAgent.toLowerCase();
+if (ua.indexOf('safari') != -1) {
+  if (ua.indexOf('chrome') > -1) {
+    Safari = false;
+    google = true;
+  } else {
+    Safari = true;
+    google = false;
+  }
+}
+
+let InternetExplorer = false;
+if((/mozilla/.test(userAgent) && !/firefox/.test(userAgent) && !/chrome/.test(userAgent) && !/safari/.test(userAgent) && !/opera/.test(userAgent)) || /msie/.test(userAgent)) {
+  InternetExplorer = true;
+}
+
 const settings = {
   particleGap: 4,
   particleSize: 1.3,
@@ -17,7 +37,7 @@ if (navigator.userAgent.indexOf('Chrome')!=-1){
   isApple = false;
 }
 
-if(valentines) {
+if(valentines && !(Safari || InternetExplorer)) {
   const getWidth = document.getElementsByClassName('section__main')[0].offsetWidth;
   const getHeight = document.getElementsByClassName('section__main')[0].offsetHeight;
   let heart = new Particle({
@@ -61,4 +81,6 @@ if(valentines) {
     const getHeight = document.getElementsByClassName('section__main')[0].offsetHeight;
     redraw(getWidth, getHeight);
   });
+} else {
+  valentines.setAttribute("src", "assets/images/erga.jpg");
 }

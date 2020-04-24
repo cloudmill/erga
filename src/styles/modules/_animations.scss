@@ -1,0 +1,179 @@
+//
+// Vendors -> animations (http://www.justinaguilar.com/animations/)
+// ------------------------------------
+
+
+.revealOut {
+  overflow: hidden;
+  @media screen and (min-width: $screen-md) {
+    padding-bottom: 10px;
+  }
+}
+
+.revealIn {
+  display: inline-block;
+  transform: translateY(100px);
+  opacity: 0;
+  .fp-viewing-three .swiper-slide &,
+  .fp-viewing-one .swiper-slide &,
+  .swiper-slide &,
+  &.aos-init {
+    animation: verticalRevealRevert 1s cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode:both;
+  }
+  .swiper-slide-active &,
+  .fp-viewing-two .swiper-slide-active &,
+  .swiper-slide-active &,
+  &.aos-animate {
+    animation: verticalReveal 1s cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode:both;
+    animation-delay: 0.3s;
+  }
+  .swiper-slide-active &,
+  .fp-viewing-two .swiper-slide-active & {
+    animation-delay: .9s !important;
+  }
+  .menuBar.open & {
+    animation: verticalReveal 1s cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode:both;
+    animation-delay: .5s;
+    @media screen and (min-width: $screen-md-min) {
+      animation-delay: 1.5s;
+    }
+  }
+}
+
+
+@keyframes verticalReveal {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes verticalRevealRevert {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+
+
+@media screen and (min-width: $screen-md-min) {
+  .animated {
+    visibility: hidden;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    &.visible {
+      visibility: visible;
+    }
+  }
+}
+
+
+@keyframes slideInUp {
+  0%{
+    -webkit-transform:translate3d(0,100%,0);
+    transform:translate3d(0,100%,0);
+    visibility:visible
+  }
+  to{
+    -webkit-transform:translateZ(0);
+    transform:translateZ(0)
+  }
+}
+
+.slideInUp{
+  -webkit-animation-name:slideInUp;
+  animation-name:slideInUp
+}
+
+
+$text-arrow-space: 16px;
+$shaft-width: 64px;
+$shaft-thickness: 1px;
+$arrow-head-width: 8px;
+
+.the-arrow {
+  width: 30px;
+
+  > .shaft {
+    display: block;
+    position: relative;
+    transition: font-size 0.2s;
+  }
+
+  &-left {
+    transition: transform 0.5s;
+    transform: translateX(-30px);
+
+    > .shaft {
+      font-size: 11px;
+    }
+  }
+
+  &-right {
+    top: 3px;
+    padding-left: 9px;
+
+    > .shaft {
+      font-size: 11px;
+      transform: translateX(0);
+      transition: transform 0.5s;
+
+      &:before,
+      &:after {
+        transition: transform 0.5s;
+      }
+    }
+  }
+}
+
+.arrowLine {
+  position: relative;
+
+  &-main {
+    white-space: nowrap;
+    transition: transform 0.5s;
+    margin-left: -30px;
+  }
+
+  &:hover {
+    > .the-arrow-left {
+      transform: translateX(0);
+      > .shaft {
+        transition: transform 0.5s;
+        transform: translateX(0);
+
+        &:before {
+          transform: translateX(0);
+        }
+      }
+    }
+
+    .arrowLine-main {
+      transform: translateX(30px);
+    }
+
+    .the-arrow-right {
+      > .shaft {
+        transform: translateX(30px);
+        transition-delay: 0s;
+      }
+    }
+  }
+}
+
+

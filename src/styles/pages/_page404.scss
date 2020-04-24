@@ -1,0 +1,61 @@
+.page404 {
+  padding: 0 0 20px;
+  position: relative;
+  &-text {
+    position: relative;
+    z-index: 9;
+    margin-top: 21vh;
+    @media screen and (min-width: $screen-lg) {
+      margin-top: 120px;
+      margin-left: 58%;
+    }
+  }
+  h3 {
+    line-height: 46px;
+    @include gamma;
+    @media screen and (max-width: $screen-sm-max) {
+      line-height: 24px;
+      font-size: 16px;
+      position: static;
+    }
+    @media screen and (min-width: $screen-lg) {
+      //left: 80px;
+      //top: 80px;
+      margin-left: 80px;
+    }
+  }
+  .revealOut {
+    padding-bottom: 0;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    font-family: 'StratosLCWeb-Medium';
+    @media screen and (min-width: $screen-md) {
+      font-size: 25px;
+      line-height: 37px;
+      margin-bottom: 30px;
+    }
+  }
+  .arrowLine {
+    margin-bottom: 15px;
+  }
+
+
+
+  &-content {
+    overflow: hidden;
+    canvas {
+      left: 3%;
+      top: 10%;
+      bottom: 0;
+      right: 0;
+      z-index: 0;
+      @media screen and (min-width: $screen-md) {
+        top: -5%;
+        left: 0;
+      }
+    }
+  }
+}

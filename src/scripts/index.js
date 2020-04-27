@@ -63,7 +63,7 @@ $(document).mouseup(function (e) {
 $(".filtersBody__item-close").click(function () {
   $(this).closest('.filtersBody__item').removeClass('active');
 });
-$(".reset-filterBody").click(function () {
+$(document).on('click', '.reset-filterBody', function(){
   const getID = $(this).closest('.filtersBody__item').attr('id');
   $(this).closest('.filtersBody__item').find('input:checkbox').prop('checked', false);
   const filterItem = $('.filter--js').find('.filter__item[data-type=' + getID + ']');
@@ -75,7 +75,7 @@ $(".reset-filterBody").click(function () {
     $('.filter--js .filter__item:nth-child(2)').addClass('disabled');
   }
 });
-$(".get-filterBody").click(function () {
+$(document).on('click', '.get-filterBody', function(){
   const getID = $(this).closest('.filtersBody__item').attr('id');
   const getChecked = $(this).closest('.filtersBody__item').find('input:checkbox:checked');
   const getLength = getChecked.length;
@@ -96,7 +96,7 @@ $(".get-filterBody").click(function () {
   }
   $(this).closest('.filtersBody__item').removeClass('active');
 });
-$(".reset--js").click(function () {
+$(document).on('click', '.reset--js', function(){
   $('.filtersBody').find('input:checkbox').prop('checked', false);
   const items = $('.filter').find('.filter__item');
   $(items).each(function () {

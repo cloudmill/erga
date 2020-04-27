@@ -6,6 +6,7 @@
   &-menu {
     display: flex;
     overflow-x: auto;
+    padding-bottom: 15px;
     &.is-affixed {
       overflow: visible;
     }

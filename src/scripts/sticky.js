@@ -191,12 +191,27 @@ $(".tabs-list").on("click", ".tab", function(e) {
 
 
 const form = $(".steps-form");
+const formValid = $(".steps-form-valid");
 form.children("div").steps({
   headerTag: "h3",
   bodyTag: "section",
   transitionEffect: "slideLeft",
   enablePagination: false,
   enableAllSteps: true,
+  titleTemplate: '#title#',
+  onStepChanged: function () {
+    if(tabs) {
+      tabs.updateSticky();
+    }
+    AOS.refresh({offset: -80});
+  },
+});
+formValid.children("div").steps({
+  headerTag: "h3",
+  bodyTag: "section",
+  transitionEffect: "slideLeft",
+  enablePagination: false,
+  enableAllSteps: false,
   titleTemplate: '#title#',
   onStepChanged: function () {
     if(tabs) {
@@ -245,19 +260,33 @@ function validateFields(element, func, isFinish) {
   })
   const nonValidFields = element.closest('section').find('div.error');
   if(nonValidFields.length === 0) {
-    form.children("div").steps(func, {})
+    form.length && form.children("div").steps(func, {})
+    formValid.length && formValid.children("div").steps(func, {})
     if(isFinish) {
       $('.finishContent').addClass('active');
     }
-    $('html, body').animate({
-      scrollTop: $(".steps-form").offset().top - 100
-    }, 500);
+    if(form.length) {
+      $('html, body').animate({
+        scrollTop: $(".steps-form").offset().top - 100
+      }, 500);
+    }
+    if(formValid.length) {
+      $('html, body').animate({
+        scrollTop: $(".steps-form-valid").offset().top - 100
+      }, 500);
+    }
   }
   if(nonValidFields.length) {
-    console.log($(".steps-form div.error").offset().top);
-    $('html, body').animate({
-      scrollTop: $(".steps-form div.error").offset().top - 100
-    }, 500);
+    if(form.length) {
+      $('html, body').animate({
+        scrollTop: $(".steps-form div.error").offset().top - 100
+      }, 500);
+    }
+    if(formValid.length) {
+      $('html, body').animate({
+        scrollTop: $(".steps-form-valid div.error").offset().top - 100
+      }, 500);
+    }
   }
 }
 

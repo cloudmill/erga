@@ -27,7 +27,7 @@ function validateField(element, event) {
   }
 }
 
-$('.steps-form').on("blur", '.input input, .textarea textarea', function(event){
+$('.steps-form, .steps-form-valid').on("blur", '.input input, .textarea textarea', function(event){
   validateField($(this), event);
 });
 $('.input input, .textarea textarea').on("blur", function(event){

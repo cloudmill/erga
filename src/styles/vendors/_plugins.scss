@@ -133,6 +133,12 @@ $items: ok;
     height: 170px;
   }
 }
+#call2 {
+  .textarea,
+  .textarea textarea {
+    height: 270px;
+  }
+}
 
 .popup-block {
   //margin: 0;

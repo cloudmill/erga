@@ -396,6 +396,83 @@
 				</div>
 			</div>
 		</div>
+		<div class="mfp-hide popup-block zoom-anim-dialog" id="getPrice">
+			<div class="background"></div>
+			<div class="container relative">
+				<div class="close-popup popup-modal-dismiss"><i class="icon-close"></i></div>
+				<h2>
+					<div class="revealOut"><span class="revealIn" data-aos="">Узнать стоимость</span></div>
+				</h2>
+				<div class="row" data-aos="">
+					<div class="col col__md-6 col__xs-12">
+						<div class="form__group">
+							<div class="relative">
+								<div class="input">
+									<input class="input__field" type="text" id="formNameP" name="formNameP" />
+									<label class="input__label" for="formNameP"><span class="input__label-content input__label-content">Имя</span></label>
+								</div>
+								<div class="input-error">Пожалуйста, заполните поле</div>
+							</div>
+						</div>
+						<div class="form__group">
+							<select class="select" style="width:100%">
+								<option value="" disabled selected>Отрасль*</option>
+								<option>Горная отрасль</option>
+								<option>Металлургия</option>
+								<option>Рециклинг</option>
+								<option>Пищевая отрасль</option>
+								<option>Машиностроение</option>
+								<option>Стекольная отрасль</option>
+								<option>Химическая отрасль</option>
+								<option>Строительная отрасль</option>
+								<option>Нефтегазовая отрасль</option>
+								<option>Огнеупорная отрасль</option>
+							</select>
+						</div>
+						<div class="form__group">
+							<div class="input textarea">
+								<textarea class="input__field" name="text" id="text"></textarea>
+								<label class="input__label" for="text"><span class="input__label-content input__label-content">Опишите задачу</span></label>
+							</div>
+						</div>
+					</div>
+					<div class="col col__md-6 col__xs-12">
+						<div class="form__group">
+							<div class="relative">
+								<div class="input">
+									<input class="input__field" type="text" id="formCompanyP" name="formCompanyP" />
+									<label class="input__label" for="formCompanyP"><span class="input__label-content input__label-content">Название компании</span></label>
+								</div>
+								<div class="input-error">Пожалуйста, заполните поле</div>
+							</div>
+						</div>
+						<div class="form__group">
+							<div class="relative">
+								<div class="input">
+									<input class="input__field required" type="text" id="formPhoneP" name="phone" required="required" />
+									<label class="input__label" for="formPhoneP"><span class="input__label-content input__label-content">Телефон*</span></label>
+								</div>
+								<div class="input-error">Пожалуйста, заполните поле</div>
+							</div>
+						</div>
+						<div class="form__group">
+							<div class="relative">
+								<div class="input">
+									<input class="input__field required" type="email" id="formEmailP" name="formEmailP" required="required" />
+									<label class="input__label" for="formEmailP"><span class="input__label-content input__label-content">E-mail*</span></label>
+								</div>
+								<div class="input-error">Пожалуйста, заполните поле</div>
+							</div>
+						</div>
+						<div class="form__group"><a class="btn btn--full btn--primary send--js btn-arrow" href="#"><i class="icons-left icon-arrow-med-right"></i><span>Отправить</span><i class="icons-right icon-arrow-mini-right"></i></a></div>
+						<div class="checkbox form__group">
+							<input type="checkbox" id="formIDPrice">
+							<label class="label" for="formIDPrice"><span>Вы даете согласие на обработку Ваших персональных данных <br> в соответствии с <a href="#">регламентирующими документами сайта</a></span></label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="mfp-hide popup-block zoom-anim-dialog" id="getACall">
 			<div class="background"></div>
 			<div class="container relative">
@@ -1290,7 +1367,7 @@
 								<div class="text--center"><img src="assets/images/card/card.jpg" alt="" />
 								</div>
 							</div>
-							<div class="sidebar__inner-bottom hidden__sm hidden__xs"><a class="btn btn--primary btn-arrow btn--full popup-modal popup-with-zoom-anim" href="#sample"><i class="icons-left icon-arrow-med-right"></i><span>Пробная сепарация</span><i class="icons-right icon-arrow-mini-right"></i></a></div>
+							<div class="sidebar__inner-bottom hidden__sm hidden__xs"><a class="btn btn--primary btn-arrow btn--full popup-modal popup-with-zoom-anim" href="#getPrice"><i class="icons-left icon-arrow-med-right"></i><span>Пробная сепарация</span><i class="icons-right icon-arrow-mini-right"></i></a></div>
 						</div>
 					</div>
 					<div class="card-top__right" data-aos="fade-up">
@@ -1389,7 +1466,7 @@
 										<li><a class="tab" data-target="#tech"><span>Технические характеристики</span></a></li>
 										<li><a class="tab" data-target="#zip"><span>ЗИП</span></a></li>
 										<li><a class="tab" data-target="#list"><span>Опросный лист</span></a></li>
-										<li><a class="popup-modal popup-with-zoom-anim" data-target="#getACall"><span>Заказать звонок</span></a></li>
+										<li><a class="popup-modal popup-with-zoom-anim" href="#getACall"><span>Заказать звонок</span></a></li>
 									</ul>
 								</div>
 							</div>
@@ -2259,8 +2336,8 @@
 						</div>
 						<div class="hidden__sm hidden__xs">
 							<ul class="social">
-								<li><a href="#"><i class="icon-fa"></i><span>Facebook</span></a></li>
-								<li><a href="#"><i class="icon-youtube"></i><span>Youtube</span></a></li>
+								<li><a href="https://www.facebook.com/npo.erga/" target="_blank"><i class="icon-fa"></i><span>Facebook</span></a></li>
+								<li><a href="https://www.youtube.com/channel/UCZyCsEiMBSvy6cE8s3fFR2A" target="_blank"><i class="icon-youtube"></i><span>Youtube</span></a></li>
 							</ul>
 							<div><a class="page-footer-copy" href="#">Пользовательское соглашение</a></div>
 						</div>

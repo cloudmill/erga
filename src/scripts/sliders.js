@@ -30,12 +30,15 @@ export const swiper = new Swiper('.swiper-container', {
       $('.swiper-title').removeClass('active');
       $('.swiper-title').addClass('remove');
       const getTitle = $('.swiper-slide[data-slide='+this.activeIndex+']').data('title');
+      const getHref = $('.swiper-slide[data-slide='+this.activeIndex+']').data('href');
       const setTitle = '<div class="revealOut"><span class="revealIn">'+getTitle[0]+'</span></div>';
       const setTitle2 = getTitle[1] ? '<div class="revealOut"><span class="revealIn">'+getTitle[1]+'</span></div>' : '';
+
       setTimeout(() => {
         $('.swiper-title').removeClass('remove');
         $('.swiper-title h2').html(setTitle + setTitle2);
         $('.swiper-title').addClass('active');
+        $('.sliderLink').find('a').attr('href', getHref);
       }, 500);
     },
   },

@@ -175,6 +175,9 @@ $(".tabs-list").on("click", ".tab", function(e) {
   if(tabs) {
     tabs.updateSticky();
   }
+  $('html, body').animate({
+    scrollTop: $(href).offset().top - 100
+  }, 500);
 
   AOS.init({offset: -80});
   $('.swiper-carousel').length && carousel.update();

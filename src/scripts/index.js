@@ -105,7 +105,7 @@ $(document).on('click', '.reset--js', function(){
     $(this).find('span').text(data);
     $(this).find('b').text('');
   })
-  $('.filter--js .filter__item:nth-child(2)').addClass('disabled');
+  $('.filter--js .filter__item[data-type="material"]').addClass('disabled');
 });
 //filter
 

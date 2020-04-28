@@ -263,7 +263,7 @@ function validateFields(element, func, isFinish) {
     form.length && form.children("div").steps(func, {})
     formValid.length && formValid.children("div").steps(func, {})
     if(isFinish) {
-      $('.finishContent').addClass('active');
+      $('.finishContent').addClass('active').parents('form').submit();
     }
     if(form.length) {
       $('html, body').animate({

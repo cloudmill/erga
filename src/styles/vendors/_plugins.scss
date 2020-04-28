@@ -130,9 +130,10 @@ $items: ok;
 #sample {
   .textarea,
   .textarea textarea {
-    height: 170px;
+    height: 140px;
   }
 }
+#call1,
 #call2 {
   .textarea,
   .textarea textarea {
@@ -245,7 +246,7 @@ $items: ok;
 .close-popup {
   cursor: pointer;
   position: absolute;
-  top: -10px;
+  top: -43px;
   right: 20px;
   height: 45px;
   width: 45px;

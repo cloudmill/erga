@@ -381,7 +381,27 @@
     }
   }
 }
-
+@media screen and (max-width: $screen-sm-max) {
+  .page-index {
+    padding-top: 70px;
+  }
+  .page-fxindex {
+    padding-top: 100px;
+  }
+  .fixed-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    background-color: white;
+    transition: padding .5s, top .5s, background-color .5s 0s;
+  }
+  .page-header__menu:not(.hideme) {
+    top: 21px;
+    position: fixed;
+  }
+}
 
 @media screen and (min-width: $screen-md-min) {
   .fixed-header {

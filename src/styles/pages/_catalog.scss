@@ -345,6 +345,10 @@
       }
       ul {
         margin-bottom: 0;
+        display: none;
+        @media screen and (min-width: $screen-md) {
+          display: inline-block;
+        }
       }
       p {
         font-size: 18px;

@@ -57,17 +57,16 @@
     }
   }
   &-shares {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 50px;
+    display: flex;
     @media screen and (min-width: $screen-md) {
+      display: block;
       right: 45px;
       top: 95px;
+      position: absolute;
     }
     > * {
-      height: 48px;
-      width: 48px;
+      height: 33px;
+      width: 33px;
       border-radius: 50px;
       border: 1px solid #DADADA;
       display: flex;
@@ -77,6 +76,10 @@
       overflow: hidden;
       position: relative;
       background-color: white;
+      @media screen and (min-width: $screen-md) {
+        height: 48px;
+        width: 48px;
+      }
       > * {
         position: relative;
         z-index: 9;
@@ -97,12 +100,17 @@
     }
   }
   &-share-icon {
-    margin-top: 10px;
+    margin-right: 10px;
     color: #0000FF;
-    font-size: 19px;
-    opacity: 0;
-    visibility: hidden;
+    font-size: 14px;
     transition: opacity .5s, border-color .5s;
+    @media screen and (min-width: $screen-md) {
+      opacity: 0;
+      visibility: hidden;
+      margin-top: 10px;
+      margin-right: 0;
+      font-size: 19px;
+    }
     &:active {
       color: white;
       border-color: #0000FF;
@@ -111,7 +119,10 @@
       }
     }
     .icon-vkontakte {
-      font-size: 14px;
+      font-size: 11px;
+      @media screen and (min-width: $screen-md) {
+        font-size: 14px;
+      }
     }
     &.active {
       opacity: 1;

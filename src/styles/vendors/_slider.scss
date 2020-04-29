@@ -112,7 +112,7 @@
         transition: left 0.05s;
         left: -45%;
       }
-      &:first-child {
+      &-one {
         &.swiper-slide-next,
         .swiper-slide-next + .swiper-slide {
           left: -45%;
@@ -122,7 +122,7 @@
           left: 48%;
         }
       }
-      &:nth-child(2) {
+      &-two {
         &.swiper-slide-next,
         .swiper-slide-next + .swiper-slide {
           left: -54%;
@@ -132,7 +132,7 @@
           left: 46%;
         }
       }
-      &:nth-child(3) {
+      &-three {
         &.swiper-slide-next,
         .swiper-slide-next + .swiper-slide {
           left: -53%;
@@ -142,7 +142,7 @@
           left: 48%;
         }
       }
-      &:nth-child(4) {
+      &-four {
         &.swiper-slide-next,
         .swiper-slide-next + .swiper-slide {
           left: -51%;
@@ -152,7 +152,7 @@
           left: 47%;
         }
       }
-      &:nth-child(5) {
+      &-five {
         &.swiper-slide-next,
         .swiper-slide-next + .swiper-slide {
           left: -51%;
@@ -162,7 +162,7 @@
           left: 49%;
         }
       }
-      &:nth-child(6) {
+      &-six {
         &.swiper-slide-next,
         .swiper-slide-next + .swiper-slide {
           left: -53%;
@@ -172,7 +172,7 @@
           left: 46%;
         }
       }
-      &:nth-child(7) {
+      &-seven {
         &.swiper-slide-next,
         .swiper-slide-next + .swiper-slide {
           left: -53%;
@@ -189,7 +189,7 @@
       text-align: left;
     }
     img {
-      transition: max-width 1.3s 0.2s, margin 0.6s;
+      transition: max-width 1.3s 0.2s ease-out, margin 0.6s ease-out;
       margin: auto;
       @media screen and (max-width: $screen-sm-max) {
         text-align: center;

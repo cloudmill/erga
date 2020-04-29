@@ -6,7 +6,7 @@ export const swiper = new Swiper('.swiper-container', {
   centeredSlides: true,
   // mousewheel: true,
   // autoplay: true,
-  // loop: true,
+  loop: true,
   slidesPerView: 'auto',
   spaceBetween: 0,
   speed: 1500,
@@ -29,8 +29,8 @@ export const swiper = new Swiper('.swiper-container', {
     slideChangeTransitionStart: function () {
       $('.swiper-title').removeClass('active');
       $('.swiper-title').addClass('remove');
-      const getTitle = $('.swiper-slide[data-slide='+this.activeIndex+']').data('title');
-      const getHref = $('.swiper-slide[data-slide='+this.activeIndex+']').data('href');
+      const getTitle = $('.swiper-container .swiper-slide-active').data('title');
+      const getHref = $('.swiper-container .swiper-slide-active').data('href');
       const setTitle = '<div class="revealOut"><span class="revealIn">'+getTitle[0]+'</span></div>';
       const setTitle2 = getTitle[1] ? '<div class="revealOut"><span class="revealIn">'+getTitle[1]+'</span></div>' : '';
 

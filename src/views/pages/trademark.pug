@@ -1,0 +1,120 @@
+extends ../layouts/master.pug
+
+block pageName
+  - var pageName = "fxindex"
+
+block header
+  include ../partials/_headerFX.pug
+
+block content
+  .container
+    h1
+      +reveal(['Наш подход к работе'])
+    +breadcrumbs(['О компании', 'Наш подход к работе'])
+    .trademark
+      h4.additLine
+        +reveal(['На счету компании «ЭРГА» 7 торговых марок,', 'зарегистрированных для основных направлений', 'деятельности компании:'])
+      .trademark-slider(data-aos='fade-up')
+        .gallery-top
+          .swiper-wrapper
+            - for (let x = 1; x < 8; x++)
+              .swiper-slide
+                .row
+                  .col.col__md-4.col__xs-6
+                    +img('about/logo-1.svg')
+                  .col.col__md-8.col__xs-12
+                    h5 Производство магнитных сепараторов и специальных систем ЭРГА
+                    p.text__sm Производство магнитных сепараторов и специальных систем ЭРГА: НПО «ЭРГА» выпускает более 60 видов магнитных сепараторов и железоотделителей, постоянных магнитов и магнитных систем специального назначения. На протяжении последних 20 лет магнитные сепараторы и железоотделители ЭРГА постоянно совершенствуются и модернизируются, позволяя обеспечить высокие рабочие характеристики, эксплутационную надёжность и безопасность наряду с увеличением экономической эффективности от их использования.
+          .swiper-pagination
+          .swiper-button
+            .swiper-btn-next
+              svg(width='76' height='11' viewbox='0 0 56 11' fill='none' xmlns='http://www.w3.org/2000/svg')
+                line(x1='-10' y1='5.25' x2='58' y2='5.24999' stroke='#0000BD' stroke-width='1.5')
+                path(d='M58.375 2.0024L64 5.25L58.375 8.49759L58.375 2.0024Z' stroke='#0000BD' stroke-width='1.5')
+            .swiper-btn-prev
+              svg(width='76' height='11' viewbox='0 0 56 11' fill='none' xmlns='http://www.w3.org/2000/svg')
+                line(x1='-10' y1='5.25' x2='58' y2='5.24999' stroke='#0000BD' stroke-width='1.5')
+                path(d='M58.375 2.0024L64 5.25L58.375 8.49759L58.375 2.0024Z' stroke='#0000BD' stroke-width='1.5')
+        .gallery-thumbs
+          .gallery-thumbs__item.active(data-slide='0') ЭРГА
+          .gallery-thumbs__item(data-slide='1') RESOLINE
+          .gallery-thumbs__item(data-slide='2') ERGUARD
+          .gallery-thumbs__item(data-slide='3') ЭЛКРОН
+          .gallery-thumbs__item(data-slide='4') АРМАГ
+          .gallery-thumbs__item(data-slide='5') ВЭЛМА
+          .gallery-thumbs__item(data-slide='6') WECONT
+      .trademark-svg
+        .row
+          .col.col__lg-5.col__md-4.col__xs-12
+            .aboutZoom.aboutZoom1(data-aos="fade-up")
+              svg(width='517' height='517' viewbox='0 0 517 517' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink')
+                defs
+                  radialgradient#maskGradient
+                    stop(offset='50%' stop-color='#fff')
+                    stop(offset='100%' stop-color='#000')
+                  mask#theMask
+                    circle.masker(r='150' fill='url(#maskGradient)' cx='800' cy='450')
+                image#lines(xlink:href='assets/images/about/planet_gray-min.png' x='0' y='0' width='517' height='517')
+                g#maskReveal(mask='url(#theMask)')
+                  image#regular(xlink:href='assets/images/about/planet_red-min.png' x='0' y='0' width='517' height='517')
+                circle.ring(cy="935", cx="577")
+          .col.col__lg-6.col__md-8.col__xs-12.trademark-svg-content
+            h4
+              +reveal(['В сжатые сроки разрабатываем эффективные', 'решения сложных инжиниринговых задач,', 'зачастую не имеющих аналогов как в России,', 'так и за её пределами.'])
+            ul.list--dots(data-aos="fade-up")
+              li Собственный научно-технический потенциал предприятия
+              li Проверенные годами партнёрские отношения с ведущими НИИ, проектными организациями и машиностроительными предприятиями
+      .trademark-tabs
+        h3
+          +reveal(['оборудование торговых марок'])
+        .tabs(data-aos="fade-up")
+          .tabs-list
+            a.tab.active(data-target='#erga')
+              span ЭРГА
+                small 38
+            a.tab(data-target='#resoline')
+              span RESOLINE
+                small 18
+            a.tab(data-target='#erguard')
+              span ERGUARD
+                small 54
+            a.tab(data-target='#elkron')
+              span ЭЛКРОН
+                small 9
+            a.tab(data-target='#armag')
+              span АРМАГ
+                small 31
+            a.tab(data-target='#velma')
+              span ВЭЛМА
+                small 29
+            a.tab(data-target='#wecont')
+              span WECONT
+                small 15
+          #erga.tabs-content.show(data-aos="fade-up")
+            include ../components/_trademark-carousel
+          #resoline.tabs-content(data-aos="fade-up")
+            include ../components/_trademark-carousel1
+          #erguard.tabs-content(data-aos="fade-up")
+            include ../components/_trademark-carousel7
+          #elkron.tabs-content(data-aos="fade-up")
+            include ../components/_trademark-carousel3
+          #armag.tabs-content(data-aos="fade-up")
+            include ../components/_trademark-carousel4
+          #velma.tabs-content(data-aos="fade-up")
+            include ../components/_trademark-carousel5
+          #wecont.tabs-content(data-aos="fade-up")
+            include ../components/_trademark-carousel6
+  a.trademark-next(data-aos="fade-up", href='#')
+    .container
+      .row.between__xs.middle__xs
+        .col(data-aos="fade-up")
+          p Смотрите далее
+          h2
+            +reveal(['каталог', 'оборудования'])
+        .col(data-aos="fade-up")
+          .img: +img('icons/arrow.svg')
+    div(data-aos='fade-up')
+      .marquee.marquees Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА —
+
+block footer
+  include ../partials/_footer.pug

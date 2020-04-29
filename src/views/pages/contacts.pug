@@ -1,0 +1,122 @@
+extends ../layouts/master.pug
+
+block pageName
+  - var pageName = "fxindex"
+
+block header
+  include ../partials/_headerFX.pug
+
+block content
+  .container
+    h1
+      +reveal(['Контакты'])
+    +breadcrumbs(['Контакты'])
+    .contacts
+      .contacts-desc
+        .row.between__xs
+          .col.col__xs-12
+            .contacts-title(data-aos="fade-up")
+              h4 Центральный офис
+          .col.col__lg-5.col__md-4.col__xs-12
+            .contacts-info(data-aos="fade-up")
+              p Россия, г. Калуга, ул. Хрустальная, 22 (а/я 65)
+              br
+              p.text__sm 8:30 — 17:30 по МСК
+                br
+                | Суббота, воскресенье — выходной
+              .hidden__sm.hidden__xs
+                a.btn.btn--info(href='#')
+                  i.icon-location
+                  span Посмотреть на карте
+          .col.col__lg-3.col__md-4.col__xs-12
+            .contacts-info(data-aos="fade-up")
+              .row
+                .col.col__md-12.col__xs-6
+                  p: a.text--primary(href='tel:84842922199'): b 8 4842 922-199
+                  p.text__sm Многоканальный
+                  br
+                .col.col__md-12.col__xs-6
+                  p: a.text--primary(href='tel:84842794280'): b 8 4842 79-42-80
+                  p.text__sm Факс
+          .col.col__lg-3.col__md-4.col__xs-12
+            .contacts-info.contacts-info--last(data-aos="fade-up")
+              p
+                a.text--primary(href='mailto:info@erga.ru'): b info@erga.ru
+              .margtop-auto
+                div
+                  a.arrowLine.popup-modal.popup-with-zoom-anim(href='#mailTo')
+                    .the-arrow.the-arrow-left: i.shaft.icon-arrow-med-right
+                    span.arrowLine-main Связаться с директором
+                    .the-arrow.the-arrow-right: i.shaft.icon-arrow-mini-right
+                div
+                  include ../components/_social
+              .visible__sm.visible__xs
+                br
+                a.btn.btn--info(href='#')
+                  i.icon-location
+                  span Посмотреть на карте
+      .contacts-list
+        .row
+          .col.col__lg-4.col__md-4.col__xs-12(data-aos="fade-up")
+            .contacts-list__item
+              .contacts-title
+                h4 ЭРГА-Сибирь
+              p г. Новосибирск, #[br] ул. Немировича-Данченко, 104, #[br] оф. 708, 709
+              br
+              .margtop-auto
+                p: a.text--primary(href='tel:83833638789'): b 8 383 36-38-789
+                p: a.text--primary(href='tel:89105223016'): b +7 910-522-30-16
+                br
+                p: a.text--primary(href='mailto:sibir@erga.ru'): b sibir@erga.ru
+                br
+                a.btn.btn--info(href='#')
+                  i.icon-location
+                  span Посмотреть на карте
+          .col.col__lg-4.col__md-4.col__xs-12(data-aos="fade-up")
+            .contacts-list__item
+              .contacts-title
+                h4 ЭРГА-Урал
+              p г. Оренбург, ул. Невельская, 9
+              br
+              .margtop-auto
+                p: a.text--primary(href='tel:83532260775'): b 8 3532 26-07-75
+                p: a.text--primary(href='tel:83532572130'): b 8 3532 57-21-30
+                br
+                p: a.text--primary(href='mailto:ural@erga.ru'): b ural@erga.ru
+                br
+                a.btn.btn--info(href='#')
+                  i.icon-location
+                  span Посмотреть на карте
+          .col.col__lg-4.col__md-4.col__xs-12(data-aos="fade-up")
+            .contacts-list__item
+              .contacts-title
+                h4 ЭРГА-Казахстан
+              p Казахстан, г. Караганда, #[br] пр. Н. Абдирова, 30 Б
+              br
+              .margtop-auto
+                p: a.text--primary(href='tel:87212513096'): b 8 7212 51-30-96
+                p: a.text--primary(href='tel:87212512426'): b 8 7212 51-24-26
+                br
+                p: a.text--primary(href='mailto:erga-kazakhstan@inbox.ru'): b erga-kazakhstan@inbox.ru
+                br
+                a.btn.btn--info(href='#')
+                  i.icon-location
+                  span Посмотреть на карте
+  #googleMap.googleMap(data-aos="fade-up")
+  .contact.marquee.marquees эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —  эрга на карте —
+  .container(data-aos="fade-up")
+    form.contacts-form(action='')
+      h3 Остались вопросы?
+      include ../components/_form1
+    form.contacts-form.return-form(action='')
+      h3 Задать вопрос или оставить пожелание?
+      .return-inner.form__group
+        h5 Мы приняли ваш запрос #[br] и обработаем его как только сможем.
+      .form__group
+        a.btn.btn--full.btn--info.return--js.btn-arrow(href='#')
+          i.icons-left.icon-arrow-med-right
+          span Отправить еще
+          i.icons-right.icon-arrow-mini-right
+
+block footer
+  include ../partials/_footer.pug

@@ -1,0 +1,92 @@
+.container
+  +breadcrumbs(['Продукция', 'Сепараторы', 'Новый высокоиндуктивный мокрый сепаратор ПВМ на постоянных магнитах'])
+.card-top
+  .card-top__left
+    .sidebar__inner
+      .sidebar__inner-top
+        .card-logo
+          +img('card/elkron.svg ')
+        .card-tags
+          div #новинка
+          div #рекомендуем
+        .hidden__sm.hidden__xs
+          .card-shares
+            a.card-share.share--js(href='#')
+              i.icon-share
+            a.card-share-icon(href='#')
+              i.icon-facebook
+            a.card-share-icon(href='#')
+              i.icon-telegram
+            a.card-share-icon(href='#')
+              i.icon-vkontakte
+            a.card-share-icon(href='#')
+              i.icon-twitter
+            a.card-share-icon(href='#')
+              i.icon-wu
+            a.card-share-icon(href='#')
+              i.icon-viber
+        .text--center
+          +img('card/card.jpg')
+      .sidebar__inner-bottom.hidden__sm.hidden__xs
+        a.btn.btn--primary.btn-arrow.btn--full.popup-modal.popup-with-zoom-anim(href='#getPrice')
+          i.icons-left.icon-arrow-med-right
+          span Пробная сепарация
+          i.icons-right.icon-arrow-mini-right
+  .card-top__right(data-aos="fade-up")
+    h1
+      +reveal(['Автоматические системы', 'для динамического взвешивания', 'продуктов (Чеквейеры) WECONT®'])
+    .col__xl-9.col__lg-11
+      p Динамические весы (чеквейер) WECONT позволяют с высокой точностью определять отклонение продукции по весу (недовес/перевес), сочетая в себе функции контроля, классификации, сортировки и отбраковки продукции, вес которой не соответствует заданному значению.
+    hr
+    ul.list--unstyled
+      li
+        .image: +img('icons/ico-slide-1 1.svg')
+        span Гарантия соответствия по весу
+      li
+        .image: +img('icons/ico-slide-2 2.svg')
+        span Интуитивное управление Touch Screen
+      li
+        .image: +img('icons/ico-slide-3 3.svg')
+        span Интеграция с 1С
+      li
+        .image: +img('icons/ico-slide-4.svg')
+        span Автоматизация процессов
+      li
+        .image: +img('icons/ico-slide-5.svg')
+        span Сбор и анализ данных
+      li
+        .image: +img('icons/ico-slide-6.svg')
+        span Класс защиты IP65
+    .card-btns
+      .card-btn
+        a.btn.btn--default.btn--full.popup-modal.popup-with-zoom-anim(href='#call1')
+          span Скачать листовку
+          i.icon-download
+      .card-btn
+        a.btn.btn--default.btn--full.popup-modal.popup-with-zoom-anim(href='#call2')
+          span Скачать #[br] отраслевой каталог
+          i.icon-download
+      .card-btn.card-btn--full
+        a.btn.btn--default.btn--full.popup-modal.popup-with-zoom-anim(href='#patent')
+          span Посмотреть патент
+          i.icon-eye
+    .form__group.visible__sm.visible__xs
+      a.btn.btn--primary.btn-arrow.btn--full(href='#')
+        i.icons-left.icon-arrow-med-right
+        span Пробная сепарация
+        i.icons-right.icon-arrow-mini-right
+    .visible__xs.visible__sm
+      p Поделиться
+      .card-shares
+        a.card-share-icon(href='#')
+          i.icon-facebook
+        a.card-share-icon(href='#')
+          i.icon-telegram
+        a.card-share-icon(href='#')
+          i.icon-vkontakte
+        a.card-share-icon(href='#')
+          i.icon-twitter
+        a.card-share-icon(href='#')
+          i.icon-wu
+        a.card-share-icon(href='#')
+          i.icon-viber

@@ -1,0 +1,150 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form(action='#')
+  div
+    h3 1
+    section
+      h4 Характеристики продукта
+      .form__group
+        +fieldLabelInput('text', 'prod', 'prod', 'Название продукта', false)
+      h5 Для насыпных продуктов
+      label.form__group Фракционный состав, мм
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from', 'from', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to', 'to', 'до', false)
+      h5 Для штучных продуктов
+      label.form__group Размер изделия (с учетом упаковки), AxBxH, мм:
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from2', 'from2', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to2', 'to2', 'до', false)
+      label.form__group Вес изделия (с упаковкой), кг:
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from1', 'from1', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to1', 'to1', 'до', false)
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'temp1', 'temp1', 'Количество изделий на ширину ленты, шт.', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'pprod1', 'pprod1', 'Расстояние между изделиями (на ленте), мм', false)
+      label.form__group Упаковка
+      .form__group
+        +fieldCheckbox('Без упаковки', 'qwe7', false, 'checkbox--inline')
+        +fieldCheckbox('Не металлизированная, без металлических элементов', 'qwe709', false, 'checkbox--inline')
+      .form__group
+        +fieldLabelInput('text', 'other', 'other', 'Другое', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    section
+      h4 Характеристики металлических включений
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+        .col.col__md-6.col__xs-12.form__group
+          label Размер включений, мм
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fromz5', 'fromz5', 'Черные металлы', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fromz', 'fromz', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'toz', 'toz', 'до', false)
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+        .col.col__md-6.col__xs-12.form__group
+          label Размер включений, мм
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fromz8', 'fromz8', 'Цветные металлы', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fromz0', 'fromz0', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'toz0', 'toz0', 'до', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 3', 'btn--full')
+    h3 3
+    section
+      h4 Способ подачи продукта
+      h5 Подача материала
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldCheckbox('Непрерывная', 'attr01', false, 'checkbox--inline')
+          +fieldCheckbox('Порпционная', 'attr02', false, 'checkbox--inline')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'perc1', 'perc1', 'Производительность, т/ч (шт/мин)', false)
+      h5 Для ленточных конвейеров
+      .row
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInput('text', 'perc2', 'perc2', 'Ширина конвейерной ленты, мм', false)
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInput('text', 'perc3', 'perc3', 'Ширина слоя продукта на ленте, мм', false)
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInput('text', 'perc4', 'perc4', 'Глубина (высота) слоя продукта, мм', false)
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInput('text', 'perc5', 'perc5', 'Скорость движения ленты, м/cv', false)
+      h5 Форма ленты
+      .form__group
+        +fieldCheckbox('Прямая', 'attr04', false, 'checkbox--inline')
+        +fieldCheckbox('Желоб', 'attr05', false, 'checkbox--inline')
+      h5 Лента содержит металлические элементы (корд, клепки и т.д.)
+      .row.middle__xs
+        .col.col__md-4.col__xs-12.form__group
+          +fieldCheckbox('Нет', 'attr07', false, 'checkbox--inline')
+          +fieldCheckbox('Да', 'attr06', false, 'checkbox--inline')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'tyu', 'tyu', 'Уточните', false)
+      h5 Для самотеков/пневмотранспортов/трубопроводов
+      .row
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInput('text', 'perc2v', 'perc2v', 'Допустимые габариты детектора, мм', false)
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInput('text', 'perc3v', 'perc3v', 'Внутреннее сечение самотека, мм', false)
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInput('text', 'perc5v', 'perc5v', 'Угол наклона самотека, град.', false)
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInput('text', 'perc6v', 'perc6v', 'Скорость подачи материала, м/c', false)
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInput('text', 'pa', 'pa', 'Давление, Па', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 4', 'btn--full')
+    h3 4
+    section
+      h4 Характеристики места установки металлодетектора
+      h5 Температура окружающей среды, °С
+      .row
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'nam9', 'nam9', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'nam10', 'nam10', 'до', false)
+      h5 Влажность окружающей среды, %
+      .row
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'nam09', 'nam09', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'nam010', 'nam010', 'до', false)
+      h5 При наличии мощных источников ЭМП укажите расстояние от них до места установки детектора
+      .row
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'nam098', 'nam098', 'метры', false)
+      h4 Требования к металлодетектору
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'nm', 'nm', 'Реакция на включения черных металлов ≥, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'nm1', 'nm1', 'Реакция на включения цветных металлов ≥, мм', false)
+      h5 Тип реакции
+      .form__group
+        +fieldCheckbox('Звуковая/визуальная сигнализация', 'sq', false, 'checkbox--inline')
+        +fieldCheckbox('Остановка процесса', 'sq1', false, 'checkbox--inline')
+        +fieldCheckbox('Автом. отбраковка', 'sq2', false, 'checkbox--inline')
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'bn', 'bn', 'Класс защиты по IPM', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'bn1', 'bn1', 'Необходимый тип металлодтектора', false)
+        .col.col__xs-12.form__group
+          +fieldLabelInput('text', 'bn2', 'bn2', 'Количество, шт', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 5', 'btn--full')
+    h3 5
+    include ../components/_stepperLast

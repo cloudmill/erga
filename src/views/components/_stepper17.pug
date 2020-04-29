@@ -1,0 +1,32 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form-valid.stepper-two(action='#')
+  div
+    h3 1
+    section
+      h4 Наименование и описание показателей
+      h5 Транспортируемый груз
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-1', 'Тип груза', false)
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-2', 'Максимальный размер кусков, мм*', true, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-3', 'Производительность м³/час*', true, 'isNumber')
+      h5 Конвейерная лента
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-4', 'Ширина ленты, мм*', true, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-5', 'Ширина материала на ленте, мм*', true, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-6', 'Скорость движения ленты, м/c*', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-7', 'Толщина ленты*', true, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-8', 'Длина конвейера, м*', true, 'isNumber')
+      h5 Приводной барабан
+      .row.middle__xs
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-9', 'Диаметр (с футеровкой), мм*', true, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-10', 'Общая установленная мощность электропривода, кВт*', true, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-11', 'Количество консолей вала, шт*', true, 'isNumber')
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    include ../components/_stepperLast1

@@ -1,22 +1,22 @@
 /* src/app.js */
 
 // Styles
-import 'styles/_app.scss';
-import { fullpage_init } from  'scripts/fullpage';
-import { menu, swiper, carousel, carousel1, publications, galleryTop, galleryThumbs, tradeCarousel, tradeCarousel1, tradeCarousel2 } from  'scripts/sliders';
+import '../src/assets/styles/_app.scss';
+import { fullpage_init } from  '../src/assets/scripts/fullpage';
+import { menu, swiper, carousel, carousel1, publications, galleryTop, galleryThumbs, tradeCarousel, tradeCarousel1, tradeCarousel2 } from  '../src/assets/scripts/sliders';
 
-require('scripts/tween');
-require('scripts/input');
-require('scripts/maps');
+require('../src/assets/scripts/tween');
+require('../src/assets/scripts/input');
+require('../src/assets/scripts/maps');
 
 import AOS from "aos";
 import Rellax from "rellax";
 
 $(document).ready(() => {
   screen_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-  require('scripts/header');
-  require('scripts/index');
-  require('scripts/history');
+  require('../src/assets/scripts/header');
+  require('../src/assets/scripts/index');
+  require('../src/assets/scripts/history');
 
   menu;
   swiper;
@@ -58,8 +58,8 @@ $(window).on("load", function() {
 
     setTimeout(function() {
       $('.loader').addClass('hidden');
-      require('scripts/particle');
-      require('scripts/sticky');
+      require('../src/assets/scripts/particle');
+      require('../src/assets/scripts/sticky');
 
       AOS.init({offset: -80});
       if (screen_width > 767 && $('.rellax').length) {

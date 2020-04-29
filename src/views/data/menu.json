@@ -1,0 +1,22 @@
+[
+  {
+    "title": "О компании",
+    "href": "about.html",
+    "subitems": false
+  },
+  {
+    "title": "Услуги",
+    "href": "services.html",
+    "subitems": false
+  },
+  {
+    "title": "Новости",
+    "href": "news.html",
+    "subitems": false
+  },
+  {
+    "title": "Контакты",
+    "href": "contacts.html",
+    "subitems": false
+  }
+]

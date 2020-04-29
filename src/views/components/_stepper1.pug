@@ -1,0 +1,60 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form.stepper-fourth(action='#')
+  div
+    h3 1
+    section
+      h4 Материал сепарации
+      .form__group
+        +fieldLabelInput('text', 'prod', 'prod', 'Наименование', false)
+      label.form__group Фракционный состав, мм:
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from', 'from', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to', 'to', 'до', false)
+      label.form__group Температура, 0С:
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from1', 'from1', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to1', 'to1', 'до', false)
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'temp1', 'temp1', 'Объемный вес, т/м3', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'pprod1', 'pprod1', 'Влажность материала, %', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'pprod2', 'pprod2', 'Производительность, т/ч', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    section
+      h4 Место установки #[br] металлодетектора/окружающая среда/чистка
+      .form__group: +fieldLabelInput('text', 'desc', 'desc', 'Краткое описание места установки', false)
+      label.form__group Фракционный состав, мм:
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fromz', 'fromz', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'toz', 'toz', 'до', false)
+      .form__group: +fieldLabelInput('text', 'perc', 'perc', 'Допустимое содержание примесей после сепарации, %', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 3', 'btn--full')
+    h3 3
+    section
+      h4 Помещение для установки сепаратора
+      .form__group: +fieldLabelInput('text', 'perc1', 'perc1', 'Относительная влажность окружающей среды, %', false)
+      .form__group: +fieldLabelInput('text', 'perc2', 'perc2', 'Температурный режим эксплуатации, 0С', false)
+      .form__group
+        +fieldCheckbox('Запыленное', 'qwe', false, 'checkbox--inline')
+        +fieldCheckbox('Не запыленное', 'qwe3', false, 'checkbox--inline')
+      .form__group: +fieldLabelTextarea('txt0', 'txt0', 'Дополнительная информация', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 4', 'btn--full')
+    h3 4
+    include ../components/_stepperLast

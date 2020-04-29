@@ -1,0 +1,142 @@
+extends ../layouts/master.pug
+
+block pageName
+  - var pageName = "fxindex"
+
+block header
+  include ../partials/_headerFX.pug
+
+block content
+  .works
+    .container
+      h1
+        +reveal(['Ремонт оборудования'])
+      +breadcrumbs(['Сервис', 'Ремонт оборудования'])
+      .row.sticky-content
+        .col.col__lg-3.col__md-4.col__xs-12.sticky-left
+          .sticky-elem
+            ul.aside-menu(data-aos="fade-up")
+              li: a(href='#'): span Пусконаладочные работы
+              li: a(href='#'): span Шефмонтажные работы
+              li: a(href='#'): span Монтажные и строительные работы
+              li: a(href='#'): span Диагностика оборудования
+              li: a(href='#'): span Обслуживание
+            a.catalog-link.popup-modal.popup-with-zoom-anim(href='#getACall')
+              span заказать звонок
+              +img('icons/phone.svg')
+        .col.col__lg-9.col__md-8.col__xs-12
+          h3
+            +reveal(['НПО «ЭРГА» производит комплексный ремонт', 'и модернизацию, обслуживание и доработку', 'как отечественного, так и импортного оборудования:'])
+          .works-list
+            .works-list__item(data-aos="fade-up")
+              .works-list__item-num 01
+              .works-list__item-text Разработку мероприятий пусконаладочных работ, согласование даты, времени и сроков их проведения
+            .works-list__item(data-aos="fade-up")
+              .works-list__item-num 02
+              .works-list__item-text Ознакомление с проектной документацией по монтажу оборудования и оформление замечаний
+            .works-list__item(data-aos="fade-up")
+              .works-list__item-num 03
+              .works-list__item-text Осмотр места смонтированного оборудования и вспомогательных инженерных конструкций
+            .works-list__item(data-aos="fade-up")
+              .works-list__item-num 04
+              .works-list__item-text Наладочные работы отдельно стоящих блоков и панелей управления, с подключением промышленного электропитания, и линий связи
+            .works-list__item(data-aos="fade-up")
+              .works-list__item-num 05
+              .works-list__item-text Первый запуск оборудования с последующей настройкой на эталонные показатели, соответствующие требованиям Технического задания
+            .works-list__item(data-aos="fade-up")
+              .works-list__item-num 06
+              .works-list__item-text Тестовый прогон оборудования с проведением контрольных замеров при помощи специализированных измерительных приборов, испытательного оборудования и аппаратуры, с составлением акта технической готовности
+          .works-form
+            h3
+              +reveal(['Получить консультацию'])
+            .row
+              .col.col__lg-6.col__xs-12(data-aos="fade-up")
+                .form__group: +fieldLabelInput('text', 'name', 'name88', 'Имя', false)
+                .form__group: +fieldLabelInput('text', 'company', 'company88', 'Название компании', false)
+                .form__group: +fieldLabelInput('text', 'phone', 'phone88', 'Телефон*', true)
+                .form__group: +fieldLabelInput('email', 'email', 'email88', 'E-mail*', true)
+              .col.col__lg-6.col__xs-12(data-aos="fade-up")
+                .form__group
+                  select.select(style='width:100%')
+                    option(value='', disabled, selected) Отрасль*
+                    option Горная отрасль
+                    option Металлургия
+                    option Рециклинг
+                    option Пищевая отрасль
+                    option Машиностроение
+                    option Стекольная отрасль
+                    option Химическая отрасль
+                    option Строительная отрасль
+                    option Нефтегазовая отрасль
+                    option Огнеупорная отрасль
+                .form__group
+                  +fieldLabelTextarea('text', 'text88', 'Опишите задачу', false)
+            br
+            .checkbox.form__group(data-aos="fade-up")
+              input(type="checkbox", id='faqId88')
+              label.label(for='faqId55')
+                span Вы даете согласие на обработку Ваших персональных данных в соответствии с #[a(href='#') регламентирующими документами сайта]
+            br
+            .form__group(data-aos="fade-up")
+              a.btn.btn--full.btn--primary.send--js.btn-arrow(href='#')
+                i.icons-left.icon-arrow-med-right
+                span Отправить
+                i.icons-right.icon-arrow-mini-right
+          .works-accordion
+            h3
+              +reveal(['Сдача оборудования в эксплуатацию', 'представителям заказчика'])
+            .accordion(data-aos="fade-up")
+              .accordion-item(data-aos="fade-up")
+                .accordion-header
+                  .title Демонстрируется работа оборудования на разных режимах работы, в соответствие с Техническим заданием
+                  .plus
+                    i.icon-plus
+                .accordion-content
+                  .row
+                    .col.col__lg-6.col__xs-12: +img('works1.jpg')
+                    .col.col__lg-6.col__xs-12: +img('works2.jpg')
+              .accordion-item(data-aos="fade-up")
+                .accordion-header
+                  .title Обслуживающий персонал заказчика знакомят с основными блоками управления и возможностью их регулировки
+                  .plus
+                    i.icon-plus
+                .accordion-content
+                  .row
+                    .col.col__lg-6.col__xs-12: +img('works1.jpg')
+                    .col.col__lg-6.col__xs-12: +img('works2.jpg')
+              .accordion-item(data-aos="fade-up")
+                .accordion-header
+                  .title Составляется и подписывается АКТ выполненных работ, или АКТ приемки, или АКТ ввода в эксплуатацию
+                  .plus
+                    i.icon-plus
+                .accordion-content
+                  .row
+                    .col.col__lg-6.col__xs-12: +img('works1.jpg')
+                    .col.col__lg-6.col__xs-12: +img('works2.jpg')
+              .accordion-item(data-aos="fade-up")
+                .accordion-header
+                  .title Пусконаладочные работы считаются законченными только после обеспечения стабильного технологического процесса на всех режимах работы в соответствии с ТЗ
+                  .plus
+                    i.icon-plus
+                .accordion-content
+                  .row
+                    .col.col__lg-6.col__xs-12: +img('works1.jpg')
+                    .col.col__lg-6.col__xs-12: +img('works2.jpg')
+      .works-question
+        h2
+          +reveal(['Остались вопросы?'])
+        include ../components/_form
+    a.trademark-next(data-aos="fade-up", href='laboratory.html')
+      .container
+        .row.between__xs.middle__xs
+          .col(data-aos="fade-up")
+            p Смотрите далее
+            h2
+              +reveal(['Лаборатория'])
+          .col(data-aos="fade-up")
+            .img: +img('icons/arrow.svg')
+      .marquee.marquees Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА —
+
+
+block footer
+  include ../partials/_footer.pug

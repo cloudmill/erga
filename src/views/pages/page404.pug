@@ -1,0 +1,23 @@
+extends ../layouts/master.pug
+
+block pageName
+  - var pageName = "fxindex"
+
+block header
+  include ../partials/_headerFX.pug
+
+block content
+  .section__main
+    .container.page404-content
+      .page404
+        h3
+          +reveal(['никто так и не узнает,', 'куда пропала', 'эта страница...'])
+        .page404-text(data-aos="fade-up")
+          p.text__lg Но, вы можете войти #[br] в каталог или воспользоваться #[br] конфигуратором оборудования.
+          +arrowLine('Продукция')
+          br
+          +arrowLine('Подбор оборудования')
+      include ../components/_particles404
+
+block footer
+  include ../partials/_footer.pug

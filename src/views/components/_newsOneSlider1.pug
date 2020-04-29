@@ -1,0 +1,14 @@
+.newsOne-slider
+  .swiper-carousel1(data-aos='fade-up')
+    .swiper-wrapper
+      - for (let x = 1; x < 3; x++)
+        .swiper-slide.t--mask
+          .t__content
+            +img('news/slide-1.jpg')
+        .swiper-slide.t--mask
+          .t__content
+            +img('news/slide-2.jpg')
+  .swiper-pagination1--js.swiper-pagination(data-aos='fade-up')
+  .swiper-button(data-aos='fade-up')
+    .swiper-btnS1-next: i.icon-arrow-right
+    .swiper-btnS1-prev: i.icon-arrow-left

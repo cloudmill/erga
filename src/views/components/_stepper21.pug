@@ -1,0 +1,22 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form-valid.stepper-two(action='#')
+  div
+    h3 1
+    section
+      h4 Характеристики исходного материала
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-1', 'Материал*', true)
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-2', 'Насыпная плотность, т/м³*', true, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-3', 'Влажность мтериала, %*', true, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-4', 'Гранулометрический состав материала, %*', true, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-5', 'Производительность по исходному продукту, м³/час*', true, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-6', 'Разделение материала на фракции, мм*', true, 'isNumber')
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    include ../components/_stepperLast1

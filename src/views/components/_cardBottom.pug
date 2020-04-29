@@ -1,0 +1,23 @@
+.card-slider
+  .tabs
+    .tabs-list
+      a.tab.active(data-target='#photo') Фотографии
+      a.tab(data-target='#video') Видео
+    #photo.tabs-content.show(data-aos="fade-up")
+      include ../components/_newsOneSlider2
+    #video.tabs-content(data-aos="fade-up")
+      include ../components/_newsOneSlider1
+    div
+      .marquee.marquees Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА —
+.card-carousel.trademark-tabs(data-aos="fade-up")
+  h3 Похожее оборудование
+  include ../components/_trademark-carousel
+.card-carousel.trademark-tabs(data-aos="fade-up")
+  h3 Изготовим для Вас
+  include ../components/_trademark-carousel1
+.card-carousel.trademark-tabs(data-aos="fade-up")
+  h3 услуги
+  include ../components/_card-carousel
+form.contacts-form(data-aos="fade-up", action='')
+  h3 Остались вопросы?
+  include ../components/_form1

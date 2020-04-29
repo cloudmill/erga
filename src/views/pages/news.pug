@@ -1,0 +1,59 @@
+extends ../layouts/master.pug
+
+block pageName
+  - var pageName = "fxindex"
+
+block header
+  include ../partials/_headerFX.pug
+
+block content
+  .container
+    h1
+      +reveal(['Новости'])
+    +breadcrumbs(['Новости'])
+    .news
+      .row.between__xs
+        .col.col__md-6.col__xs-12(data-aos='fade-up')
+          .mainNews-index
+            .mainNews-index-date 13 января 2019
+            .mainNews-index-img
+              +img('index/mainImg.jpg')
+            .mainNews-index-title Новинка! Автономная магнитная траверса АРМАГ-30-ЛС.
+        .col.col__lg-5.col__md-6.col__xs-12(data-aos='fade-up')
+          .mainNews-list
+            a.mainNews-list__item(href='#')
+              .mainNews-index-date 13 января 2019
+              .mainNews-index-title «ЭРГА» на выставке «Уголь России и Майнинг – 2017»
+            a.mainNews-list__item(href='#')
+              .mainNews-index-date 13 января 2019
+              .mainNews-index-title Новинка! Автономная магнитная траверса АРМАГ-30-ЛС
+            a.mainNews-list__item(href='#')
+              .mainNews-index-date 13 января 2019
+              .mainNews-index-title Уважаемые партнеры! От всей души поздравляем #[br] вас с наступающим 2019 годом и Рождеством!
+      .row.between__xs.news-sub
+        .col.col__md-6.col__xs-12
+          .mainNews-list
+            - for (let x = 1; x < 5; x++)
+              a.mainNews-list__item(href='#', data-aos='fade-up')
+                .mainNews-index-date 13 января 2019
+                .mainNews-index-title Уважаемые партнеры! От всей души поздравляем #[br] вас с наступающим 2019 годом и Рождеством!
+        .col.col__lg-5.col__md-6.col__xs-12(data-aos='fade-up')
+          .mainNews-list
+            a.mainNews-list__item(href='#', data-aos='fade-up')
+              .mainNews-index-date 13 января 2019
+              .mainNews-index-title «ЭРГА» на выставке «Уголь России и Майнинг – 2017»
+            a.mainNews-list__item(href='#', data-aos='fade-up')
+              .mainNews-index-date 13 января 2019
+              .mainNews-index-title Новинка! Автономная магнитная траверса АРМАГ-30-ЛС
+            a.mainNews-list__item(href='#', data-aos='fade-up')
+              .mainNews-index-date 13 января 2019
+              .mainNews-index-title Уважаемые партнеры! От всей души поздравляем #[br] вас с наступающим 2019 годом и Рождеством!
+            a.mainNews-list__item(href='#', data-aos='fade-up')
+              .mainNews-index-date 13 января 2019
+              .mainNews-index-title «ЭРГА» на выставке «Уголь России и Майнинг – 2017»
+      .text--center.hidden__sm.hidden__xs(data-aos='fade-up'): include ../components/_paginator
+      .text--center.visible__sm.visible__xs(data-aos='fade-up'): a.showMoreLink(href='#') Показать еще
+    include ../components/_newsSign
+
+block footer
+  include ../partials/_footer.pug

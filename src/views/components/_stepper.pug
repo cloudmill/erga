@@ -1,0 +1,163 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form(action='#')
+  div
+    h3 1
+    section
+      h4 Описание продукта и способа его транспортировки
+      .form__group
+        +fieldLabelInput('text', 'prod', 'prod', 'Продукт', false)
+      h5 Свойства продукта
+      .form__group
+        +fieldCheckbox('Сухой', 'attr1', false, 'checkbox--inline')
+        +fieldCheckbox('Влажный', 'attr2', false, 'checkbox--inline')
+        +fieldCheckbox('Жидкий', 'attr3', false, 'checkbox--inline')
+        +fieldCheckbox('Липкий', 'attr4', false, 'checkbox--inline')
+        +fieldCheckbox('Частично замороженный', 'attr5', false, 'checkbox--inline')
+        +fieldCheckbox('Полностью замороженный', 'attr6', false, 'checkbox--inline')
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'temp', 'temp', 'Температура продукта, °С', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'pprod', 'pprod', 'Плотность продукта, кг/м3', false)
+      h5 Упаковка
+      .form__group
+        +fieldCheckbox('Без упаковки', 'pack1', false, 'checkbox--inline')
+        +fieldCheckbox('Металлизированная', 'pack2', false, 'checkbox--inline')
+        +fieldCheckbox('Не металлизированная', 'pack3', false, 'checkbox--inline')
+      h5 Способ подачи пр-та на конвейер детектора
+      .form__group
+        +fieldCheckbox('Вручную', 'man', false, 'checkbox--inline')
+      .form__group
+        +fieldLabelInput('text', 'mc', 'mc', 'С конвеера (укажите скорость движения ленты конвеера, м/с)', false)
+      .form__group
+        +fieldLabelInput('text', 'del', 'del', 'Другой способ подачи', false)
+      h5 Для продуктов, транспортируемых россыпью/внавалку
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'wid1', 'wid1', 'Ширина конвейерной ленты, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'wid2', 'wid2', 'Ширина слоя продукта, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'hei1', 'hei1', 'Высота слоя продукта, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'hei2', 'hei2', 'Производительность, кг/ч', false)
+      h5 Для продуктов, транспортируемых поштучно
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-6.form__group
+          label Размеры продукта, мм
+        .col.col__lg-3.col__md-6.col__xs-6.form__group
+          +fieldLabelInput('text', 'a', 'a', 'A', false)
+        .col.col__lg-3.col__md-6.col__xs-6.form__group
+          +fieldLabelInput('text', 'b', 'b', 'B', false)
+        .col.col__lg-3.col__md-6.col__xs-6.form__group
+          +fieldLabelInput('text', 'c', 'c', 'C', false)
+      label.form__group Вдоль направления движения ленты расположена сторона
+      +fieldRadio('A', 'radio1', 'radioabc', false, 'radio--inline')
+      +fieldRadio('B', 'radio2', 'radioabc', false, 'radio--inline')
+      +fieldRadio('C', 'radio3', 'radioabc', false, 'radio--inline')
+      label.form__group Вес продукта (брутто), кг
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-6.form__group
+          +fieldLabelInput('text', 'from', 'from', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-6.form__group
+          +fieldLabelInput('text', 'to', 'to', 'до', false)
+      label.form__group Высота продукта на ленте равна стороне
+      +fieldRadio('A', 'radio11', 'radioabc1', false, 'radio--inline')
+      +fieldRadio('B', 'radio21', 'radioabc1', false, 'radio--inline')
+      +fieldRadio('C', 'radio31', 'radioabc1', false, 'radio--inline')
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'wid11', 'wid11', 'Ширина конвейерной ленты, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'wid21', 'wid21', 'Расстояние между рядами упаковок (по длине ленты), мм:', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'hei11', 'hei11', 'Производительность, шт/мин', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'hei21', 'hei21', 'Кол-во упаковок в ряду (по ширине ленты), шт:', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    section
+      h4 Место установки #[br] металлодетектора/окружающая среда/чистка
+      .form__group: +fieldLabelInput('text', 'desc', 'desc', 'Краткое описание места установки', false)
+      .form__group
+        +fieldLabelInput('text', 'desc', 'desc', 'Краткое описание места установки#[small (цех/участок, какие технологические операции выполняются)]', false)
+      h5 Окружающая среда на месте установки
+      .form__group
+        +fieldCheckbox('Сухая', 'attr01', false, 'checkbox--inline')
+        +fieldCheckbox('Влажная', 'attr02', false, 'checkbox--inline')
+      .form__group: +fieldLabelInput('text', 'desc0', 'desc0', 'Другая (опишите)', false)
+      .form__group: +fieldLabelInput('text', 'temp0', 'temp0', 'Температура окружающей среды, °С', false)
+      .form__group: +fieldLabelInput('text', 'check0', 'check0', 'Требования к классу защиты металлодетектора', false)
+      .form__group
+        +fieldCheckbox('Сухая', 'attr001', false, 'checkbox--inline')
+        +fieldCheckbox('Влажная', 'attr002', false, 'checkbox--inline')
+        +fieldCheckbox('Мойка, низкое давление', 'attr003', false, 'checkbox--inline')
+        +fieldCheckbox('Мойка, высокое давление', 'attr004', false, 'checkbox--inline')
+      h5 Предполагаемый способ чистки металлодетектора
+      .form__group
+        +fieldCheckbox('С применением агрессивных растворов', 'clean1', false)
+        +fieldCheckbox('Без применения агрессивных растворов', 'clean2', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 3', 'btn--full')
+    h3 3
+    section
+      h4 Требования к металлодетектору
+      h5 Варианты исполнения
+      .form__group
+        +fieldCheckbox('Изготовить без конвеера', 'cont1', false, 'checkbox--inline')
+        +fieldCheckbox('Изготовить вместе с падающим ковеером', 'cont2', false, 'checkbox--inline')
+      h5 Материал конвейера
+      .form__group
+        +fieldCheckbox('Окрашенная сталь', 'mat01', false, 'checkbox--inline')
+        +fieldCheckbox('Нержавеющая сталь', 'mat02', false, 'checkbox--inline')
+      h5 Прочие параметры изготавливаемого конвейера
+      .form__group
+        +fieldLabelInput('text', 'width0', 'width0', 'Требуемая ширина ленты, мм#[small (ширина ленты всегда на 50 мм уже ширины апертуры металлодетектора)]', false)
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'leng1', 'leng1', 'Требуемая длина конвейера, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'leng2', 'leng2', 'Высота начальной секции конвейера (по уровню ленты), мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'leng3', 'leng3', 'Высота конечной секции конвейера (по уровню ленты), мм', false)
+      h5 Электропитание детектора
+      .form__group
+        +fieldCheckbox('Однофазное 220В ± 10%, частота 60 Гц', '220', false, 'checkbox--inline')
+        +fieldCheckbox('Трехфазное 380В ± 10%, частота 50 Гц', '380', false, 'checkbox--inline')
+      .form__group
+        +fieldLabelInput('text', 'width9', 'width9', 'Необх. длина сетевого кабеля, м', false)
+      h5 Необходимые системы сигнализации/отбраковки
+      .form__group
+        +fieldCheckbox('Остановка конвеера', 'sig1', false, 'checkbox--inline')
+        +fieldCheckbox('Световая сигнализация', 'sig2', false, 'checkbox--inline')
+        +fieldCheckbox('Звуковая сигнализация', 'sig3', false, 'checkbox--inline')
+        +fieldCheckbox('Система автоматической отбраковки', 'sig4', false, 'checkbox--inline')
+      .form__group: +fieldLabelInput('text', 'other', 'other', 'Другое', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 4', 'btn--full')
+    h3 4
+    section
+      h4 Размещение панели оператора
+      +img('card/stepper.svg')
+      p.text__sm.text--grey Варианты расположения панели оператора и направления отбраковки #[br] (относительно направления движения ленты)
+      h5 Размещение панели оператора
+      .form__group
+        +fieldCheckbox('1 – на корпусе блока металлодетектора, слева', 'cor1', false)
+        +fieldCheckbox('2 – на корпусе блока металлодетектора, справа', 'cor2', false)
+        +fieldCheckbox('3 – на выносном пульте управления (ПУ)', 'cor3', false)
+      .form__group: +fieldLabelInput('text', 'var', 'var', 'Для варианта 3 укажите предполагаемое расстояние #[br] от металлодетектора до выносного ПУ, м', false)
+      h5 Размещение панели оператора
+      .form__group
+        +fieldCheckbox('А - отбраковка на правую сторону конвеера', 'cor4', false)
+        +fieldCheckbox('В - отбраковка на левую сторону конвеера', 'cor5', false)
+      .form__group: +fieldLabelTextarea('txt0', 'txt0', 'Дополнительная информация', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 5', 'btn--full')
+    h3 5
+    include ../components/_stepperLast

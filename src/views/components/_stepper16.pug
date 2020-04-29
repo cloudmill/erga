@@ -1,0 +1,24 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form-valid.stepper-two(action='#')
+  div
+    h3 1
+    section
+      h4 Характеристики шаровой мельницы
+      .row.middle__xs
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-1', 'Наружный диаметр бутары со стороны присоединительного фланца*', true, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-2', 'Внутренний диаметр бутары со стороны присоединительного фланца*', true, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-3', 'Наружный диаметр присоединительного фланца бутары', false, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-4', 'Диаметр монтажных отверстий бутары*', true, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-5', 'Количество монтажных отверстий бутары*', true, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-6', 'Диаметр расположения монтажных отверстий*', true, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-7', 'Направление вращения мельницы*', true, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-8', 'Длина бутары*', true, 'isNumber')
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    include ../components/_stepperLast1

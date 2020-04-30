@@ -1,0 +1,101 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form-valid.stepper-three(action='#')
+  div
+    h3 1
+    section
+      h4 Материал сепарации
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-1', 'Название материала*', true)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-2', 'Объемный вес, т/м³*', true, 'isNumber')
+      label.form__group Фракционный состав, мм:
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-3', 'от*', true, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-4', 'до*', true, 'isNumber')
+      label.form__group Температура, 0С:
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('from1', 'от', false, 'isNumber')
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('to1', 'до', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('to2', 'Влажность материала, %*', true, 'isNumber')
+      h4 Металлические (ферромагнитные) включения
+      .form__group
+        +fieldLabelInputId('id-5', 'Тип/происхождение включений*', true)
+      label.form__group Фракционный состав, мм
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('from', 'от*', true, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('to', 'до*', true, 'isNumber')
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('from3', 'Фактическое содержание примесей, %*', true, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('to3', 'Допустимое содержание примесей, %*', true, 'isNumber')
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    section
+      h4 Технологический процесс
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-6', 'Производительность, т/ч*', true, 'isNumber')
+      h4 Для ленточных конвейеров
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-7', 'Ширина конвейерной ленты, ММ', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-8', 'Ширина слоя материала на ленте, мм', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-9', 'Глубина (высота) слоя материала, мм', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-10', 'Диаметр приводного барабана, мм', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-11', 'Толщина конвейерной ленты,  мм', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-12', 'Скорость движения ленты, м/с', false, 'isNumber')
+        .col.col__xs-12.form__group
+          +fieldLabelInputId('id-13', 'Для подвесных систем (см. рис. А), мм', false, 'isNumber')
+      h4 Для мест пересыпки / самотеков / трубопроводов
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-14', 'Допустимые габариты сепаратора, мм', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-15', 'Внутреннее сечение самотека, мм', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-16', 'Высота самотека, мм', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-17', 'Угол наклона самотека, градус', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-18', 'Степень заполнения сечения самотека, %', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-19', 'Скорость подачи материала, м/c', false, 'isNumber')
+        .col.col__xs-12.form__group
+          +fieldLabelInputId('id-20', 'Давление, Па', false, 'isNumber')
+      h4 Предпочтительный тип сепаратора-железоотделителя
+      label.form__group Система очистки
+      .form__group
+        +fieldCheckbox('Автоматическая', 'attr04', false, 'checkbox--inline')
+        +fieldCheckbox('Механическая / ручная', 'attr05', false, 'checkbox--inline')
+      .form__group
+        +fieldCheckbox('Подвесные', 'img1', false, 'checkbox--inline col__xl-2 col__lg-3', 'card/icon-7.svg')
+        +fieldCheckbox('Шкивные', 'img2', false, 'checkbox--inline col__xl-2 col__lg-3', 'card/icon-8.svg')
+        +fieldCheckbox('Барабанные', 'img3', false, 'checkbox--inline col__xl-2 col__lg-3', 'card/icon-9.svg')
+      .form__group
+        +fieldCheckbox('Барабанные', 'img4', false, 'checkbox--inline col__xl-2 col__lg-3', 'card/icon-10.svg')
+        +fieldCheckbox('Пластинчатые', 'img5', false, 'checkbox--inline col__xl-2 col__lg-3', 'card/icon-11.svg')
+        +fieldCheckbox('Стержевые', 'img6', false, 'checkbox--inline col__xl-2 col__lg-3', 'card/icon-12.svg')
+      br
+      .stepper-next: +btnArrowSub('Шаг 3', 'btn--full')
+    h3 3
+    include ../components/_stepperLast1

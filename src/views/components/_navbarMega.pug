@@ -1,0 +1,133 @@
+mixin subNav()
+  ul.dropdownDeeper
+    li.dropdownDeeper__item
+      a(href='#'): span Подвесные железоотделители
+    li.dropdownDeeper__item
+      a(href='#'): span Шкивные железоотделители
+    li.dropdownDeeper__item
+      a(href='#'): span Пластинчатые железоотделители
+    li.dropdownDeeper__item
+      a(href='#'): span Барабанные сепараторы
+    li.dropdownDeeper__item
+      a(href='#'): span Стержневые сепараторы
+    li.dropdownDeeper__item
+      a(href='#'): span Валковые сепараторы
+    li.dropdownDeeper__item
+      a(href='#'): span Вихретоковые сепараторы
+
+nav.navbar
+  .main-nav__collapse
+    ul.main-nav.main-nav-mega
+      li.main-nav__item.main-nav__item--parent
+        a.main-nav__link(href='#', title='Продукция') Продукция
+        .dropdown(style='background: url("assets/images/menu/back1.jpg") no-repeat right bottom 15px, #F6F6F6')
+          .container.relative
+            .liners
+              span.liner
+              span.liner
+              span.liner
+            ul.dropdown-menu
+              li.dropdown-menu__item.dropdown-menu__item--parent.dropdown-menu__item--js(data-img='back1.jpg')
+                a(href='#'): span Сепараторы
+                ul.dropdownDeep
+                  li.dropdownDeep__item.dropdownDeep__item--parent.dropdown-menu__item1--js
+                    a(href='#'): span Магнитные сепараторы и железотделители
+                    +subNav()
+                  li.dropdownDeep__item
+                    a(href='#'): span Электростатические сепараторы
+                  li.dropdownDeep__item
+                    a(href='#'): span Гравитационные сепараторы
+              li.dropdown-menu__item(data-img='back2.png')
+                a(href='#'): span Промышленные металлодетекторы ERGUARD
+              li.dropdown-menu__item(data-img='back3.png')
+                a(href='#'): span Комплексные решения Resoline
+              li.dropdown-menu__item(data-img='back4.png')
+                a(href='#'): span Магнитные системы и устройства
+              li.dropdown-menu__item(data-img='back5.png')
+                a(href='#'): span Высокоскоростные электрические машины ВЭЛМА
+              li.dropdown-menu__item(data-img='back6.png')
+                a(href='#'): span Магнитные траверсы и захваты АРМАГ
+              li.dropdown-menu__item(data-img='back7.png')
+                a(href='#'): span Оборудование для лабораторий
+              li.dropdown-menu__item(data-img='back8.png')
+                a(href='#'): span Постоянные магниты
+      li.main-nav__item.main-nav__item--parent
+        a.main-nav__link(href='#', title='Отрасли применения') Отрасли применения
+        .dropdown.dropdown-services
+          .container.relative
+            .liners
+              span.liner
+              span.liner
+              span.liner
+            .dropdownList
+              ul.dropdown-menu
+                li.dropdown-menu__item
+                  a(href='#'): span Горная отрасль
+                li.dropdown-menu__item
+                  a(href='#'): span Металлургия
+                li.dropdown-menu__item
+                  a(href='#'): span Рециклинг
+                li.dropdown-menu__item
+                  a(href='#'): span Пищевая отрасль
+            .dropdownList
+              ul.dropdown-menu
+                li.dropdown-menu__item
+                  a(href='#'): span Машиностроение
+                li.dropdown-menu__item
+                  a(href='#'): span Стекольная отрасль
+                li.dropdown-menu__item
+                  a(href='#'): span Химическая отрасль
+                li.dropdown-menu__item
+                  a(href='#'): span Строительная отрасль
+            .dropdownList
+              ul.dropdown-menu
+                li.dropdown-menu__item
+                  a(href='#'): span Нефтегазовая отрасль
+                li.dropdown-menu__item
+                  a(href='#'): span Огнеупорная отрасль
+      li.main-nav__item.main-nav__item--parent
+        a.main-nav__link(href='#', title='Сервис') Сервис
+        .dropdown.dropdown-services
+          .container.relative
+            .liners
+              span.liner
+              span.liner
+              span.liner
+            .dropdownList
+              .dropdown-menu-title: a(href='#') Сервисные услуги
+              ul.dropdown-menu
+                li.dropdown-menu__item
+                  a(href='#'): span Пусконаладочные работы
+                li.dropdown-menu__item
+                  a(href='#'): span Шефмонтажные работы
+                li.dropdown-menu__item
+                  a(href='#'): span Монтажные и строительные работы
+                li.dropdown-menu__item
+                  a(href='#'): span Диагностика оборудования
+                li.dropdown-menu__item
+                  a(href='#'): span Сервисный контракт
+              .dropdown-menu-title: a(href='#') Обучение обслуживающего персонала
+            .dropdownList
+              .dropdown-menu-title: a(href='#') Лаборатория исследования минерального и техногенного сырья
+              ul.dropdown-menu
+                li.dropdown-menu__item
+                  a(href='#'): span Обогащение руд
+                li.dropdown-menu__item
+                  a(href='#'): span Переработка шлаков
+                li.dropdown-menu__item
+                  a(href='#'): span Сепарация вторсырья
+                li.dropdown-menu__item
+                  a(href='#'): span Очистка пищевого сырья
+            .dropdownList
+              .dropdown-menu-title: a(href='#') Ремонт оборудования
+              ul.dropdown-menu
+                li.dropdown-menu__item
+                  a(href='#'): span Ремонт магнитных сепараторов
+                li.dropdown-menu__item
+                  a(href='#'): span Ремонт металлодетекторов
+                li.dropdown-menu__item
+                  a(href='#'): span Ремонт магнитного грузоподъемного оборудования
+                li.dropdown-menu__item
+                  a(href='#'): span Ремонт магнитных муфт
+      li.main-nav__item.hidden
+        a.main-nav__link(href='#', title='О компании') О компании

@@ -1,0 +1,199 @@
+extends ../layouts/master.pug
+
+block pageName
+  - var pageName = "index"
+  - var pageBody = "index"
+
+block header
+  include ../partials/_headerFX.pug
+
+block content
+  .fullpage
+    .section.section__main
+      .inner.rellax(data-rellax-speed="-2")
+        .content-inner
+          include ../components/_particles
+          .section__main-content.relative
+            .container
+              h1
+                +reveal(['Научно—', 'производственное', 'объединение'])
+              .section__main-img
+                div(data-aos='fade-up', data-aos-delay='500'): +img('erga.svg')
+                .text__lg.text--left
+                  +reveal(['Крупнейший российский', 'производитель магнитных систем', 'и промышленного оборудования'])
+              .scrolling
+                .scrolling-in
+                .scrolling-out: +img('scroller.svg')
+              .language
+                a.language-el.active(href='#') Ru
+                a.language-el(href='#') En
+    .section.section__slider
+      .content-inner.rellax(data-rellax-speed="-2")
+        .sliderList
+          .container
+            .row
+              .col.col__lg-4.col__md-6.col__xs-12
+                a.sliderList__item(href='#')
+                  .sliderList__item-num 01
+                  .img
+                  .sliderList__item-title Горная отрасль
+              .col.col__lg-4.col__md-6.col__xs-12
+                a.sliderList__item(href='#')
+                  .sliderList__item-num 02
+                  .img
+                  .sliderList__item-title Металлургия
+              .col.col__lg-4.col__md-6.col__xs-12
+                a.sliderList__item(href='#')
+                  .sliderList__item-num 03
+                  .img
+                  .sliderList__item-title Рециклинг
+              .col.col__lg-4.col__md-6.col__xs-12
+                a.sliderList__item(href='#')
+                  .sliderList__item-num 04
+                  .img
+                  .sliderList__item-title Пищевая отрасль
+              .col.col__lg-4.col__md-6.col__xs-12
+                a.sliderList__item(href='#')
+                  .sliderList__item-num 05
+                  .img
+                  .sliderList__item-title Машиностроение
+              .col.col__lg-4.col__md-6.col__xs-12
+                a.sliderList__item(href='#')
+                  .sliderList__item-num 06
+                  .img
+                  .sliderList__item-title Стекольная отрасль
+              .col.col__lg-4.col__md-6.col__xs-12
+                a.sliderList__item(href='#')
+                  .sliderList__item-num 07
+                  .img
+                  .sliderList__item-title Химическая отрасль
+              .col.col__lg-4.col__md-6.col__xs-12
+                a.sliderList__item(href='#')
+                  .sliderList__item-num 08
+                  .img
+                  .sliderList__item-title Строительная отрасль
+              .col.col__lg-4.col__md-6.col__xs-12
+                a.sliderList__item(href='#')
+                  .sliderList__item-num 09
+                  .img
+                  .sliderList__item-title Нефтегазовая отрасль
+              .col.col__lg-4.col__md-6.col__xs-12
+                a.sliderList__item(href='#')
+                  .sliderList__item-num 10
+                  .img
+                  .sliderList__item-title Огнеупорная отрасль
+        .section__slider-content
+          .relative
+            .swiper-button(data-aos='fade-up')
+              .swiper-btn-next: i.icon-arrow-right
+              .swiper-btn-prev: i.icon-arrow-left
+            .swiper-pagination(data-aos='fade-up')
+            .swiper-container
+              .swiper-wrapper
+                .swiper-slide(data-title=['Сепараторы'], data-slide='0')
+                  +img('index/slider-1.png')
+                .swiper-slide(data-title=['Промышленные', 'металлодетекторы Erguard'], data-slide='1')
+                  +img('index/slider-2.png')
+                .swiper-slide(data-title=['Комплексные', 'решения Resoline'], data-slide='2')
+                  +img('index/slider-4.png')
+                .swiper-slide(data-title=['Магнитные системы', 'и устройства'], data-slide='3')
+                  +img('index/slider-3.png')
+                .swiper-slide(data-title=['Высокоскоростные', 'электрические машины ВЭЛМА'], data-slide='4')
+                  +img('index/slider-5.png')
+                .swiper-slide(data-title=['Магнитные траверсы', 'и захваты Армаг'], data-slide='5')
+                  +img('index/slider-7.png')
+                .swiper-slide(data-title=['Оборудование', 'для лабораторий'], data-slide='6')
+                  +img('index/slider-6.png')
+          .container.slider--middle
+            .swiper-title.active
+              h2(data-aos='fade-up')
+                +revealIndep(['Сепараторы'])
+          .container.slider--bottom(data-aos='fade-up')
+            .sliderTab.sliderTab--js
+              .sliderTab-item.active
+                +reveal(['По оборудованию'])
+              .sliderTab-item
+                +reveal(['По отраслям'])
+            .sliderLink: +arrowLine('Перейти в категорию')
+    .section.section__scheme
+      .section__scheme-inner
+        .inner.rellax(data-rellax-speed="-2")
+          .schemeTitle
+            h3
+              .revealOut: span.revealIn.aos-act(data-aos='') Подберите
+              .revealOut: span.revealIn.aos-act(data-aos='') оборудование
+              .revealOut: span.revealIn.aos-act(data-aos='') по отрасли
+              .revealOut: span.revealIn.aos-act(data-aos='') применения
+            div.aos-act(data-aos='fade-up')
+              +btnArrow('Подобрать оборудование')
+          .schemeSvg.content-inner(data-aos='')
+            include ../components/_svg
+      .section__bottom
+        .section__bottom-inner
+          .container.relative.mainGlobus
+            h3.click
+              +reveal(['Научно-производственное', 'объединение «ЭРГА» ведёт', 'свою историю с 1991 года'])
+            .text--center.rellax
+              div(data-aos='fade-up'): +img('index/planet.svg')
+              .circleMap: +img('index/planetCircle.svg')
+            .row.between__xs
+              .col.col__lg-5.col__md-6.col__xs-12
+                .historyList
+                  .historyList__item(data-aos='fade-up')
+                    +img('index/item-1.svg')
+                    span Опыт производства более 29 лет
+                  .historyList__item(data-aos='fade-up')
+                    +img('index/item-5.svg')
+                    span Испытательная лаборатория ЛИМиТС
+                  .historyList__item(data-aos='fade-up')
+                    +img('index/item-2.svg')
+                    span Система качества ISO 9001:2015
+                  .historyList__item(data-aos='fade-up')
+                    +img('index/item-6.svg')
+                    span.nowrap Конструкторско-проектное #[br] решение задач
+                  .historyList__item(data-aos='fade-up')
+                    +img('index/item-3.svg')
+                    span Современное производство площадью >25000 м²
+                  .historyList__item(data-aos='fade-up')
+                    +img('index/item-7.svg')
+                    span Ремонт оборудования зарубежных производителей
+                  .historyList__item(data-aos='fade-up')
+                    +img('index/item-4.svg')
+                    span Полный цикл производства
+                  .historyList__item(data-aos='fade-up')
+                    +img('index/item-8.svg')
+                    span Профессиональная сервисная поддержка
+                .visible__xs.visible__sm
+                  +arrowLine('Подробнее о нас')
+              .col.col__lg-5.col__md-6.col__xs-12.flex-column.first__xs.last__md
+                p.text__lg(data-aos='fade-up') Тогда Котуновым В.В. было создано специализированное предприятие по производству постоянных редкоземельных магнитов и магнитных систем специального назначения.
+                p.text__lg(data-aos='fade-up') За прошедшие годы предприятие выросло в полноценный завод с собственными производственными площадями и современным оборудованием, мощной научно-исследовательской и проектно-конструкторской базой и эффективной системой управления.
+                .margtop-auto.hidden__sm.hidden__xs(data-aos='fade-up')
+                  +arrowLine('Подробнее о нас')
+          .mainNews
+            .container
+              .row.middle__xs.between__xs
+                .col.col__md-6.col__xs-12
+                  h3
+                    +reveal(['Новости'])
+                .col.col__lg-5.col__md-6.col__xs-12(data-aos='fade-up', data-aos-delay='300')
+                  +arrowLine('Все новости')
+              .row.between__xs
+                .col.col__md-6.col__xs-12(data-aos='fade-up', data-aos-delay='500')
+                  .mainNews-index
+                    .mainNews-index-date 13 января 2019
+                    .mainNews-index-img
+                      +img('index/mainImg.jpg')
+                    .mainNews-index-title Новинка! Автономная магнитная траверса АРМАГ-30-ЛС.
+                .col.col__lg-5.col__md-6.col__xs-12(data-aos='fade-up', data-aos-delay='800')
+                  .mainNews-list#waypoint
+                    a.mainNews-list__item(href='#')
+                      .mainNews-index-date 13 января 2019
+                      .mainNews-index-title «ЭРГА» на выставке «Уголь России и Майнинг – 2017»
+                    a.mainNews-list__item(href='#')
+                      .mainNews-index-date 13 января 2019
+                      .mainNews-index-title Новинка! Автономная магнитная траверса АРМАГ-30-ЛС
+                    a.mainNews-list__item(href='#')
+                      .mainNews-index-date 13 января 2019
+                      .mainNews-index-title Уважаемые партнеры! От всей души поздравляем #[br] вас с наступающим 2019 годом и Рождеством!
+          include ../partials/_footer.pug

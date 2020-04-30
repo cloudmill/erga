@@ -1,0 +1,13 @@
+.searchBar
+  .container.relative
+    .searchBar__close: i.icon-close
+    form.searchBar__input(method='POST', action='')
+      +fieldInput('text', 'search', 'searchID', '', 'Что вы хотите найти?', true)
+      button(type='submit')
+        +arrowLine('Поиск')
+    p.text__sm Популярные запросы:
+    ul.list--inline
+      li: a(href='#') Оборудование для сепарации
+      li: a(href='#') Оборудование
+      li: a(href='#') Магнитные сепараторы
+      li: a(href='#') Железноотделители

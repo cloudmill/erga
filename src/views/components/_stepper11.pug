@@ -1,0 +1,171 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form(action='#')
+  div
+    h3 1
+    section
+      h4 Характеристики поднимаемого материала
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'zxc', 'zxc', 'Марка стали по ГОСТ', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'zxc1', 'zxc1', 'Температура материала, °С', false)
+      .form__group
+        +fieldCheckbox('Лист', 'list45', false)
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'zxc2', 'zxc2', 'длина min, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'zxc5', 'zxc5', 'ширина min, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'zxc3', 'zxc3', 'толщина min, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'zxc7', 'zxc7', 'вес, кг', false)
+      .form__group
+        +fieldCheckbox('Сляб', 'list1', false)
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'vbn', 'vbn', 'длина min, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'vbn133', 'vbn133', 'ширина max, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'vbn1', 'vbn1', 'длина max, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'vbn2', 'vbn2', 'толщина min, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'vbn3', 'vbn3', 'ширина min, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'vbn4', 'vbn4', 'вес, кг', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'vbn5', 'vbn5', 'вес, кг', false)
+      .form__group
+        +fieldCheckbox('Труба', 'list2', false)
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'xcv', 'xcv', 'длина min, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'xcv1', 'xcv1', 'длина max, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'xcv2', 'xcv2', 'диаметр min, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'xcv3', 'xcv3', 'диаметр max, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'xcv4', 'xcv4', 'толщина стенки min, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'xcv5', 'xcv5', 'толщина стенки max, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'xcv6', 'xcv6', 'вес, кг', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'xcv7', 'xcv7', 'вес, кг', false)
+      .form__group: +fieldLabelTextarea('txt2', 'txt2', 'Прочее', false)
+      .form__group
+        +fieldLabelInput('text', 'xcv8', 'xcv8', 'Количество единомоментно поднимаемых предметов, шт.', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    section
+      h4 Характеристики поднимаемого материала под задачу снятия раскроя
+      .form__group: +fieldLabelInput('text', 'asd', 'asd', 'Марка стали по ГОСТ', false)
+      h5 Характеристика листа до подачи на раскрой
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fgh', 'fgh', 'длина min, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fgh1', 'fgh1', 'длина max, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fgh2', 'fgh2', 'ширина min, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fgh3', 'fgh3', 'ширина max, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fgh4', 'fgh4', 'толщина min, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fgh5', 'fgh5', 'толщина max, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fgh6', 'fgh6', 'вес, кг', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fgh7', 'fgh7', 'вес, кг', false)
+      h5 Характеристика листа до подачи на раскрой
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'tyu', 'tyu', 'длина min, мм', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'tyu2', 'tyu2', 'ширина min, мм', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'tyu4', 'tyu4', 'вес, кг', false)
+        .col.col__xs-12.form__group
+          +fieldLabelInput('text', 'tyu6', 'tyu6', 'Количество единомоментно поднимаемых предметов, шт', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'tyu1', 'tyu1', 'длина max, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'tyu3', 'tyu3', 'ширина max, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'tyu5', 'tyu5', 'вес, кг', false)
+        .col.col__xs-12.form__group
+          +fieldLabelInput('text', 'tyu7', 'tyu7', 'Количество единомоментно поднимаемых предметов, шт', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 3', 'btn--full')
+    h3 3
+    section
+      h4 Спецификация крана
+      .form__group: +fieldLabelInput('text', 'nam6', 'nam6', 'Грузоподъемность, т', false)
+      .form__group
+        +fieldCheckbox('Башенный', 'qaz', false, 'checkbox--inline')
+        +fieldCheckbox('Мостовой', 'qazny', false, 'checkbox--inline')
+        +fieldCheckbox('Козловой', 'qaznm', false, 'checkbox--inline')
+        +fieldCheckbox('Кран-Балка', 'qazni', false, 'checkbox--inline')
+      label.form__group Количество крюков
+      .row.middle__xs
+        .col.col__md-4.col__xs-12.form__group
+          +fieldRadio('Один', 'radio1', 'radioabcd', false, 'radio--inline')
+          +fieldRadio('Два', 'radio2', 'radioabcd', false, 'radio--inline')
+        .col.col__md-5.col__xs-12.form__group
+          +fieldLabelInput('text', 'nam68', 'nam68', 'Обозначение ГОСТ', false)
+      label.form__group Кабина оператора
+      .row.middle__xs
+        .col.col__md-4.col__xs-12.form__group
+          +fieldRadio('Да', 'yes2', 'yes', false, 'radio--inline')
+          +fieldRadio('Нет', 'yes3', 'yes', false, 'radio--inline')
+        .col.col__md-5.col__xs-12.form__group
+          +fieldLabelInput('text', 'nam69', 'nam69', 'Другое', false)
+      label.form__group Пульт управления
+      .row.middle__xs
+        .col.col__md-4.col__xs-12.form__group
+          +fieldRadio('Да', 'yes4', 'yes1', false, 'radio--inline')
+          +fieldRadio('Нет', 'yes5', 'yes1', false, 'radio--inline')
+        .col.col__md-5.col__xs-12.form__group
+          +fieldLabelInput('text', 'nam67', 'nam67', 'Другое', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 4', 'btn--full')
+    h3 4
+    section
+      h4 Окружающая среда
+      .form__group: +fieldLabelInput('text', 'nam6', 'nam6', 'Грузоподъемность, т', false)
+      .form__group
+        +fieldCheckbox('Закрытая площадь', 'square1', false, 'checkbox--inline')
+        +fieldCheckbox('Открытая площадь', 'square2', false, 'checkbox--inline')
+        +fieldCheckbox('Агрессивная', 'square3', false, 'checkbox--inline')
+        +fieldCheckbox('Взрывоопасная', 'square5', false, 'checkbox--inline')
+        +fieldCheckbox('Запыленная', 'square4', false, 'checkbox--inline')
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'nam68', 'nam9', 'Температура', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'nam68', 'nam9', 'Влажность', false)
+      h5 Характеристика продукта при порционной подачи
+      label.form__group Кабельный барабан
+      .form__group
+        +fieldRadio('Да', 'yesm2', 'yesm', false, 'radio--inline')
+        +fieldRadio('Нет', 'yesm3', 'yesm', false, 'radio--inline')
+      label.form__group Траверса г/п
+      .form__group
+        +fieldRadio('Да', 'yesn2', 'yesn', false, 'radio--inline')
+        +fieldRadio('Нет', 'yesn3', 'yesn', false, 'radio--inline')
+      .form__group: +fieldLabelTextarea('txt2m', 'txt2m', 'Дополнительные требования', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 5', 'btn--full')
+    h3 5
+    include ../components/_stepperLast

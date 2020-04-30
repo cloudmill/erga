@@ -1,0 +1,140 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form.stepper-three(action='#')
+  div
+    h3 1
+    section
+      h4 Материал сепарации
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'prod', 'prod277', 'Название материала', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'prod', 'prod288', 'Объемный вес, т/м3', false)
+      label.form__group Фракционный состав, мм:
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from', 'from', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to', 'to', 'до', false)
+      label.form__group Температура, 0С:
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from1', 'from1', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to1', 'to1', 'до', false)
+      label.form__group Свойства материала
+      .row.middle__xs
+        .col.col__xs-12.form__group
+          +fieldCheckbox('Абразивный', 'attr01', false, 'checkbox--inline')
+          +fieldCheckbox('Склонен к слипанию', 'attr02', false, 'checkbox--inline')
+          +fieldCheckbox('Прочие свойства', 'attr03', false, 'checkbox--inline')
+        .col.col__xs-12.form__group
+          +fieldLabelInput('text', 'temp1', 'temp1', 'Введите прочие свойсва', false)
+      h4 Металлические (ферромагнитные) включения
+      .form__group
+        +fieldLabelInput('text', 'prod3', 'prod3', 'Тип/происхождение включений', false)
+      label.form__group Фракционный состав, мм:
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from56', 'from56', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to56', 'to56', 'до', false)
+      label.form__group Масса включений, кг
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from156', 'from156', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to156', 'to156', 'до', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to1567', 'to1567', 'Фактическое содержание примесей, %', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to1568', 'to1568', 'Допустимое содержание примесей, %', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    section
+      h4 Технологический процесс
+      h5 Подача материала
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldCheckbox('Непрерывная, с производительностью, т/ч:', 'kl', false, 'checkbox--inline')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fromz5', 'fromz5', 'Введите данные', false)
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldCheckbox('Порционная', 'kl1', false, 'checkbox--inline')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fromz5', 'fromz56', 'Введите данные', false)
+      label.form__group Место установки
+      .form__group
+        +fieldCheckbox('Запыленное', 'kl2', false, 'checkbox--inline')
+        +fieldCheckbox('Не запыленное', 'kl3', false, 'checkbox--inline')
+      h4 Для ленточных конвейеров
+      label.form__group Тип транспортера
+      .form__group
+        +fieldCheckbox('Открытый', 'kl4', false, 'checkbox--inline')
+        +fieldCheckbox('Закрытый', 'kl5', false, 'checkbox--inline')
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fromz', 'fromz', 'Ширина конвейерной ленты, ММ', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'toz', 'toz', 'Ширина слоя материала на ленте, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fromz8', 'fromz8', 'Глубина (высота) слоя материала, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'fromz0', 'fromz0', 'УГОЛ наклона транспортера, град.', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'toz0', 'toz0', 'Диаметр приводного барабана, мм.', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'perc1', 'perc1', 'Толщина конвейерной ленты (мм)', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'perc2', 'perc2', 'Скорость движения ленты, м/с', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'perc3', 'perc3', 'Для подвесных систем (см. рис.) А (мм)=', false)
+      h4 Для мест пересыпки / самотеков / трубопроводов
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'perc4', 'perc4', 'Допустимые габариты сепаратора, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'perc5', 'perc5', 'Внутреннее сечение самотека, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'perc58', 'perc58', 'Высота самотека мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'perc59', 'perc59', 'Угол наклона самотека, град.', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'perc52', 'perc52', 'Степень заполнения сечения самотека, %', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'perc53', 'perc53', 'Давление, Па', false)
+      h4 Предпочтительный тип сепаратора-железоотделителя
+      label.form__group Система очистки
+      .row
+        .col.col__md-8.col__xs-12.form__group
+          +fieldCheckbox('Автоматическая', 'attr04', false, 'checkbox--inline')
+          +fieldCheckbox('Механическая / ручная', 'attr05', false, 'checkbox--inline')
+        .col.col__md-4.col__xs-12.form__group
+          +fieldLabelInput('text', 'tyu', 'tyu', 'Количество, шт', false)
+      label.form__group Степень защиты двигателя от внешних воздействий IP
+      .form__group
+        +fieldCheckbox('55', 'attr07', false, 'checkbox--inline')
+        +fieldCheckbox('56', 'attr06', false, 'checkbox--inline')
+      label.form__group Взрывозащищенное исполнение электродвигателя
+      .form__group
+        +fieldCheckbox('Без взрывозащиты', 'attr08', false)
+        +fieldCheckbox('1ExdIIBT4, 1ExdеIICT4 (наземное применение (химиндустрия, НХЗ, НПЗ и т. п))', 'attr0677', false)
+        +fieldCheckbox('РВExdI (подземные выработки (шахты), наружные установки опасные по метану и угольной пыли)', 'attr0688', false)
+      .form__group
+        +fieldCheckbox('Подвесные', 'img1', false, 'checkbox--inline col__xl-2 col__lg-3', 'card/icon-1.svg')
+        +fieldCheckbox('Шкивные', 'img2', false, 'checkbox--inline col__xl-2 col__lg-3', 'card/icon-2.svg')
+        +fieldCheckbox('Барабанные', 'img3', false, 'checkbox--inline col__xl-2 col__lg-3', 'card/icon-3.svg')
+      .form__group
+        +fieldCheckbox('Барабанные', 'img4', false, 'checkbox--inline col__xl-2 col__lg-3', 'card/icon-4.svg')
+        +fieldCheckbox('Пластинчатые', 'img5', false, 'checkbox--inline col__xl-2 col__lg-3', 'card/icon-5.svg')
+        +fieldCheckbox('Стержевые', 'img6', false, 'checkbox--inline col__xl-2 col__lg-3', 'card/icon-6.svg')
+      br
+      .stepper-next: +btnArrowSub('Шаг 3', 'btn--full')
+    h3 3
+    include ../components/_stepperLast

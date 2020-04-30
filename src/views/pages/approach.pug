@@ -1,0 +1,98 @@
+extends ../layouts/master.pug
+
+block pageName
+  - var pageName = "fxindex"
+
+block header
+  include ../partials/_headerFX.pug
+
+block content
+  .container
+    h1
+      +reveal(['Наш подход к работе'])
+    +breadcrumbs(['О компании', 'Наш подход к работе'])
+    .approach
+      h4.additLine
+        +reveal(['В настоящее время научно-производственное', 'объединение «ЭРГА» является крупнейшим в России', 'специализированным производителем постоянных', 'редкоземельных магнитов и магнитных систем', 'особого назначения.'])
+      .approach-content
+        .row
+          .col.col__xl-7.col__md-6.col__xs-12(data-aos='fade-up')
+            .mainNews-index-img
+              +img('about/approach.jpg')
+          .col.col__xl-4.col__md-6.col__xs-12(data-aos='fade-up')
+            p При разработке магнитных систем мы внедряем инновационные технологии, что обеспечивает весомые конкурентные преимущества для наших заказчиков. Уровень знаний наших сотрудников постоянно повышается, это означает, что мы не только соответствуем ожиданиям наших клиентов, но и превосходим их.
+          .col.col__xl-1
+        .row.between__xs
+          .col.col__md-4.col__xs-12(data-aos='fade-up')
+          .col.col__xl-5.col__md-6.col__xs-12(data-aos='fade-up')
+            h4 Заказывая магнитные системы #[br] у&nbsp;НПО «ЭРГА», вы гарантируете себе эффективную и прозрачную схему реализации вашей задачи, которая предполагает следующие этапы:
+      .row.between__xs.approach-list
+        .marquee-rtl.marquee-top
+          +img('icons/triangleLineL.svg')
+        .marquee-rtl.marquee-bottom
+          +img('icons/triangleLineL.svg')
+        .col.col__lg-4.col__md-6.col__xs-12(data-aos='fade-up')
+          .approach-list__item
+            .approach-list__item-num 01
+            .approach-list__item-txt Первичное выяснение #[br] ваших потребностей #[br] и&nbsp;постановка задачи
+        .col.col__lg-4.col__md-6.col__xs-12(data-aos='fade-up')
+          .approach-list__item
+            .approach-list__item-num 02
+            .approach-list__item-txt Согласование технико-коммерческих вопросов, проведение испытаний, конструкторская проработка технических решений
+        .col.col__lg-4.col__md-6.col__xs-12(data-aos='fade-up')
+          .approach-list__item
+            .approach-list__item-num 03
+            .approach-list__item-txt Подписание договора и&nbsp;разработка конструкторско-технологической документации
+        .col.col__lg-4.col__md-6.col__xs-12(data-aos='fade-up')
+          .approach-list__item
+            .approach-list__item-num 04
+            .approach-list__item-txt Полный цикл производства оборудования, контроль качества и&nbsp;проведение приёмно-сдаточных испытаний
+        .col.col__lg-4.col__md-6.col__xs-12(data-aos='fade-up')
+          .approach-list__item
+            .approach-list__item-num 05
+            .approach-list__item-txt Поставка и&nbsp;ввод оборудования в&nbsp;эксплуатацию
+        .col.col__lg-4.col__md-6.col__xs-12(data-aos='fade-up')
+          .approach-list__item
+            .approach-list__item-num 06
+            .approach-list__item-txt Проведение промышленных #[br] испытаний, сбор и&nbsp;анализ данных, #[br] получение вами прибыли от&nbsp;#[br]внедрения оборудования НПО «ЭРГА»
+      .row.center__xs.approach-desc
+        .col.col__md-5.col__xs-12(data-aos='fade-up')
+          hr.redLine.hidden__sm.hidden__xs
+        .col.col__md-6.col__xs-12(data-aos='fade-up')
+          h4
+            +reveal(['Научно-исследовательская деятельность'])
+          p Ведение активной научно-исследовательской деятельности даёт предприятию возможность не&nbsp;только совершенствовать и&nbsp;расширять номенклатуру основной продукции, но и&nbsp;участвовать в&nbsp;уникальных проектах федерального масштаба, в&nbsp;частности, в&nbsp;проектах Федерального космического агентства (“Роскосмос”).
+      .row.approach-predesc
+        .col.col__md-3.col__xs-12(data-aos='fade-up')
+          h4 На предприятии внедрена система стратегического управления
+        .col.col__md-2
+        .col.col__md-5.col__xs-12(data-aos='fade-up')
+          p Особое внимание уделяется реализации программ, направленных на&nbsp;совершенствование процессов управления качеством продукции и&nbsp;организацию эффективного взаимодействия с&nbsp;потребителями.
+      include ../components/_newsOneSlider
+      .approach-video(data-aos='fade-up')
+        .marquee-rtl.hidden__sm.hidden__xs
+          +img('icons/triangleLineL.svg')
+        .approach-video-link
+          +img('video.svg')
+        +img('about/video.jpg')
+      .approach-catalog
+        h4
+          +reveal(['Большая часть выпускаемого предприятием оборудования', 'проектируется и поставляется «под ключ».'])
+        .row
+          .col.col__md-6.col__xs-12(data-aos='fade-up')
+            p Стандартизированное оборудование (пользующиеся #[br] неизменным спросом модели магнитных сепараторов и полный модельный ряд грузоподъёмных захватов) постоянно имеется в наличии на складе готовой продукции.
+          .col.col__md-6.col__xs-12(data-aos='fade-up')
+            p Для обеспечения максимальной эффективности и надёжности работы оборудования в промышленных условиях квалифицированными специалистами сервисной службы НПО «ЭРГА» проводятся шефмонтажные и пусконаладочные работы, обучение обслуживающего персонала.
+        .row.cardLink
+          .col.col__md-6.col__xs-12(data-aos='fade-up')
+            a.cardLink__item(href='#')
+              .cardLink__item-title Каталог оборудования
+              .cardLink__item-link: i.icon-arr
+          .col.col__md-6.col__xs-12(data-aos='fade-up')
+            a.cardLink__item(href='#')
+              .cardLink__item-title Сервисная поддержка
+              .cardLink__item-link: i.icon-arr
+        div(data-aos='fade-up')
+          .marquee.marquees Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА —
+block footer
+  include ../partials/_footer.pug

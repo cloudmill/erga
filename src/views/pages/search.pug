@@ -1,0 +1,222 @@
+extends ../layouts/master.pug
+
+block pageName
+  - var pageName = "fxindex"
+
+block header
+  include ../partials/_headerFX.pug
+
+block content
+  .search
+    .container
+      h1
+        +reveal(['Результаты поиска'])
+      h3
+        +reveal(['Найдено результатов: 5'])
+      p(data-aos="fade-up") По запросу: «‎Оборудование»‎
+      form.search-form(data-aos="fade-up")
+        input.control(type='text', value='Оборудование')
+        button(type='submit'): i.icon-search
+      h3
+        +reveal(['Продукция'])
+    .catalog-content
+      a.catalog-content__item(href='#', data-aos="fade-up")
+        .catalog-content__item-inner
+          .row
+            .col.col__md-6.col__xs-12.flex-middle
+              +img('catalog/item-1.jpg')
+            .col.col__md-6.col__xs-12.flex-column
+              .tags
+                div #Новинка
+              p Новый высокоиндуктивный мокрый сепаратор ПВМ на постоянных магнитах
+              .margtop-auto
+                ul.list--inline
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-1.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-2.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-3.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+      a.catalog-content__item(href='#', data-aos="fade-up")
+        .catalog-content__item-inner
+          .row
+            .col.col__md-6.col__xs-12
+              +img('catalog/item-2.jpg')
+            .col.col__md-6.col__xs-12.flex-column
+              .tags
+                div #Новинка
+              p Барабанные магнитные сепараторы серии ВИ-МБС
+              .margtop-auto
+                ul.list--inline
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-1.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+      a.catalog-content__item(href='#', data-aos="fade-up")
+        .catalog-content__item-inner
+          .row
+            .col.col__md-6.col__xs-12
+              +img('catalog/item-3.jpg')
+            .col.col__md-6.col__xs-12.flex-column
+              .tags
+                div #Новинка
+                div #Рекомендуем
+              p Магнитные сепараторы серий СМТП-1 и СМТП-2
+              .margtop-auto
+                ul.list--inline
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-1.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-2.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+      a.catalog-content__item(href='#', data-aos="fade-up")
+        .catalog-content__item-inner
+          .row
+            .col.col__md-6.col__xs-12
+              +img('catalog/item-4.jpg')
+            .col.col__md-6.col__xs-12.flex-column
+              .tags
+                div #Новинка
+              p Мокрые магнитные сепараторы серий МБС
+              .margtop-auto
+                ul.list--inline
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-1.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-2.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-3.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+      a.catalog-content__item(href='#', data-aos="fade-up")
+        .catalog-content__item-inner
+          .row
+            .col.col__md-6.col__xs-12
+              +img('catalog/item-5.jpg')
+            .col.col__md-6.col__xs-12.flex-column
+              .tags
+                div #Новинка
+              p Автоматические пластинчатые железоотделители серии ПСМ-А
+              .margtop-auto
+                ul.list--inline
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-1.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-2.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-3.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+      a.catalog-content__item(href='#', data-aos="fade-up")
+        .catalog-content__item-inner
+          .row
+            .col.col__md-6.col__xs-12
+              +img('catalog/item-6.jpg')
+            .col.col__md-6.col__xs-12.flex-column
+              .tags
+                div #Новинка
+              p Стержневой магнитный сепаратор серии СМВР
+              .margtop-auto
+                ul.list--inline
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-1.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-2.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+      a.catalog-content__item(href='#', data-aos="fade-up")
+        .catalog-content__item-inner
+          .row
+            .col.col__md-6.col__xs-12
+              +img('catalog/item-7.jpg')
+            .col.col__md-6.col__xs-12.flex-column
+              .tags
+                div #Новинка
+                div #Рекомендуем
+              p Стержневой магнитный сепаратор серии СМВР
+              .margtop-auto
+                ul.list--inline
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-1.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-2.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-3.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+      a.catalog-content__item(href='#', data-aos="fade-up")
+        .catalog-content__item-inner
+          .row
+            .col.col__md-6.col__xs-12
+              +img('catalog/item-8.jpg')
+            .col.col__md-6.col__xs-12.flex-column
+              .tags
+                div #Новинка
+              p Барабанные магнитные сепараторы серий СМБМ и СМБМ-2
+              .margtop-auto
+                ul.list--inline
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-1.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-2.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+                  li
+                    .tooltip
+                      +img('icons/ico-slide-3.svg')
+                      span.tooltiptext Гарантия соответствия по весу
+    .container
+      h3
+        +reveal(['Новости'])
+      .row.between__xs.news-sub
+        .col.col__md-6.col__xs-12
+          .mainNews-list
+            a.mainNews-list__item(href='#', data-aos='fade-up')
+              .mainNews-index-date 13 января 2019
+              .mainNews-index-title Уважаемые партнеры! От всей души поздравляем #[br] вас с наступающим 2019 годом и Рождеством!
+              .mainNews-index-subtitle Категория:
+              .mainNews-index-link Новости
+            a.mainNews-list__item(href='#', data-aos='fade-up')
+              .mainNews-index-date 13 января 2019
+              .mainNews-index-title Уважаемые партнеры! От всей души поздравляем #[br] вас с наступающим 2019 годом и Рождеством!
+              .mainNews-index-subtitle Категория:
+              .mainNews-index-link Новости
+        .col.col__lg-5.col__md-6.col__xs-12(data-aos='fade-up')
+          .mainNews-list
+            a.mainNews-list__item(href='#', data-aos='fade-up')
+              .mainNews-index-date 13 января 2019
+              .mainNews-index-title «ЭРГА» на выставке «Уголь России и Майнинг – 2017»
+              .mainNews-index-subtitle Категория:
+              .mainNews-index-link Новости
+            a.mainNews-list__item(href='#', data-aos='fade-up')
+              .mainNews-index-date 13 января 2019
+              .mainNews-index-title Новинка! Автономная магнитная траверса АРМАГ-30-ЛС
+              .mainNews-index-subtitle Категория:
+              .mainNews-index-link Новости
+block footer
+  include ../partials/_footer.pug

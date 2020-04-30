@@ -1,0 +1,21 @@
+extends ../layouts/master.pug
+
+block pageName
+  - var pageName = "index"
+
+block header
+  include ../partials/_headerFX.pug
+
+block content
+  .history
+    .tabs-list.ajax--js(data-aos="fade-up", data-aos-delay='300')
+      a.tab.active.history1990(data-target='history2000') 1991–1999
+      a.tab.history2000(data-target='history2010') 2000-2009
+      a.tab.history2010(data-target='history1990') 2010-2019
+    .history-arrow
+      i.icon-arrow-up
+      i.icon-arrow-down
+    #box
+      include ../pages/history1990
+
+block footer

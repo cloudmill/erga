@@ -1,0 +1,88 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form-valid.stepper-four(action='#')
+  div
+    h3 1
+    section
+      h4 Характеристики продукта
+      .form__group: +fieldLabelInputId('id-1', 'Название продукта*', true)
+      h5 Для насыпных продуктов
+      label.form__group Фракционный состав, мм
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-2', 'от*', true, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-3', 'до*', true, 'isNumber')
+      h5 Для штучных продуктов
+      .row.middle__xs
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-4', 'Размер изделия (с учетом упаковки), AxBxH, мм*', true, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-5', 'Вес (с упаковкой), кг*', true, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-6', 'Количество на ширину ленты, шт.', false, 'isNumber')
+        .col.col__xs-12.form__group: +fieldLabelInputId('id-7', 'Расстояние между (на ленте), мм', false, 'isNumber')
+      h5 Упаковка
+      .form__group
+        +fieldCheckbox('Без упаковки', 'attr1', false, 'checkbox--inline')
+        +fieldCheckbox('Не металлизированная, без металлических элементов', 'attr2', false, 'checkbox--inline')
+      .form__group: +fieldLabelInputId('id-8', 'Другое', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    section
+      h4 Характеристики металлических включений
+      label.form__group Размер включений, мм
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-9', 'от', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-10', 'до', false, 'isNumber')
+      h4 Способы подачи продукта
+      h5 Подача материала
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldCheckbox('Непрерывная', 'attr7', false, 'checkbox--inline')
+          +fieldCheckbox('Порпционная', 'attr8', false, 'checkbox--inline')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-11', 'Производительность, т/ч (шт/мин)*', true, 'isNumber')
+      h5 Для ленточных конвейеров
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-12', 'Ширина конвейерной ленты, мм*', true, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-13', 'Скорость движения ленты, м/c*', true, 'isNumber')
+      h5 Форма ленты
+      .form__group
+        +fieldCheckbox('Прямая', 'attr9', false, 'checkbox--inline')
+        +fieldCheckbox('Желоб', 'attr10', false, 'checkbox--inline')
+      h5 Лента содержит металлические элементы (корд, клепки и т.д.)
+      .row.middle__xs
+        .col.col__lg-4.col__md-6.col__xs-12.form__group
+          +fieldCheckbox('Нет', 'attr11', false, 'checkbox--inline')
+          +fieldCheckbox('Да', 'attr12', false, 'checkbox--inline')
+        .col.col__lg-4.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-14', 'Уточните', false)
+      h4 Характеристики места установки металлодетектора
+      label.form__group Температура окружающей среды, °С
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-15', 'от', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-16', 'до', false, 'isNumber')
+      br
+      .stepper-next: +btnArrowSub('Шаг 3', 'btn--full')
+    h3 3
+    section
+      h4 Требования к металлодетектору
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-17', 'Реакция на включения черных металлов ≥, мм', false, 'isNumber')
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-18', 'Реакция на включения цветных металлов ≥, мм', false, 'isNumber')
+      h5 Тип реакции
+      .form__group
+        +fieldCheckbox('Звуковая/визуальная сигнализация', 'attr09', false, 'checkbox--inline')
+        +fieldCheckbox('Остановка процесса', 'attr08', false, 'checkbox--inline')
+        +fieldCheckbox('Автоматическая отбраковка', 'attr07', false, 'checkbox--inline')
+      br
+      .stepper-next: +btnArrowSub('Шаг 4', 'btn--full')
+    h3 4
+    include ../components/_stepperLast1

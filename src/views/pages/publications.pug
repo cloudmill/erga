@@ -1,0 +1,92 @@
+extends ../layouts/master.pug
+
+block pageName
+  - var pageName = "fxindex"
+
+block header
+  include ../partials/_headerFX.pug
+
+block content
+  .container
+    h1
+      +reveal(['Публикации'])
+    +breadcrumbs(['Публикации'])
+    .publications
+      .row.between__xs
+        .col.col__lg-8.col__xs-12(data-aos='fade-up')
+          a.publications-index.publications-item-js(href='#')
+            .publications-index-inner
+              .publications-link
+                .arrowLine
+                  span Подробнее
+                  i.icon-arrow-mini-right
+              .publications-img
+                +img('news/publications.jpg')
+              .mainNews-index-date 13 января 2019
+              .publications-title Применение магнитных сепараторов НПО «ЭРГА» #[br] для вторичной переработки алюминиевой стружки
+            p.publications-index-text Применение магнитных сепараторов "ЭРГА" при вторичной переработке алюминиевого лома...
+        .col.col__lg-4.col__md-6.col__xs-12(data-aos='fade-up')
+          .publications-list
+            a.publications-list__item.publications-item-js(href='#')
+              .publications-list-inner
+                .mainNews-index-date 13 января 2019
+                .publications-list-title Опыт применения сухой магнитной сепарации железных руд
+                p.publications-index-text Специалисты НПО "ЭРГА" рассказывают об опыте применения магнитных сепараторов в золотодобывающей промышленности...
+                .tags.text__sm.margtop-auto
+                  div #Наше оборудование
+                  div #Исследования
+                .publications-link
+                  .arrowLine
+                    span Подробнее
+                    i.icon-arrow-mini-right
+              p.publications-index-text Специалисты НПО "ЭРГА" рассказывают об опыте применения магнитных сепараторов в золотодобывающей промышленности...
+      .row.between__xs.publications-list
+        - for (let x = 1; x < 3; x++)
+          .col.col__lg-4.col__md-6.col__xs-12
+            a.publications-list__item.publications-item-js(href='#', data-aos='fade-up')
+              .publications-list-inner
+                .mainNews-index-date 13 января 2019
+                .publications-list-title Металлосепаратор
+                p.publications-index-text Задача таких устройств - обнаружение посторонних металлических включений в сырье с целью повышения качества продукции и...
+                .tags.text__sm.margtop-auto
+                  div #Наше оборудование
+                  div #Исследования
+                .publications-link
+                  .arrowLine
+                    span Подробнее
+                    i.icon-arrow-mini-right
+              p.publications-index-text Задача таких устройств - обнаружение посторонних металлических включений в сырье с целью повышения качества продукции и...
+          .col.col__lg-4.col__md-6.col__xs-12
+            a.publications-list__item.publications-item-js(href='#', data-aos='fade-up')
+              .publications-list-inner
+                .mainNews-index-date 13 января 2019
+                .publications-list-title Металлодетекторы для стекольной промышленности
+                p.publications-index-text Задача таких устройств - обнаружение посторонних металлических включений в сырье с целью повышения качества продукции и...
+                .tags.text__sm.margtop-auto
+                  div #Наше оборудование
+                  div #Исследования
+                .publications-link
+                  .arrowLine
+                    span Подробнее
+                    i.icon-arrow-mini-right
+              p.publications-index-text Задача таких устройств - обнаружение посторонних металлических включений в сырье с целью повышения качества продукции и...
+          .col.col__lg-4.col__md-6.col__xs-12
+            a.publications-list__item.publications-list__item--top.publications-item-js(href='#', data-aos='fade-up')
+              .publications-list-inner
+                .mainNews-index-date 13 января 2019
+                .publications-list-title Оборудование RESOLINE для переработки отходов кабеля
+                p.publications-index-text Кабельный лом наиболее доступный и при этом экономически выгодный вид отходов: его легко собирать, транспортировать...
+                .tags.text__sm.margtop-auto
+                  div #Наше оборудование
+                  div #Исследования
+                .publications-link
+                  .arrowLine
+                    span Подробнее
+                    i.icon-arrow-mini-right
+              p.publications-index-text Кабельный лом наиболее доступный и при этом экономически выгодный вид отходов: его легко собирать, транспортировать...
+      .text--center.hidden__sm.hidden__xs(data-aos='fade-up'): include ../components/_paginator
+      .text--center.visible__sm.visible__xs(data-aos='fade-up'): a.showMoreLink(href='#') Показать еще
+    include ../components/_newsSign
+
+block footer
+  include ../partials/_footer.pug

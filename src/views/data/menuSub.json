@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Продукция",
+    "href": "catalog.html",
+    "subitems": false
+  },
+  {
+    "title": "Отрасли применения",
+    "href": "services.html",
+    "subitems": false
+  },
+  {
+    "title": "Сервис",
+    "href": "service.html",
+    "subitems": false
+  }
+]

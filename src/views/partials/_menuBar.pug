@@ -1,0 +1,234 @@
+.menuBar(role="navigation")
+  .background
+  .menuBar-header
+    .page-header__logo
+      a(href="/")
+    .visible__xs.visible__sm
+      .page-header-right
+        .language
+          a.language-el.active(href='#') Ru
+          a.language-el(href='#') En
+        a.page-header__search.page-header__addphone.popup-modal.popup-with-zoom-anim(href='#getACall'): +img('icons/phoneBlue.svg')
+        a.page-header__search.search--js(href='#'): i.icon-search
+    .header-content.hidden__sm.hidden__xs
+      .header-content__top
+        nav.navbar
+        .page-header__phone
+          a(href='tel:84842922199') 8 4842 922-199
+        .page-header__link.popup-modal.popup-with-zoom-anim(href='#getACall')
+          +arrowLine('Заказать звонок')
+      .header-content__bottom
+        nav.navbar
+        .page-header__phone
+          a(href='mailto:info@erga.ru') info@erga.ru
+        .page-header__link
+          a.arrowLine(href='config.html')
+            .the-arrow.the-arrow-left: i.shaft.icon-arrow-med-right
+            span.arrowLine-main Подбор оборудования
+            .the-arrow.the-arrow-right: i.shaft.icon-arrow-mini-right
+  .menuBar-top
+    .container
+      .row.between__xs
+        .col.col__md-6.col__xs-12.mobileMenu--js
+          h3.revealOut
+            i.icon-menu-right
+            a.revealIn(href='#') Продукция
+            ul.dropdown-menu
+              li.dropdown-menu__item.dropdown-menu__item--parent
+                a(href='#'): span Сепараторы
+                ul.dropdownDeep
+                  li.dropdownDeep__item.dropdownDeep__item--parent
+                    a(href='#'): span Магнитные сепараторы и железотделители
+                    +subNav()
+                  li.dropdownDeep__item
+                    a(href='#'): span Электростатические сепараторы
+                  li.dropdownDeep__item
+                    a(href='#'): span Гравитационные сепараторы
+              li.dropdown-menu__item
+                a(href='#'): span Промышленные металлодетекторы ERGUARD
+              li.dropdown-menu__item
+                a(href='#'): span Комплексные решения Resoline
+              li.dropdown-menu__item
+                a(href='#'): span Магнитные системы и устройства
+              li.dropdown-menu__item
+                a(href='#'): span Высокоскоростные электрические машины ВЭЛМА
+              li.dropdown-menu__item
+                a(href='#'): span Магнитные траверсы и захваты АРМАГ
+              li.dropdown-menu__item
+                a(href='#'): span Оборудование для лабораторий
+              li.dropdown-menu__item
+                a(href='#'): span Постоянные магниты
+          h3.revealOut
+            i.icon-menu-right
+            a.revealIn(href='#') Отрасли применения
+            ul.dropdown-menu
+              li.dropdown-menu__item
+                a(href='#'): span Горная отрасль
+              li.dropdown-menu__item
+                a(href='#'): span Металлургия
+              li.dropdown-menu__item
+                a(href='#'): span Рециклинг
+              li.dropdown-menu__item
+                a(href='#'): span Пищевая отрасль
+              li.dropdown-menu__item
+                a(href='#'): span Машиностроение
+              li.dropdown-menu__item
+                a(href='#'): span Стекольная отрасль
+              li.dropdown-menu__item
+                a(href='#'): span Химическая отрасль
+              li.dropdown-menu__item
+                a(href='#'): span Строительная отрасль
+              li.dropdown-menu__item
+                a(href='#'): span Нефтегазовая отрасль
+          h3.revealOut
+            i.icon-menu-right
+            a.revealIn(href='#') Сервис
+            ul.dropdown-menu
+              li.dropdown-menu__item.dropdown-menu__item--parent
+                a(href='#'): span Сервисные услуги
+                ul.dropdownDeep
+                  li.dropdownDeep__item
+                    a(href='#'): span Пусконаладочные работы
+                  li.dropdownDeep__item
+                    a(href='#'): span Шефмонтажные работы
+                  li.dropdownDeep__item
+                    a(href='#'): span Монтажные и строительные работы
+                  li.dropdownDeep__item
+                    a(href='#'): span Диагностика оборудования
+                  li.dropdownDeep__item
+                    a(href='#'): span Сервисный контракт
+              li.dropdown-menu__item
+                a(href='#'): span Обучение обслуживающего персонала
+              li.dropdown-menu__item.dropdown-menu__item--parent
+                a(href='#'): span Лаборатория исследования минерального и техногенного сырья
+                ul.dropdownDeep
+                  li.dropdownDeep__item
+                    a(href='#'): span Обогащение руд
+                  li.dropdownDeep__item
+                    a(href='#'): span Переработка шлаков
+                  li.dropdownDeep__item
+                    a(href='#'): span Сепарация вторсырья
+                  li.dropdownDeep__item
+                    a(href='#'): span Очистка пищевого сырья
+              li.dropdown-menu__item.dropdown-menu__item--parent
+                a(href='#'): span Ремонт оборудования
+                ul.dropdownDeep
+                  li.dropdownDeep__item
+                    a(href='#'): span Ремонт магнитных сепараторов
+                  li.dropdownDeep__item
+                    a(href='#'): span Ремонт металлодетекторов
+                  li.dropdownDeep__item
+                    a(href='#'): span Ремонт магнитного грузоподъемного оборудования
+                  li.dropdownDeep__item
+                    a(href='#'): span Ремонт магнитных муфт
+        .col.col__md-6.col__xs-12.menuBar-right
+          ul.list--unstyled
+            li.revealOut
+              a.revealIn(href='#') О компании
+            li.revealOut
+              a.revealIn(href='#') Услуги
+            li.revealOut
+              a.revealIn(href='#') Новости
+            li.revealOut
+              a.revealIn(href='#') Публикации
+            li.revealOut
+              a.revealIn(href='#') Контакты
+          .visible__sm.visible__xs
+            .flex.between__xs.margtop40.margbot40
+              .page-header__phone
+                a(href='tel:84842922199') 8 4842 922-199
+              .page-header__phone
+                a(href='mailto:info@erga.ru') info@erga.ru
+            .margbot40
+              .page-header__link.margbot20
+                +arrowLine('Заказать звонок')
+              .page-header__link
+                a.arrowLine(href='config.html')
+                  .the-arrow.the-arrow-left: i.shaft.icon-arrow-mini-right
+                  span.arrowLine-main Подбор оборудования
+                  .the-arrow.the-arrow-right: i.shaft.icon-arrow-mini-right
+          ul.social
+            li.revealOut
+              a.revealIn(href='#')
+                i.icon-fa
+                span Facebook
+            li.revealOut
+              a.revealIn(href='#')
+                i.icon-youtube
+                span Youtube
+  .menuBar-bottom
+    .menuBar-bottom-icon.dragger-js#dragger-js: +img('icons/menu.svg')
+    .menu-carousel
+      .swiper-wrapper
+        a.menuBar-scroll__item.swiper-slide.menuBar-scroll__item-first(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-1.png')
+          p Сепараторы
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-2.png')
+          p Промышленные металлодетекторы Erguard
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-3.png')
+          p Комплексные решения Resoline
+        a.menuBar-scroll__item.swiper-slide.menuBar-scroll__item-fourth(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-4.png')
+          p Магнитные системы и устройства
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-5.png')
+          p Высокоскоростные электрические машины ВЭЛМА
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-6.png')
+          p Магнитные траверсы и захваты АРМАГ
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-7.png')
+          p Оборудование для лабораторий
+        a.menuBar-scroll__item.swiper-slide.menuBar-scroll__item-last(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-8.png')
+          p Постоянные #[br] магниты
+        a.menuBar-scroll__item.swiper-slide.menuBar-scroll__item-first(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-1.png')
+          p Сепараторы
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-2.png')
+          p Промышленные металлодетекторы Erguard
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-3.png')
+          p Комплексные решения Resoline
+        a.menuBar-scroll__item.swiper-slide.menuBar-scroll__item-fourth(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-4.png')
+          p Магнитные системы и устройства
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-5.png')
+          p Высокоскоростные электрические машины ВЭЛМА
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-6.png')
+          p Магнитные траверсы и захваты АРМАГ
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-7.png')
+          p Оборудование для лабораторий
+        a.menuBar-scroll__item.swiper-slide.menuBar-scroll__item-last(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-8.png')
+          p Постоянные #[br] магниты
+        a.menuBar-scroll__item.swiper-slide.menuBar-scroll__item-first(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-1.png')
+          p Сепараторы
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-2.png')
+          p Промышленные металлодетекторы Erguard
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-3.png')
+          p Комплексные решения Resoline
+        a.menuBar-scroll__item.swiper-slide.menuBar-scroll__item-fourth(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-4.png')
+          p Магнитные системы и устройства
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-5.png')
+          p Высокоскоростные электрические машины ВЭЛМА
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-6.png')
+          p Магнитные траверсы и захваты АРМАГ
+        a.menuBar-scroll__item.swiper-slide(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-7.png')
+          p Оборудование для лабораторий
+        a.menuBar-scroll__item.swiper-slide.menuBar-scroll__item-last(href='#')
+          .menuBar-scroll__item-img: +img('menu/item-8.png')
+          p Постоянные #[br] магниты

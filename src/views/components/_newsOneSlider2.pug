@@ -1,0 +1,17 @@
+.newsOne-slider
+  .swiper-carousel(data-aos='fade-up')
+    .swiper-wrapper
+      - for (let x = 1; x < 3; x++)
+        .swiper-slide.t--mask
+          .t__content
+            +img('news/slide-1.jpg')
+        .swiper-slide.t--mask
+          .t__content
+            +img('news/slide-2.jpg')
+        .swiper-slide.t--mask
+          .t__content
+            +img('news/slide-3.jpg')
+  .swiper-pagination--js.swiper-pagination(data-aos='fade-up')
+  .swiper-button(data-aos='fade-up')
+    .swiper-btnSN-next: i.icon-arrow-right
+    .swiper-btnSN-prev: i.icon-arrow-left

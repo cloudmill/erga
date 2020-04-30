@@ -1,0 +1,67 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form-valid.stepper-four(action='#')
+  div
+    h3 1
+    section
+      h4 Описание продукта и способа его транспортировки
+      .form__group: +fieldLabelInputId('id-1', 'Продукт*', true)
+      h5 Свойства продукта
+      .form__group
+        +fieldCheckbox('Сухой', 'attr1', false, 'checkbox--inline')
+        +fieldCheckbox('Влажный', 'attr2', false, 'checkbox--inline')
+        +fieldCheckbox('Жидкий', 'attr3', false, 'checkbox--inline')
+        +fieldCheckbox('Частично замороженный', 'attr5', false, 'checkbox--inline')
+        +fieldCheckbox('Липкий/комкующийся', 'attr6', false, 'checkbox--inline')
+      .form__group: +fieldLabelInputId('id-2', 'Температура продукта, °С', false, 'isNumber')
+      h5 Способ подачи продукта
+      .form__group
+        +fieldCheckbox('Вручную', 'man', false, 'checkbox--inline')
+        +fieldCheckbox('Самотек', 'man1', false, 'checkbox--inline')
+        +fieldCheckbox('Самотек под давлением', 'man2', false, 'checkbox--inline')
+      .form__group: +fieldLabelInputId('id-3', 'Другой способ подачи', false)
+      .form__group: +fieldLabelInputId('id-4', 'Размеры подающей трубы, мм*', true, 'isNumber')
+      .form__group: +fieldLabelInputId('id-5', 'Высота подачи продукта, мм*', true, 'isNumber')
+      .form__group: +fieldLabelInputId('id-6', 'Производительность, кг/ч*', true, 'isNumber')
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    section
+      h4 Место установки металлодетектора/окружающая среда/чистка
+      .form__group: +fieldLabelInputId('id-7', 'Краткое описание места установки: (цех/участок, какие технологические операции выполняются)', false)
+      .form__group: +fieldLabelInputId('id-8', 'Температура окружающей среды, °С', false, 'isNumber')
+      h5 Предполагаемый способ чистки металлодетектора:
+      .form__group
+        +fieldCheckbox('Сухая', 'attr7', false, 'checkbox--inline')
+        +fieldCheckbox('Влажная', 'attr8', false, 'checkbox--inline')
+        +fieldCheckbox('Мойка, низкое давление', 'attr9', false, 'checkbox--inline')
+        +fieldCheckbox('Мойка, высокое давление', 'attr10', false, 'checkbox--inline')
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldCheckbox('С применением агрессивных растворов', 'clean1', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInputId('id-9', 'Растворы', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 3', 'btn--full')
+    h3 3
+    section
+      h4 Требования к металлодетектору
+      .form__group: +fieldLabelInputId('id-10', 'Необходимая длина сетевого кабеля, м', false)
+      h5 Необходимая система отбраковки
+      .form__group
+        +fieldCheckbox('Система автоматической отбраковки', 'attr77', false)
+      .form__group: +fieldLabelInputId('id-11', 'Другое', false)
+      h5 Размещение панели оператора
+      .form__group
+        +fieldCheckbox('1 - на корпусе блока металлодетектора', 'attr87', false, 'checkbox--inline')
+        +fieldCheckbox('2 - на выносном пульте управления (ПУ)', 'attr88', false, 'checkbox--inline')
+      .form__group: +fieldLabelInputId('id-12', 'Для варианта 2 укажите предполагаемое расстояние от металлодетектора до выносного ПУ, м', false)
+      .form__group: +fieldLabelTextarea('txt0', 'txt0', 'Дополнительная информация', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 4', 'btn--full')
+    h3 4
+    include ../components/_stepperLast1

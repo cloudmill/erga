@@ -1,0 +1,316 @@
+extends ../layouts/master.pug
+
+block pageName
+  - var pageName = "fxindex"
+
+block header
+  include ../partials/_headerFX.pug
+
+block content
+  include ../components/_filters
+  .catalog
+    .container
+      h1
+        +reveal(['Продукция'])
+      +breadcrumbs(['Продукция', 'Сепараторы', 'Новый высокоиндуктивный мокрый сепаратор ПВМ на постоянных магнитах'])
+    .filter-body
+      .filter.filter--js
+        .container
+          .filter__item(data-type='industry', data-title='выбрать отрасль', data-aos="fade-up")
+            span выбрать отрасль
+            b
+            i.icon-filterPlus
+          .filter__item.disabled(data-type='material', data-title='выбрать материал или продукт', data-aos="fade-up")
+            span выбрать материал или продукт
+            b
+            i.icon-filterPlus
+            .filter__item-error Пожалуйста, сначала укажите отрасль
+          .filter__item(data-type='equipment', data-title='выбрать тип оборудования', data-aos="fade-up")
+            span выбрать тип оборудования
+            b
+            i.icon-filterPlus
+          .filter__item(data-type='technology', data-title='Выбрать технологию переработки', data-aos="fade-up")
+            span Выбрать технологию переработки
+            b
+            i.icon-filterPlus
+          .filter__item.reset--js(data-aos="fade-up")
+            span Сбросить все
+            i.icon-reset
+    .catalog-main
+      .catalog-main-row.catalog-main-row-first
+        .catalog-menu-mobile.catalog-menu__item
+          a.catalog-menu__link(href='#'): span Сепараторы
+        .catalog-main__left
+          h1 Продукция
+          .catalog-menu-close: i.icon-close
+          .sidebar__inner
+            .catalog-menu(data-aos="fade-up")
+              .catalog-menu__item.catalog-menu__item--parent
+                a.catalog-menu__link(href='#'): span Сепараторы #[i.icon-tris-down]
+                .catalog-menu-sub
+                  .catalog-menu__item.catalog-menu__item--parent
+                    a.catalog-menu__link(href='#'): span Магнитные сепараторы и&nbsp;железоотделители #[i.icon-tris-down]
+                    .catalog-menu-sub
+                      .catalog-menu__item: a.catalog-menu__link(href='#'): span Подвесные железоотделители
+                      .catalog-menu__item: a.catalog-menu__link(href='#'): span Шкивные железоотделители
+                      .catalog-menu__item: a.catalog-menu__link(href='#'): span Пластинчатые железоотделители
+                      .catalog-menu__item: a.catalog-menu__link(href='#'): span Барабанные сепараторы
+                      .catalog-menu__item: a.catalog-menu__link(href='#'): span Стержневые сепараторы
+                      .catalog-menu__item: a.catalog-menu__link(href='#'): span Валковые сепараторы
+                      .catalog-menu__item: a.catalog-menu__link(href='#'): span Вихретоковые сепараторы
+                  .catalog-menu__item
+                    a.catalog-menu__link(href='#') Электростатические сепараторы
+                  .catalog-menu__item
+                    a.catalog-menu__link(href='#') Гравитационные сепараторы
+              .catalog-menu__item
+                a.catalog-menu__link(href='#'): span Промышленные металлодетекторы Erguard
+              .catalog-menu__item
+                a.catalog-menu__link(href='#'): span Комплексные решения Resoline
+              .catalog-menu__item
+                a.catalog-menu__link(href='#'): span Магнитные системы и устройства
+              .catalog-menu__item
+                a.catalog-menu__link(href='#'): span Высокоскоростные электрические машины ВЭЛМА
+              .catalog-menu__item
+                a.catalog-menu__link(href='#'): span Магнитные траверсы и захваты Армаг
+              .catalog-menu__item
+                a.catalog-menu__link(href='#'): span Оборудование для лабораторий
+              .catalog-menu__item
+                a.catalog-menu__link(href='#'): span Постоянные магниты
+            a.catalog-link.popup-modal.popup-with-zoom-anim(href='#getACall')
+              span заказать звонок
+              +img('icons/phone.svg')
+        .catalog-main__right
+          .catalog-content
+            - for (let x = 1; x < 3; x++)
+              a.catalog-content__item(href='#', data-aos="fade-up")
+                .catalog-content__item-inner
+                  .row
+                    .col.col__md-6.col__xs-12.flex-middle
+                      +img('catalog/item-1.jpg')
+                    .col.col__md-6.col__xs-12.flex-column
+                      .tags
+                        div #Новинка
+                      .ellipsis
+                        p Новый высокоиндуктивный мокрый сепаратор ПВМ на постоянных магнитах Новый высокоиндуктивный мокрый сепаратор ПВМ на постоянных магнитах Новый высокоиндуктивный мокрый сепаратор ПВМ на постоянных магнитах
+                      .margtop-auto
+                        ul.list--inline
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-2.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-1.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-2.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-3.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-4 4.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-5 5.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-6 6.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-2.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-1.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-2.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-3.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+              a.catalog-content__item(href='#', data-aos="fade-up")
+                .catalog-content__item-inner
+                  .row
+                    .col.col__md-6.col__xs-12
+                      +img('catalog/item-2.jpg')
+                    .col.col__md-6.col__xs-12.flex-column
+                      .tags
+                        div #Новинка
+                      p Барабанные магнитные сепараторы серии ВИ-МБС
+                      .margtop-auto
+                        ul.list--inline
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-1.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+              a.catalog-content__item(href='#', data-aos="fade-up")
+                .catalog-content__item-inner
+                  .row
+                    .col.col__md-6.col__xs-12
+                      +img('catalog/item-3.jpg')
+                    .col.col__md-6.col__xs-12.flex-column
+                      .tags
+                        div #Новинка
+                        div #Рекомендуем
+                      p Магнитные сепараторы серий СМТП-1 и СМТП-2
+                      .margtop-auto
+                        ul.list--inline
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-1.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-2.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+              a.catalog-content__item(href='#', data-aos="fade-up")
+                .catalog-content__item-inner
+                  .row
+                    .col.col__md-6.col__xs-12
+                      +img('catalog/item-4.jpg')
+                    .col.col__md-6.col__xs-12.flex-column
+                      .tags
+                        div #Новинка
+                      p Мокрые магнитные сепараторы серий МБС
+                      .margtop-auto
+                        ul.list--inline
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-1.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-2.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-3.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+              a.catalog-content__item(href='#', data-aos="fade-up")
+                .catalog-content__item-inner
+                  .row
+                    .col.col__md-6.col__xs-12
+                      +img('catalog/item-5.jpg')
+                    .col.col__md-6.col__xs-12.flex-column
+                      .tags
+                        div #Новинка
+                      p Автоматические пластинчатые железоотделители серии ПСМ-А
+                      .margtop-auto
+                        ul.list--inline
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-1.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-2.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-3.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+              a.catalog-content__item(href='#', data-aos="fade-up")
+                .catalog-content__item-inner
+                  .row
+                    .col.col__md-6.col__xs-12
+                      +img('catalog/item-6.jpg')
+                    .col.col__md-6.col__xs-12.flex-column
+                      .tags
+                        div #Новинка
+                      p Стержневой магнитный сепаратор серии СМВР
+                      .margtop-auto
+                        ul.list--inline
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-1.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-2.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+              a.catalog-content__item(href='#', data-aos="fade-up")
+                .catalog-content__item-inner
+                  .row
+                    .col.col__md-6.col__xs-12
+                      +img('catalog/item-7.jpg')
+                    .col.col__md-6.col__xs-12.flex-column
+                      .tags
+                        div #Новинка
+                        div #Рекомендуем
+                      p Стержневой магнитный сепаратор серии СМВР
+                      .margtop-auto
+                        ul.list--inline
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-1.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-2.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-3.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+              a.catalog-content__item(href='#', data-aos="fade-up")
+                .catalog-content__item-inner
+                  .row
+                    .col.col__md-6.col__xs-12
+                      +img('catalog/item-8.jpg')
+                    .col.col__md-6.col__xs-12.flex-column
+                      .tags
+                        div #Новинка
+                      p Барабанные магнитные сепараторы серий СМБМ и СМБМ-2
+                      .margtop-auto
+                        ul.list--inline
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-1.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-2.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+                          li
+                            .tooltip
+                              +img('icons/ico-slide-3.svg')
+                              span.tooltiptext Гарантия соответствия по весу
+      .catalog-main-row
+        .catalog-main__left
+        .catalog-main__right
+          .text--center.hidden__sm.hidden__xs(data-aos='fade-up'): include ../components/_paginator
+          .text--center.visible__sm.visible__xs(data-aos='fade-up'): a.showMoreLink(href='#') Показать еще
+          .col__lg-7.col__md-9.centered-block
+            .catalog-text(data-aos='fade-up')
+              .catalog-text__inner
+                p Магнитные сепараторы – устройства, предназначенные для разделения многокомпонентных материалов на составные части по их магнитным свойствам.
+                p Несмотря на кажущуюся ограниченность области применения, магнитные сепараторы используются на подавляющем большинстве предприятий добывающей и обрабатывающей отраслей для очистки немагнитных материалов от магнитных примесей или для обогащения обладающих магнитными свойствами руд. Фактически сепараторы обеспечивают получение беспримесных сырьевых материалов, что является необходимым условием для выпуска качественной готовой продукции, или защиту технологического оборудования от поломок и ускоренного износа, вызванных попаданием в механизмы магнитных включений.
+                p С 1996 года Научно-производственное объединение “ЭРГА” специализируется на разработке и производстве магнитных сепараторов на основе постоянных магнитов. Благодаря сочетанию высоких рабочих характеристик, многолетней стабильности магнитных свойств, отсутствию затрат электроэнергии на генерацию магнитного поля, эксплуатационной надёжности и безопасности, сепараторы на основе постоянных магнитов уверенно вытесняют с рынка традиционно применявшиеся с прошлого века на многих предприятиях электромагнитные аналоги.
+              .catalog-text__link.showText--js
+                span Раскрыть
+                i.icon-tris-down
+    a.trademark-next(data-aos="fade-up", href='#')
+      .container
+        .row.between__xs.middle__xs
+          .col(data-aos="fade-up")
+            p Смотрите также
+            h2
+              +reveal(['Комплексные решения', 'Resoline'])
+          .col(data-aos="fade-up")
+            .img: +img('icons/arrow.svg')
+      div(data-aos='fade-up')
+        .marquee.marquees Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА — Научно-производственное объединение ЭРГА —
+
+
+block footer
+  include ../partials/_footer.pug

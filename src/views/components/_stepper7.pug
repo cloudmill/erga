@@ -1,0 +1,78 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form.stepper-two(action='#')
+  div
+    h3 1
+    section
+      h4 Материал сепарации
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'prod', 'prod', 'Наименование', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'prod1', 'prod1', 'Объемный вес, т/м3', false)
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          label.form__group Фракционный состав, мм
+          .row.middle__xs
+            .col.col__md-6.col__xs-12.form__group
+              +fieldLabelInput('text', 'from', 'from', 'от', false)
+            .col.col__md-6.col__xs-12.form__group
+              +fieldLabelInput('text', 'to', 'to', 'до', false)
+        .col.col__md-6.col__xs-12.form__group
+          label.form__group Температура, °С
+          .row.middle__xs
+            .col.col__md-6.col__xs-12.form__group
+              +fieldLabelInput('text', 'from1', 'from1', 'от', false)
+            .col.col__md-6.col__xs-12.form__group
+              +fieldLabelInput('text', 'to1', 'to1', 'до', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from2', 'from2', 'Объемный вес, т/м³', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from3', 'from3', 'Влажность материала, %', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from4', 'from4', 'Производительность, т/ч', false)
+      h4 Материал сепарации
+      h5 Электропроводящий продукт
+      label.form__group Фракционный состав, мм
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from12', 'from12', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to12', 'to12', 'до', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'temp1', 'temp1', 'Допустимое содержание примесей после сепарации, %', false)
+      h5 Полупроводниковый продукт
+      label.form__group Фракционный состав, мм
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from21', 'from21', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to21', 'to21', 'до', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'pprod1', 'pprod1', 'Допустимое содержание примесей после сепарации, %', false)
+      h5 Не проводящий продукт
+      label.form__group Фракционный состав, мм
+      .row.middle__xs
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'from31', 'from31', 'от', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'to31', 'to31', 'до', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'pprod2', 'pprod2', 'Допустимое содержание примесей после сепарации, %', false)
+      h4 Помещение для установки сепаратора
+      .form__group
+        +fieldLabelInput('text', 'fromz5', 'fromz5', 'Относительная влажность окружающей среды, %', false)
+      .form__group
+        +fieldLabelInput('text', 'fromz', 'fromz', 'Температурный режим эксплуатации, °С', false)
+      .form__group
+        +fieldCheckbox('Запыленное', 'qwe7', false, 'checkbox--inline')
+        +fieldCheckbox('Не запыленное', 'qwe9090', false, 'checkbox--inline')
+      .form__group: +fieldLabelTextarea('txt0', 'txt0', 'Дополнительные требования', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    include ../components/_stepperLast

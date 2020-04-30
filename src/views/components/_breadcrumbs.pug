@@ -1,0 +1,7 @@
+mixin breadcrumbs(title)
+  ul.breadcrumbs
+      li.breadcrumbs__item
+          a.breadcrumbs__link(href="/")
+            i.icon-arrow-mini-left
+            span Главная
+      li.breadcrumbs__item.active= title

@@ -1,0 +1,36 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form-valid.stepper-two(action='#')
+  div
+    h3 1
+    section
+      h4 Характеристики поднимаемого материала
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-1', 'Марка стали по ГОСТ', false)
+        .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-2', 'Температура материала, °С', false, 'isNumber')
+      h5 Размеры поднимаемой заготовки (Лист, сляб, труба и пр.)
+      .row.middle__xs
+        .col.col__lg-4.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-3', 'длина min, мм*', true, 'isNumber')
+        .col.col__lg-4.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-4', 'ширина min, мм*', true, 'isNumber')
+        .col.col__lg-4.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-5', 'толщина min, мм*', true, 'isNumber')
+        .col.col__lg-4.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-6', 'длина max, мм*', true, 'isNumber')
+        .col.col__lg-4.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-7', 'ширина max, мм*', true, 'isNumber')
+        .col.col__lg-4.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-8', 'толщина max, мм*', true, 'isNumber')
+      h5 Спецификация крана
+      .form__group: +fieldLabelInputId('id-9', 'Грузоподъемность, т', false, 'isNumber')
+      h5 Количество крюков*
+      .form__group
+        .checkbox
+          input.required(type="checkbox", id='last1', name='last', required='required')
+          label.label(for='last1') Один
+        .checkbox
+          input.required(type="checkbox", id='last2', name='last', required='required')
+          label.label(for='last2') Два
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    include ../components/_stepperLast1

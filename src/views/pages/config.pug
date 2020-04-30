@@ -1,0 +1,303 @@
+extends ../layouts/master.pug
+
+block pageName
+  - var pageName = "fxindex"
+
+block header
+  include ../partials/_headerFX.pug
+
+block content
+  .config
+    .container
+      h1
+        +reveal(['Подбор оборудования'])
+      +breadcrumbs(['Подбор оборудования'])
+      .config-construct
+        .config-block
+          h3
+            span(data-aos="fade-up") 01
+            +reveal(['Выберите отрасль'])
+          .config-filter
+            .config-filter__item(data-aos="fade-up")
+              input(type='radio', name='config', id='config1', value='Горная отрасль')
+              label(for='config1')
+                .sliderList__item-num 01
+                span Горная отрасль
+                .img
+            .config-filter__item(data-aos="fade-up")
+              input(type='radio', name='config', id='config2', value='Металлургия')
+              label(for='config2')
+                .sliderList__item-num 02
+                span Металлургия
+                .img
+            .config-filter__item(data-aos="fade-up")
+              input(type='radio', name='config', id='config3', value='Рециклинг')
+              label(for='config3')
+                .sliderList__item-num 03
+                span Рециклинг
+                .img
+            .config-filter__item(data-aos="fade-up")
+              input(type='radio', name='config', id='config4', value='Пищевая отрасль')
+              label(for='config4')
+                .sliderList__item-num 04
+                span Пищевая отрасль
+                .img
+            .config-filter__item(data-aos="fade-up")
+              input(type='radio', name='config', id='config5', value='Машиностроение')
+              label(for='config5')
+                .sliderList__item-num 05
+                span Машиностроение
+                .img
+            .config-filter__item(data-aos="fade-up")
+              input(type='radio', name='config', id='config6', value='Стекольная отрасль')
+              label(for='config6')
+                .sliderList__item-num 06
+                span Стекольная отрасль
+                .img
+            .config-filter__item(data-aos="fade-up")
+              input(type='radio', name='config', id='config7', value='Химическая отрасль')
+              label(for='config7')
+                .sliderList__item-num 07
+                span Химическая отрасль
+                .img
+            .config-filter__item(data-aos="fade-up")
+              input(type='radio', name='config', id='config8', value='Строительная отрасль')
+              label(for='config8')
+                .sliderList__item-num 08
+                span Строительная отрасль
+                .img
+            .config-filter__item(data-aos="fade-up")
+              input(type='radio', name='config', id='config9', value='Нефтегазовая отрасль')
+              label(for='config9')
+                .sliderList__item-num 09
+                span Нефтегазовая отрасль
+                .img
+            .config-filter__item(data-aos="fade-up")
+              input(type='radio', name='config', id='config10', value='Огнеупорная отрасль')
+              label(for='config10')
+                .sliderList__item-num 10
+                span Огнеупорная отрасль
+                .img
+            .config-filter__item.config-filter__item--link.popup-modal.popup-with-zoom-anim(data-aos="fade-up", href='#notFound')
+              label
+                span Не нашли свою отрасль?
+        .config-block-text
+          span 01
+          span.txt
+          span
+            .img
+        .config-block.hidden
+          h3
+            span(data-aos="fade-up") 02
+            +reveal(['Выберите материал или продукт'])
+          .config-filter.config-filter--short
+            .config-filter__item
+              input(type='radio', name='material', id='material1', value='Руды чёрных и легирующих металлов')
+              label(for='material1')
+                span Руды чёрных и легирующих металлов
+            .config-filter__item
+              input(type='radio', name='material', id='material2', value='Руды редких и редкоземельных металлов')
+              label(for='material2')
+                span Руды редких и редкоземельных металлов
+            .config-filter__item
+              input(type='radio', name='material', id='material3', value='Неметаллические полезные ископаемые')
+              label(for='material3')
+                span Неметаллические полезные ископаемые
+            .config-filter__item
+              input(type='radio', name='material', id='material4', value='Руды цветных металлов')
+              label(for='material4')
+                span Руды цветных металлов
+            .config-filter__item
+              input(type='radio', name='material', id='material5', value='Транспортировка и переработка угля')
+              label(for='material5')
+                span Транспортировка и переработка угля
+            .config-filter__item
+              input(type='radio', name='material', id='material6', value='Каменные карьеры')
+              label(for='material6')
+                span Каменные карьеры
+            .config-filter__item.config-filter__item--link.popup-modal.popup-with-zoom-anim(href='#notFoundProduct')
+              label
+                span Не нашли свой материал или продукт?
+        .config-block-text
+          span 02
+          span.txt
+          span
+            .img
+        .config-textres
+          p Подобрано оборудования: 7
+    .config-result
+      .catalog-content
+        a.catalog-content__item(href='#', data-aos="fade-up")
+          .catalog-content__item-inner
+            .row
+              .col.col__md-6.col__xs-12.flex-middle
+                +img('catalog/item-1.jpg')
+              .col.col__md-6.col__xs-12.flex-column
+                .tags
+                  div #Новинка
+                p Новый высокоиндуктивный мокрый сепаратор ПВМ на постоянных магнитах
+                .margtop-auto
+                  ul.list--inline
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-1.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-2.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-3.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+        a.catalog-content__item(href='#', data-aos="fade-up")
+          .catalog-content__item-inner
+            .row
+              .col.col__md-6.col__xs-12
+                +img('catalog/item-2.jpg')
+              .col.col__md-6.col__xs-12.flex-column
+                .tags
+                  div #Новинка
+                p Барабанные магнитные сепараторы серии ВИ-МБС
+                .margtop-auto
+                  ul.list--inline
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-1.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+        a.catalog-content__item(href='#', data-aos="fade-up")
+          .catalog-content__item-inner
+            .row
+              .col.col__md-6.col__xs-12
+                +img('catalog/item-3.jpg')
+              .col.col__md-6.col__xs-12.flex-column
+                .tags
+                  div #Новинка
+                  div #Рекомендуем
+                p Магнитные сепараторы серий СМТП-1 и СМТП-2
+                .margtop-auto
+                  ul.list--inline
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-1.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-2.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+        a.catalog-content__item(href='#', data-aos="fade-up")
+          .catalog-content__item-inner
+            .row
+              .col.col__md-6.col__xs-12
+                +img('catalog/item-4.jpg')
+              .col.col__md-6.col__xs-12.flex-column
+                .tags
+                  div #Новинка
+                p Мокрые магнитные сепараторы серий МБС
+                .margtop-auto
+                  ul.list--inline
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-1.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-2.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-3.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+        a.catalog-content__item(href='#', data-aos="fade-up")
+          .catalog-content__item-inner
+            .row
+              .col.col__md-6.col__xs-12
+                +img('catalog/item-5.jpg')
+              .col.col__md-6.col__xs-12.flex-column
+                .tags
+                  div #Новинка
+                p Автоматические пластинчатые железоотделители серии ПСМ-А
+                .margtop-auto
+                  ul.list--inline
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-1.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-2.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-3.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+        a.catalog-content__item(href='#', data-aos="fade-up")
+          .catalog-content__item-inner
+            .row
+              .col.col__md-6.col__xs-12
+                +img('catalog/item-6.jpg')
+              .col.col__md-6.col__xs-12.flex-column
+                .tags
+                  div #Новинка
+                p Стержневой магнитный сепаратор серии СМВР
+                .margtop-auto
+                  ul.list--inline
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-1.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-2.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+        a.catalog-content__item(href='#', data-aos="fade-up")
+          .catalog-content__item-inner
+            .row
+              .col.col__md-6.col__xs-12
+                +img('catalog/item-7.jpg')
+              .col.col__md-6.col__xs-12.flex-column
+                .tags
+                  div #Новинка
+                  div #Рекомендуем
+                p Стержневой магнитный сепаратор серии СМВР
+                .margtop-auto
+                  ul.list--inline
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-1.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-2.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-3.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+        a.catalog-content__item(href='#', data-aos="fade-up")
+          .catalog-content__item-inner
+            .row
+              .col.col__md-6.col__xs-12
+                +img('catalog/item-8.jpg')
+              .col.col__md-6.col__xs-12.flex-column
+                .tags
+                  div #Новинка
+                p Барабанные магнитные сепараторы серий СМБМ и СМБМ-2
+                .margtop-auto
+                  ul.list--inline
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-1.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-2.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+                    li
+                      .tooltip
+                        +img('icons/ico-slide-3.svg')
+                        span.tooltiptext Гарантия соответствия по весу
+
+
+block footer
+  include ../partials/_footer.pug

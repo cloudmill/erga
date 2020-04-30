@@ -1,0 +1,145 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form.stepper-fourth(action='#')
+  div
+    h3 1
+    section
+      h4 Описание продукта и способа его транспортировки
+      .form__group
+        +fieldLabelInput('text', 'prod', 'prod', 'Продукт', false)
+      label.form__group Свойства продукта
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldCheckbox('Вязкость', 'attr1', false, 'checkbox--inline')
+          +fieldCheckbox('Прочие свойства', 'attr2', false, 'checkbox--inline')
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'temp999', 'temp999', 'Опишите свойства', false)
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'temp', 'temp', 'Температура продукта, °С', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'pprod', 'pprod', 'Плотность продукта, кг/м3', false)
+        .col.col__xs-12.form__group
+          +fieldLabelInput('text', 'mc', 'mc', 'Другой способ подачи', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'temp2', 'temp2', 'Диаметр трубопровода, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'pprod2', 'pprod2', 'Производительность, кг/ч', false)
+      h5 Способ подачи продукта
+      .form__group
+        +fieldCheckbox('Подача непрерывная', 'man', false, 'checkbox--inline')
+        +fieldCheckbox('Подача с интервалом', 'man1', false, 'checkbox--inline')
+        +fieldCheckbox('Подача порционно', 'man2', false, 'checkbox--inline')
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'temp99', 'temp99', 'Давление в трубопроводе', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'temp88', 'temp88', 'Скорость потока', false)
+      h5 Характеристика продукта при порционной подачи
+      label.form__group Размер пр-та, мм
+      .row
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'max', 'max', 'max', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'min', 'min', 'min', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'wid1', 'wid1', 'Количество, шт', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'wid2', 'wid2', 'Длина, мм', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'wid3', 'wid3', 'Диаметр, мм', false)
+        .col.col__xs-12.form__group
+          +fieldLabelInput('text', 'wid4', 'wid4', 'Количество пр-та в мин', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    section
+      h4 Место установки металлодетектора/окружающая среда/чистка
+      .form__group: +fieldLabelInput('text', 'desc', 'desc', 'Краткое описание места установки: (цех/участок, какие технологические операции выполняются)', false)
+      label.form__group Окружающая среда на месте установки
+      .row.middle__xs
+        .col.col__md-7.col__xs-12.form__group
+          +fieldCheckbox('Сухая', 'attr01', false, 'checkbox--inline')
+          +fieldCheckbox('Влажная', 'attr02', false, 'checkbox--inline')
+          +fieldCheckbox('Другая', 'attr03', false, 'checkbox--inline')
+        .col.col__md-5.col__xs-12.form__group
+          +fieldLabelInput('text', 'desc0', 'desc0', 'Опишите', false)
+      .form__group
+        +fieldLabelInput('text', 'temp0', 'temp0', 'Температура окружающей среды, °С', false)
+      .form__group
+        +fieldLabelInput('text', 'check0', 'check0', 'Требования к классу защиты металлодетектора: IP', false)
+      .form__group
+        +fieldCheckbox('Сухая', 'attr001', false, 'checkbox--inline checkbox--inline-sm')
+        +fieldCheckbox('Влажная', 'attr002', false, 'checkbox--inline checkbox--inline-sm')
+        +fieldCheckbox('Мойка, низкое давление', 'attr003', false, 'checkbox--inline checkbox--inline-sm')
+        +fieldCheckbox('Мойка, высокое давление', 'attr004', false, 'checkbox--inline checkbox--inline-sm')
+      .row.middle__xs
+        .col.col__md-6.col__xs-12.form__group
+          +fieldCheckbox('С применением агрессивных растворов', 'clean1', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'check09', 'check09', 'Растворы', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldCheckbox('Без применения агрессивных растворов', 'clean2', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 3', 'btn--full')
+    h3 3
+    section
+      h4 Требования к металлодетектору
+      h5 Варианты исполнения
+      .form__group
+        +fieldCheckbox('Изготовить без', 'cont1', false, 'checkbox--inline')
+        +fieldCheckbox('Изготовить на раме', 'cont2', false, 'checkbox--inline')
+      h5 Материал
+      .form__group
+        +fieldCheckbox('Окрашенная сталь', 'mat01', false, 'checkbox--inline')
+        +fieldCheckbox('Нержавеющая сталь', 'mat02', false, 'checkbox--inline')
+      .form__group
+        +fieldCheckbox('Другой', 'mat04', false, 'checkbox--inline')
+      h5 Электропитание детектора
+      .form__group
+        +fieldCheckbox('Однофазное 220В ± 10%, частота 60 Гц', '220', false, 'checkbox--inline')
+        +fieldCheckbox('Трёхфазное 380В ± 10%, частота 50 Гц', '380', false, 'checkbox--inline')
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'width9', 'width9', 'Необх. длина сетевого кабеля, м', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'width19', 'width19', 'Передача данных в АСУ', false)
+      h5 Необходимые системы сигнализации/отбраковки
+      .form__group
+        +fieldCheckbox('Световая сигнализация', 'sig2', false, 'checkbox--inline')
+        +fieldCheckbox('Звуковая сигнализация', 'sig3', false, 'checkbox--inline')
+      .form__group
+        +fieldCheckbox('Система автоматической отбраковки', 'sig4', false, 'checkbox--inline')
+      .form__group: +fieldLabelInput('text', 'other', 'other', 'Другое', false)
+      label.form__group Подключение металлодетектора установленного на раму (рис.B):
+      .form__group
+        +fieldCheckbox('Подключение к насосу', 'nas', false, 'checkbox--inline')
+        +fieldCheckbox('Подключение к шприцу', 'nas1', false, 'checkbox--inline')
+        +fieldCheckbox('Автономная работа', 'nas2', false, 'checkbox--inline')
+      .form__group: +fieldLabelInput('text', 'other1', 'other1', 'Материал отбраковывающего устройства', false)
+      h4 Варианты расположения панели оператора и #[br] отбраковывающего устройства – см. схему:
+      .form__group: +img('card/card-2.svg')
+      .form__group: +img('card/card-3.svg')
+      h5 Монтаж панели оператора
+      .form__group
+        +fieldCheckbox('А - на выносном пульте управления', 'sig26', false, 'checkbox--inline')
+        +fieldCheckbox('В - на раме', 'sig36', false, 'checkbox--inline')
+      .form__group: +fieldLabelInput('text', 'other2', 'other2', 'Для варианта А укажите предполагаемое расстояние от металлодетектора до выносного ПУ, м', false)
+      h5 Монтаж панели оператора
+      .form__group
+        +fieldCheckbox('А - отдельно', 'sig27', false, 'checkbox--inline')
+        +fieldCheckbox('В - на раме', 'sig37', false, 'checkbox--inline')
+      h5 Направление отбраковки относительно корпуса металлодетектора (рисунок А)
+      .form__group
+        +fieldCheckbox('1 влево', 'sig28', false, 'checkbox--inline')
+        +fieldCheckbox('2 вниз', 'sig38', false, 'checkbox--inline')
+        +fieldCheckbox('3 вправо', 'sig39', false, 'checkbox--inline')
+      .form__group: +fieldLabelTextarea('txt0', 'txt0', 'Дополнительная информация', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 4', 'btn--full')
+    h3 4
+    include ../components/_stepperLast

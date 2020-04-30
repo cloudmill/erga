@@ -1,0 +1,89 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form.stepper-fourth(action='#')
+  div
+    h3 1
+    section
+      h4 Информация о продукте
+      .form__group
+        +fieldLabelInput('text', 'prod', 'prod', 'Название', false)
+      .row
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'temp1', 'temp1', 'Производительность, т/ч', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'pprod1', 'pprod1', 'Насыпная плотность, т/м³', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'temp10', 'temp10', 'Температура, °C', false)
+        .col.col__md-6.col__xs-12.form__group
+          +fieldLabelInput('text', 'pprod10', 'pprod10', 'Влажность, %', false)
+      h5 Гранулометрический состав
+      .row.middle__xs
+        - for (let x = 10; x < 17; x++)
+          .col.col__lg-3.col__md-6.col__xs-12.form__group
+            +fieldLabelInput('text', 'from'+x, 'from'+x, 'от', false)
+          .col.col__lg-3.col__md-6.col__xs-12.form__group
+            +fieldLabelInput('text', 'to'+x, 'to'+x, 'до', false)
+          .col.col__md-6.col__xs-12.form__group
+            +fieldLabelInput('text', 'dol'+x, 'dol'+x, 'Доля, %', false)
+      h5 Состав материала сепарации
+      .row.middle__xs
+        - for (let x = 10; x < 17; x++)
+          .col.col__md-6.col__xs-12.form__group
+            +fieldLabelInput('text', 'nsw'+x, 'nsw'+x, 'Название', false)
+          .col.col__lg-3.col__md-6.col__xs-12.form__group
+            +fieldLabelInput('text', 'fr'+x, 'fr'+x, 'от', false)
+          .col.col__lg-3.col__md-6.col__xs-12.form__group
+            +fieldLabelInput('text', 'tod'+x, 'tod'+x, 'до', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    section
+      h4 Проектное задание
+      label.form__group Применение
+      .form__group
+        +fieldCheckbox('Удаление мелкой фракции (пыли)', 'poi1', false, 'checkbox--inline')
+        +fieldCheckbox('Разделение по удельному весу', 'poi2', false, 'checkbox--inline')
+        +fieldCheckbox('Очистка материала от посторонних примесей', 'poi3', false, 'checkbox--inline')
+      .form__group
+        +fieldLabelInput('text', 'fromz5', 'fromz5', 'Иное', false)
+      .form__group
+        +fieldCheckbox('Необходим удаленный контроль параметров работы оборудования', 'poi4', false, 'checkbox--inline')
+      br
+      .stepper-next: +btnArrowSub('Шаг 3', 'btn--full')
+    h3 3
+    section
+      h4 Исполнение
+      h5 Материал
+      label.form__group Соприкасающиеся с продуктом детали
+      .form__group
+        +fieldCheckbox('Обыкновенная сталь', 'attr01', false, 'checkbox--inline')
+        +fieldCheckbox('1.4571 / SS 316Ti', 'attr02', false, 'checkbox--inline')
+        +fieldCheckbox('1.4404 / SS 321', 'attr03', false, 'checkbox--inline')
+      .form__group
+        +fieldCheckbox('1.4301 / SS 304', 'attr04', false, 'checkbox--inline')
+        +fieldCheckbox('Другое', 'attr05', false, 'checkbox--inline')
+      label.form__group Детали, не вступающие в контакт с продуктом
+      .form__group
+        +fieldCheckbox('Обыкновенная сталь', 'attr06', false, 'checkbox--inline')
+        +fieldCheckbox('1.4404 / SS 321', 'attr07', false, 'checkbox--inline')
+        +fieldCheckbox('Другое', 'attr08', false, 'checkbox--inline')
+      label.form__group Качество поверхности
+      .form__group
+        +fieldCheckbox('Без обработки', 'attr09', false, 'checkbox--inline')
+        +fieldCheckbox('Обработанное', 'attr10', false, 'checkbox--inline')
+        +fieldCheckbox('Другое', 'attr11', false, 'checkbox--inline')
+      label.form__group Покрытие
+      .form__group
+        +fieldCheckbox('Нет', 'attr12', false, 'checkbox--inline')
+        +fieldCheckbox('Да', 'attr13', false, 'checkbox--inline')
+      .form__group: +fieldLabelInput('text', 'perc2v', 'perc2v', 'Напряжение питающей сети [В]', false)
+      .form__group: +fieldLabelInput('text', 'perc3v', 'perc3v', 'Расположение в помещении', false)
+      .form__group: +fieldLabelInput('text', 'perc5v', 'perc5v', 'Расположение снаружи (навес да/нет)', false)
+      br
+      .stepper-next: +btnArrowSub('Шаг 4', 'btn--full')
+    h3 4
+    include ../components/_stepperLast

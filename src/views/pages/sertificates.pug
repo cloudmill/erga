@@ -1,0 +1,85 @@
+extends ../layouts/master.pug
+
+block pageName
+  - var pageName = "fxindex"
+
+block header
+  include ../partials/_headerFX.pug
+
+block content
+  .container
+    h1
+      +reveal(['Сертификаты'])
+    +breadcrumbs(['О компании', 'Сертификаты'])
+    .sertificates
+      .row.sertificates-content
+        .col.col__lg-3.col__md-4.col__xs-12.sertificates-left
+          div.aside-menu.sertificates-menu#filters
+            ul(data-aos='fade-up')
+              li: a.active(href='#', data-filter="all"): span Свидетельства #[br] на&nbsp;товарные знаки
+              li: a(href='#', data-filter=".earth"): span Система менеджмента качества ISO 9001:2015
+              li: a(href='#', data-filter=".air"): span Гигиенические сертификаты
+              li: a(href='#', data-filter=".fire"): span Сертификаты соответствия ГОСТ Р
+              li: a(href='#', data-filter=".water"): span Сертификаты таможенного союза
+              li: a(href='#', data-filter=".rock"): span Наши партнёры
+        .col.col__lg-9.col__md-8.col__xs-12.grid
+          h3.earth
+            +reveal(['Свидетельство о товарном знаке'])
+          .sertificates-list.earth
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-1.jpg')
+              .sertificates-list__item-txt Свидетельство на товарный знак ЭРГА
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-2.jpg')
+              .sertificates-list__item-txt Приложение к свидетельству на товарный знак ЭРГА
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-3.jpg')
+              .sertificates-list__item-txt Свидетельство на товарный знак АРМАГ
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-4.jpg')
+              .sertificates-list__item-txt Свидетельство на товарный знак ВЭЛМА
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-5.jpg')
+              .sertificates-list__item-txt Свидетельство на товарный знак РЕСОЛАЙН
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-6.jpg')
+              .sertificates-list__item-txt  Свидетельство на товарный знак ЭРГАРД
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-7.jpg')
+              .sertificates-list__item-txt Свидетельство на товарный знак ВЕКОНТ
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-8.jpg')
+              .sertificates-list__item-txt Международный товарный знак ВЭЛМА
+          h3.air
+            +reveal(['Система менеджмента качества ISO 9001:2015'])
+          .sertificates-list.air
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-9.jpg')
+              .sertificates-list__item-txt Сертификат Роскосмос
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-10.jpg')
+              .sertificates-list__item-txt Cертификат соответствия IQNet
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-11.jpg')
+              .sertificates-list__item-txt Область сертификации системы менеджмента качества ООО «ЭРГА ПЛЮС»
+          h3.fire
+            +reveal(['Гигиенические сертификаты'])
+          .sertificates-list.fire
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-9.jpg')
+              .sertificates-list__item-txt Сертификат Роскосмос
+          h3.water
+            +reveal(['Сертификаты таможенного союза'])
+          .sertificates-list.water
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-9.jpg')
+              .sertificates-list__item-txt Сертификат Роскосмос
+          h3.rock
+            +reveal(['Наши партнёры'])
+          .sertificates-list.rock
+            .sertificates-list__item(data-aos='fade-up')
+              .sertificates-list__item-img: +img('about/sert-9.jpg')
+              .sertificates-list__item-txt Сертификат Роскосмос
+
+block footer
+  include ../partials/_footer.pug

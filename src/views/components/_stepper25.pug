@@ -1,0 +1,25 @@
+.stepper-btn
+  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+    span Скачать опросный лист
+      br
+      small .PDF&nbsp;&nbsp;235 KB.
+    i.icon-download
+form.steps-form-valid.stepper-two(action='#')
+  div
+    h3 1
+    section
+      h4 Информация о продукте
+      .form__group: +fieldLabelInputId('id-1', 'Название*', true)
+      .form__group: +fieldLabelInputId('id-2', 'Крупность материала, мм*', true, 'isNumber')
+      .form__group: +fieldLabelInputId('id-3', 'Содержание твёрдого в питании, %*', true, 'isNumber')
+      .form__group: +fieldLabelInputId('id-4', 'Процентное содержание магнитной фракции в питании, %*', true, 'isNumber')
+      .form__group: +fieldLabelInputId('id-5', 'Требуемая производительность (по твёрдому исходному), т/ч*', true, 'isNumber')
+      h5 Тип ванны*
+      .form__group
+        +fieldCheckbox('Прямоточная', 'attr1', false, 'checkbox--inline')
+        +fieldCheckbox('Противоточная', 'attr1', false, 'checkbox--inline')
+        +fieldCheckbox('Полупротивоточная', 'attr1', false, 'checkbox--inline')
+      br
+      .stepper-next: +btnArrowSub('Шаг 2', 'btn--full')
+    h3 2
+    include ../components/_stepperLast1

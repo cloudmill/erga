@@ -177,18 +177,18 @@ module.exports = env => {
         {from: 'assets/images', to: 'assets/images'},
         {from: 'assets/fonts', to: 'assets/fonts'},
       ]),
-      // new ImageminPlugin({
-      //   test: /\.(jpe?g|png|gif|svg)$/i,
-      //   pngquant: {
-      //     quality: '70'
-      //   },
-      //   plugins: [
-      //     imageminMozjpeg({
-      //       quality: 70,
-      //       progressive: true
-      //     })
-      //   ]
-      // }),
+      new ImageminPlugin({
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        pngquant: {
+          quality: '70'
+        },
+        plugins: [
+          imageminMozjpeg({
+            quality: 70,
+            progressive: true
+          })
+        ]
+      }),
       new SVGSpritemapPlugin('sprites/**/*.svg', {
         styles: path.join(__dirname, '../src/assets/styles/_sprites.scss')
       }),

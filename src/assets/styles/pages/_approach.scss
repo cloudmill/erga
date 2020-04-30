@@ -315,9 +315,12 @@
     background-color: $white;
     position: relative;
     margin-bottom: 10px;
-    height: 130px;
+    height: 145px;
     transition: color .5s;
     //transition: background-color .5s;
+    @media screen and (min-width: $screen-md) {
+      height: 130px;
+    }
     &:before {
       content: '';
       width: 100%;

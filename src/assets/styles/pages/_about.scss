@@ -153,18 +153,24 @@
         &-ico {
           position: absolute;
           top: 30px;
-          left: -20px;
+          left: -15px;
           z-index: -1;
+          @media screen and (min-width: $screen-md) {
+            left: -20px;
+          }
         }
         &--left {
           @media screen and (min-width: $screen-xl) {
             left: -100px;
           }
           @media screen and (min-height: 578px) and (max-height: 799px) {
-            left: 0;
+            left: 15px;
           }
         }
         &--right {
+          @media screen and (max-width: $screen-sm-max) {
+            margin-left: 30px;
+          }
           @media screen and (min-width: $screen-md) {
             position: absolute;
             top: 0;
@@ -693,6 +699,10 @@
     position: absolute;
     transition: height 0.5s;
     background-color: $color-type-2a;
+    border-radius: 300px;
+    @media screen and (min-width: $screen-md) {
+      border-radius: 0;
+    }
   }
 
   .arrowLine {

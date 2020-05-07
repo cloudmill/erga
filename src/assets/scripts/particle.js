@@ -81,6 +81,6 @@ if(valentines) {
       redraw(getWidth, getHeight);
     });
   } else {
-    valentines.setAttribute("src", "assets/images/erga.jpg");
+    valentines.setAttribute("src", "/local/templates/main/assets/images/erga.jpg");
   }
 }

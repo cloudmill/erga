@@ -517,6 +517,7 @@
   }
 }
 
+.steps-form-valid,
 .steps-form {
   position: relative;
   margin-left: -20px;
@@ -580,14 +581,22 @@
     color: $black;
     width: 100%;
     justify-content: space-between;
+
+    @media screen and (max-width: $screen-sm-max) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
     i {
       font-size: 13px;
       color: $base-color-main;
       transition: color .5s;
     }
+    span {
+      color: $black;
+    }
     &:hover {
       color: white;
-      i {
+      span, i {
         color: white;
       }
     }

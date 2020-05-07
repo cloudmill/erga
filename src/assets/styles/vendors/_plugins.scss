@@ -133,6 +133,11 @@ $items: ok;
     height: 140px;
   }
 }
+#call {
+  .close-popup {
+    top: -20px;
+  }
+}
 #call1,
 #call2 {
   .textarea,

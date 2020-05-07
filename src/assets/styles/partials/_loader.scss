@@ -10,6 +10,11 @@
   overflow: hidden;
   background: white;
   transition: height .5s;
+
+  .marquee--inner div {
+    width: 51%;
+  }
+
   &-body {
     position: absolute;
     left: 0;

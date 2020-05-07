@@ -1,18 +1,26 @@
 import StickySidebar from 'sticky-sidebar';
-import AOS from "aos";
+import AOS from 'aos';
 import 'jquery.steps';
 import {
-  carousel, carousel1, tradeCarousel1, tradeCarousel, tradeCarousel2, tradeCarousel3,
-  tradeCarousel4, tradeCarousel5, tradeCarousel6, tradeCarousel7
-} from  '../../../src/assets/scripts/sliders';
+  carousel,
+  carousel1,
+  tradeCarousel1,
+  tradeCarousel,
+  tradeCarousel2,
+  tradeCarousel3,
+  tradeCarousel4,
+  tradeCarousel5,
+  tradeCarousel6,
+  tradeCarousel7
+} from '../../../src/assets/scripts/sliders';
 import 'inputmask/dist/jquery.inputmask.min';
 
 let card, catalog, tabs, news, sert, screen_width;
 
-$(window).on('resize orientationchange', function(){
+$(window).on('resize orientationchange', function () {
   screen_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-  if(screen_width > 767) {
-    if($('.card-top__left').length) {
+  if (screen_width > 767) {
+    if ($('.card-top__left').length) {
       card = new StickySidebar('.card-top__left', {
         containerSelector: '.card-top',
         innerWrapperSelector: '.sidebar__inner',
@@ -22,7 +30,7 @@ $(window).on('resize orientationchange', function(){
         stickyClass: 'is-affixed',
       });
     }
-    if($('.catalog-main__left').length) {
+    if ($('.catalog-main__left').length) {
       catalog = new StickySidebar('.catalog-main__left', {
         containerSelector: '.catalog-main-row-first',
         innerWrapperSelector: '.sidebar__inner',
@@ -32,7 +40,7 @@ $(window).on('resize orientationchange', function(){
         stickyClass: 'is-affixed',
       });
     }
-    if($('.card-tabs__left').length) {
+    if ($('.card-tabs__left').length) {
       tabs = new StickySidebar('.card-tabs__left', {
         containerSelector: '.card-tabs',
         innerWrapperSelector: '.sidebar__inner',
@@ -42,7 +50,7 @@ $(window).on('resize orientationchange', function(){
         stickyClass: 'is-affixed',
       });
     }
-    if($('.socialNews').length) {
+    if ($('.socialNews').length) {
       news = new StickySidebar('.socialNews', {
         containerSelector: '.newsOne-content',
         innerWrapperSelector: '.mainNews-index',
@@ -52,7 +60,7 @@ $(window).on('resize orientationchange', function(){
         stickyClass: 'is-affixed',
       });
     }
-    if($('.sertificates-menu').length) {
+    if ($('.sertificates-menu').length) {
       sert = new StickySidebar('.sertificates-menu', {
         containerSelector: '.sertificates-content',
         innerWrapperSelector: '.sertificates-left',
@@ -62,7 +70,7 @@ $(window).on('resize orientationchange', function(){
         stickyClass: 'is-affixed',
       });
     }
-    if($('.sticky-elem').length) {
+    if ($('.sticky-elem').length) {
       sert = new StickySidebar('.sticky-elem', {
         containerSelector: '.sticky-content',
         innerWrapperSelector: '.sticky-left',
@@ -76,8 +84,8 @@ $(window).on('resize orientationchange', function(){
 });
 
 screen_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-if(screen_width > 767) {
-  if($('.card-top__left').length) {
+if (screen_width > 767) {
+  if ($('.card-top__left').length) {
     card = new StickySidebar('.card-top__left', {
       containerSelector: '.card-top',
       innerWrapperSelector: '.sidebar__inner',
@@ -87,7 +95,7 @@ if(screen_width > 767) {
       stickyClass: 'is-affixed',
     });
   }
-  if($('.catalog-main__left').length) {
+  if ($('.catalog-main__left').length) {
     catalog = new StickySidebar('.catalog-main__left', {
       containerSelector: '.catalog-main-row-first',
       innerWrapperSelector: '.sidebar__inner',
@@ -97,7 +105,7 @@ if(screen_width > 767) {
       stickyClass: 'is-affixed',
     });
   }
-  if($('.card-tabs__left').length) {
+  if ($('.card-tabs__left').length) {
     tabs = new StickySidebar('.card-tabs__left', {
       containerSelector: '.card-tabs',
       innerWrapperSelector: '.sidebar__inner',
@@ -107,7 +115,7 @@ if(screen_width > 767) {
       stickyClass: 'is-affixed',
     });
   }
-  if($('.socialNews').length) {
+  if ($('.socialNews').length) {
     news = new StickySidebar('.socialNews', {
       containerSelector: '.newsOne-content',
       innerWrapperSelector: '.mainNews-index',
@@ -117,7 +125,7 @@ if(screen_width > 767) {
       stickyClass: 'is-affixed',
     });
   }
-  if($('.sertificates-menu').length) {
+  if ($('.sertificates-menu').length) {
     sert = new StickySidebar('.sertificates-menu', {
       containerSelector: '.sertificates-content',
       innerWrapperSelector: '.sertificates-left',
@@ -127,7 +135,7 @@ if(screen_width > 767) {
       stickyClass: 'is-affixed',
     });
   }
-  if($('.sticky-elem').length) {
+  if ($('.sticky-elem').length) {
     sert = new StickySidebar('.sticky-elem', {
       containerSelector: '.sticky-content',
       innerWrapperSelector: '.sticky-left',
@@ -139,9 +147,9 @@ if(screen_width > 767) {
   }
 }
 
-$(document).mousemove(function(e) {
+$(document).mousemove(function (e) {
   screen_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-  if(screen_width > 1200) {
+  if (screen_width > 1200) {
     const elements = $('.publications-item-js');
     elements.each((index, item) => {
       const jItem = $(item);
@@ -157,7 +165,7 @@ $(document).mousemove(function(e) {
 
 
 // tabs
-$(".tabs-list").on("click", ".tab", function(e) {
+$(".tabs-list").on("click", ".tab", function (e) {
   e.preventDefault();
   const href = $(this).attr("data-target");
 
@@ -172,14 +180,16 @@ $(".tabs-list").on("click", ".tab", function(e) {
   $(this).addClass("active");
   $(href).addClass("show");
 
-  if(tabs) {
+  if (tabs) {
     tabs.updateSticky();
   }
   $('html, body').animate({
     scrollTop: $(href).offset().top - 100
   }, 500);
 
-  AOS.init({offset: -80});
+  AOS.init({
+    offset: -80
+  });
   $('.swiper-carousel').length && carousel.update();
   $('.swiper-carousel1').length && carousel1.update();
   $('.trademark-carousel--js').length && tradeCarousel.update();
@@ -203,10 +213,12 @@ form.children("div").steps({
   enableAllSteps: true,
   titleTemplate: '#title#',
   onStepChanged: function () {
-    if(tabs) {
+    if (tabs) {
       tabs.updateSticky();
     }
-    AOS.refresh({offset: -80});
+    AOS.refresh({
+      offset: -80
+    });
   },
 });
 formValid.children("div").steps({
@@ -217,12 +229,15 @@ formValid.children("div").steps({
   enableAllSteps: false,
   titleTemplate: '#title#',
   onStepChanged: function () {
-    if(tabs) {
+    if (tabs) {
       tabs.updateSticky();
     }
-    AOS.refresh({offset: -80});
+    AOS.refresh({
+      offset: -80
+    });
   },
 });
+
 
 function validateFields(element, func, isFinish) {
   const input = element.closest('section').find('.required');
@@ -231,18 +246,18 @@ function validateFields(element, func, isFinish) {
 
   input.each((index, item) => {
     const jItem = $(item);
-    if(jItem.prop('type') === 'checkbox') {
-      if(checked) {
+    if (jItem.prop('type') === 'checkbox') {
+      if (checked) {
         jItem.parent().removeClass('error');
       } else {
-        if(jItem.prop('checked')) {
+        if (jItem.prop('checked')) {
           jItem.parent().removeClass('error');
         } else {
           jItem.parent().addClass('error');
         }
       }
     } else {
-      if(!jItem.val()) {
+      if (!jItem.val()) {
         jItem.parent().addClass('error');
         jItem.parent().find('.input-error').text('Пожалуйста, заполните поле');
       } else {
@@ -251,7 +266,7 @@ function validateFields(element, func, isFinish) {
     }
     isNum.each((index, item) => {
       const jItem = $(item);
-      if(!!jItem.val()) {
+      if (!!jItem.val()) {
         if (!isNaN(jItem.val())) {
           jItem.parent().removeClass('error');
         } else {
@@ -262,30 +277,46 @@ function validateFields(element, func, isFinish) {
     })
   })
   const nonValidFields = element.closest('section').find('div.error');
-  if(nonValidFields.length === 0) {
+  if (nonValidFields.length === 0) {
     form.length && form.children("div").steps(func, {})
     formValid.length && formValid.children("div").steps(func, {})
-    if(isFinish) {
-      $('.finishContent').addClass('active').parents('form').submit();
+    if (isFinish) {
+      $('.finishContent').addClass('active');
+      let formCheck = $('.finishContent').parents('form');
+      if (formCheck.attr('data-type') == 'quest') {
+        $.ajax({
+          type: "POST",
+          url: "/local/templates/main/ajax/quest/add.php",
+          data: ({
+            "data": formCheck.serializeArray(),
+            "value": formCheck.attr('data-value'),
+            "item": formCheck.attr('data-item'),
+          }),
+          success: function (a) {
+            console.log(a);
+          }
+        });
+      }
+
     }
-    if(form.length) {
+    if (form.length) {
       $('html, body').animate({
         scrollTop: $(".steps-form").offset().top - 100
       }, 500);
     }
-    if(formValid.length) {
+    if (formValid.length) {
       $('html, body').animate({
         scrollTop: $(".steps-form-valid").offset().top - 100
       }, 500);
     }
   }
-  if(nonValidFields.length) {
-    if(form.length) {
+  if (nonValidFields.length) {
+    if (form.length) {
       $('html, body').animate({
         scrollTop: $(".steps-form div.error").offset().top - 100
       }, 500);
     }
-    if(formValid.length) {
+    if (formValid.length) {
       $('html, body').animate({
         scrollTop: $(".steps-form-valid div.error").offset().top - 100
       }, 500);

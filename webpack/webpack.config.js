@@ -178,6 +178,7 @@ module.exports = env => {
         {from: 'assets/fonts', to: 'assets/fonts'},
       ]),
       new ImageminPlugin({
+        cacheFolder: './.cache',
         test: /\.(jpe?g|png|gif|svg)$/i,
         pngquant: {
           quality: '70'

@@ -528,6 +528,9 @@
       margin-bottom: 0;
       width: auto;
     }
+    &[data-type="material"] {
+      z-index: 3;
+    }
     @media screen and (min-width: $screen-xl) {
       &[data-type="industry"] {
         max-width: 170px;

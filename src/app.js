@@ -3,31 +3,24 @@
 // Styles
 import '../src/assets/styles/_app.scss';
 import { fullpage_init } from  '../src/assets/scripts/fullpage';
-import { menu, swiper, carousel, carousel1, publications, galleryTop, galleryThumbs, tradeCarousel, tradeCarousel1, tradeCarousel2 } from  '../src/assets/scripts/sliders';
 
 require('../src/assets/scripts/tween');
 require('../src/assets/scripts/input');
 require('../src/assets/scripts/maps');
+const { detect } = require('detect-browser');
 
 import AOS from "aos";
 import Rellax from "rellax";
 
 $(document).ready(() => {
+  const browser = detect();
+  $('html').addClass(browser.name);
+
   screen_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   require('../src/assets/scripts/header');
   require('../src/assets/scripts/index');
   require('../src/assets/scripts/history');
 
-  menu;
-  swiper;
-  carousel;
-  carousel1;
-  publications;
-  galleryTop;
-  galleryThumbs;
-  tradeCarousel;
-  tradeCarousel1;
-  tradeCarousel2;
   if(screen_width > 767 && $('#fullpage').length) {
     fullpage_init();
   }

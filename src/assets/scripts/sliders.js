@@ -1,7 +1,10 @@
 import Swiper from 'swiper';
+const { detect } = require('detect-browser');
 
+const browser = detect();
+console.log(browser.name);
 export const swiper = new Swiper('.swiper-container', {
-  effect: 'coverflow',
+  effect: browser.name === 'safari' ? 'slide' : 'coverflow',
   grabCursor: true,
   centeredSlides: true,
   // mousewheel: true,
@@ -11,11 +14,11 @@ export const swiper = new Swiper('.swiper-container', {
   spaceBetween: 0,
   speed: 1500,
   coverflowEffect: {
-    rotate: 50,
+    rotate: 0,
     stretch: 0,
-    depth: 100,
+    depth: 0,
     modifier: 1,
-    slideShadows : true,
+    slideShadows : false,
   },
   pagination: {
     el: '.swiper-pagination',
@@ -188,11 +191,11 @@ divOverlay.addEventListener('mousedown', function(e) {
     divOverlay.offsetLeft - e.clientX,
   ];
 }, true);
-document.addEventListener('mouseup', function() {
+divOverlay.addEventListener('mouseup', function() {
   isDown = false;
   stopWhereYouAre();
 }, true);
-document.addEventListener('mousemove', function(event) {
+divOverlay.addEventListener('mousemove', function(event) {
   event.preventDefault();
   if (isDown) {
     if (event.pageX > oldx) {

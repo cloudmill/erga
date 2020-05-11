@@ -75,6 +75,15 @@
         position: relative;
         z-index: 2;
       }
+      .txt {
+        @media screen and (max-width: $screen-sm-max) {
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          padding: 0 5px;
+        }
+      }
       @media screen and (min-width: $screen-md) {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -315,6 +324,18 @@
         }
         label {
           align-items: center;
+          @media screen and (max-width: $screen-sm-max) {
+            display: flex;
+            align-items: center;
+          }
+        }
+        .inner {
+          @media screen and (max-width: $screen-sm-max) {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
         }
         &--link {
           @extend .col__lg-12;

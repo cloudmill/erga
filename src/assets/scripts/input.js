@@ -1,5 +1,16 @@
 import AOS from "aos";
 
+export function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+export function validatePhone(phone) {
+  const re = /^(\+7)[\s\-]\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+  return re.test(phone);
+}
+
+
 function validateField(element, event) {
   const isRequired = element.attr('required');
   const value = event.target.value;
@@ -11,18 +22,31 @@ function validateField(element, event) {
   } else {
     element.closest('.input').addClass('input--filled');
   }
+
   if(value) {
     if(isNumber && isNaN(value)) {
       element.closest('.input').addClass('error');
-      element.closest('.input').next();
       element.closest('.input').next().text('Укажите числовое значение');
+    } else if(element.prop('type') === 'email') {
+      if (validateEmail(value)) {
+        element.closest('.input').removeClass('error');
+      } else {
+        element.closest('.input').addClass('error');
+        element.closest('.input').next().text('Неверно введен формат адреса');
+      }
+    } else if(element.prop('name') === 'phone') {
+      if (validatePhone(value)) {
+        element.closest('.input').removeClass('error');
+      } else {
+        element.closest('.input').addClass('error');
+        element.closest('.input').next().text('Неверно введен номер телефона');
+      }
     } else {
       element.closest('.input').removeClass('error');
     }
   }
   if(!value && isRequired) {
     element.closest('.input').addClass('error');
-    element.closest('.input').next();
     element.closest('.input').next().text('Пожалуйста, заполните поле');
   }
 }
@@ -88,7 +112,7 @@ $(document).on("submit", "#filter", function () {
   }
   return false;
 });
- 
+
 $(document).on("change", "#filter input", function () {
   var sector = $('#industry input:checked').val();
   if (sector) {

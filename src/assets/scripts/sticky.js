@@ -14,6 +14,7 @@ import {
   tradeCarousel7
 } from '../../../src/assets/scripts/sliders';
 import 'inputmask/dist/jquery.inputmask.min';
+import {validateEmail, validatePhone} from "./input";
 
 let card, catalog, tabs, news, sert, screen_width;
 
@@ -238,7 +239,6 @@ formValid.children("div").steps({
   },
 });
 
-
 function validateFields(element, func, isFinish) {
   const input = element.closest('section').find('.required');
   const isNum = element.closest('section').find('.isNumber').find('input');
@@ -246,6 +246,7 @@ function validateFields(element, func, isFinish) {
 
   input.each((index, item) => {
     const jItem = $(item);
+    const value = jItem.val();
     if (jItem.prop('type') === 'checkbox') {
       if (checked) {
         jItem.parent().removeClass('error');
@@ -256,8 +257,21 @@ function validateFields(element, func, isFinish) {
           jItem.parent().addClass('error');
         }
       }
+    } else if (jItem.prop('type') === 'email' && value) {
+      if (validateEmail(value)) {
+        jItem.parent().removeClass('error');
+      } else {
+        jItem.parent().addClass('error');
+      }
+    } else if(jItem.prop('name') === 'phone') {
+      if (validatePhone(value)) {
+        jItem.parent().removeClass('error');
+      } else {
+        jItem.parent().addClass('error');
+        jItem.parent().find('.input-error').text('Неверно введен номер телефона');
+      }
     } else {
-      if (!jItem.val()) {
+      if (!value) {
         jItem.parent().addClass('error');
         jItem.parent().find('.input-error').text('Пожалуйста, заполните поле');
       } else {
@@ -266,8 +280,9 @@ function validateFields(element, func, isFinish) {
     }
     isNum.each((index, item) => {
       const jItem = $(item);
-      if (!!jItem.val()) {
-        if (!isNaN(jItem.val())) {
+      const value = jItem.val();
+      if (!!value) {
+        if (!isNaN(value)) {
           jItem.parent().removeClass('error');
         } else {
           jItem.parent().addClass('error');
@@ -300,26 +315,34 @@ function validateFields(element, func, isFinish) {
 
     }
     if (form.length) {
-      $('html, body').animate({
-        scrollTop: $(".steps-form").offset().top - 100
-      }, 500);
+      setTimeout(() => {
+        $('html, body').animate({
+          scrollTop: $(".steps-form").offset().top - 100
+        }, 500);
+      }, 100);
     }
     if (formValid.length) {
-      $('html, body').animate({
-        scrollTop: $(".steps-form-valid").offset().top - 100
-      }, 500);
+      setTimeout(() => {
+        $('html, body').animate({
+          scrollTop: $(".steps-form-valid").offset().top - 100
+        }, 500);
+      }, 100);
     }
   }
   if (nonValidFields.length) {
     if (form.length) {
-      $('html, body').animate({
-        scrollTop: $(".steps-form div.error").offset().top - 100
-      }, 500);
+      setTimeout(() => {
+        $('html, body').animate({
+          scrollTop: $(".steps-form div.error").offset().top - 100
+        }, 500);
+      }, 100);
     }
     if (formValid.length) {
-      $('html, body').animate({
-        scrollTop: $(".steps-form-valid div.error").offset().top - 100
-      }, 500);
+      setTimeout(() => {
+        $('html, body').animate({
+          scrollTop: $(".steps-form-valid div.error").offset().top - 100
+        }, 500);
+      }, 100);
     }
   }
 }

@@ -1,5 +1,5 @@
 .stepper-btn
-  a.btn.btn--default.popup-modal.popup-with-zoom-anim(href='#call')
+  a.btn.btn--default(href='assets/files/card22.pdf', target='_blank')
     span Скачать опросный лист
       br
       small .PDF&nbsp;&nbsp;235 KB.
@@ -27,8 +27,8 @@ form.steps-form-valid.stepper-five(action='#')
         +fieldCheckbox('Не металлизированная', 'man2', false, 'checkbox--inline')
       h5 Способ подачи продукта на конвейер детектора
       .row.middle__xs
-        .col.col__xs-12.form__group: +fieldCheckbox('Вручную', 'man', false)
-        .col.col__lg-3.col__md-6.col__xs-12.form__group: +fieldCheckbox('С конвейера', 'man1', false)
+        .col.col__xs-12.form__group: +fieldCheckbox('Вручную', 'man66', false)
+        .col.col__lg-3.col__md-6.col__xs-12.form__group: +fieldCheckbox('С конвейера', 'man88', false)
         .col.col__lg-9.col__md-6.col__xs-12.form__group: +fieldLabelInputId('from2', 'Укажите скорость движения ленты конвейера, м/с', false, 'isNumber')
       .form__group: +fieldLabelInputId('id-4', 'Другой способ подачи', false)
       br
@@ -58,9 +58,9 @@ form.steps-form-valid.stepper-five(action='#')
         +fieldRadio('C', 'radio3', 'radioabcz', false, 'radio--inline')
       label.form__group Высота продукта на ленте равна стороне
       .form__group
-        +fieldRadio('A', 'radio1', 'radioabcy', false, 'radio--inline')
-        +fieldRadio('B', 'radio2', 'radioabcy', false, 'radio--inline')
-        +fieldRadio('C', 'radio3', 'radioabcy', false, 'radio--inline')
+        +fieldRadio('A', 'radio11', 'radioabcy', false, 'radio--inline')
+        +fieldRadio('B', 'radio21', 'radioabcy', false, 'radio--inline')
+        +fieldRadio('C', 'radio31', 'radioabcy', false, 'radio--inline')
       .row.middle__xs
         .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-14', 'Ширина конвейерной ленты, мм', false, 'isNumber')
         .col.col__md-6.col__xs-12.form__group: +fieldLabelInputId('id-15', 'Расстояние между рядами упаковок (по длине ленты), мм:', false, 'isNumber')
@@ -95,7 +95,7 @@ form.steps-form-valid.stepper-five(action='#')
       .form__group: +fieldLabelInputId('id-21', 'Требуемая длина конвейера, мм', false, 'isNumber')
       .form__group: +fieldLabelInputId('id-22', 'Высота начальной секции конвейера (по уровню ленты), мм', false, 'isNumber')
       .form__group: +fieldLabelInputId('id-23', 'Высота конечной секции конвейера (по уровню ленты), мм:', false, 'isNumber')
-      .form__group: +fieldLabelInputId('id-24', 'Необход. длина сетевого кабеля, м', false, 'isNumber')
+      .form__group: +fieldLabelInputId('id-24', 'Необходимая длина сетевого кабеля, м', false, 'isNumber')
       h5 Необходимая система отбраковки
       .form__group
         +fieldCheckbox('Остановка конвейера', 'attr41', false, 'checkbox--inline')

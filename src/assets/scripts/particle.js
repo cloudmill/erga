@@ -31,7 +31,10 @@ const settings = {
   layerDistance: 8.7
 };
 const valentines = document.getElementById('valentines');
-const webGLAvailable = typeof window['WebGL2RenderingContext'] !== 'undefined';
+
+function detectSupportWebGL2(){
+  return  !!document.createElement('canvas').getContext('webgl2');
+}
 
 let isApple = /iPhone|iPad|iPod|Safari/i.test(navigator.userAgent);
 if (navigator.userAgent.indexOf('Chrome')!=-1){
@@ -39,7 +42,7 @@ if (navigator.userAgent.indexOf('Chrome')!=-1){
 }
 
 if(valentines) {
-  if(!(Safari || InternetExplorer) || (!Safari && webGLAvailable)) {
+  if(!(Safari || InternetExplorer) || (!Safari && detectSupportWebGL2())) {
     const getWidth = document.getElementsByClassName('section__main')[0].offsetWidth;
     const getHeight = document.getElementsByClassName('section__main')[0].offsetHeight;
     let heart = new Particle({

@@ -113,6 +113,9 @@
       @media screen and (min-width: $screen-xl) {
         max-width: 890px;
       }
+      @media screen and (min-width: $screen-xl) and (max-width: 1400px) {
+        max-width: 1000px;
+      }
       @media screen and (min-width: $screen-xxl) {
         max-width: 1030px;
       }

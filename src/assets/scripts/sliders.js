@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 const { detect } = require('detect-browser');
 
 const browser = detect();
-console.log(browser.name);
+
 export const swiper = new Swiper('.swiper-container', {
   effect: browser.name === 'safari' ? 'slide' : 'coverflow',
   grabCursor: true,

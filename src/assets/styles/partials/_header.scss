@@ -447,6 +447,17 @@
       padding: 10px 85px;
     }
   }
+  @media screen and (min-width: $screen-xl) and (max-width: 1400px) {
+    .page-header__phone {
+      margin: 0 20px;
+    }
+    .page-header__link {
+      display: none;
+    }
+    .header-content > * {
+      justify-content: center;
+    }
+  }
   .header-content {
     max-width: 70%;
     @media screen and (min-width: $screen-xl) {

@@ -105,7 +105,7 @@ form.steps-form-valid.stepper-five(action='#')
       .form__group
         +fieldCheckbox('1 - на корпусе блока металлодетектора, слева', 'attr21', false)
         +fieldCheckbox('2 - на выносном пульте управления (ПУ)', 'attr22', false)
-      .form__group: +fieldLabelInputId('id-26', 'Для варианта 2 укажите предполагаемое расстояние от металлодетектора до выносного ПУ, м:', false)
+      .form__group.input-xs: +fieldLabelInputId('id-26', 'Для варианта 2 укажите предполагаемое расстояние от металлодетектора до выносного ПУ, м:', false)
       .form__group: +fieldLabelTextarea('txt7', 'txt7', 'Дополнительная информация', false)
       br
       .stepper-next: +btnArrowSub('Шаг 4', 'btn--full')

@@ -141,8 +141,10 @@
     > * {
       @extend .col__md-6;
       @extend .col__xs-12;
+      margin-top: -1px;
       @media screen and (min-width: $screen-md) {
         margin-left: -1px;
+        margin-top: 0;
       }
     }
     > .card-btn--full {
@@ -552,6 +554,16 @@
   .radio {
     label {
       line-height: 30px;
+      @media screen and (max-width: $screen-sm-max) {
+        font-size: 16px;
+      }
+    }
+  }
+  .input-xs {
+    label {
+      @media screen and (max-width: $screen-sm-max) {
+        font-size: 11px;
+      }
     }
   }
 

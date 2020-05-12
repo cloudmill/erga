@@ -388,6 +388,7 @@ $items: ok;
 .stepper {
   &-fourth {
     .wizard > .steps > ul > li + li:before {
+      width: 200%;
       @media screen and (min-width: 768px) {
         width: 400%;
       }
@@ -398,6 +399,7 @@ $items: ok;
   }
   &-three {
     .wizard > .steps > ul > li + li:before {
+      width: 400%;
       @media screen and (min-width: 768px) {
         width: 800%;
       }
@@ -411,6 +413,7 @@ $items: ok;
   }
   &-two {
     .wizard > .steps > ul > li + li:before {
+      width: 1000%;
       @media screen and (min-width: 768px) {
         width: 1600%;
       }

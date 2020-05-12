@@ -33,7 +33,16 @@ const settings = {
 const valentines = document.getElementById('valentines');
 
 function detectSupportWebGL2(){
-  return  !!document.createElement('canvas').getContext('webgl2');
+  let result = true;
+  const gl = document.createElement('canvas').getContext('webgl2');
+  if (!gl) {
+    if (typeof WebGL2RenderingContext !== 'undefined') {
+      result = false;
+    } else {
+      result = false;
+    }
+  }
+  return result;
 }
 
 let isApple = /iPhone|iPad|iPod|Safari/i.test(navigator.userAgent);

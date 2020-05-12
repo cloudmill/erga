@@ -14,6 +14,7 @@ import Rellax from "rellax";
 
 $(document).ready(() => {
   const browser = detect();
+  console.log(browser);
   $('html').addClass(browser.name);
 
   screen_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);

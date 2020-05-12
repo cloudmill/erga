@@ -67,6 +67,18 @@ body.index {
       padding-bottom: 10px;
       background-color: white;
       border-bottom: 1px solid #dadada;
+
+      @media screen and (min-width: $screen-xl) and (max-width: 1400px) {
+        .page-header__phone {
+          margin: 0 20px;
+        }
+        .page-header__link {
+          display: none;
+        }
+        .header-content > * {
+          justify-content: center;
+        }
+      }
       //&:not(.white) {
       //  color: white;
       //  background-color: #0000FF;

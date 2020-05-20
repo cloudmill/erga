@@ -71,9 +71,7 @@ $(document).on('click', '.reset-filterBody', function(){
   $(filterItem).removeClass('active');
   $(filterItem).find('span').text(data);
   $(filterItem).find('b').text('');
-  if(getID === 'industry') {
-    $('.filter--js .filter__item:nth-child(2)').addClass('disabled');
-  }
+  $('#filter').submit();
 });
 $(document).on('click', '.get-filterBody', function(){
   const getID = $(this).closest('.filtersBody__item').attr('id');
@@ -91,10 +89,8 @@ $(document).on('click', '.get-filterBody', function(){
     $('.filter--js').find('.filter__item[data-type=' + getID + '] > span').text(string);
     $('.filter--js').find('.filter__item[data-type=' + getID + ']').addClass('active');
   }
-  if(getID === 'industry') {
-    $('.filter--js .filter__item.disabled').removeClass('disabled').find('.filter__item-error').slideUp();
-  }
   $(this).closest('.filtersBody__item').removeClass('active');
+  $('#filter').submit();
 });
 $(document).on('click', '.reset--js', function(){
   $('.filtersBody').find('input:checkbox').prop('checked', false);
@@ -104,8 +100,8 @@ $(document).on('click', '.reset--js', function(){
     $(this).removeClass('active');
     $(this).find('span').text(data);
     $(this).find('b').text('');
-  })
-  $('.filter--js .filter__item[data-type="material"]').addClass('disabled');
+  });
+  $('#filter').submit();
 });
 //filter
 
@@ -131,7 +127,7 @@ $(".catalog-menu-close").click(function () {
   return false;
 });
 $(document).on("click", ".config-filter__item input", function () {
-  const data = $(this).attr('value');
+  const data = $(this).attr('data-name');
   $(this).closest('.config-block').hide('300').next().addClass('active').find('.txt').text(data);
   $(this).closest('.config-block').hide('300').next().next().show('300');
 
@@ -140,6 +136,7 @@ $(document).on("click", ".config-filter__item input", function () {
     $('.config-result').show('300');
   }
   setTimeout(() => AOS.refresh({offset: -80}), 500);
+  $('#config').submit();
 });
 $(document).on("click", ".config-block-text", function () {
   $(this).removeClass('active');
@@ -150,6 +147,7 @@ $(document).on("click", ".config-block-text", function () {
     $('.config-result, .config-textres').hide('300');
   }
   setTimeout(() => AOS.refresh({offset: -80}), 500);
+  $('#config').submit();
 });
 
 // $(".catalog-content__item").mouseover(function (e) {

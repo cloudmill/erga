@@ -18,10 +18,11 @@ exports.pages = function (env, folder = '') {
     } else {
       fileName = folder === '' ? `${viewName}.html` : `${folder}/${viewName}.html`;
     }
+    const excludeHTML = fileName === 'history1990.html' || fileName === 'history2000.html' || fileName === 'history2010.html';
     const options = {
       filename: fileName,
       template: `views/${rootPagesFolderName}/${folder}/${view}`,
-      inject: true
+      inject: excludeHTML ? false : true
     };
 
     if (env === 'development') {

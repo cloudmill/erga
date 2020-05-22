@@ -1,1 +1,10 @@
-<svg width="53" height="53" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="26.5" cy="26.5" r="26.5" fill="#fff"/><path d="M14.109 32.03L9.559 15.5h34.878l-4.55 16.53H14.108z" stroke="#DF0112"/><path stroke="#0000BD" d="M15.69 20.155h22.619"/><path stroke="#DF0112" d="M11.213 21.559v14.477M42.88 21.559v14.477m2.214-.179H8.904"/><circle cx="19.648" cy="35.923" r="2.327" fill="#fff" stroke="#DF0112"/><circle cx="34.35" cy="35.923" r="2.327" fill="#fff" stroke="#DF0112"/></svg>
+<svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="26.5" cy="26.5" r="26.5" fill="white"/>
+<path d="M14.1087 32.0298L9.55858 15.5H44.4366L39.8865 32.0298H14.1087Z" stroke="#DF0112"/>
+<line x1="15.6895" y1="20.1548" x2="38.3085" y2="20.1548" stroke="#0000BD"/>
+<line x1="11.2134" y1="21.5595" x2="11.2134" y2="36.0357" stroke="#DF0112"/>
+<line x1="42.8801" y1="21.5595" x2="42.8801" y2="36.0357" stroke="#DF0112"/>
+<line x1="45.0942" y1="35.8571" x2="8.90376" y2="35.8571" stroke="#DF0112"/>
+<circle cx="19.6479" cy="35.9226" r="2.32738" fill="white" stroke="#DF0112"/>
+<circle cx="34.3503" cy="35.9226" r="2.32738" fill="white" stroke="#DF0112"/>
+</svg>

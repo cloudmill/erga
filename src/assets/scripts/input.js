@@ -849,6 +849,13 @@ function config() {
             }),
             success: function (a) {
                 $('#material_body').html(a);
+                $('#material_body .popup-modal').magnificPopup({
+                    type: 'inline',
+                    removalDelay: 1300,
+                    mainClass: 'my-mfp-zoom-in',
+                    showCloseBtn: false,
+                    fixedContentPos: true,
+                });
             }
         });
 

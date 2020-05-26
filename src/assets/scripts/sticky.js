@@ -1,6 +1,6 @@
 import StickySidebar from 'sticky-sidebar';
 import AOS from 'aos';
-import 'jquery.steps';
+import '../../../src/assets/scripts/plugins/jquery.steps.min';
 import {
   carousel,
   carousel1,

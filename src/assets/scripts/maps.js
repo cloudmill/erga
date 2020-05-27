@@ -187,7 +187,7 @@ function initMap() {
   for (let i = 0; i < locations.length; i++) {
     markers[i] = new google.maps.Marker({
       position: new google.maps.LatLng(locations[i][0], locations[i][1]),
-      icon: "assets/images/icons/marker.svg",
+      icon: "/local/templates/main/assets/images/icons/marker.svg",
       map: map,
       id: i
     });

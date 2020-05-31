@@ -687,158 +687,28 @@ body.index {
     .sliderList__item {
       opacity: 1;
       transform: translate3d(0, 0, 0);
+      .img {
+        img {
+          &:nth-child(2) {
+            display: none;
+          }
+        }
+      }
+      &:hover {
+        .img {
+          img {
+            &:nth-child(1) {
+              display: none;
+            }
+            &:nth-child(2) {
+              display: block;
+            }
+          }
+        }
+      }
     }
     .col {
-      &:first-child {
-        .sliderList__item {
-          transition: transform 0.5s 0.6s, opacity 0.5s 0.6s;
-          .img {
-            background: url("../images/icons/otr/ico-slide-1.svg") no-repeat
-              center;
-          }
-          &:hover {
-            .img {
-              background: url("../images/icons/otr/ico-slide-1-h.svg") no-repeat
-                center;
-            }
-          }
-        }
-      }
-      &:nth-child(2) {
-        .sliderList__item {
-          transition: transform 0.5s 0.7s, opacity 0.5s 0.7s;
-          .img {
-            background: url("../images/icons/otr/ico-slide-2.svg") no-repeat
-              center;
-          }
-          &:hover {
-            .img {
-              background: url("../images/icons/otr/ico-slide-2-h.svg") no-repeat
-                center;
-            }
-          }
-        }
-      }
-      &:nth-child(3) {
-        .sliderList__item {
-          transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
-          .img {
-            background: url("../images/icons/otr/ico-slide-3.svg") no-repeat
-              center;
-          }
-          &:hover {
-            .img {
-              background: url("../images/icons/otr/ico-slide-3-h.svg") no-repeat
-                center;
-            }
-          }
-        }
-      }
-      &:nth-child(4) {
-        .sliderList__item {
-          transition: transform 0.5s 0.9s, opacity 0.5s 0.9s;
-          .img {
-            background: url("../images/icons/otr/ico-slide-4.svg") no-repeat
-              center;
-          }
-          &:hover {
-            .img {
-              background: url("../images/icons/otr/ico-slide-4-h.svg") no-repeat
-                center;
-            }
-          }
-        }
-      }
-      &:nth-child(5) {
-        .sliderList__item {
-          transition: transform 0.5s 1s, opacity 0.5s 1s;
-          .img {
-            background: url("../images/icons/otr/ico-slide-5.svg") no-repeat
-              center;
-          }
-          &:hover {
-            .img {
-              background: url("../images/icons/otr/ico-slide-5-h.svg") no-repeat
-                center;
-            }
-          }
-        }
-      }
-      &:nth-child(6) {
-        .sliderList__item {
-          transition: transform 0.5s 1.1s, opacity 0.5s 1.1s;
-          .img {
-            background: url("../images/icons/otr/ico-slide-6.svg") no-repeat
-              center;
-          }
-          &:hover {
-            .img {
-              background: url("../images/icons/otr/ico-slide-6-h.svg") no-repeat
-                center;
-            }
-          }
-        }
-      }
-      &:nth-child(7) {
-        .sliderList__item {
-          transition: transform 0.5s 1.2s, opacity 0.5s 1.2s;
-          .img {
-            background: url("../images/icons/otr/ico-slide-7.svg") no-repeat
-              center;
-          }
-          &:hover {
-            .img {
-              background: url("../images/icons/otr/ico-slide-7-h.svg") no-repeat
-                center;
-            }
-          }
-        }
-      }
-      &:nth-child(8) {
-        .sliderList__item {
-          transition: transform 0.5s 1.3s, opacity 0.5s 1.3s;
-          .img {
-            background: url("../images/icons/otr/ico-slide-8.svg") no-repeat
-              center;
-          }
-          &:hover {
-            .img {
-              background: url("../images/icons/otr/ico-slide-8-h.svg") no-repeat
-                center;
-            }
-          }
-        }
-      }
-      &:nth-child(9) {
-        .sliderList__item {
-          transition: transform 0.5s 1.4s, opacity 0.5s 1.4s;
-          .img {
-            background: url("../images/icons/otr/ico-slide-9.svg") no-repeat
-              center;
-          }
-          &:hover {
-            .img {
-              background: url("../images/icons/otr/ico-slide-9-h.svg") no-repeat
-                center;
-            }
-          }
-        }
-      }
-      &:nth-child(10) {
-        .sliderList__item {
-          transition: transform 0.5s 1.5s, opacity 0.5s 1.5s;
-          .img {
-            background: url("../images/icons/otr/ico-slide-10.svg") no-repeat
-              center;
-          }
-          &:hover {
-            .img {
-              background: url("../images/icons/otr/ico-slide-10-h.svg")
-                no-repeat center;
-            }
-          }
-        }
-      }
+
     }
   }
   &__item {

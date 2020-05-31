@@ -1,9 +1,0 @@
-<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.0854 23.2486C21.8029 22.2086 23.7337 19.583 23.7337 16.499C23.7337 13.4169 21.8029 10.791 19.0854 9.7498V1.23291C26.4132 2.46472 32.0014 8.82139 32.0014 16.499C32.0014 24.1778 26.4132 30.5348 19.0854 31.7666V23.2486Z" stroke="#DF0112" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.5001 9.26619C12.5043 9.26619 9.26653 12.5044 9.26653 16.4986C9.26653 17.5506 9.49554 18.5464 9.89852 19.4473L3.8747 25.4696C2.07135 22.937 1.00073 19.8464 1.00073 16.4986C1.00073 7.93906 7.9394 1 16.5001 1V9.26619Z" stroke="#0000FF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.5021 23.7322C14.5042 23.7322 12.6959 22.9224 11.3877 21.6143L5.54175 27.4587C8.34674 30.2641 12.2224 31.9988 16.5021 31.9988V23.7322Z" stroke="#DF0112" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<line x1="13.2985" y1="10.2633" x2="10.2985" y2="2.26334" stroke="#0000FF" stroke-width="1.5"/>
-<line y1="-0.75" x2="8.544" y2="-0.75" transform="matrix(-0.78563 -0.618697 0.618686 -0.785638 11.8484 11.1055)" stroke="#0000FF" stroke-width="1.5"/>
-<line x1="9.79104" y1="14.7203" x2="1.84819" y2="12.4161" stroke="#0000FF" stroke-width="1.5"/>
-<line y1="-0.75" x2="8.544" y2="-0.75" transform="matrix(-0.998605 0.0528059 -0.0528617 -0.998602 9.53198 17)" stroke="#0000FF" stroke-width="1.5"/>
-</svg>

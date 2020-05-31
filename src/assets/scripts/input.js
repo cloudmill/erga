@@ -54,7 +54,7 @@ function validateField(element, event) {
 $('.steps-form, .steps-form-valid').on("blur", '.input input, .textarea textarea', function (event) {
     validateField($(this), event);
 });
-$('.input input, .textarea textarea').on("blur", function (event) {
+$(document).on("blur", '.input input, .textarea textarea', function (event) {
     validateField($(this), event);
 });
 
@@ -114,8 +114,8 @@ function forms() {
                     "company": company,
                     "name": name,
                     "phone": phone,
-                    "sector_name": sector_name,
-                    "sector": sector,
+                    "sector": sector_name,
+                    "url": window.location.href
                 }),
                 dataType: 'json',
                 success: function (msg) {
@@ -125,6 +125,77 @@ function forms() {
                     $('#callback_form input[name=company]').val('');
                     $('#callback_form input[name=phone]').val('');
                     $('#callback_form input[name=checkbox]').prop("checked", false);
+                }
+            });
+
+        }
+    });
+
+    $(document).on("click", "#question_form .send--js", function (e) {
+        e.preventDefault();
+        var mist = 0;
+        var sessid = $('#question_form input[name=sessid]').val();
+        var name = $('#question_form input[name=name]').val();
+        var company = $('#question_form input[name=company]').val();
+        var phone = $('#question_form input[name=phone]').val();
+        var email = $('#question_form input[name=email]').val();
+        var sector = $('#question_form select[name=sector]').val();
+        var sector_name = $('#question_form option[value=' + sector + ']').html();
+        var text = $('#question_form textarea[name=text]').val();
+        var agree = '';
+        agree = $('#question_form input[name=checkbox]:checked').val();
+        if (agree != 'y') {
+            mist = mist + 1;
+            $('#question_form input[name=checkbox]').parent().addClass("error");
+        } else {
+            $('#question_form input[name=checkbox]').parent().removeClass("error");
+        }
+        if (phone) {
+            $('#question_form input[name=phone]').parent().removeClass("error");
+        } else {
+            $('#question_form input[name=phone]').parent().addClass("error");
+            mist = mist + 1;
+        }
+        if (isValidEmail(email)) {
+            $('#question_form input[name=email]').parent().removeClass("error");
+        } else {
+            $('#question_form input[name=email]').parent().addClass("error");
+            mist = mist + 1;
+        }
+        if (sector) {
+            $('#question_form select[name=sector]').parent().removeClass("error");
+        } else {
+            $('#question_form select[name=sector]').parent().addClass("error");
+            mist = mist + 1;
+        }
+
+        if (mist == 0) {
+            $.ajax({
+                type: "POST",
+                url: "/local/templates/main/ajax/form/add_question.php",
+                data: ({
+                    "sessid": sessid,
+                    "company": company,
+                    "name": name,
+                    "phone": phone,
+                    "email": email,
+                    "sector": sector_name,
+                    "text": text,
+                    "url": window.location.href
+                }),
+                //dataType: 'json',
+                success: function (msg) {
+                    console.log(msg);
+                    $('#question_form input[name=name]').val('');
+                    $('#question_form input[name=company]').val('');
+                    $('#question_form input[name=phone]').val('');
+                    $('#question_form input[name=email]').val('');
+                    $('#question_form select[name=sector]').val('');
+                    $('#question_form textarea[name=text]').val('');
+                    $("#question_form input[name=checkbox]").prop("checked", false);
+
+                    $("#question_form").hide(500);
+                    $("#question_result").show();
                 }
             });
 
@@ -174,7 +245,8 @@ function forms() {
                     "phone": phone,
                     "sector_name": sector_name,
                     "sector": sector,
-                    "text": text
+                    "text": text,
+                    "url": window.location.href
                 }),
                 dataType: 'json',
                 success: function (msg) {
@@ -238,9 +310,9 @@ function forms() {
                     "name": name,
                     "phone": phone,
                     "email": email,
-                    "sector_name": sector_name,
-                    "sector": sector,
-                    "text": text
+                    "sector": sector_name,
+                    "text": text,
+                    "url": window.location.href
                 }),
                 dataType: 'json',
                 success: function (msg) {
@@ -258,76 +330,6 @@ function forms() {
             });
         }
         return false;
-    });
-
-    $(document).on("click", "#question_form .send--js", function (e) {
-        e.preventDefault();
-        var mist = 0;
-        var sessid = $('#question_form input[name=sessid]').val();
-        var name = $('#question_form input[name=name]').val();
-        var company = $('#question_form input[name=company]').val();
-        var phone = $('#question_form input[name=phone]').val();
-        var email = $('#question_form input[name=email]').val();
-        var sector = $('#question_form select[name=sector]').val();
-        var sector_name = $('#question_form option[value=' + sector + ']').html();
-        var text = $('#question_form textarea[name=text]').val();
-        var agree = '';
-        agree = $('#question_form input[name=checkbox]:checked').val();
-        if (agree != 'y') {
-            mist = mist + 1;
-            $('#question_form input[name=checkbox]').parent().addClass("error");
-        } else {
-            $('#question_form input[name=checkbox]').parent().removeClass("error");
-        }
-        if (phone) {
-            $('#question_form input[name=phone]').parent().removeClass("error");
-        } else {
-            $('#question_form input[name=phone]').parent().addClass("error");
-            mist = mist + 1;
-        }
-        if (isValidEmail(email)) {
-            $('#question_form input[name=email]').parent().removeClass("error");
-        } else {
-            $('#question_form input[name=email]').parent().addClass("error");
-            mist = mist + 1;
-        }
-        if (sector) {
-            $('#question_form select[name=sector]').parent().removeClass("error");
-        } else {
-            $('#question_form select[name=sector]').parent().addClass("error");
-            mist = mist + 1;
-        }
-        if (mist == 0) {
-            $.ajax({
-                type: "POST",
-                url: "/local/templates/main/ajax/form/add_question.php",
-                data: ({
-                    "sessid": sessid,
-                    "company": company,
-                    "name": name,
-                    "phone": phone,
-                    "email": email,
-                    "sector_name": sector_name,
-                    "sector": sector,
-                    "text": text
-                }),
-                dataType: 'json',
-                success: function (msg) {
-                    console.log(msg);
-                    $('#question_form input[name=name]').val('');
-                    $('#question_form input[name=company]').val('');
-                    $('#question_form input[name=phone]').val('');
-                    $('#question_form input[name=email]').val('');
-                    $('#question_form select[name=sector]').val('');
-                    $('#question_form textarea[name=text]').val('');
-                    $("#question_form input[name=checkbox]").prop("checked", false);
-
-                    $("#question_form").hide(500);
-                    $("#question_result").show();
-                }
-            });
-
-        }
     });
 
     $(document).on("click", "#own_sector .send--js", function (e) {
@@ -380,7 +382,8 @@ function forms() {
                     "name": name,
                     "phone": phone,
                     "email": email,
-                    "sector": sector
+                    "sector": sector,
+                    "url": window.location.href
                 }),
                 dataType: 'json',
                 success: function (msg) {
@@ -454,8 +457,8 @@ function forms() {
                     "phone": phone,
                     "email": email,
                     "mat": mat,
-                    "sector": sector,
-                    "sector_name": sector_name,
+                    "sector": sector_name,
+                    "url": window.location.href
                 }),
                 dataType: 'json',
                 success: function (msg) {
@@ -472,35 +475,7 @@ function forms() {
             });
         }
     });
-
-    $(document).on("submit", "#send_form", function (e) {
-        e.preventDefault();
-        var mist = 0;
-        var sessid = $('#send_form input[name=sessid]').val();
-        var email = $('#send_form input[name=mail]').val();
-
-        if (isValidEmail(email)) {
-            $('#send_form input[name=mail]').parent().removeClass("error");
-        } else {
-            $('#send_form input[name=mail]').parent().addClass("error");
-            mist = mist + 1;
-        }
-
-        if (mist == 0) {
-            $.ajax({
-                type: "POST",
-                url: "/local/templates/main/ajax/form/add_send.php",
-                data: ({
-                    "sessid": sessid,
-                    "email": email,
-                }),
-                success: function (msg) {
-                    $("#send_form").html(msg);
-                }
-            });
-        }
-    });
-
+    
     $(document).on("click", "#separation .send--js", function (e) {
         e.preventDefault();
         var mist = 0;
@@ -511,7 +486,7 @@ function forms() {
         var sector = $('#separation select[name=sector]').val();
         var sector_name = $('#separation option[value=' + sector + ']').html();
         var text = $('#separation textarea[name=text]').val();
-        var mat = $('#separation input[name=mat]').val();
+        var material = $('#separation input[name=mat]').val();
         var email = $('#separation input[name=email]').val();
 
         var agree = '';
@@ -536,7 +511,7 @@ function forms() {
             mist = mist + 1;
         }
 
-        if (mat) {
+        if (material) {
             $('#separation input[name=mat]').parent().removeClass("error");
         } else {
             $('#separation input[name=mat]').parent().addClass("error");
@@ -561,10 +536,10 @@ function forms() {
                     "name": name,
                     "phone": phone,
                     "email": email,
-                    "mat": mat,
-                    "sector": sector,
-                    "sector_name": sector_name,
-                    "text": text
+                    "material": material,
+                    "sector": sector_name,
+                    "text": text,
+                    "url": window.location.href
                 }),
                 dataType: 'json',
                 success: function (msg) {
@@ -635,9 +610,9 @@ function forms() {
                     "leaflet": leaflet,
                     "phone": phone,
                     "email": email,
-                    "sector": sector,
-                    "sector_name": sector_name,
-                    "text": text
+                    "sector": sector_name,
+                    "text": text,
+                    "url": window.location.href
                 }),
                 dataType: 'json',
                 success: function (msg) {
@@ -654,7 +629,8 @@ function forms() {
         }
     });
 
-    $(document).on("click", "#dow_catalog .send--js", function () {
+    $(document).on("click", "#dow_catalog .send--js", function (e) {
+        e.preventDefault();
         var mist = 0;
         var sessid = $('#dow_catalog input[name=sessid]').val();
         var name = $('#dow_catalog input[name=name]').val();
@@ -704,10 +680,10 @@ function forms() {
                     "name": name,
                     "phone": phone,
                     "email": email,
-                    "sector": sector,
-                    "sector_name": sector_name,
+                    "sector": sector_name,
                     "catalog": catalog,
-                    "text": text
+                    "text": text,
+                    "url": window.location.href
                 }),
                 success: function (msg) {
                     window.open(msg.file, 'width=640,height=480');
@@ -723,6 +699,250 @@ function forms() {
 
         }
     });
+
+    $(document).on("click", "#dow_quest .send--js", function (e) {
+        e.preventDefault();
+        var mist = 0;
+        var sessid = $('#dow_quest input[name=sessid]').val();
+        var name = $('#dow_quest input[name=name]').val();
+        var company = $('#dow_quest input[name=company]').val();
+        var phone = $('#dow_quest input[name=phone]').val();
+        var sector = $('#dow_quest select[name=sector]').val();
+        var sector_name = $('#dow_quest option[value=' + sector + ']').html();
+        var text = $('#dow_quest textarea[name=text]').val();
+        var email = $('#dow_quest input[name=email]').val();
+        var quest = $('[data-type=quest]').attr('data-value');
+
+        var agree = '';
+        agree = $('#dow_quest input[name=checkbox]:checked').val();
+        if (agree != 'y') {
+            mist = mist + 1;
+            $('#dow_quest input[name=checkbox]').parent().addClass("error");
+        } else {
+            $('#dow_quest input[name=checkbox]').parent().removeClass("error");
+        }
+        if (sector) {
+            $('#dow_quest select[name=sector]').parent().removeClass("error");
+        } else {
+            $('#dow_quest select[name=sector]').parent().addClass("error");
+            mist = mist + 1;
+        }
+
+        if (phone) {
+            $('#dow_quest input[name=phone]').parent().removeClass("error");
+        } else {
+            $('#dow_quest input[name=phone]').parent().addClass("error");
+            mist = mist + 1;
+        }
+        if (isValidEmail(email)) {
+            $('#dow_quest input[name=email]').parent().removeClass("error");
+        } else {
+            $('#dow_quest input[name=email]').parent().addClass("error");
+            mist = mist + 1;
+        }
+
+        if (mist == 0) {
+            $.ajax({
+                type: "POST",
+                url: "/local/templates/main/ajax/form/dow_quest.php",
+                data: ({
+                    "sessid": sessid,
+                    "company": company,
+                    "name": name,
+                    "phone": phone,
+                    "email": email,
+                    "sector": sector_name,
+                    "quest": quest,
+                    "text": text,
+                    "url": window.location.href
+                }),
+                success: function (msg) {
+                    console.log(msg);
+                    window.open(msg.file, 'width=640,height=480');
+                    $(".popup-modal-dismiss").trigger("click");
+                    $('#dow_quest input[name=name]').val('');
+                    $('#dow_quest input[name=company]').val('');
+                    $('#dow_quest input[name=phone]').val('');
+                    $('#dow_quest input[name=email]').val('');
+                    $('#dow_quest textarea[name=text]').val('');
+                    $("#dow_quest input[name=checkbox]").prop("checked", false);
+                }
+            });
+
+        }
+    });
+
+    $(document).on("click", "#consult_form .send--js", function (e) {
+        e.preventDefault();
+        var mist = 0;
+        var sessid = $('#consult_form input[name=sessid]').val();
+        var name = $('#consult_form input[name=name]').val();
+        var company = $('#consult_form input[name=company]').val();
+        var phone = $('#consult_form input[name=phone]').val();
+        var email = $('#consult_form input[name=email]').val();
+        var sector = $('#consult_form select[name=sector]').val();
+        var sector_name = $('#consult_form option[value=' + sector + ']').html();
+        var text = $('#consult_form textarea[name=text]').val();
+        var agree = '';
+        agree = $('#consult_form input[name=checkbox]:checked').val();
+        if (agree != 'y') {
+            mist = mist + 1;
+            $('#consult_form input[name=checkbox]').parent().addClass("error");
+        } else {
+            $('#consult_form input[name=checkbox]').parent().removeClass("error");
+        }
+        if (phone) {
+            $('#consult_form input[name=phone]').parent().removeClass("error");
+        } else {
+            $('#consult_form input[name=phone]').parent().addClass("error");
+            mist = mist + 1;
+        }
+        if (isValidEmail(email)) {
+            $('#consult_form input[name=email]').parent().removeClass("error");
+        } else {
+            $('#consult_form input[name=email]').parent().addClass("error");
+            mist = mist + 1;
+        }
+        if (sector) {
+            $('#consult_form select[name=sector]').parent().removeClass("error");
+        } else {
+            $('#consult_form select[name=sector]').parent().addClass("error");
+            mist = mist + 1;
+        }
+        if (mist == 0) {
+            $.ajax({
+                type: "POST",
+                url: "/local/templates/main/ajax/form/add_consult.php",
+                data: ({
+                    "sessid": sessid,
+                    "company": company,
+                    "name": name,
+                    "phone": phone,
+                    "email": email,
+                    "sector": sector_name,
+                    "text": text,
+                    "url": window.location.href
+                }),
+                success: function (msg) {
+                    $('#consult_form input[name=name]').val('');
+                    $('#consult_form input[name=company]').val('');
+                    $('#consult_form input[name=phone]').val('');
+                    $('#consult_form input[name=email]').val('');
+                    $('#consult_form select[name=sector]').val('');
+                    $('#consult_form textarea[name=text]').val('');
+                    $("#consult_form input[name=checkbox]").prop("checked", false);
+    
+                    $("#consult_form").hide(500);
+                    $("#consult_result").show();
+                }
+            });
+    
+        } 
+    });
+
+    $(document).on("click", "#price .send--js", function (e) {
+        e.preventDefault();
+        var mist = 0;
+        var sessid = $('#price input[name=sessid]').val();
+        var name = $('#price input[name=name]').val();
+        var company = $('#price input[name=company]').val();
+        var phone = $('#price input[name=phone]').val();
+        var sector = $('#price select[name=sector]').val();
+        var sector_name = $('#price option[value=' + sector + ']').html();
+        var text = $('#price textarea[name=text]').val();
+        var email = $('#price input[name=email]').val();
+    
+        var agree = '';
+        agree = $('#price input[name=checkbox]:checked').val();
+        if (agree != 'y') {
+            mist = mist + 1;
+            $('#price input[name=checkbox]').parent().addClass("error");
+        } else {
+            $('#price input[name=checkbox]').parent().removeClass("error");
+        }
+        if (sector) {
+            $('#price select[name=sector]').parent().removeClass("error");
+        } else {
+            $('#price select[name=sector]').parent().addClass("error");
+            mist = mist + 1;
+        }
+    
+        if (phone) {
+            $('#price input[name=phone]').parent().removeClass("error");
+        } else {
+            $('#price input[name=phone]').parent().addClass("error");
+            mist = mist + 1;
+        }
+        if (isValidEmail(email)) {
+            $('#price input[name=email]').parent().removeClass("error");
+        } else {
+            $('#price input[name=email]').parent().addClass("error");
+            mist = mist + 1;
+        }
+    
+        if (mist == 0) {
+            $.ajax({
+                type: "POST",
+                url: "/local/templates/main/ajax/form/price.php",
+                data: ({
+                    "sessid": sessid,
+                    "company": company,
+                    "name": name,
+                    "phone": phone,
+                    "email": email,
+                    "sector": sector_name,
+                    "text": text,
+                    "url": window.location.href
+                }),
+                success: function (msg) {
+                    console.log(msg);
+                    $(".popup-modal-dismiss").trigger("click");
+                    $('#price input[name=name]').val('');
+                    $('#price input[name=company]').val('');
+                    $('#price input[name=phone]').val('');
+                    $('#price input[name=email]').val('');
+                    $('#price input[name=mat]').val('');
+                    $('#price textarea[name=text]').val('');
+                    $("#price input[name=checkbox]").prop("checked", false);
+                }
+            });
+    
+        }
+    });
+
+
+
+    $(document).on("submit", "#send_form", function (e) {
+        e.preventDefault();
+        var mist = 0;
+        var sessid = $('#send_form input[name=sessid]').val();
+        var email = $('#send_form input[name=mail]').val();
+
+        if (isValidEmail(email)) {
+            $('#send_form input[name=mail]').parent().removeClass("error");
+        } else {
+            $('#send_form input[name=mail]').parent().addClass("error");
+            mist = mist + 1;
+        }
+
+        if (mist == 0) {
+            $.ajax({
+                type: "POST",
+                url: "/local/templates/main/ajax/form/add_send.php",
+                data: ({
+                    "sessid": sessid,
+                    "email": email,
+                }),
+                success: function (msg) {
+                    $("#send_form").html(msg);
+                }
+            });
+        }
+    });
+
+
+
+
 }
 
 function filter() {
@@ -935,157 +1155,9 @@ $(document).on("click", ".t__content.video .approach-video-link", function () {
     return false;
 });
 
-$(document).on("click", "[data-event=consult_submit] .send--js", function () {
-    var mist = 0;
-    var sessid = $('#consult_form input[name=sessid]').val();
-    var name = $('#consult_form input[name=name]').val();
-    var company = $('#consult_form input[name=company]').val();
-    var phone = $('#consult_form input[name=phone]').val();
-    var email = $('#consult_form input[name=email]').val();
-    var sector = $('#consult_form select[name=sector]').val();
-    var sector_name = $('#consult_form option[value=' + sector + ']').html();
-    var text = $('#consult_form textarea[name=text]').val();
-    var agree = '';
-    agree = $('#consult_form input[name=checkbox]:checked').val();
-    if (agree != 'y') {
-        mist = mist + 1;
-        $('#consult_form input[name=checkbox]').parent().addClass("error");
-    } else {
-        $('#consult_form input[name=checkbox]').parent().removeClass("error");
-    }
-    if (phone != '') {
-        $('#consult_form input[name=phone]').parent().removeClass("error");
-    } else {
-        $('#consult_form input[name=phone]').parent().addClass("error");
-        mist = mist + 1;
-    }
-    if (isValidEmail(email)) {
-        $('#consult_form input[name=email]').parent().removeClass("error");
-    } else {
-        $('#consult_form input[name=email]').parent().addClass("error");
-        mist = mist + 1;
-    }
-    if (sector > 0) {
-        $('#consult_form select[name=sector]').parent().removeClass("error");
-    } else {
-        $('#consult_form select[name=sector]').parent().addClass("error");
-        mist = mist + 1;
-    }
-    if (mist == 0) {
-        $.ajax({
-            type: "POST",
-            url: "/local/templates/main/ajax/form/add_consult.php",
-            data: ({
-                "sessid": sessid,
-                "company": company,
-                "name": name,
-                "phone": phone,
-                "email": email,
-                "sector_name": sector_name,
-                "sector": sector,
-                "text": text
-            }),
-            success: function (msg) {
-                $('#consult_form input[name=name]').val('');
-                $('#consult_form input[name=company]').val('');
-                $('#consult_form input[name=phone]').val('');
-                $('#consult_form input[name=email]').val('');
-                $('#consult_form select[name=sector]').val('');
-                $('#consult_form textarea[name=text]').val('');
-                $("#consult_form input[name=checkbox]").prop("checked", false);
-
-                $("#consult_form").hide(500);
-                $("#consult_result").show();
-            }
-        });
-
-    } else {
-        //     ,t(".send--js").click((function(){return t(this).closest(".contacts-form").hide(500),t(this).closest(".contacts-form").next().show(),setTimeout((function(){return s.a.refresh({offset:-80})}),500),!1}
-
-        // $(this).closest(".contacts-form").hide(500);
-        // $(this).closest(".contacts-form").next().show();
-    }
-    return false;
-});
 
 
 
-$(document).on("click", "#price .send--js", function () {
-    var mist = 0;
-    var sessid = $('#price input[name=sessid]').val();
-    var name = $('#price input[name=name]').val();
-    var company = $('#price input[name=company]').val();
-    var phone = $('#price input[name=phone]').val();
-    var sector = $('#price select[name=sector]').val();
-    var text = $('#price textarea[name=text]').val();
-    var mat = $('#price input[name=mat]').val();
-    var email = $('#price input[name=email]').val();
-
-    var agree = '';
-    agree = $('#price input[name=checkbox]:checked').val();
-    if (agree != 'y') {
-        mist = mist + 1;
-        $('#price input[name=checkbox]').parent().addClass("error");
-    } else {
-        $('#price input[name=checkbox]').parent().removeClass("error");
-    }
-    if (sector != null) {
-        $('#price select[name=sector]').parent().removeClass("error");
-    } else {
-        $('#price select[name=sector]').parent().addClass("error");
-        mist = mist + 1;
-    }
-
-    if (phone != '') {
-        $('#price input[name=phone]').parent().removeClass("error");
-    } else {
-        $('#price input[name=phone]').parent().addClass("error");
-        mist = mist + 1;
-    }
-    if (isValidEmail(email)) {
-        $('#price input[name=email]').parent().removeClass("error");
-    } else {
-        $('#price input[name=email]').parent().addClass("error");
-        mist = mist + 1;
-    }
-
-    if (mist == 0) {
-        $.ajax({
-            type: "POST",
-            url: "/local/templates/main/ajax/form/price.php",
-            data: ({
-                "sessid": sessid,
-                "company": company,
-                "name": name,
-                "phone": phone,
-                "email": email,
-                "mat": mat,
-                "sector": sector,
-                "text": text
-            }),
-            success: function (msg) {
-                $(".popup-modal-dismiss").trigger("click");
-                $('#price input[name=name]').val('');
-                $('#price input[name=company]').val('');
-                $('#price input[name=phone]').val('');
-                $('#price input[name=email]').val('');
-                $('#price input[name=mat]').val('');
-                $('#price textarea[name=text]').val('');
-                $("#price input[name=checkbox]").prop("checked", false);
-
-                // $("#question_form").hide(500);
-                // $("#question_result").show();
-            }
-        });
-
-    } else {
-        //     ,t(".send--js").click((function(){return t(this).closest(".contacts-form").hide(500),t(this).closest(".contacts-form").next().show(),setTimeout((function(){return s.a.refresh({offset:-80})}),500),!1}
-
-        // $(this).closest(".contacts-form").hide(500);
-        // $(this).closest(".contacts-form").next().show();
-    }
-    return false;
-});
 
 $(document).on("click", ".history .tabs-list .tab", function () {
     $(".history .tabs-list .tab").removeClass('active');

@@ -203,6 +203,11 @@
           top: 20px;
           bottom: auto;
         }
+        img {
+          &:nth-child(2) {
+            display: none;
+          }
+        }
       }
       &--link {
         @extend .col__lg-6;
@@ -213,103 +218,15 @@
           justify-content: center;
         }
       }
-      &:first-child {
+      &:hover {
         .img {
-          background: url("../images/icons/otr/ico-slide-1.svg") no-repeat center;
-        }
-        &:hover {
-          .img {
-            background: url("../images/icons/otr/ico-slide-1-h.svg") no-repeat center;
-          }
-        }
-      }
-      &:nth-child(2) {
-        .img {
-          background: url("../images/icons/otr/ico-slide-2.svg") no-repeat center;
-        }
-        &:hover {
-          .img {
-            background: url("../images/icons/otr/ico-slide-2-h.svg") no-repeat center;
-          }
-        }
-      }
-      &:nth-child(3) {
-        .img {
-          background: url("../images/icons/otr/ico-slide-3.svg") no-repeat center;
-        }
-        &:hover {
-          .img {
-            background: url("../images/icons/otr/ico-slide-3-h.svg") no-repeat center;
-          }
-        }
-      }
-      &:nth-child(4) {
-        .img {
-          background: url("../images/icons/otr/ico-slide-4.svg") no-repeat center;
-        }
-        &:hover {
-          .img {
-            background: url("../images/icons/otr/ico-slide-4-h.svg") no-repeat center;
-          }
-        }
-      }
-      &:nth-child(5) {
-        .img {
-          background: url("../images/icons/otr/ico-slide-5.svg") no-repeat center;
-        }
-        &:hover {
-          .img {
-            background: url("../images/icons/otr/ico-slide-5-h.svg") no-repeat center;
-          }
-        }
-      }
-      &:nth-child(6) {
-        .img {
-          background: url("../images/icons/otr/ico-slide-6.svg") no-repeat center;
-        }
-        &:hover {
-          .img {
-            background: url("../images/icons/otr/ico-slide-6-h.svg") no-repeat center;
-          }
-        }
-      }
-      &:nth-child(7) {
-        .img {
-          background: url("../images/icons/otr/ico-slide-7.svg") no-repeat center;
-        }
-        &:hover {
-          .img {
-            background: url("../images/icons/otr/ico-slide-7-h.svg") no-repeat center;
-          }
-        }
-      }
-      &:nth-child(8) {
-        .img {
-          background: url("../images/icons/otr/ico-slide-8.svg") no-repeat center;
-        }
-        &:hover {
-          .img {
-            background: url("../images/icons/otr/ico-slide-8-h.svg") no-repeat center;
-          }
-        }
-      }
-      &:nth-child(9) {
-        .img {
-          background: url("../images/icons/otr/ico-slide-9.svg") no-repeat center;
-        }
-        &:hover {
-          .img {
-            background: url("../images/icons/otr/ico-slide-9-h.svg") no-repeat center;
-          }
-        }
-      }
-      &:nth-child(10) {
-        .img {
-          background: url("../images/icons/otr/ico-slide-10.svg") no-repeat center;
-        }
-        &:hover {
-          .img {
-            background: url("../images/icons/otr/ico-slide-10-h.svg") no-repeat center;
+          img {
+            &:nth-child(1) {
+              display: none;
+            }
+            &:nth-child(2) {
+              display: inline;
+            }
           }
         }
       }

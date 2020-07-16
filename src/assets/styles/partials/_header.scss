@@ -53,13 +53,11 @@
         width: 100px;
       }
     }
-
-    //img {
-    //  height: 45px;
-    //  @media screen and (min-width: $screen-md) {
-    //    height: auto;
-    //  }
-    //}
+    &.englishVer {
+      a {
+        background: url("../images/logo-en.svg") no-repeat center / auto 100%;
+      }
+    }
   }
 
   &__phone {

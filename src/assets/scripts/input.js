@@ -992,6 +992,9 @@ function filter() {
                     $('#catalog_body .pagenavigation').remove();
                     $('#pagenavigation').html('');
                     $('#pagenavigation').html(pagenavigation);
+                    $('html,body').animate({
+                        scrollTop: $("#catalog_body").offset().top
+                    }, 'fast');
                 }
             });
 
@@ -1030,6 +1033,9 @@ function filter() {
                     } else {
                         $('#news_body').html(a);
                     }
+                    $('html,body').animate({
+                        scrollTop: $("#news_body").offset().top
+                    }, 'fast');
                 }
             });
         }

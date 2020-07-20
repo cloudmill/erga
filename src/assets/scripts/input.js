@@ -52,10 +52,10 @@ function validateField(element, event) {
 }
 
 $('.steps-form, .steps-form-valid').on("blur", '.input input, .textarea textarea', function (event) {
-    validateField($(this), event);
+    // validateField($(this), event);
 });
 $(document).on("blur", '.input input, .textarea textarea', function (event) {
-    validateField($(this), event);
+    // validateField($(this), event);
 });
 
 
@@ -475,7 +475,7 @@ function forms() {
             });
         }
     });
-    
+
     $(document).on("click", "#separation .send--js", function (e) {
         e.preventDefault();
         var mist = 0;
@@ -831,13 +831,13 @@ function forms() {
                     $('#consult_form select[name=sector]').val('');
                     $('#consult_form textarea[name=text]').val('');
                     $("#consult_form input[name=checkbox]").prop("checked", false);
-    
+
                     $("#consult_form").hide(500);
                     $("#consult_result").show();
                 }
             });
-    
-        } 
+
+        }
     });
 
     $(document).on("click", "#price .send--js", function (e) {
@@ -851,7 +851,7 @@ function forms() {
         var sector_name = $('#price option[value=' + sector + ']').html();
         var text = $('#price textarea[name=text]').val();
         var email = $('#price input[name=email]').val();
-    
+
         var agree = '';
         agree = $('#price input[name=checkbox]:checked').val();
         if (agree != 'y') {
@@ -866,7 +866,7 @@ function forms() {
             $('#price select[name=sector]').parent().addClass("error");
             mist = mist + 1;
         }
-    
+
         if (phone) {
             $('#price input[name=phone]').parent().removeClass("error");
         } else {
@@ -879,7 +879,7 @@ function forms() {
             $('#price input[name=email]').parent().addClass("error");
             mist = mist + 1;
         }
-    
+
         if (mist == 0) {
             $.ajax({
                 type: "POST",
@@ -906,7 +906,7 @@ function forms() {
                     $("#price input[name=checkbox]").prop("checked", false);
                 }
             });
-    
+
         }
     });
 

@@ -1,13 +1,30 @@
 .newsOne-slider
   .swiper-carousel1(data-aos='fade-up')
     .swiper-wrapper
-      - for (let x = 1; x < 3; x++)
-        .swiper-slide.t--mask
-          .t__content
-            +img('news/slide-1.jpg')
-        .swiper-slide.t--mask
-          .t__content
-            +img('news/slide-2.jpg')
+      .swiper-slide.t--mask
+        .t__content.about__video
+          .inner
+            .approach-video-link.play-button(data-num='0')
+              +img('video.svg')
+            #player0.player(data-src='LsJOoaFi3iw')
+      .swiper-slide.t--mask
+        .t__content.about__video
+          .inner
+            .approach-video-link.play-button(data-num='1')
+              +img('video.svg')
+            #player1.player(data-src='M7lc1UVf-VE')
+      .swiper-slide.t--mask
+        .t__content.about__video
+          .inner
+            .approach-video-link.play-button(data-num='2')
+              +img('video.svg')
+            #player2.player(data-src='LsJOoaFi3iw')
+      .swiper-slide.t--mask
+        .t__content.about__video
+          .inner
+            .approach-video-link.play-button(data-num='3')
+              +img('video.svg')
+            #player3.player(data-src='M7lc1UVf-VE')
   .swiper-pagination1--js.swiper-pagination(data-aos='fade-up')
   .swiper-button(data-aos='fade-up')
     .swiper-btnS1-next: i.icon-arrow-right

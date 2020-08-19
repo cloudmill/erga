@@ -21,6 +21,7 @@ $(document).ready(() => {
   require('../src/assets/scripts/header');
   require('../src/assets/scripts/index');
   require('../src/assets/scripts/history');
+  require('../src/assets/scripts/video');
 
   if(screen_width > 767 && $('#fullpage').length) {
     fullpage_init();

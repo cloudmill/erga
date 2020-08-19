@@ -113,8 +113,8 @@ $(".showText--js").click(function () {
     .addClass('active');
 });
 
-$(".catalog-menu__item--parent").click(function () {
-  $(this).toggleClass('active');
+$(".catalog-menu__item--parent > a").click(function () {
+  $(this).parent().toggleClass('active');
   return false;
 });
 

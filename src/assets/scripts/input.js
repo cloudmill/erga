@@ -52,10 +52,10 @@ function validateField(element, event) {
 }
 
 $('.steps-form, .steps-form-valid').on("blur", '.input input, .textarea textarea', function (event) {
-     validateField($(this), event);
+    validateField($(this), event);
 });
 $(document).on("blur", '.input input, .textarea textarea', function (event) {
-     validateField($(this), event);
+    validateField($(this), event);
 });
 
 

@@ -23,7 +23,7 @@
  */
 
 /*!
- * fullPage 3.0.8
+ * fullPage 3.0.9
  * https://github.com/alvarotrigo/fullPage.js
  *
  * @license GPLv3 for open source use only
@@ -48,7 +48,7 @@
  */
 
 /*!
-* Scrolloverflow 2.0.5 module for fullPage.js >= 3
+* Scrolloverflow 2.0.6 module for fullPage.js >= 3
 * https://github.com/alvarotrigo/fullPage.js
 * @license MIT licensed
 *

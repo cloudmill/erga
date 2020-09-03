@@ -34,7 +34,7 @@ export const swiper = new Swiper('.swiper-container', {
       $('.swiper-title').addClass('remove');
       const getTitle = $('.swiper-container .swiper-slide-active').data('title');
       const getHref = $('.swiper-container .swiper-slide-active').data('href');
-      const separateTitle = getTitle.split('/b');
+      const separateTitle = getTitle && getTitle.split('/b');
       const setTitle = separateTitle && '<div class="revealOut"><span class="revealIn">'+separateTitle[0]+'</span></div>';
       const setTitle2 = separateTitle && separateTitle[1] ? '<div class="revealOut"><span class="revealIn">'+separateTitle[1]+'</span></div>' : '';
 

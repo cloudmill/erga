@@ -149,6 +149,12 @@ let map;
 
 function initMap() {
   const locations = [];
+  let marker = "/local/templates/main/assets/images/icons/marker.svg";
+
+  if ($('input[name=site_id]').val() == 's2') {
+    marker = "/local/templates/main/assets/images/icons/marker_eng.svg";
+  }
+
 
   $('input[name=coord]').each(function () {
     var coord = $(this).val();
@@ -174,7 +180,7 @@ function initMap() {
   for (let i = 0; i < locations.length; i++) {
     markers[i] = new google.maps.Marker({
       position: new google.maps.LatLng(locations[i][0], locations[i][1]),
-      icon: "/local/templates/main/assets/images/icons/marker.svg",
+      icon: marker,
       map: map,
       id: i
     });
@@ -196,7 +202,7 @@ $(document).ready(function () {
 
     new google.maps.Marker({
       position: new google.maps.LatLng(getMapX, getMapY),
-      icon: "/local/templates/main/assets/images/icons/marker.svg",
+      icon: marker,
       map: map,
       id: 99
     });

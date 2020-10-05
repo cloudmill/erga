@@ -51,6 +51,7 @@ if (navigator.userAgent.indexOf('Chrome')!=-1){
 }
 
 if(valentines) {
+  let mainMobilImg = $('input[name=pictureLanguageId]').val();
   if(detectSupportWebGL2()) {
     if(!(Safari || InternetExplorer)) {
       const getWidth = document.getElementsByClassName('section__main')[0].offsetWidth;
@@ -95,9 +96,9 @@ if(valentines) {
         redraw(getWidth, getHeight);
       });
     } else {
-      valentines.setAttribute("src", "/local/templates/main/assets/images/erga.jpg");
+      valentines.setAttribute("src", mainMobilImg);
     }
   } else {
-    valentines.setAttribute("src", "/local/templates/main/assets/images/erga.jpg");
+    valentines.setAttribute("src", mainMobilImg);
   }
 }

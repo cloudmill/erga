@@ -28,6 +28,29 @@ $(document).ready(() => {
 
   if (screen_width > 767 && $("#fullpage").length) {
     fullpage_init();
+  } else {
+    const el = $("#fullpage .section.section__main");
+    var played = true;
+    document.addEventListener("scroll", () => {
+      const top = el.height() + el.offset().top;
+      var show = false;
+      if ($(document).scrollTop() > top) {
+        show = false;
+      } else {
+        show = true;
+      }
+      if (show) {
+        if (startParticle && !played) {
+          startParticle();
+          played = true;
+        }
+      } else {
+        if (stopParticle && played) {
+          stopParticle();
+          played = false;
+        }
+      }
+    });
   }
 });
 
@@ -58,7 +81,13 @@ function complateLoading() {
   require("../src/assets/scripts/particle");
   require("../src/assets/scripts/sticky");
 
-  AOS.init({ offset: -80 });
+  AOS.init({
+    offset: -80,
+    disable: function () {
+      var maxWidth = 600;
+      return window.innerWidth < maxWidth;
+    },
+  });
   if (screen_width > 767 && $(".rellax").length) {
     const rellax = new Rellax(".rellax", {
       speed: 2,

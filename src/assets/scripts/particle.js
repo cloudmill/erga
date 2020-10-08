@@ -68,6 +68,14 @@ if(valentines) {
         layerCount: settings.layerCount,
         layerDistance: settings.layerDistance
       });
+      function stopParticle(){
+        heart.stop()
+      }
+      function startParticle(){
+        heart.start()
+      }
+      window.stopParticle = stopParticle
+      window.startParticle = startParticle
       function redraw(getWidth, getHeight) {
         heart.particleGap = settings.particleGap;
         heart.particleSize = settings.particleSize;

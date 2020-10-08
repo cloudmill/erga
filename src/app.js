@@ -13,6 +13,9 @@ import AOS from "aos";
 import Rellax from "rellax";
 
 $(document).ready(() => {
+  const noop = ()=>{};
+  window.stopParticle = noop;
+  window.startParticle = noop;
   const browser = detect();
   console.log(browser);
   $("html").addClass(browser.name);

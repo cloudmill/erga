@@ -13,7 +13,7 @@ import AOS from "aos";
 import Rellax from "rellax";
 
 $(document).ready(() => {
-  const noop = ()=>{};
+  const noop = () => { };
   window.stopParticle = noop;
   window.startParticle = noop;
   const browser = detect();
@@ -35,22 +35,24 @@ $(document).ready(() => {
     const el = $("#fullpage .section.section__main");
     var played = true;
     document.addEventListener("scroll", () => {
-      const top = el.height() + el.offset().top;
-      var show = false;
-      if ($(document).scrollTop() > top) {
-        show = false;
-      } else {
-        show = true;
-      }
-      if (show) {
-        if (startParticle && !played) {
-          startParticle();
-          played = true;
+      if (el.length > 0) {
+        const top = el.height() + el.offset().top;
+        var show = false;
+        if ($(document).scrollTop() > top) {
+          show = false;
+        } else {
+          show = true;
         }
-      } else {
-        if (stopParticle && played) {
-          stopParticle();
-          played = false;
+        if (show) {
+          if (startParticle && !played) {
+            startParticle();
+            played = true;
+          }
+        } else {
+          if (stopParticle && played) {
+            stopParticle();
+            played = false;
+          }
         }
       }
     });

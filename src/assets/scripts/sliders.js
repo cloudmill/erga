@@ -79,7 +79,7 @@ export const carousel = new Swiper('.swiper-carousel', {
 });
 export const carousel1 = new Swiper('.swiper-carousel1', {
   centeredSlides: true,
-  loop: true,
+  loop: false,
   slidesPerView: 'auto',
   spaceBetween: 10,
   pagination: {

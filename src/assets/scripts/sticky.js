@@ -17,6 +17,7 @@ import 'inputmask/dist/jquery.inputmask.min';
 import {validateEmail, validatePhone} from "./input";
 
 let card, catalog, tabs, news, sert, screen_width;
+let lang = $('input:hidden[name=lang]').val();
 
 $(window).on('resize orientationchange', function () {
   screen_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -356,9 +357,14 @@ $('.stepper-submit button').click(function () {
   return false;
 });
 
+let phoneMask = '(999) 999-9999';
+
+if (lang == 'ru') {
+  phoneMask = '+7 (999) 999-9999';
+}
 
 // mask phone {maskedinput}
 $("[name=phone]").inputmask({
-  mask: "+7 (999) 999-9999",
+  mask: phoneMask,
   showMaskOnHover: false,
 });

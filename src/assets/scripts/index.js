@@ -223,3 +223,20 @@ $('.select').on('select2:open', function () {
 });
 
 
+
+$('.language-eng').on('click', function(){
+  $('.select-lang').toggleClass('select-lang--active');
+});
+
+$('.lang').on('click', function(){
+  let main = $('.lang-main');
+  let text;
+  if (!$(this).hasClass('lang-act')){
+    text = $(this).text();
+    main.text(text);
+    $('.lang').removeClass('lang-act');
+    $(this).addClass('lang-act');
+  }
+});
+
+

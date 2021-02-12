@@ -415,6 +415,9 @@
     color: $black;
     transition: color .5s;
   }
+  path {
+    transition: fill .5s;
+  }
   a {
     display: flex;
     align-items: center;
@@ -429,6 +432,9 @@
       }
       i {
         color: $color-type-2a;
+      }
+      path {
+        fill: $color-type-2a;
       }
     }
   }

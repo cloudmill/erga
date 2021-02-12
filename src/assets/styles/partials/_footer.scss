@@ -21,8 +21,17 @@
   .social {
     border-color: white;
     margin-bottom: 20px;
+    flex-wrap: wrap;
     @media screen and (min-width: $screen-md) {
       margin-bottom: 65px;
+    }
+    
+    & :last-child {
+      margin-right: 0;
+    }
+    li {
+      margin-left: 0;
+      margin-right: 30px;
     }
     i {
       color: white;

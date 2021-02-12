@@ -216,6 +216,9 @@ body.index {
     @media screen and (min-width: 768px) and (max-width: 1290px) and (max-height: 600px) {
       padding: 17vh 0 25px;
     }
+    .language {
+      display: none;
+    }
     h1 {
       margin-top: 0;
       position: relative;

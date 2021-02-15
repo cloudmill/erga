@@ -7,27 +7,21 @@
     .page-header__logo
       a(href="/")
     .visible__xs.visible__sm
-      .language-eng
-            |Ru
-      //- .language
-      //-   a.language-el.active(href='#') Ru
-      //-   a.language-el(href='#') En
+      //- .language-eng
+      //-       |Ru
+      .language
+        a.language-el.active(href='#') Ru
+        a.language-el(href='#') En
     .header-content.hidden__sm.hidden__xs
       .header-content__top
         include ../components/_navbar
         .page-header__phone
-          .language-eng
-            span.lang.lang-main Ru
-            .select-lang
-              .lang.lang-act Ru
-              .lang En
-              .lang فارسی
-          //- .language
-          //-   a.language-el.active(href='#') Ru
-          //-   a.language-el(href='#') En
+          .language
+            a.language-el.active(href='#') Ru
+            a.language-el(href='#') En
           a(href="mailto:info@erga.ru").page-header__mail
             svg(width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg")
-              path(d="M0.75 0.75H18.25V13.25H0.75V0.75Z" stroke="#0000BD" stroke-width="1.5")
+              path(fill-rule="evenodd" clip-rule="evenodd" d="M9.5 7.54624L1.5 1.96175V12.5H17.5V1.96175L9.5 7.54624ZM19 14H0V0H19V14ZM15.5409 1.5H3.45909L9.5 5.71692L15.5409 1.5Z" fill="#0000BD")
           //- a(href='tel:+74842922199') +7 4842 922-199
         .page-header__link.popup-modal.popup-with-zoom-anim(href='#getACall')
           +arrowLine('Заказать звонок')
@@ -42,11 +36,15 @@
         include ../components/_navbarMega
         .page-header__phone
           a(href='tel:+74842922199') +7 4842 922-199
-          .language-eng
-            |Ru
-          //- .language
-          //-   a.language-el.active(href='#') Ru
-          //-   a.language-el(href='#') En
+          //- .language-eng
+          //-   span.lang.lang-main Ru
+          //-   .select-lang
+          //-     .lang.lang-act Ru
+          //-     .lang En
+          //-     .lang فارسی
+          .language
+            a.language-el.active(href='#') Ru
+            a.language-el(href='#') En
         .page-header__link
           a.arrowLine(href='config.html')
             .the-arrow.the-arrow-left: i.shaft.icon-arrow-med-right

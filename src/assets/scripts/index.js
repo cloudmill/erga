@@ -240,3 +240,8 @@ $('.lang').on('click', function(){
 });
 
 
+$('.language-el').on('click', function(){
+  $('.language-el').removeClass('active');
+  $(this).addClass('active');
+});
+

@@ -164,7 +164,7 @@
       // display: none;
     }
 
-    &:after {
+    &::before {
       content: '';
       width: 100%;
       height: 0;
@@ -176,16 +176,20 @@
       transition: height .5s;
     }
 
+    svg {
+      z-index: 1;
+    }
+
     path {
       position: relative;
       font-size: 18px;
       z-index: 1;
       color: $base-color-main;
-      transition: color .5s;
+      transition: fill .5s;
     }
 
     &:hover {
-      &:after {
+      &::before {
         height: 100%;
       }
 
@@ -367,7 +371,7 @@
     width: 100%;
     @include transition(width .5s);
     @media screen and (min-width: $screen-md) {
-      width: 55%;
+      width: 61%;
     }
     @media screen and (min-width: $screen-lg) {
       width: 100%;
@@ -409,8 +413,19 @@
       max-height: 0;
       overflow: hidden;
       .page-header__phone {
-        width: 200px;
+        width: 135px;
         white-space: nowrap;
+        @media (max-width: 1400px){
+          width: 200px;
+        }
+      }
+
+      .language {
+        display: none;
+
+        @media (max-width: 1400px){
+          display: block;
+        }
       }
     }
   }
@@ -443,20 +458,20 @@
   position: relative;
   cursor: pointer;
   
-  .lang-main:after {
-    content: "\e905";
-    font-family: icomoon;
-    color: #0000BD;
-    font-size: 10px;
-    margin-left: 8px;
-    transform: rotate(0);
-    transition: transform .5s, color .5s;
-  }
+  // .lang-main:after {
+  //   content: "\e905";
+  //   font-family: icomoon;
+  //   color: #0000BD;
+  //   font-size: 10px;
+  //   margin-left: 8px;
+  //   transform: rotate(0);
+  //   transition: transform .5s, color .5s;
+  // }
 
   &:hover {
-    .lang-main {
-      color: #0000BD;
-    }
+    // .lang-main {
+    //   color: #0000BD;
+    // }
 
     .lang-main::after {
       transform: rotate(180deg);

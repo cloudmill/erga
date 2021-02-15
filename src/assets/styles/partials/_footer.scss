@@ -110,10 +110,11 @@
         border-bottom: 1px solid white;
       }
       @media screen and (min-width: $screen-lg) {
-        padding: 31px 30px;
+        padding: 31px 20px;
       }
     }
     .name {
+      white-space: nowrap;
       font-size: 25px;
       line-height: 46px;
       text-transform: uppercase;

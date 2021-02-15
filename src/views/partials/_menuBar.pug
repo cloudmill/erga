@@ -5,9 +5,12 @@
       a(href="/")
     .visible__xs.visible__sm
       .page-header-right
-        .language
-          a.language-el.active(href='#') Ru
-          a.language-el(href='#') En
+        .language-eng
+            span.lang.lang-main Ru
+            .select-lang
+              .lang.lang-act Ru
+              .lang En
+              .lang فارسی
         a.page-header__search.page-header__addphone.popup-modal.popup-with-zoom-anim(href='#getACall'): +img('icons/phoneBlue.svg')
         a.page-header__search.search--js(href='#'): i.icon-search
     .header-content.hidden__sm.hidden__xs
@@ -156,6 +159,13 @@
               a.revealIn(href='#')
                 i.icon-youtube
                 span Youtube
+            li.revealOut
+              a.revealIn(href='#', target='_blank')
+                i.icon-instagram
+                  svg(width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                    path(d="M6.99997 4.62C5.70497 4.62 4.65497 5.66999 4.65497 6.96499C4.65497 8.25999 5.70497 9.30999 6.99997 9.30999C8.29497 9.30999 9.34497 8.25999 9.34497 6.96499C9.34497 5.66999 8.29497 4.62 6.99997 4.62Z" fill="#313131")
+                    path(d="M9.45 0H4.55C2.065 0 0 2.065 0 4.55V9.415C0 11.935 2.065 13.965 4.55 13.965H9.415C11.935 13.965 13.965 11.9 13.965 9.415V4.55C14 2.065 11.935 0 9.45 0ZM7 10.64C5.005 10.64 3.36 9.03 3.36 7C3.36 4.97 5.005 3.36 7 3.36C8.995 3.36 10.64 4.97 10.64 7C10.64 8.995 9.03 10.64 7 10.64ZM10.57 4.235C10.08 4.235 9.695 3.815 9.695 3.36C9.695 2.905 10.115 2.45 10.57 2.45C11.06 2.45 11.445 2.87 11.445 3.325C11.445 3.85 11.06 4.235 10.57 4.235Z" fill="#313131")
+                span Instagram
   .menuBar-bottom
     .menuBar-bottom-icon.dragger-js#dragger-js: +img('icons/menu.svg')
     .menu-carousel

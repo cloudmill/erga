@@ -309,6 +309,7 @@
     max-width: 430px;
     .social {
       margin-bottom: 15px;
+      margin-left: 25px;
     }
     .revealOut {
       padding-bottom: 0;
@@ -405,6 +406,11 @@
   font-family: 'HalvarBreit-XBd';
   display: inline-flex;
   margin-bottom: 30px;
+  flex-wrap: wrap;
+
+  & :last-child li {
+    margin-right: 0;
+  }
   i {
     color: $black;
     font-size: 15px;
@@ -422,8 +428,8 @@
     display: flex;
     align-items: center;
   }
-  li + li {
-    margin-left: 45px;
+  li {
+    margin-right: 25px;
   }
   li {
     &:hover {

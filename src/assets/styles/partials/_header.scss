@@ -458,20 +458,20 @@
   position: relative;
   cursor: pointer;
   
-  // .lang-main:after {
-  //   content: "\e905";
-  //   font-family: icomoon;
-  //   color: #0000BD;
-  //   font-size: 10px;
-  //   margin-left: 8px;
-  //   transform: rotate(0);
-  //   transition: transform .5s, color .5s;
-  // }
+  .lang-main:after {
+    content: "\e905";
+    font-family: icomoon;
+    color: #0000BD;
+    font-size: 10px;
+    margin-left: 8px;
+    transform: rotate(0);
+    transition: transform .5s, color .5s;
+  }
 
   &:hover {
-    // .lang-main {
-    //   color: #0000BD;
-    // }
+    .lang-main {
+      color: #0000BD;
+    }
 
     .lang-main::after {
       transform: rotate(180deg);
@@ -493,7 +493,7 @@
     width: 70px;
     padding: 5px 10px 0 10px;
     box-shadow: 0px 14px 35px rgba(0, 0, 0, 0.15);
-    z-index: 30,;
+    z-index: 30;
     transform: translateY(50%);
     transition: all .5s;
     opacity: 0;

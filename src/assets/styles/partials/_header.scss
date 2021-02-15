@@ -409,9 +409,9 @@
     &__hidden {
       //display: none;
       //transition: all .5s;
-      display: flex;
+      display: none;
       max-height: 0;
-      overflow: hidden;
+      // overflow: hidden;
       .page-header__phone {
         width: 135px;
         white-space: nowrap;

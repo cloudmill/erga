@@ -246,13 +246,8 @@ $('.language-el').on('click', function(){
 });
 
 $(window).on('click', function(event){
-  if ( $('.select-lang').hasClass('select-lang--active') && !( $(event.target).hasClass('language-eng') || $(event.target).hasClass('select-lang') ) ){
+  if ( $('.select-lang').hasClass('select-lang--active') && !( $(event.target).hasClass('language-eng') || $(event.target).hasClass('select-lang') || $(event.target).hasClass('lang') ) ){
     $('.select-lang').removeClass('select-lang--active');
   }
 
 });
-
-$(window).scroll(function(){
-  console.log('kn');
-});
-

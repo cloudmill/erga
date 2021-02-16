@@ -5,25 +5,35 @@
       a(href="/")
     .visible__xs.visible__sm
       .page-header-right
-        .language-eng
+        .language-eng.language
+          span.lang.lang-main Ru
+          .select-lang
+            .lang.lang-act Ru
+            .lang En
+            .lang فارسی
+        a.page-header__search.page-header__addphone.popup-modal.popup-with-zoom-anim(href='#getACall'): +img('icons/phoneBlue.svg')
+        a.page-header__search.search--js(href='#'): i.icon-search
+    .header-content.hidden__sm.hidden__xs
+      .header-content__top
+        //- nav.navbar
+        .page-header__phone
+          .language-eng
             span.lang.lang-main Ru
             .select-lang
               .lang.lang-act Ru
               .lang En
               .lang فارسی
-        a.page-header__search.page-header__addphone.popup-modal.popup-with-zoom-anim(href='#getACall'): +img('icons/phoneBlue.svg')
-        a.page-header__search.search--js(href='#'): i.icon-search
-    .header-content.hidden__sm.hidden__xs
-      .header-content__top
-        nav.navbar
-        .page-header__phone
-          a(href='tel:+74842922199') +7 4842 922-199
+          a(href="mailto:info@erga.ru").page-header__mail
+            svg(width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(fill-rule="evenodd" clip-rule="evenodd" d="M9.5 7.54624L1.5 1.96175V12.5H17.5V1.96175L9.5 7.54624ZM19 14H0V0H19V14ZM15.5409 1.5H3.45909L9.5 5.71692L15.5409 1.5Z" fill="#0000BD")
+          //- a(href='tel:+74842922199') +7 4842 922-199
         .page-header__link.popup-modal.popup-with-zoom-anim(href='#getACall')
           +arrowLine('Заказать звонок')
       .header-content__bottom
-        nav.navbar
+        //- nav.navbar
         .page-header__phone
-          a(href='mailto:info@erga.ru') info@erga.ru
+          a(href='tel:+74842922199') +7 4842 922-199
+          //- a(href='mailto:info@erga.ru') info@erga.ru
         .page-header__link
           a.arrowLine(href='config.html')
             .the-arrow.the-arrow-left: i.shaft.icon-arrow-med-right

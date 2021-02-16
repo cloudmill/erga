@@ -310,6 +310,15 @@
     .social {
       margin-bottom: 15px;
       margin-left: 25px;
+      min-width: 311px;
+      @media (max-width: 920px){
+        flex-direction: column;
+        min-width: 0;
+      }
+      @media (max-width: 768px){
+        margin-left: 0;
+        flex-direction: row;
+      }
     }
     .revealOut {
       padding-bottom: 0;
@@ -407,8 +416,10 @@
   display: inline-flex;
   margin-bottom: 30px;
   flex-wrap: wrap;
+  
+  
 
-  & :last-child li {
+  & :last-child {
     margin-right: 0;
   }
   i {
@@ -430,6 +441,9 @@
   }
   li {
     margin-right: 25px;
+    @media (max-width: 768px){
+      margin-right: 14px;
+    }
   }
   li {
     &:hover {

@@ -413,12 +413,16 @@
       max-height: 0;
       // overflow: hidden;
       .page-header__phone {
-        width: 135px;
+        width: 178px;
         white-space: nowrap;
         @media (max-width: 1400px){
           width: 200px;
         }
       }
+
+      // .language-eng {
+      //   margin-left: 10px;
+      // }
 
       .language {
         display: none;
@@ -498,10 +502,14 @@
     transition: all .5s;
     opacity: 0;
     background-color: white;
+    
+    overflow: hidden;
+    height: 0;
 
     &--active {
       transform: translateY(0);
       opacity: 1;
+      height: auto;
     }
   }
   .lang-act {

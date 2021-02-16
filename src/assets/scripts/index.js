@@ -245,3 +245,14 @@ $('.language-el').on('click', function(){
   $(this).addClass('active');
 });
 
+$(window).on('click', function(event){
+  if ( $('.select-lang').hasClass('select-lang--active') && !( $(event.target).hasClass('language-eng') || $(event.target).hasClass('select-lang') ) ){
+    $('.select-lang').removeClass('select-lang--active');
+  }
+
+});
+
+$(window).scroll(function(){
+  console.log('kn');
+});
+

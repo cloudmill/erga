@@ -73,11 +73,19 @@ $(document).mouseup(function (e) {
 
 // Hide Header on on scroll down
 
+
+
 $(function(){
   let lastScrollTop = 0, delta = 5;
+  // $(this.body).css({
+  //   'overflow': 'scroll',
+  //   'height': 'auto',
+  // });
   const offset = $(".filter--js").offset();
   $(window).scroll(function(){
     const st = $(this).scrollTop();
+
+    console.log('sdfa');
 
     if(offset) {
       if (st > offset.top) {

@@ -358,6 +358,9 @@
     width: 490px;
     @include transition(opacity .5s, width .5s);
     display: none;
+    @media (max-width: 1080px){
+      width: 430px;
+    }
     @media screen and (min-width: $screen-lg) {
       display: block;
     }
@@ -685,7 +688,11 @@
 .lt-ie8 {
 }
 
-.fp-viewing-two {
+.fp-viewing-two,
+.fp-viewing-three,
+.fp-viewing-four,
+.fp-viewing-five,
+.fp-viewing-six  {
   .header-content__hidden {
     display: flex;
   }

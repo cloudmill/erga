@@ -114,13 +114,17 @@
       }
     }
     .name {
-      white-space: nowrap;
+      // white-space: nowrap;
       font-size: 25px;
       line-height: 46px;
       text-transform: uppercase;
       font-family: "HalvarBreit-Blk";
       &:hover {
         color: $color-type-2a
+      }
+
+      &--mail {
+        font-size: 19px;
       }
     }
     .flex {

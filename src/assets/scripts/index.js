@@ -253,8 +253,6 @@ $(window).on('click', function(event){
 });
 
 $(document).ready(function(){
-  if ( $('#index').length)
+  if ( $('body').hasClass('index'))
     $('.header-content__hidden').addClass('header-content__hidden--index');
-
-  console.log($('#index').length);
 });

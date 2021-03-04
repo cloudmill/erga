@@ -485,10 +485,13 @@
     }
   }
   .lang {
-    margin-bottom: 5px;
-
     &:hover {
       color: #0000BD;
+    }
+
+    & > a {
+      display: block;
+      padding: 5px 10px;
     }
   }
 
@@ -498,7 +501,6 @@
     left: -10px;
     display: block;
     width: 70px;
-    padding: 5px 10px 0 10px;
     box-shadow: 0px 14px 35px rgba(0, 0, 0, 0.15);
     z-index: 30;
     transform: translateY(50%);

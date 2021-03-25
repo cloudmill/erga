@@ -231,7 +231,17 @@ input[type="checkbox"]:focus {
     color: $black;
     font-family: 'StratosLCWeb-Regular';
   }
-
+  &--small {
+    $height: 160px;
+    @media screen and (min-width: $screen-md) {
+      height: $height;
+    }
+    textarea {
+      @media screen and (min-width: $screen-md) {
+        height: $height;
+      }
+    }
+  }
 }
 select.control {
   -webkit-appearance: none;

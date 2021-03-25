@@ -103,8 +103,9 @@ mixin fieldLabelInputId(id, label, required, mainClass)
         span.input__label-content.input__label-content= label
     .input-error Пожалуйста, заполните поле
 
-mixin fieldLabelTextarea(name, id, label, required)
-  .input.textarea
+mixin fieldLabelTextarea(name, id, label, required, modifier)
+  - const className = 'textarea';
+  .input(class = [className, modifier ? className + '--' + modifier : null])
     textarea.input__field(name=name, id=id, required=required)
     label.input__label(for=id)
       span.input__label-content.input__label-content= label

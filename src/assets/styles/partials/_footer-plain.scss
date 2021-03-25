@@ -1,0 +1,96 @@
+$background-color: #F6F6F6;
+$tablet-breakpoint: 768px;
+$link-highlight-color: $color-type-2a;
+
+.footer-plain {
+  padding: 40px 0;
+  @media (min-width: $tablet-breakpoint) {
+    padding: 80px 0;
+  }
+
+  background-color: $background-color;
+
+  $col-gap: 20px;
+  $col-gap-tablet: 30px;
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+  &__col {
+    width: calc((100% - #{$col-gap}) / 2);
+    @media (min-width: $tablet-breakpoint) {
+      width: calc((100% - #{$col-gap-tablet}) / 2);
+    }
+
+    &:last-child {
+      margin-left: $col-gap;
+      @media (min-width: $tablet-breakpoint) {
+        margin-left: $col-gap-tablet;
+      }
+    }
+  }
+
+  &__logo-image {
+    margin: 0;
+    max-width: 66px;
+    @media (min-width: $tablet-breakpoint) {
+      max-width: 96px;
+    }
+    display: flex;
+    align-items: flex-start;
+  }
+  &__logo-img {}
+
+  &__list {
+    margin: 0;
+    @media (min-width: $tablet-breakpoint) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+  &__list-item {
+    margin: 0;
+
+    &:last-child {
+      margin-top: 13px;
+      @media (min-width: $tablet-breakpoint) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__agreement-wrapper {
+    display: flex;
+  }
+  &__agreement-link {
+    font-size: 14px;
+    line-height: 18px;
+    @media (min-width: $tablet-breakpoint) {
+      font-size: 18px;
+      line-height: 23px;
+    }
+    white-space: nowrap;
+
+    &:hover {
+      color: $link-highlight-color;
+    }
+  }
+
+  &__developer-info {
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+
+    font-size: 14px;
+    line-height: 18px;
+    @media (min-width: $tablet-breakpoint) {
+      font-size: 18px;
+      line-height: 23px;
+    }
+    white-space: nowrap;
+  }
+  &__developer-link {
+    color: $link-highlight-color;
+  }
+}

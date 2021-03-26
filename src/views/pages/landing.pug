@@ -4,35 +4,99 @@ block pageName
   - var pageName = "fxindex"
 
 block header
+  //- HEADER
   include ../partials/_headerFX.pug
 
 block content
-  //- top
-  section
-    .container
-      h1
-        +reveal(['Research & Production Company ERGA'])
-  
-  //- gallery
-  section
-    .container(data-aos="fade-up")
-      include ../components/_landing-gallery
-  
-  //- form on page
-  section
-    .container(data-aos="fade-up")
-      form.contacts-form(action='')
-        h3 Any questions?
-        include ../components/_form-landing
-      form.contacts-form.return-form(action='')
-        h3 Any questions?
-        .return-inner.form__group
-          h5 We have accepted your request #[br] and will process it as soon as we can.
-        .form__group
-          a.btn.btn--full.btn--info.return--js.btn-arrow(href='#')
-            i.icons-left.icon-arrow-med-right
-            span Send more
-            i.icons-right.icon-arrow-mini-right
+  .landing
+    //- TOP
+    section
+      .container
+        h1
+          +reveal(['Research & Production Company ERGA'])
+    
+    //- FEATURES
+    section.landing__features-section
+      .landing__features-decoration
+        ul.landing__features-decoration-list
+          - for (let i = 0; i < 30; i++)
+            li.landing__features-decoration-item
+      .container
+        .landing__features-wrapper
+          ul.landing__features1
+            li.landing__features1-item(data-aos="fade-up")
+              h3.landing__features1-title
+                |Research
+              p.landing__features1-text
+                |LIMiTS testing laboratory / Testing laboratory for mineral and industrial raw materials
+            li.landing__features1-item(data-aos="fade-up")
+              h3.landing__features1-title
+                |Design
+              p.landing__features1-text
+                |Design and engineering solution of the tasks
+            li.landing__features1-item(data-aos="fade-up")
+              h3.landing__features1-title
+                |Production
+              p.landing__features1-text
+                |#{'> 25 000 m² of modern production faciities'}
+            li.landing__features1-item(data-aos="fade-up")
+              h3.landing__features1-title
+                |Implementation
+              p.landing__features1-text
+                |Professional service support: supervision and commissioning works, equipment diagnostics and repair, training of the customer's maintenance personnel
+          ul.landing__features2
+            li.landing__features2-item(data-aos="fade-up")
+              figure.landing__features2-image
+                img.landing__features2-img(src='assets/images/landing/feature-1.svg' alt='')
+              p.landing__features2-text
+                |ISO 9001: 2015 quality system
+            li.landing__features2-item(data-aos="fade-up")
+              figure.landing__features2-image
+                img.landing__features2-img(src='assets/images/landing/feature-2.svg' alt='')
+              p.landing__features2-text(data-aos="fade-up")
+                |#{'> 200 qualified employees'}
+            li.landing__features2-item
+              figure.landing__features2-image
+                img.landing__features2-img(src='assets/images/landing/feature-3.svg' alt='')
+              p.landing__features2-text
+                |Full production cycle
+            li.landing__features2-item(data-aos="fade-up")
+              figure.landing__features2-image
+                img.landing__features2-img(src='assets/images/landing/feature-4.svg' alt='')
+              p.landing__features2-text
+                |Successful experience in export deliveries
+
+    //- INDUSTRIES
+    section.landing__industries-section
+      .container
+        h2.landing__section-title(data-aos="fade-up")
+          |Industries
+        ul.landing__industries-list
+
+
+    //- GALLERY
+    section
+      .container(data-aos="fade-up")
+        h2
+          +reveal(['GALLERY'])
+        include ../components/_landing-gallery
+    
+    //- QUESTIONS
+    section
+      .container(data-aos="fade-up")
+        form.contacts-form(action='')
+          h3 Any questions?
+          include ../components/_form-landing
+        form.contacts-form.return-form(action='')
+          h3 Any questions?
+          .return-inner.form__group
+            h5 We have accepted your request #[br] and will process it as soon as we can.
+          .form__group
+            a.btn.btn--full.btn--info.return--js.btn-arrow(href='#')
+              i.icons-left.icon-arrow-med-right
+              span Send more
+              i.icons-right.icon-arrow-mini-right
 
 block footer
+  //- FOOTER
   include ../partials/_footer-plain

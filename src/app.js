@@ -11,6 +11,7 @@ const { detect } = require("detect-browser");
 
 import AOS from "aos";
 import Rellax from "rellax";
+import './assets/scripts/landing-tabs.js';
 
 $(document).ready(() => {
   const noop = () => { };

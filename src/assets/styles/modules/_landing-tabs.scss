@@ -24,9 +24,17 @@ $border-width: 1px;
         border-bottom: #{$border-width} solid $color-border;
     }
     &-panel-item {
-        margin-bottom: -#{$border-width};
         position: relative;
+        margin-bottom: -#{$border-width};
+        padding: 10px 15px;
         width: calc((100% / 4) + #{$border-width});
+        height: 60px;
+        @media (min-width: $breakpoint-1) {
+            height: 180px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
         
         border: #{$border-width} solid $color-border;
         cursor: pointer;
@@ -40,6 +48,10 @@ $border-width: 1px;
 
             border-color: $color-active;  
         }
+    }
+    &-panel-img {
+        max-width: 100%;
+        max-height: 100%;
     }
 
     // content

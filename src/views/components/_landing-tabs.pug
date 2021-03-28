@@ -4,7 +4,7 @@
   ul.landing__tabs-panel-list
     - for (let i = 0; i < itemsCount; i++)
       li.landing__tabs-panel-item(class = (!i) ? 'landing__tabs-panel-item--active' : '')
-        |#{i + 1}
+        img.landing__tabs-panel-img(src=`assets/images/landing/tab-${i + 1}.svg` alt='')
   ul.landing__tabs-content-list
     - for (let i = 0; i < itemsCount; i++)
       li.landing__tabs-content-item(class = (!i) ? 'landing__tabs-content-item--active' : '')

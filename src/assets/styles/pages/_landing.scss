@@ -250,44 +250,4 @@
         }
     }
     // ###
-
-    // TABS
-    &__tabs-component {
-        border: 1px solid black;
-    }
-
-    &__tabs-panel-list {
-        margin: 0;
-        display: flex;
-
-        border: 1px solid black;
-    }
-    &__tabs-panel-item {
-        width: calc(100% / 4);
-
-        border: 1px solid black;
-        cursor: pointer;
-
-        &--active {
-            border-color: red;
-        }
-    }
-
-    &__tabs-content-list {
-        margin: 0;
-
-        border: 1px solid black;
-    }
-    &__tabs-content-item {
-        display: none;
-
-        border: 1px solid black;
-
-        &--active {
-            display: block;
-
-            border-color: red;
-        }
-    }
-    // ###
 }

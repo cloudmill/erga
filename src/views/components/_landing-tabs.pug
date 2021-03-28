@@ -1,0 +1,17 @@
+- const itemsCount = 4;
+
+.landing__tabs-component(data-aos="fade-up")
+  ul.landing__tabs-panel-list
+    - for (let i = 0; i < itemsCount; i++)
+      li.landing__tabs-panel-item(class = (!i) ? 'landing__tabs-panel-item--active' : '')
+        |#{i + 1}
+  ul.landing__tabs-content-list
+    - for (let i = 0; i < itemsCount; i++)
+      li.landing__tabs-content-item(class = (!i) ? 'landing__tabs-content-item--active' : '')
+        .landing__tabs-content-row
+          .landing__tabs-content-col
+            h3.landing__tabs-content-title(data-aos="fade-up")
+              |#{'Erga-' + (i + 1)}
+          .landing__tabs-content-col
+            p.landing__tabs-content-text(data-aos="fade-up")
+              |Production of magnetic separators, iron separators and specialized equipment ERGA produces more than 60 types of industrial and laboratory equipment under ERGA trademark. ERGA equipment is continuously improved and modernized, thus ensuring high performance, operational reliability and safety while increasing cost efficiency of their application.

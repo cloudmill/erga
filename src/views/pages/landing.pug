@@ -1,26 +1,5 @@
 extends ../layouts/master.pug
 
-mixin landing__tabs
-	.landing__tabs-component
-		ul.landing__tabs-panel-list
-			li.landing__tabs-panel-item.landing__tabs-panel-item--active
-				|1
-			li.landing__tabs-panel-item
-				|2
-			li.landing__tabs-panel-item
-				|3
-			li.landing__tabs-panel-item
-				|4
-		ul.landing__tabs-content-list
-			li.landing__tabs-content-item.landing__tabs-content-item--active
-				|1
-			li.landing__tabs-content-item
-				|2
-			li.landing__tabs-content-item
-				|3
-			li.landing__tabs-content-item
-				|4
-
 block pageName
 	- var pageName = "fxindex";
 
@@ -125,7 +104,8 @@ block content
 			.container
 				h2.landing__section-title(data-aos="fade-up")
 					|OUR TRADEMARKS
-				+landing__tabs
+				.landing__trademarks-tabs
+					include ../components/_landing-tabs
 
 		//- GALLERY
 		section

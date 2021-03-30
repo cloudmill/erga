@@ -114,23 +114,135 @@ block content
 					+reveal(['GALLERY'])
 				include ../components/_landing-gallery
 
-		//- CONTACTS
+		//- contacts
 		section.landing__contacts-section
 			.container
 				.landing__contacts-row
 					.landing__contacts-col
 						h2.landing__contacts-title
 							|Head office
-						ul.landing__contacts-list
-							li.landing__contacts-item
-							li.landing__contacts-item
-							li.landing__contacts-item
-							li.landing__contacts-item
-							li.landing__contacts-item
+						ul.landing__contacts-info-list
+							li.landing__contacts-info-row
+								.landing__contacts-info-col
+									h3.landing__contacts-info-title
+										|Address
+								.landing__contacts-info-col
+									p.landing__contacts-info-text
+										|Russia, Kaluga, Khrustalnaya st., 22 (POB 65)
+							li.landing__contacts-info-row
+								.landing__contacts-info-col
+								.landing__contacts-info-col
+									.landing__contacts-person-row
+										figure.landing__contacts-person-image
+											img.landing__contacts-person-img(src='assets/images/landing/contact-1.png' alt='')
+										p.landing__contacts-person-name
+											|Alexey
+											br
+											|Chernov
+							li.landing__contacts-info-row
+								.landing__contacts-info-col
+									h3.landing__contacts-info-title
+										|E-mail
+								.landing__contacts-info-col
+									.landing__contacts-link-wrapper
+										a.landing__contacts-info-text(href='#')
+											|info@rusmagnet.com
+									.landing__contacts-info-block
+										ul.landing__contacts-social-list
+											li.landing__contacts-social-item
+												a.landing__contacts-social-link
+													figure.landing__contacts-social-image
+														img.landing__contacts-social-img(src='assets/images/landing/social-whatsapp.svg' alt='')
+													span.landing__contacts-social-title
+														|WhatsApp
+											li.landing__contacts-social-item
+												a.landing__contacts-social-link
+													figure.landing__contacts-social-image
+														img.landing__contacts-social-img(src='assets/images/landing/social-telegram.svg' alt='')
+													span.landing__contacts-social-title
+														|Telegram
+							li.landing__contacts-info-row
+								.landing__contacts-info-col
+									h3.landing__contacts-info-title
+										|Phone
+								.landing__contacts-info-col
+									.landing__contacts-line-row
+										.landing__contacts-line-col
+											.landing__contacts-link-wrapper
+												a.landing__contacts-info-text(href='#')
+													|+7 4842 922-199
+											.landing__contacts-info-block.landing__contacts-info-block--caption
+												span.landing__contacts-info-text.landing__contacts-info-text--small
+													|Multichannel
+										.landing__contacts-line-col
+											p.landing__contacts-info-text.landing__contacts-info-text--small
+												|8:30 a.m. — 5:30 p.m. Moscow time
+												br
+												|SAT, SUN — days off
+									.landing__contacts-info-block
+										ul.landing__contacts-social-list
+											li.landing__contacts-social-item
+												a.landing__contacts-social-link
+													figure.landing__contacts-social-image
+														img.landing__contacts-social-img(src='assets/images/landing/social-facebook.svg' alt='')
+													span.landing__contacts-social-title
+														|Facebook
+											li.landing__contacts-social-item
+												a.landing__contacts-social-link
+													figure.landing__contacts-social-image
+														img.landing__contacts-social-img(src='assets/images/landing/social-youtube.svg' alt='')
+													span.landing__contacts-social-title
+														|Youtube
+											li.landing__contacts-social-item
+												a.landing__contacts-social-link
+													figure.landing__contacts-social-image
+														img.landing__contacts-social-img(src='assets/images/landing/social-instagram.svg' alt='')
+													span.landing__contacts-social-title
+														|Instagram
+							li.landing__contacts-info-row
+								.landing__contacts-info-col
+									h3.landing__contacts-info-title
+										|Web
+								.landing__contacts-info-col
+									.landing__contacts-link-wrapper
+										a.landing__contacts-info-text.landing__contacts-info-link(href='#')
+											|rusmagnet.com
 					.landing__contacts-col
-						h2.landing__contacts-title
+						h2.landing__contacts-title.landing__contacts-title--elongated
 							|Your contact in Iran
-
+						ul.landing__contacts-info-list
+							li.landing__contacts-info-row
+								.landing__contacts-info-col
+								.landing__contacts-info-col
+									.landing__contacts-person-row
+										figure.landing__contacts-person-image
+											img.landing__contacts-person-img(src='assets/images/landing/contact-2.png' alt='')
+										p.landing__contacts-person-name
+											|Hamed Haghi
+							li.landing__contacts-info-row
+								.landing__contacts-info-col
+									h3.landing__contacts-info-title
+										|E-mail
+								.landing__contacts-info-col
+									.landing__contacts-link-wrapper
+										a.landing__contacts-info-text(href='#')
+											|hamed.haghi@gmail.com
+									.landing__contacts-info-block
+										.landing__contacts-line-row
+											.landing__contacts-line-col
+												ul.landing__contacts-social-list
+													li.landing__contacts-social-item
+														a.landing__contacts-social-link
+															figure.landing__contacts-social-image
+																img.landing__contacts-social-img(src='assets/images/landing/social-telegram.svg' alt='')
+															span.landing__contacts-social-title
+																|Telegram
+											.landing__contacts-line-col
+												p.landing__contacts-info-text.landing__contacts-info-text--small
+													|9:30 a.m. — 5:30 p.m.
+													br
+													|THU, FRI — days off
+													
 		//- QUESTIONS
 		section
 			.container(data-aos="fade-up")

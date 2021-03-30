@@ -1,264 +1,292 @@
 extends ../layouts/master.pug
 
 block pageName
-	- var pageName = "fxindex";
+  - var pageName = "fxindex";
 
 block header
-	//- HEADER
-	include ../partials/_headerFX.pug
-
-block content
-	.landing
-		//- TOP
-		section
-			.container
-				h1
-					+reveal(['Research & Production Company ERGA'])
-
-		//- FEATURES
-		section.landing__features-section
-			.landing__features-decoration
-				ul.landing__features-decoration-list
-					- for (let i = 0; i < 30; i++)
-						li.landing__features-decoration-item
-			.container
-				.landing__features-wrapper
-					ul.landing__features1
-						li.landing__features1-item(data-aos="fade-up")
-							h3.landing__features1-title
-								|Research
-							p.landing__features1-text
-								|LIMiTS testing laboratory / Testing laboratory for mineral and industrial raw materials
-						li.landing__features1-item(data-aos="fade-up")
-							h3.landing__features1-title
-								|Design
-							p.landing__features1-text
-								|Design and engineering solution of the tasks
-						li.landing__features1-item(data-aos="fade-up")
-							h3.landing__features1-title
-								|Production
-							p.landing__features1-text
-								|#{'> 25 000 m² of modern production faciities'}
-						li.landing__features1-item(data-aos="fade-up")
-							h3.landing__features1-title
-								|Implementation
-							p.landing__features1-text
-								|Professional service support: supervision and commissioning works, equipment diagnostics and repair, training of the customer's maintenance personnel
-					ul.landing__features2
-						li.landing__features2-item(data-aos="fade-up")
-							figure.landing__features2-image
-								img.landing__features2-img(src='assets/images/landing/feature-1.svg' alt='')
-							p.landing__features2-text
-								|ISO 9001: 2015 quality system
-						li.landing__features2-item(data-aos="fade-up")
-							figure.landing__features2-image
-								img.landing__features2-img(src='assets/images/landing/feature-2.svg' alt='')
-							p.landing__features2-text(data-aos="fade-up")
-								|#{'> 200 qualified employees'}
-						li.landing__features2-item
-							figure.landing__features2-image
-								img.landing__features2-img(src='assets/images/landing/feature-3.svg' alt='')
-							p.landing__features2-text
-								|Full production cycle
-						li.landing__features2-item(data-aos="fade-up")
-							figure.landing__features2-image
-								img.landing__features2-img(src='assets/images/landing/feature-4.svg' alt='')
-							p.landing__features2-text
-								|Successful experience in export deliveries
-
-		//- INDUSTRIES
-		section.landing__industries-section
-			.container
-				h2.landing__section-title(data-aos="fade-up")
-					|Industries
-				ul.landing__industries-list
-					li.landing__industries-item(data-aos="fade-up")
-						a.landing__industries-link(href='#')
-							figure.landing__industries-image
-								img.landing__industries-img(src='assets/images/landing/industry-1.svg' alt='')
-							h3.landing__industries-title
-								|Mining
-					li.landing__industries-item(data-aos="fade-up")
-						a.landing__industries-link(href='#')
-							figure.landing__industries-image
-								img.landing__industries-img(src='assets/images/landing/industry-2.svg' alt='')
-							h3.landing__industries-title
-								|Food
-					li.landing__industries-item(data-aos="fade-up")
-						a.landing__industries-link(href='#')
-							figure.landing__industries-image
-								img.landing__industries-img(src='assets/images/landing/industry-3.svg' alt='')
-							h3.landing__industries-title
-								|Recycling
-
-		//- SELECT
-		section.landing__select
-			.container
-				h2.landing__section-title(data-aos="fade-up")
-					|Select equipment for mining
-					br
-					|and processing industry
-
-		//- TRADEMARKS
-		section.landing__trademarks-section
-			.container
-				h2.landing__section-title(data-aos="fade-up")
-					|OUR TRADEMARKS
-				.landing__trademarks-tabs
-					include ../components/_landing-tabs
-
-		//- GALLERY
-		section
-			.container(data-aos="fade-up")
-				h2
-					+reveal(['GALLERY'])
-				include ../components/_landing-gallery
-
-		//- contacts
-		section.landing__contacts-section
-			.container
-				.landing__contacts-row
-					.landing__contacts-col
-						h2.landing__contacts-title
-							|Head office
-						ul.landing__contacts-info-list
-							li.landing__contacts-info-row
-								.landing__contacts-info-col
-									h3.landing__contacts-info-title
-										|Address
-								.landing__contacts-info-col
-									p.landing__contacts-info-text
-										|Russia, Kaluga, Khrustalnaya st., 22 (POB 65)
-							li.landing__contacts-info-row
-								.landing__contacts-info-col
-								.landing__contacts-info-col
-									.landing__contacts-person-row
-										figure.landing__contacts-person-image
-											img.landing__contacts-person-img(src='assets/images/landing/contact-1.png' alt='')
-										p.landing__contacts-person-name
-											|Alexey
-											br
-											|Chernov
-							li.landing__contacts-info-row
-								.landing__contacts-info-col
-									h3.landing__contacts-info-title
-										|E-mail
-								.landing__contacts-info-col
-									.landing__contacts-link-wrapper
-										a.landing__contacts-info-text(href='#')
-											|info@rusmagnet.com
-									.landing__contacts-info-block
-										ul.landing__contacts-social-list
-											li.landing__contacts-social-item
-												a.landing__contacts-social-link
-													figure.landing__contacts-social-image
-														img.landing__contacts-social-img(src='assets/images/landing/social-whatsapp.svg' alt='')
-													span.landing__contacts-social-title
-														|WhatsApp
-											li.landing__contacts-social-item
-												a.landing__contacts-social-link
-													figure.landing__contacts-social-image
-														img.landing__contacts-social-img(src='assets/images/landing/social-telegram.svg' alt='')
-													span.landing__contacts-social-title
-														|Telegram
-							li.landing__contacts-info-row
-								.landing__contacts-info-col
-									h3.landing__contacts-info-title
-										|Phone
-								.landing__contacts-info-col
-									.landing__contacts-line-row
-										.landing__contacts-line-col
-											.landing__contacts-link-wrapper
-												a.landing__contacts-info-text(href='#')
-													|+7 4842 922-199
-											.landing__contacts-info-block.landing__contacts-info-block--caption
-												span.landing__contacts-info-text.landing__contacts-info-text--small
-													|Multichannel
-										.landing__contacts-line-col
-											p.landing__contacts-info-text.landing__contacts-info-text--small
-												|8:30 a.m. — 5:30 p.m. Moscow time
-												br
-												|SAT, SUN — days off
-									.landing__contacts-info-block
-										ul.landing__contacts-social-list
-											li.landing__contacts-social-item
-												a.landing__contacts-social-link
-													figure.landing__contacts-social-image
-														img.landing__contacts-social-img(src='assets/images/landing/social-facebook.svg' alt='')
-													span.landing__contacts-social-title
-														|Facebook
-											li.landing__contacts-social-item
-												a.landing__contacts-social-link
-													figure.landing__contacts-social-image
-														img.landing__contacts-social-img(src='assets/images/landing/social-youtube.svg' alt='')
-													span.landing__contacts-social-title
-														|Youtube
-											li.landing__contacts-social-item
-												a.landing__contacts-social-link
-													figure.landing__contacts-social-image
-														img.landing__contacts-social-img(src='assets/images/landing/social-instagram.svg' alt='')
-													span.landing__contacts-social-title
-														|Instagram
-							li.landing__contacts-info-row
-								.landing__contacts-info-col
-									h3.landing__contacts-info-title
-										|Web
-								.landing__contacts-info-col
-									.landing__contacts-link-wrapper
-										a.landing__contacts-info-text.landing__contacts-info-link(href='#')
-											|rusmagnet.com
-					.landing__contacts-col
-						h2.landing__contacts-title.landing__contacts-title--elongated
-							|Your contact in Iran
-						ul.landing__contacts-info-list
-							li.landing__contacts-info-row
-								.landing__contacts-info-col
-								.landing__contacts-info-col
-									.landing__contacts-person-row
-										figure.landing__contacts-person-image
-											img.landing__contacts-person-img(src='assets/images/landing/contact-2.png' alt='')
-										p.landing__contacts-person-name
-											|Hamed Haghi
-							li.landing__contacts-info-row
-								.landing__contacts-info-col
-									h3.landing__contacts-info-title
-										|E-mail
-								.landing__contacts-info-col
-									.landing__contacts-link-wrapper
-										a.landing__contacts-info-text(href='#')
-											|hamed.haghi@gmail.com
-									.landing__contacts-info-block
-										.landing__contacts-line-row
-											.landing__contacts-line-col
-												ul.landing__contacts-social-list
-													li.landing__contacts-social-item
-														a.landing__contacts-social-link
-															figure.landing__contacts-social-image
-																img.landing__contacts-social-img(src='assets/images/landing/social-telegram.svg' alt='')
-															span.landing__contacts-social-title
-																|Telegram
-											.landing__contacts-line-col
-												p.landing__contacts-info-text.landing__contacts-info-text--small
-													|9:30 a.m. — 5:30 p.m.
-													br
-													|THU, FRI — days off
-													
-		//- QUESTIONS
-		section
-			.container(data-aos="fade-up")
-				form.contacts-form(action='')
-					h3 Any questions?
-					include ../components/_form-landing
-				form.contacts-form.return-form(action='')
-					h3 Any questions?
-					.return-inner.form__group
-						h5 We have accepted your request #[br] and will process it as soon as we can.
-					.form__group
-						a.btn.btn--full.btn--info.return--js.btn-arrow(href='#')
-							i.icons-left.icon-arrow-med-right
-							span Send more
-							i.icons-right.icon-arrow-mini-right
+  include ../partials/_headerFX.pug
 
 block footer
-	//- FOOTER
-	include ../partials/_footer-plain
+  include ../partials/_footer-plain
+
+block content
+  .landing
+
+    section
+      .container
+        h1
+          +reveal(['Research & Production Company ERGA'])
+
+    //- features
+    section.landing__features-section
+      .landing__features-decoration
+        ul.landing__features-decoration-list
+          - for (let i = 0; i < 30; i++)
+            li.landing__features-decoration-item
+      .container
+        .landing__features-wrapper
+          ul.landing__features1
+            li.landing__features1-item(data-aos="fade-up")
+              h3.landing__features1-title
+                |Research
+              p.landing__features1-text
+                |LIMiTS testing laboratory / Testing laboratory for mineral and industrial raw materials
+            li.landing__features1-item(data-aos="fade-up")
+              h3.landing__features1-title
+                |Design
+              p.landing__features1-text
+                |Design and engineering solution of the tasks
+            li.landing__features1-item(data-aos="fade-up")
+              h3.landing__features1-title
+                |Production
+              p.landing__features1-text
+                |#{'> 25 000 m² of modern production faciities'}
+            li.landing__features1-item(data-aos="fade-up")
+              h3.landing__features1-title
+                |Implementation
+              p.landing__features1-text
+                |Professional service support: supervision and commissioning works, equipment diagnostics and repair, training of the customer's maintenance personnel
+          ul.landing__features2
+            li.landing__features2-item(data-aos="fade-up")
+              figure.landing__features2-image
+                img.landing__features2-img(src='assets/images/landing/feature-1.svg' alt='')
+              p.landing__features2-text
+                |ISO 9001: 2015 quality system
+            li.landing__features2-item(data-aos="fade-up")
+              figure.landing__features2-image
+                img.landing__features2-img(src='assets/images/landing/feature-2.svg' alt='')
+              p.landing__features2-text(data-aos="fade-up")
+                |#{'> 200 qualified employees'}
+            li.landing__features2-item
+              figure.landing__features2-image
+                img.landing__features2-img(src='assets/images/landing/feature-3.svg' alt='')
+              p.landing__features2-text
+                |Full production cycle
+            li.landing__features2-item(data-aos="fade-up")
+              figure.landing__features2-image
+                img.landing__features2-img(src='assets/images/landing/feature-4.svg' alt='')
+              p.landing__features2-text
+                |Successful experience in export deliveries
+
+    //- industries
+    section.landing__industries-section
+      .container
+        h2.landing__section-title(data-aos="fade-up")
+          |Industries
+        ul.landing__industries-list
+          li.landing__industries-item(data-aos="fade-up")
+            a.landing__industries-link(href='#')
+              figure.landing__industries-image
+                img.landing__industries-img(src='assets/images/landing/industry-1.svg' alt='')
+              h3.landing__industries-title
+                |Mining
+          li.landing__industries-item(data-aos="fade-up")
+            a.landing__industries-link(href='#')
+              figure.landing__industries-image
+                img.landing__industries-img(src='assets/images/landing/industry-2.svg' alt='')
+              h3.landing__industries-title
+                |Food
+          li.landing__industries-item(data-aos="fade-up")
+            a.landing__industries-link(href='#')
+              figure.landing__industries-image
+                img.landing__industries-img(src='assets/images/landing/industry-3.svg' alt='')
+              h3.landing__industries-title
+                |Recycling
+
+    //- select
+    section.landing__select-section
+      .container
+        h2.landing__section-title(data-aos="fade-up")
+          |Select equipment for mining
+          br
+          |and processing industry
+        h3.landing__select-title(data-aos="fade-up")
+          |Select your material
+        form.landing__select-form
+          .filtersBody-checkboxes.row
+            .col.col__md-6.col__xs-12(data-aos="fade-up")
+              .filtersBody-checkbox
+                input(type='checkbox', id='item-1', data-title='Ferrous and alloying metal ores')
+                label(for='item-1') Ferrous and alloying metal ores
+            .col.col__md-6.col__xs-12(data-aos="fade-up")
+              .filtersBody-checkbox
+                input(type='checkbox', id='item-2', data-title='Rare and rare-earth metal ores')
+                label(for='item-2') Rare and rare-earth metal ores
+            .col.col__md-6.col__xs-12(data-aos="fade-up")
+              .filtersBody-checkbox
+                input(type='checkbox', id='item-3', data-title='Неметаллические полезные ископаемые')
+                label(for='item-3') Non-metallic minerals
+            .col.col__md-6.col__xs-12(data-aos="fade-up")
+              .filtersBody-checkbox
+                input(type='checkbox', id='item-4', data-title='Non-metallic minerals')
+                label(for='item-4') Nonferrous metal ores
+            .col.col__md-6.col__xs-12(data-aos="fade-up")
+              .filtersBody-checkbox
+                input(type='checkbox', id='item-5', data-title='Coal transportation and processing')
+                label(for='item-5') Coal transportation and processing
+            .col.col__md-6.col__xs-12(data-aos="fade-up")
+              .filtersBody-checkbox
+                input(type='checkbox', id='item-6', data-title='Stone quarries')
+                label(for='item-6') Stone quarries
+            .col.col__xs-12(data-aos="fade-up")
+              a.landing__select-link(href='#') Haven’t found your material?
+
+    //- trademarks
+    section.landing__trademarks-section
+      .container
+        h2.landing__section-title(data-aos="fade-up")
+          |OUR TRADEMARKS
+        .landing__trademarks-tabs
+          include ../components/_landing-tabs
+
+    //- gallery
+    section
+      .container(data-aos="fade-up")
+        h2
+          +reveal(['GALLERY'])
+        include ../components/_landing-gallery
+
+    //- contacts
+    section.landing__contacts-section
+      .container
+        .landing__contacts-row
+          .landing__contacts-col
+            h2.landing__contacts-title
+              |Head office
+            ul.landing__contacts-info-list
+              li.landing__contacts-info-row
+                .landing__contacts-info-col
+                  h3.landing__contacts-info-title
+                    |Address
+                .landing__contacts-info-col
+                  p.landing__contacts-info-text
+                    |Russia, Kaluga, Khrustalnaya st., 22 (POB 65)
+              li.landing__contacts-info-row
+                .landing__contacts-info-col
+                .landing__contacts-info-col
+                  .landing__contacts-person-row
+                    figure.landing__contacts-person-image
+                      img.landing__contacts-person-img(src='assets/images/landing/contact-1.png' alt='')
+                    p.landing__contacts-person-name
+                      |Alexey
+                      br
+                      |Chernov
+              li.landing__contacts-info-row
+                .landing__contacts-info-col
+                  h3.landing__contacts-info-title
+                    |E-mail
+                .landing__contacts-info-col
+                  .landing__contacts-link-wrapper
+                    a.landing__contacts-info-text(href='#')
+                      |info@rusmagnet.com
+                  .landing__contacts-info-block
+                    ul.landing__contacts-social-list
+                      li.landing__contacts-social-item
+                        a.landing__contacts-social-link
+                          figure.landing__contacts-social-image
+                            img.landing__contacts-social-img(src='assets/images/landing/social-whatsapp.svg' alt='')
+                          span.landing__contacts-social-title
+                            |WhatsApp
+                      li.landing__contacts-social-item
+                        a.landing__contacts-social-link
+                          figure.landing__contacts-social-image
+                            img.landing__contacts-social-img(src='assets/images/landing/social-telegram.svg' alt='')
+                          span.landing__contacts-social-title
+                            |Telegram
+              li.landing__contacts-info-row
+                .landing__contacts-info-col
+                  h3.landing__contacts-info-title
+                    |Phone
+                .landing__contacts-info-col
+                  .landing__contacts-line-row
+                    .landing__contacts-line-col
+                      .landing__contacts-link-wrapper
+                        a.landing__contacts-info-text(href='#')
+                          |+7 4842 922-199
+                      .landing__contacts-info-block.landing__contacts-info-block--caption
+                        span.landing__contacts-info-text.landing__contacts-info-text--small
+                          |Multichannel
+                    .landing__contacts-line-col
+                      p.landing__contacts-info-text.landing__contacts-info-text--small
+                        |8:30 a.m. — 5:30 p.m. Moscow time
+                        br
+                        |SAT, SUN — days off
+                  .landing__contacts-info-block
+                    ul.landing__contacts-social-list
+                      li.landing__contacts-social-item
+                        a.landing__contacts-social-link
+                          figure.landing__contacts-social-image
+                            img.landing__contacts-social-img(src='assets/images/landing/social-facebook.svg' alt='')
+                          span.landing__contacts-social-title
+                            |Facebook
+                      li.landing__contacts-social-item
+                        a.landing__contacts-social-link
+                          figure.landing__contacts-social-image
+                            img.landing__contacts-social-img(src='assets/images/landing/social-youtube.svg' alt='')
+                          span.landing__contacts-social-title
+                            |Youtube
+                      li.landing__contacts-social-item
+                        a.landing__contacts-social-link
+                          figure.landing__contacts-social-image
+                            img.landing__contacts-social-img(src='assets/images/landing/social-instagram.svg' alt='')
+                          span.landing__contacts-social-title
+                            |Instagram
+              li.landing__contacts-info-row
+                .landing__contacts-info-col
+                  h3.landing__contacts-info-title
+                    |Web
+                .landing__contacts-info-col
+                  .landing__contacts-link-wrapper
+                    a.landing__contacts-info-text.landing__contacts-info-link(href='#')
+                      |rusmagnet.com
+          .landing__contacts-col
+            h2.landing__contacts-title.landing__contacts-title--elongated
+              |Your contact in Iran
+            ul.landing__contacts-info-list
+              li.landing__contacts-info-row
+                .landing__contacts-info-col
+                .landing__contacts-info-col
+                  .landing__contacts-person-row
+                    figure.landing__contacts-person-image
+                      img.landing__contacts-person-img(src='assets/images/landing/contact-2.png' alt='')
+                    p.landing__contacts-person-name
+                      |Hamed Haghi
+              li.landing__contacts-info-row
+                .landing__contacts-info-col
+                  h3.landing__contacts-info-title
+                    |E-mail
+                .landing__contacts-info-col
+                  .landing__contacts-link-wrapper
+                    a.landing__contacts-info-text(href='#')
+                      |hamed.haghi@gmail.com
+                  .landing__contacts-info-block
+                    .landing__contacts-line-row
+                      .landing__contacts-line-col
+                        ul.landing__contacts-social-list
+                          li.landing__contacts-social-item
+                            a.landing__contacts-social-link
+                              figure.landing__contacts-social-image
+                                img.landing__contacts-social-img(src='assets/images/landing/social-telegram.svg' alt='')
+                              span.landing__contacts-social-title
+                                |Telegram
+                      .landing__contacts-line-col
+                        p.landing__contacts-info-text.landing__contacts-info-text--small
+                          |9:30 a.m. — 5:30 p.m.
+                          br
+                          |THU, FRI — days off
+
+    //- questions
+    section
+      .container(data-aos="fade-up")
+        form.contacts-form(action='')
+          h3 Any questions?
+          include ../components/_form-landing
+        form.contacts-form.return-form(action='')
+          h3 Any questions?
+          .return-inner.form__group
+            h5 We have accepted your request #[br] and will process it as soon as we can.
+          .form__group
+            a.btn.btn--full.btn--info.return--js.btn-arrow(href='#')
+              i.icons-left.icon-arrow-med-right
+              span Send more
+              i.icons-right.icon-arrow-mini-right

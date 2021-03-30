@@ -1,3 +1,32 @@
+@mixin filter-checkbox {
+  padding: 20px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1.5px dashed #B6B6B6;
+  margin-bottom: 10px;
+  transition: all .5s;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+  @media screen and (min-width: $screen-md) {
+    padding: 20px 30px;
+    height: 70px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  &:hover {
+    border: 1.5px solid $base-color-main;
+  }
+}
+@mixin filter-checkbox--active {
+  color: white;
+  background-color: $base-color-main;
+  border: 1.5px solid $base-color-main;
+}
+
 .filtersBody {
   &__item {
     position: fixed;
@@ -146,32 +175,10 @@
       display: none;
     }
     label {
-      padding: 20px;
-      height: 50px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      border: 1.5px dashed #B6B6B6;
-      margin-bottom: 10px;
-      transition: all .5s;
-      font-size: 14px;
-      line-height: 20px;
-      cursor: pointer;
-      @media screen and (min-width: $screen-md) {
-        padding: 20px 30px;
-        height: 70px;
-        margin-bottom: 20px;
-        font-size: 18px;
-        line-height: 23px;
-      }
-      &:hover {
-        border: 1.5px solid $base-color-main;
-      }
+      @include filter-checkbox();
     }
     input:checked + label {
-      color: white;
-      background-color: $base-color-main;
-      border: 1.5px solid $base-color-main;
+      @include filter-checkbox--active();
     }
   }
 }

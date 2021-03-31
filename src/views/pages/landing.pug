@@ -160,6 +160,45 @@ block content
         .landing__trademarks-tabs
           include ../components/_landing-tabs
 
+    //- partners
+    section.landing__partners-section
+      .container
+        h2.landing__section-title(data-aos="fade-up")
+          |Our partners
+        .landing__partners-slider-block.trademark-tabs(data-aos="fade-up")
+          .swiper-button
+            .swiper-btnS-prev: i.icon-arrow-right
+            .swiper-btnS-next: i.icon-arrow-right
+          .trademark-carousel.trademark-carousel--js
+            .swiper-wrapper
+              - for (let i = 0; i < 8; i++)
+                .swiper-slide
+                  a.landing__partners-slider-slide(href='#')
+                    .landing__partners-slide-block
+                      figure.landing__partners-slide-image
+                        img.landing__partners-slide-img(src=`assets/images/landing/partners-${i % 2 + 1}.png`)
+                    h3.landing__partners-slide-title
+                      |Cimaghand
+
+    //- sertificates
+    section.landing__sertificates-section
+      .container
+        h2.landing__section-title(data-aos="fade-up")
+          |Certificates
+        .newsOne-slider
+          .swiper-carousel(data-aos='fade-up')
+            .swiper-wrapper
+              - for (let x = 1; x < 3; x++)
+                .swiper-slide.t--mask
+                  .t__content
+                    +img('landing/sertificate-1.jpg')
+          .swiper-pagination--js.swiper-pagination(data-aos='fade-up')
+          .swiper-button(data-aos='fade-up')
+            .swiper-btnSN-next: i.icon-arrow-right
+            .swiper-btnSN-prev: i.icon-arrow-left
+          div(data-aos='fade-up')
+            .marquee.marquees #{'ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System'}
+
     //- gallery
     section
       .container(data-aos="fade-up")

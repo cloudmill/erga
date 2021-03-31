@@ -12,16 +12,44 @@ block footer
 block content
   .landing
 
-    section
+    //- top
+    section.landing__top-section
+      .landing__top-first-block
+        .landing__top-first-background-layout
+        .container
+          h1.landing__top-title(data-aos="fade-up")
+            |#{'Research & Production Company ERGA'}
+          .landing__top-first-description-block
+            p.landing__top-first-description-text(data-aos="fade-up")
+              |Russian largest manufacturer
+              br
+              |of magnetic systems and industrial equipment
       .container
-        h1
-          +reveal(['Research & Production Company ERGA'])
+        .landing__top-about-block(data-aos="fade-up")
+          .landing__top-about-row
+            .landing__top-about-col
+              h2.landing__top-about-title(data-aos="fade-up")
+                |About ERGA
+            .landing__top-about-col
+              p.landing__top-about-text(data-aos="fade-up")
+                |The key activity of the company is development and production of equipment for mineral processing, air-gravity separation, complete solutions for the processing of various waste and separation of materials by electrical properties.
+        .landing__top-movie-block
+          .approach-video(data-aos='fade-up')
+            .approach-video-link
+              +img('video.svg')
+            +img('about/video.jpg')
+
+    //- 
+      section
+        .container
+          h1
+            +reveal(['Research & Production Company ERGA'])
 
     //- features
     section.landing__features-section
-      .landing__features-decoration
+      .landing__features-decoration-block
         ul.landing__features-decoration-list
-          - for (let i = 0; i < 30; i++)
+          - for (let i = 0; i < 60; i++)
             li.landing__features-decoration-item
       .container
         .landing__features-wrapper
@@ -55,9 +83,9 @@ block content
             li.landing__features2-item(data-aos="fade-up")
               figure.landing__features2-image
                 img.landing__features2-img(src='assets/images/landing/feature-2.svg' alt='')
-              p.landing__features2-text(data-aos="fade-up")
+              p.landing__features2-text
                 |#{'> 200 qualified employees'}
-            li.landing__features2-item
+            li.landing__features2-item(data-aos="fade-up")
               figure.landing__features2-image
                 img.landing__features2-img(src='assets/images/landing/feature-3.svg' alt='')
               p.landing__features2-text
@@ -129,7 +157,7 @@ block content
                 input(type='checkbox', id='item-6', data-title='Stone quarries')
                 label(for='item-6') Stone quarries
             .col.col__xs-12(data-aos="fade-up")
-              a.landing__select-link(href='#') Haven’t found your material?
+              a.landing__select-link.popup-modal.popup-with-zoom-anim(href='#notFoundProduct') Haven’t found your material?
 
     //- interesting
     section.landing__interesting-section

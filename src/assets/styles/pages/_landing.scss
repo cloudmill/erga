@@ -1,11 +1,11 @@
-.landing {
-    $breakpoint-main: 768px;
-    $color-red: #DF0112;
-    $color-black: #313131;
-    $color-gray: #F6F6F6;
-    $color-blue: #0000BD;
-    $font-family-title: 'HalvarBreit-XBd';
+$breakpoint-main: 768px;
+$color-red: #DF0112;
+$color-black: #313131;
+$color-gray: #F6F6F6;
+$color-blue: #0000BD;
+$font-family-title: 'HalvarBreit-XBd';
 
+.landing {
     // # select
     // section
     &__select-section {
@@ -53,8 +53,6 @@
     // FEATURES
     // var
     $breakpoint-features: $breakpoint-main;
-    $decoration-width: 10px;
-    $decoration-height: 10px;
     
     // mixin
     @mixin feature-text {
@@ -71,27 +69,6 @@
     &__features-section {
         background-color: $color-gray;
         border-top: 1px dashed $color-black;
-    }
-
-    // decoration
-    &__features-decoration {
-        position: relative;
-    }
-    &__features-decoration-list {
-        position: absolute;
-        left: calc(50% - #{$decoration-width / 2});
-        transform: translate(-50%, -50%);
-        display: flex;
-    }
-    &__features-decoration-item {
-        $border-hor: $decoration-width solid $color-black;
-        $border-vert: #{$decoration-height / 2} solid transparent;
-
-        margin-right: 100px;
-        
-        border-left: $border-hor;
-        border-top: $border-vert;
-        border-bottom: $border-vert;
     }
 
     // wrapper
@@ -671,5 +648,202 @@
         }
 
         background-color: $color-gray;
+    }
+}
+
+.landing {
+    &__top {
+        &-section {
+            padding-bottom: 30px;
+            @media (min-width: $breakpoint-main) {
+                padding-bottom: 60px;
+            }
+
+            background-color: $color-gray;
+        }
+
+        &-title {
+            margin: 0;
+
+            font-family: $font-family-title;
+            font-size: 30px;
+            line-height: 100%;
+            @media (min-width: $breakpoint-main) {
+                font-size: 60px;
+            }
+            text-transform: uppercase;
+        }
+
+        &-first {
+            &-block {
+                position: relative;
+                z-index: 0;
+                padding-top: 50px;
+                @media (min-width: $breakpoint-main) {
+                    font-size: 130px;
+                }
+            }
+
+            &-background {
+                &-layout {
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    bottom: 90px;
+                    left: 0;
+                    right: 0;
+    
+                    background-color: white;
+                }
+            }
+
+            &-description {
+                &-block {
+                    margin-top: 20px;
+                    @media (min-width: $breakpoint-main) {
+                        margin-top: 40px;
+                        padding-right: 140px;
+                    }
+                }
+                
+                &-text {
+                    margin: 0;
+                    @media (min-width: $breakpoint-main) {
+                        margin-left: auto;
+                    }
+                    width: 320px;
+                    @media (min-width: $breakpoint-main) {
+                        width: 365px;
+                    }
+
+                    font-size: 16px;
+                    line-height: 140%;
+                    @media (min-width: $breakpoint-main) {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+
+        &-slider {
+            &-block {
+                margin-top: 40px;
+                @media (min-width: $breakpoint-main) {
+                    margin-top: 80px;
+                }
+            }
+        }
+
+        &-about {
+            &-block {
+                margin-top: 110px;
+                padding-top: 10px;
+                @media (min-width: $breakpoint-main) {
+                    margin-top: 160px;
+                    padding-top: 30px;
+                }
+    
+                border-top: 1px solid $color-black;
+            }
+            &-row {
+                @media (min-width: $breakpoint-main) {
+                    margin-top: -30px;
+                    margin-left: -30px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+            }
+            &-col {
+                @media (min-width: $breakpoint-main) {
+                    margin-top: 30px;
+                    margin-left: 30px;
+                }
+    
+                &:last-child {
+                    margin-top: 20px;
+                    @media (min-width: $breakpoint-main) {
+                        max-width: 945px;
+                    }
+                }
+            }
+            &-title {
+                margin: 0;
+    
+                font-family: $font-family-title;
+                font-size: 13px;
+                line-height: 140%;
+                @media (min-width: $breakpoint-main) {
+                    font-size: 15px;
+                }
+                color: $color-blue;
+                text-transform: uppercase;
+            }
+            &-text {
+                margin: 0;
+    
+                font-size: 20px;
+                line-height: 140%;
+                @media (min-width: $breakpoint-main) {
+                    font-size: 33px;
+                }
+                text-transform: uppercase;
+            }
+        }
+
+        &-movie {
+            &-block {
+                margin-top: 80px;
+                @media (min-width: $breakpoint-main) {
+                    margin-top: 160px;
+                }
+
+                .approach-video {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &__features {
+        &-decoration {
+            $decoration-width: 10px;
+            $decoration-height: 10px;
+
+            @keyframes decoration-move {
+                from {
+                    transform: translate(-75%, -50%);
+                }
+                
+                to {
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            &-block {
+                position: relative;
+            }
+            &-list {
+                position: absolute;
+                left: calc(50% - #{$decoration-width / 2});
+                transform: translate(-75%, -50%);
+                display: flex;
+
+                animation-name: decoration-move;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+            }
+            &-item {
+                $border-hor: $decoration-width solid $color-black;
+                $border-vert: #{$decoration-height / 2} solid transparent;
+        
+                margin-right: 100px;
+                
+                border-left: $border-hor;
+                border-top: $border-vert;
+                border-bottom: $border-vert;
+            }
+        }
     }
 }

@@ -498,7 +498,10 @@
         color: white;
     }
 
-    // line
+
+
+    // # line
+    // grid
     &__contacts-line-row {
         display: flex;
         justify-content: space-between;
@@ -519,5 +522,77 @@
             }
         }
     }
-    // ###
+    // #
+
+
+
+    // # interesting
+    // section
+    &__interesting-section {
+        padding: 60px 0 90px;
+        @media (min-width: $breakpoint-main) {
+            padding: 160px 0;
+        }
+        overflow: hidden;
+
+        background-color: $color-gray;
+    }
+    // title block
+    &__interesting-title-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__interesting-title-col {
+        &:last-child {
+            padding-top: 15px;
+            display: none;
+            @media (min-width: $breakpoint-main) {
+                display: block;
+            }
+        }
+    }
+    // slider
+    &__interesting-slider {
+        position: relative;
+        z-index: 2;
+    }
+    // bottom
+    &__interesting-bottom {
+        position: relative;
+        z-index: 1;
+        margin-top: 80px;
+        @media (min-width: $breakpoint-main) {
+            margin-top: 160px;
+        }
+    }
+    &__interesting-bottom-row {
+        display: flex;
+        align-items: stretch;
+    }
+    &__interesting-bottom-col {
+        width: 50%;
+
+        &:first-child {
+            position: relative;
+
+            @media (min-width: $breakpoint-main) {
+                width: calc(100% / 3 * 2);
+            }
+        }
+
+        &:last-child {
+            @media (min-width: $breakpoint-main) {
+                width: calc(100% / 3 * 1);
+            }
+        }
+    }
+    &__interesting-background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, calc(-50% + 150px));
+        max-width: 630px;
+    }
+    // #
 }

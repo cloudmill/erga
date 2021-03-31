@@ -131,6 +131,27 @@ block content
             .col.col__xs-12(data-aos="fade-up")
               a.landing__select-link(href='#') Haven’t found your material?
 
+    //- interesting
+    section.landing__interesting-section
+      .container
+        .landing__interesting-title-row
+          .landing__interesting-title-col(data-aos="fade-up")
+            h2.landing__section-title
+              |You can be interested in
+          .landing__interesting-title-col(data-aos="fade-up")
+            +arrowLine('Show other equipment')
+        .landing__interesting-slider.trademark-tabs(data-aos="fade-up")
+          include ../components/_trademark-carousel
+        .landing__interesting-bottom
+          .landing__interesting-bottom-row
+            .landing__interesting-bottom-col
+              img.landing__interesting-background(src='assets/images/landing/interesting-background.png' arl='')
+            .landing__interesting-bottom-col
+              h3.landing__interesting-bottom-title
+                |products
+                br
+                |catalog
+
     //- trademarks
     section.landing__trademarks-section
       .container

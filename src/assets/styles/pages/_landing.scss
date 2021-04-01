@@ -680,7 +680,7 @@ $font-family-title: 'HalvarBreit-XBd';
                 z-index: 0;
                 padding-top: 50px;
                 @media (min-width: $breakpoint-main) {
-                    font-size: 130px;
+                    padding-top: 130px;
                 }
             }
 
@@ -689,11 +689,32 @@ $font-family-title: 'HalvarBreit-XBd';
                     position: absolute;
                     z-index: -1;
                     top: 0;
-                    bottom: 90px;
+                    bottom: 40px;
                     left: 0;
                     right: 0;
+                    @media (min-width: $breakpoint-main) {
+                        bottom: 90px;
+                    }
     
                     background-color: white;
+                }
+
+                &-image {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+
+
+                    background-image: url('../images/landing/top-background.png');
+                    background-repeat: no-repeat;
+                    background-position: center top 25px;
+                    background-size: 930px auto;
+                    @media (min-width: $breakpoint-main) {
+                        background-position: center top;
+                        background-size: auto auto;
+                    }
                 }
             }
 
@@ -727,9 +748,79 @@ $font-family-title: 'HalvarBreit-XBd';
 
         &-slider {
             &-block {
+                position: relative;
+                z-index: 0;
                 margin-top: 40px;
                 @media (min-width: $breakpoint-main) {
                     margin-top: 80px;
+                }
+
+                &::before {
+                    position: absolute;
+                    z-index: -1;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    content: '';
+                    display: none;
+                    @media (min-width: $breakpoint-main) {
+                        display: block;
+                    }
+                    width: 2060px;
+                    height: 60px;
+
+                    background-image: url('../images/landing/top-slider-background.svg');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+            }
+
+            &-container {}
+            
+            &-slide {}
+            &-image {
+                display: flex;
+                align-items: flex-start;
+            }
+            &-img {}
+
+            &-buttons {
+                position: absolute;
+                top: calc(100% + 10px);
+                left: 50%;
+                transform: translateX(-50%);
+                @media (min-width: $breakpoint-main) {
+                    top: auto;
+                    bottom: calc(100% + 75px);
+                    left: 0;
+                    transform: none;
+                }
+                display: flex;
+            }
+            &-button {
+                width: 75px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                cursor: pointer;
+
+                .icon-arrow-right {
+                    font-size: 9px;
+                    transition: color 0.5s;
+                }
+
+                &:hover {
+                    .icon-arrow-right {
+                        color: $color-red;
+                    }
+                }
+
+                &--left {
+                    .icon-arrow-right {
+                        transform: rotate(180deg);
+                    }
                 }
             }
         }

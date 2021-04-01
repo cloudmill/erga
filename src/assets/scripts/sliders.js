@@ -3,6 +3,41 @@ const { detect } = require('detect-browser');
 
 const browser = detect();
 
+export const landingTopSlider = new Swiper('.landing__top-slider-container', {
+  loop: true,
+  spaceBetween: 100,
+  slidesPerView: 1,
+  breakpoints: {
+    768: {
+      spaceBetween: 10,
+    }
+  },
+  navigation: {
+    prevEl: '.landing__top-slider-button--left',
+    nextEl: '.landing__top-slider-button--right',
+  },
+});
+
+const slidesCount = $('.landing__top-slider-slide').length;
+console.log(slidesCount);
+let currentIndex = 0;
+landingTopSlider.on('slidePrevTransitionEnd', () => {
+  if (currentIndex === 0) {
+    currentIndex = slidesCount - 1;
+  } else {
+    currentIndex--;
+  }
+  console.log(currentIndex);
+});
+landingTopSlider.on('slideNextTransitionEnd', () => {
+  if (currentIndex >= slidesCount) {
+    currentIndex = 0;
+  } else {
+    currentIndex++;
+  }
+  console.log(currentIndex);
+});
+
 export const swiper = new Swiper('.swiper-container', {
   effect: browser.name === 'safari' ? 'slide' : 'coverflow',
   grabCursor: true,
@@ -18,7 +53,7 @@ export const swiper = new Swiper('.swiper-container', {
     stretch: 0,
     depth: 0,
     modifier: 1,
-    slideShadows : false,
+    slideShadows: false,
   },
   pagination: {
     el: '.swiper-pagination',
@@ -35,8 +70,8 @@ export const swiper = new Swiper('.swiper-container', {
       const getTitle = $('.swiper-container .swiper-slide-active').data('title');
       const getHref = $('.swiper-container .swiper-slide-active').data('href');
       const separateTitle = getTitle && getTitle.split('/b');
-      const setTitle = separateTitle && '<div class="revealOut"><span class="revealIn">'+separateTitle[0]+'</span></div>';
-      const setTitle2 = separateTitle && separateTitle[1] ? '<div class="revealOut"><span class="revealIn">'+separateTitle[1]+'</span></div>' : '';
+      const setTitle = separateTitle && '<div class="revealOut"><span class="revealIn">' + separateTitle[0] + '</span></div>';
+      const setTitle2 = separateTitle && separateTitle[1] ? '<div class="revealOut"><span class="revealIn">' + separateTitle[1] + '</span></div>' : '';
 
       setTimeout(() => {
         $('.swiper-title').removeClass('remove');
@@ -173,30 +208,30 @@ export const menu = new Swiper('.menu-carousel', {
 });
 
 $('.menu-carousel.swiper-container').hover(
-  function() {
+  function () {
     $('.status').html('mouseenter');
     moveForward();
-  }, function() {
+  }, function () {
     $('.status').html('mouseleave');
     stopWhereYouAre();
   }
 );
 
 let oldx = 0;
-let offset = [0,0];
+let offset = [0, 0];
 let isDown = false;
 const divOverlay = document.getElementById("dragger-js");
-divOverlay.addEventListener('mousedown', function(e) {
+divOverlay.addEventListener('mousedown', function (e) {
   isDown = true;
   offset = [
     divOverlay.offsetLeft - e.clientX,
   ];
 }, true);
-divOverlay.addEventListener('mouseup', function() {
+divOverlay.addEventListener('mouseup', function () {
   isDown = false;
   stopWhereYouAre();
 }, true);
-divOverlay.addEventListener('mousemove', function(event) {
+divOverlay.addEventListener('mousemove', function (event) {
   event.preventDefault();
   if (isDown) {
     if (event.pageX > oldx) {
@@ -217,31 +252,31 @@ let slideWidth = $('.menu-carousel .swiper-slide').outerWidth(),
   totalSlides = $('.menu-carousel .swiper-slide').length - 1,
   totalWidth = slideWidth * totalSlides,
   desiredSpeed = 50000,
-  leftSpeed = desiredSpeed + ( $('.menu-carousel .swiper-wrapper').position().left/slideWidth * 1000);
+  leftSpeed = desiredSpeed + ($('.menu-carousel .swiper-wrapper').position().left / slideWidth * 1000);
 
 function moveForward() {
-  leftSpeed = desiredSpeed + ( $('.menu-carousel .swiper-wrapper').position().left/slideWidth * 1000);
+  leftSpeed = desiredSpeed + ($('.menu-carousel .swiper-wrapper').position().left / slideWidth * 1000);
   $('.menu-carousel .swiper-wrapper').stop().animate({
     left: -totalWidth
-  }, leftSpeed, 'linear', function(){
+  }, leftSpeed, 'linear', function () {
     resetStart();
   });
 }
 function moveBack() {
-  leftSpeed = desiredSpeed + ( $('.menu-carousel .swiper-wrapper').position().left/slideWidth * 1000);
+  leftSpeed = desiredSpeed + ($('.menu-carousel .swiper-wrapper').position().left / slideWidth * 1000);
   $('.menu-carousel .swiper-wrapper').stop().animate({
     left: totalWidth
-  }, leftSpeed, 'linear', function(){
+  }, leftSpeed, 'linear', function () {
     resetStart();
   });
 }
-function stopWhereYouAre(){
+function stopWhereYouAre() {
   $('.menu-carousel .swiper-wrapper').stop().animate();
 }
-function resetStart(){
+function resetStart() {
   $('.menu-carousel .swiper-wrapper').stop().animate({
     left: 0
-  }, 1000, 'linear', function(){
+  }, 1000, 'linear', function () {
     moveForward();
   });
 
@@ -263,7 +298,7 @@ export const galleryTop = new Swiper('.gallery-top', {
   on: {
     slideChange: function () {
       $('.gallery-thumbs__item').removeClass('active');
-      $('.gallery-thumbs__item[data-slide='+this.activeIndex+']').addClass('active');
+      $('.gallery-thumbs__item[data-slide=' + this.activeIndex + ']').addClass('active');
     },
   },
 });

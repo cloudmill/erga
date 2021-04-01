@@ -16,6 +16,7 @@ block content
     section.landing__top-section
       .landing__top-first-block
         .landing__top-first-background-layout
+          .landing__top-first-background-image(data-aos="fade-up")
         .container
           h1.landing__top-title(data-aos="fade-up")
             |#{'Research & Production Company ERGA'}
@@ -24,6 +25,18 @@ block content
               |Russian largest manufacturer
               br
               |of magnetic systems and industrial equipment
+          .landing__top-slider-block(data-aos="fade-up")
+            .landing__top-slider-buttons(data-aos="fade-up")
+              .landing__top-slider-button.landing__top-slider-button--left
+                i.icon-arrow-right
+              .landing__top-slider-button.landing__top-slider-button--right
+                i.icon-arrow-right
+            .landing__top-slider-container
+              .swiper-wrapper
+                - for (let i = 0; i < 3; i++)
+                  .swiper-slide.landing__top-slider-slide
+                    figure.landing__top-slider-image
+                      img.landing__top-slider-img(src='assets/images/landing/top-slide-1.png' alt='')
       .container
         .landing__top-about-block(data-aos="fade-up")
           .landing__top-about-row
@@ -38,12 +51,6 @@ block content
             .approach-video-link
               +img('video.svg')
             +img('about/video.jpg')
-
-    //- 
-      section
-        .container
-          h1
-            +reveal(['Research & Production Company ERGA'])
 
     //- features
     section.landing__features-section

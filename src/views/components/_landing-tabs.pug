@@ -6,12 +6,35 @@
       li.landing__tabs-panel-item(class = (!i) ? 'landing__tabs-panel-item--active' : '')
         img.landing__tabs-panel-img(src=`assets/images/landing/tab-${i + 1}.svg` alt='')
   ul.landing__tabs-content-list
-    - for (let i = 0; i < itemsCount; i++)
-      li.landing__tabs-content-item(class = (!i) ? 'landing__tabs-content-item--active' : '')
-        .landing__tabs-content-row
-          .landing__tabs-content-col
-            h3.landing__tabs-content-title(data-aos="fade-up")
-              |#{'Erga-' + (i + 1)}
-          .landing__tabs-content-col
-            p.landing__tabs-content-text(data-aos="fade-up")
-              |Production of magnetic separators, iron separators and specialized equipment ERGA produces more than 60 types of industrial and laboratory equipment under ERGA trademark. ERGA equipment is continuously improved and modernized, thus ensuring high performance, operational reliability and safety while increasing cost efficiency of their application.
+    li.landing__tabs-content-item.landing__tabs-content-item--active
+      .landing__tabs-content-row
+        .landing__tabs-content-col
+          h3.landing__tabs-content-title(data-aos="fade-up")
+            |ERGA
+        .landing__tabs-content-col
+          p.landing__tabs-content-text(data-aos="fade-up")
+            |Production of magnetic separators, iron separators and specialized equipment. ERGA produces more than 60 types of industrial and laboratory equipment under ERGA trademark. ERGA equipment is continuously improved and modernized, thus ensuring high performance, operational reliability and safety while increasing cost efficiency of their application.
+    li.landing__tabs-content-item
+      .landing__tabs-content-row
+        .landing__tabs-content-col
+          h3.landing__tabs-content-title(data-aos="fade-up")
+            |RESOLINE
+        .landing__tabs-content-col
+          p.landing__tabs-content-text(data-aos="fade-up")
+            |RESOLINE complete process solutions. Research and Production Company “ERGA” designs and produces customized complete plants and lines. The scope of supply depends on the task and can include various types of our industrial equipment.
+    li.landing__tabs-content-item
+      .landing__tabs-content-row
+        .landing__tabs-content-col
+          h3.landing__tabs-content-title(data-aos="fade-up")
+            |ERGUARD
+        .landing__tabs-content-col
+          p.landing__tabs-content-text(data-aos="fade-up")
+            |Manufacture of ERGUARD industrial metal detectors. ERGA manufactures ERGUARD industrial conveyorized, gravity and pipeline metal detectors designed to protect process equipment from damage and fast wear, control quality of raw materials, semi-finished and finished products.
+    li.landing__tabs-content-item
+      .landing__tabs-content-row
+        .landing__tabs-content-col
+          h3.landing__tabs-content-title(data-aos="fade-up")
+            |ЭЛКРОН
+        .landing__tabs-content-col
+          p.landing__tabs-content-text(data-aos="fade-up")
+            |Manufacture of ELKRON electrostatic and triboelectrostatic separators. ERGA manufactures industrial and laboratory ELKRON drum corona electrostatic separators for dry separation of materials with different electrical properties.

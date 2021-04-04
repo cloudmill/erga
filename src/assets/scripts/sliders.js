@@ -19,7 +19,6 @@ export const landingTopSlider = new Swiper('.landing__top-slider-container', {
 });
 
 const slidesCount = $('.landing__top-slider-slide').length;
-console.log(slidesCount);
 let currentIndex = 0;
 landingTopSlider.on('slidePrevTransitionEnd', () => {
   if (currentIndex === 0) {
@@ -221,65 +220,69 @@ let oldx = 0;
 let offset = [0, 0];
 let isDown = false;
 const divOverlay = document.getElementById("dragger-js");
-divOverlay.addEventListener('mousedown', function (e) {
-  isDown = true;
-  offset = [
-    divOverlay.offsetLeft - e.clientX,
-  ];
-}, true);
-divOverlay.addEventListener('mouseup', function () {
-  isDown = false;
-  stopWhereYouAre();
-}, true);
-divOverlay.addEventListener('mousemove', function (event) {
-  event.preventDefault();
-  if (isDown) {
-    if (event.pageX > oldx) {
-      // menu.slideNext();
-      moveForward();
-    } else if (event.pageX < oldx) {
-      // menu.slidePrev();
-      moveBack();
+if (divOverlay !== null) {
+  divOverlay.addEventListener('mousedown', function (e) {
+    isDown = true;
+    offset = [
+      divOverlay.offsetLeft - e.clientX,
+    ];
+  }, true);
+  divOverlay.addEventListener('mouseup', function () {
+    isDown = false;
+    stopWhereYouAre();
+  }, true);
+  divOverlay.addEventListener('mousemove', function (event) {
+    event.preventDefault();
+    if (isDown) {
+      if (event.pageX > oldx) {
+        // menu.slideNext();
+        moveForward();
+      } else if (event.pageX < oldx) {
+        // menu.slidePrev();
+        moveBack();
+      }
+      divOverlay.style.left = ((event.clientX + offset[0])) + 'px';
+      divOverlay.style.right = 'auto';
+      divOverlay.style.margin = '0';
+      oldx = event.pageX;
     }
-    divOverlay.style.left = ((event.clientX + offset[0])) + 'px';
-    divOverlay.style.right = 'auto';
-    divOverlay.style.margin = '0';
-    oldx = event.pageX;
+  }, true);
+}
+
+if ($('.menu-carousel').length > 0) {
+  let slideWidth = $('.menu-carousel .swiper-slide').outerWidth(),
+    totalSlides = $('.menu-carousel .swiper-slide').length - 1,
+    totalWidth = slideWidth * totalSlides,
+    desiredSpeed = 50000,
+    leftSpeed = desiredSpeed + ($('.menu-carousel .swiper-wrapper').position().left / slideWidth * 1000);
+
+  function moveForward() {
+    leftSpeed = desiredSpeed + ($('.menu-carousel .swiper-wrapper').position().left / slideWidth * 1000);
+    $('.menu-carousel .swiper-wrapper').stop().animate({
+      left: -totalWidth
+    }, leftSpeed, 'linear', function () {
+      resetStart();
+    });
   }
-}, true);
+  function moveBack() {
+    leftSpeed = desiredSpeed + ($('.menu-carousel .swiper-wrapper').position().left / slideWidth * 1000);
+    $('.menu-carousel .swiper-wrapper').stop().animate({
+      left: totalWidth
+    }, leftSpeed, 'linear', function () {
+      resetStart();
+    });
+  }
+  function stopWhereYouAre() {
+    $('.menu-carousel .swiper-wrapper').stop().animate();
+  }
+  function resetStart() {
+    $('.menu-carousel .swiper-wrapper').stop().animate({
+      left: 0
+    }, 1000, 'linear', function () {
+      moveForward();
+    });
 
-let slideWidth = $('.menu-carousel .swiper-slide').outerWidth(),
-  totalSlides = $('.menu-carousel .swiper-slide').length - 1,
-  totalWidth = slideWidth * totalSlides,
-  desiredSpeed = 50000,
-  leftSpeed = desiredSpeed + ($('.menu-carousel .swiper-wrapper').position().left / slideWidth * 1000);
-
-function moveForward() {
-  leftSpeed = desiredSpeed + ($('.menu-carousel .swiper-wrapper').position().left / slideWidth * 1000);
-  $('.menu-carousel .swiper-wrapper').stop().animate({
-    left: -totalWidth
-  }, leftSpeed, 'linear', function () {
-    resetStart();
-  });
-}
-function moveBack() {
-  leftSpeed = desiredSpeed + ($('.menu-carousel .swiper-wrapper').position().left / slideWidth * 1000);
-  $('.menu-carousel .swiper-wrapper').stop().animate({
-    left: totalWidth
-  }, leftSpeed, 'linear', function () {
-    resetStart();
-  });
-}
-function stopWhereYouAre() {
-  $('.menu-carousel .swiper-wrapper').stop().animate();
-}
-function resetStart() {
-  $('.menu-carousel .swiper-wrapper').stop().animate({
-    left: 0
-  }, 1000, 'linear', function () {
-    moveForward();
-  });
-
+  }
 }
 
 

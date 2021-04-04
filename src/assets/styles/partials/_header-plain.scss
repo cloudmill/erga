@@ -1,0 +1,17 @@
+.header-plain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    @media (min-width: 992px) {
+        height: 150px;
+    }
+
+    transition: 0.5s;
+
+    &--scroll {
+        background-color: white;
+        border-bottom: 1px solid #DADADA;
+    }
+}

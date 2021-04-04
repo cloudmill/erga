@@ -130,3 +130,33 @@ if ($(".loader-outer").length > 0) {
     );
   });
 }
+
+$(window).on('load', () => {
+  if ($('.header-plain').length !== 0) {
+    const startYOffset = window.pageYOffset;
+
+    if (startYOffset > 0) {
+      $('.header-plain').addClass('header-plain--scroll');
+    }
+
+    $(window).on('scroll.header-plain', scrollHandler);
+
+    function scrollHandler() {
+      console.log(123);
+
+      $(window).off('scroll.header-plain');
+      const timeout = setTimeout(() => {
+        const currentYOffset = window.pageYOffset;
+
+        if (currentYOffset > 0) {
+          $('.header-plain').addClass('header-plain--scroll');
+        } else {
+          $('.header-plain').removeClass('header-plain--scroll');
+        }
+
+        clearTimeout(timeout);
+        $(window).on('scroll.header-plain', scrollHandler);
+      }, 200);
+    }
+  }
+});

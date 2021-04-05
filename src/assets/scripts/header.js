@@ -4,13 +4,13 @@ import { closeContainer } from './demo';
 
 const screen_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 let requestRunning = false;
-$(".menu--js").click(function(event) {
+$(".menu--js").click(function (event) {
   event.preventDefault();
   if (requestRunning) {
     return;
   }
 
-  if($(this).hasClass('open')) {
+  if ($(this).hasClass('open')) {
     closeMenu();
     $('.menuBar').removeClass("open");
     $('.menu--js').removeClass("open");
@@ -27,8 +27,8 @@ $(".menu--js").click(function(event) {
     $("body").toggleClass('fixed');
   }, 0);
 
-  if($('#fullpage').length) {
-    if($(this).hasClass('open')) {
+  if ($('#fullpage').length) {
+    if ($(this).hasClass('open')) {
       fullpage_api.setMouseWheelScrolling(true);
       fullpage_api.setAllowScrolling(true);
     } else {
@@ -38,22 +38,22 @@ $(".menu--js").click(function(event) {
   }
   requestRunning = true;
 
-  setTimeout(() => {requestRunning = false}, 1500);
+  setTimeout(() => { requestRunning = false }, 1500);
 });
 
 // search
-$(".search--js").click(function() {
+$(".search--js").click(function () {
   $(".searchBar").addClass("active");
 
   return false;
 });
-$(".searchBar__close").click(function() {
+$(".searchBar__close").click(function () {
   $(".searchBar").removeClass("active");
 
   return false;
 });
 
-if(screen_width < 768) {
+if (screen_width < 768) {
   $(
     ".mobileMenu--js h3 > a, " +
     ".mobileMenu--js .dropdown-menu__item--parent > a, " +
@@ -75,20 +75,20 @@ $(document).mouseup(function (e) {
 
 
 
-$(function(){
+$(function () {
   let lastScrollTop = 0, delta = 5;
   const offset = $(".filter--js").offset();
-  $(window).scroll(function(){
+  $(window).scroll(function () {
     const st = $(this).scrollTop();
 
-    if(offset) {
+    if (offset) {
       if (st > offset.top) {
         $('.filter--js').addClass('fixed');
       } else {
         $('.filter--js').removeClass('fixed');
       }
     }
-    if(Math.abs(lastScrollTop - st) <= delta)
+    if (Math.abs(lastScrollTop - st) <= delta)
       return;
 
     // if (st > lastScrollTop && lastScrollTop > 0){
@@ -100,11 +100,11 @@ $(function(){
     //   $('.filter--js').removeClass('nav-up');
     //   $('.menu--js').removeClass('thin');
     // }
-    if(screen_width > 767) {
+    if (screen_width > 767) {
       if (st > 1) {
-        $("header").addClass('scroll').parent().addClass('scroller');
+        $("header:not(.header-plain)").addClass('scroll').parent().addClass('scroller');
       } else {
-        $("header").removeClass('scroll').parent().removeClass('scroller');
+        $("header:not(.header-plain)").removeClass('scroll').parent().removeClass('scroller');
       }
     }
     lastScrollTop = st;
@@ -113,26 +113,26 @@ $(function(){
 
 
 // header__menu-el--parent
-$(".main-nav__item--parent").mouseleave(function() {
+$(".main-nav__item--parent").mouseleave(function () {
   $(this).parents().find('.page-header').removeClass('hover');
 });
-$(".main-nav__item--parent").mouseover(function() {
+$(".main-nav__item--parent").mouseover(function () {
   $(this).parents().find('.page-header').addClass('hover');
 });
-$(".dropdown-menu__item").mouseover(function() {
+$(".dropdown-menu__item").mouseover(function () {
   const getImg = $(this).data('img');
   $(this).closest('.dropdown').css('background', `url("${getImg}") no-repeat right bottom 30px, #F6F6F6`);
 });
-$(".dropdown-menu__item--js").mouseover(function() {
+$(".dropdown-menu__item--js").mouseover(function () {
   $('.liners span:nth-child(2)').css('opacity', 1);
 });
-$(".dropdown-menu__item1--js").mouseover(function() {
+$(".dropdown-menu__item1--js").mouseover(function () {
   $('.liners span:nth-child(3)').css('opacity', 1);
 });
-$(".dropdown-menu__item--js").mouseleave(function() {
+$(".dropdown-menu__item--js").mouseleave(function () {
   $('.liners span:nth-child(2)').css('opacity', 0);
 });
-$(".dropdown-menu__item1--js").mouseleave(function() {
+$(".dropdown-menu__item1--js").mouseleave(function () {
   $('.liners span:nth-child(3)').css('opacity', 0);
 });
 const $nav = $(".menuBar"),

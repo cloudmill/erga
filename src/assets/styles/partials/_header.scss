@@ -520,6 +520,10 @@
   .lang-act {
     color: #0000BD;
   }
+  .lang-disabled > a {
+    color: rgb(161, 161, 161);
+    cursor: default;
+  }
 }
 
 @media screen and (max-width: $screen-sm-max) {

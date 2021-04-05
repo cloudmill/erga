@@ -131,8 +131,10 @@ if ($(".loader-outer").length > 0) {
   });
 }
 
+// header plain
 $(window).on('load', () => {
   if ($('.header-plain').length !== 0) {
+    const intervalTime = 1000 / 30;
     const startYOffset = window.pageYOffset;
 
     if (startYOffset > 0) {
@@ -140,6 +142,10 @@ $(window).on('load', () => {
     }
 
     $(window).on('scroll.header-plain', scrollHandler);
+
+    $('.page-header__menu').on('click', () => {
+      console.log('menu');
+    });
 
     function scrollHandler() {
       console.log(123);
@@ -156,7 +162,7 @@ $(window).on('load', () => {
 
         clearTimeout(timeout);
         $(window).on('scroll.header-plain', scrollHandler);
-      }, 200);
+      }, intervalTime);
     }
   }
 });

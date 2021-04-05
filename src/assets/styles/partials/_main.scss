@@ -32,6 +32,8 @@ body.index #fp-nav {
   }
 }
 .page-plain {
+  position: relative;
+  z-index: 1;
   padding-top: 90px;
   @media (min-width: 992px) {
     padding-top: 150px;

@@ -1,2 +1,38 @@
-.header-plain
-  |hello, world
+header.header-plain
+  section.header-plain__bar
+    .header-plain__bar-row
+      .header-plain__bar-col
+        .header-plain__left-row
+          .header-plain__left-col
+            a.header-plain__logo-image(href='#')
+              img.header-plain__logo-img(src='assets/images/logo-en.svg' alt='')
+          .header-plain__left-col
+            +arrowLine('Go global')
+          .header-plain__left-col
+            .language-eng
+              span.lang.lang-main En
+              .select-lang
+                .lang.lang-act #[a(href="#") En]
+                .lang.lang-disabled #[a(href="#") فارسی]
+      .header-plain__bar-col
+        nav.header-plain__nav
+          ul.header-plain__nav-list
+            li.header-plain__nav-item
+              a.header-plain__nav-link(href='#')
+                |About ERGA
+            li.header-plain__nav-item
+              a.header-plain__nav-link(href='#')
+                |Products
+            li.header-plain__nav-item
+              a.header-plain__nav-link(href='#')
+                |Industries
+            li.header-plain__nav-item
+              a.header-plain__nav-link(href='#')
+                |Contact
+      .header-plain__bar-col
+        button.header-plain__button
+          span
+          span
+          span
+  section.header-plain__dropdown
+    |dropdown

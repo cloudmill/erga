@@ -29,7 +29,8 @@ module.exports = env => {
     devServer: {
       contentBase: path.resolve(__dirname, '../dist'),
     },
-    devtool: (env.NODE_ENV === 'development') ? 'source-map' : false,
+    devtool: 'source-map',
+    // devtool: (env.NODE_ENV === 'development') ? 'source-map' : false,
     resolve: {
       extensions: ['.js', '.css', '.scss'],
       alias: {
@@ -59,7 +60,7 @@ module.exports = env => {
           use: [
             {
               loader: 'babel-loader',
-              options: {presets: ['@babel/preset-env']}
+              options: { presets: ['@babel/preset-env'] }
             }
           ]
         },
@@ -79,7 +80,7 @@ module.exports = env => {
           test: /\.scss$/,
           use: [
             env.NODE_ENV === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
-            {loader: 'css-loader', options: {importLoaders: 1}},
+            { loader: 'css-loader', options: { importLoaders: 1 } },
             {
               loader: 'sass-loader',
               options: {
@@ -173,10 +174,10 @@ module.exports = env => {
 
     plugins: [
       new CopyWebpackPlugin([
-        {from: 'assets/images/favicons/favicon.ico', to: ''},
-        {from: 'assets/images', to: 'assets/images'},
-        {from: 'assets/fonts', to: 'assets/fonts'},
-        {from: 'assets/files', to: 'assets/files'},
+        { from: 'assets/images/favicons/favicon.ico', to: '' },
+        { from: 'assets/images', to: 'assets/images' },
+        { from: 'assets/fonts', to: 'assets/fonts' },
+        { from: 'assets/files', to: 'assets/files' },
       ]),
       new ImageminPlugin({
         cacheFolder: './.cache',
@@ -222,7 +223,7 @@ module.exports = env => {
             preserve_newlines: true
           }
         },
-        replace: [ ' type="text/javascript"' ]
+        replace: [' type="text/javascript"']
       }),
 
       new WebpackNotifierPlugin({

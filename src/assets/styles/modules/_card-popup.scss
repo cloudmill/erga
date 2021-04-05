@@ -15,6 +15,7 @@
             bottom: 0;
             left: 0;
             right: 50%;
+            overflow-y: auto;
         }
         padding-top: 20px;
         @media (min-width: 992px) {
@@ -85,6 +86,7 @@
     &__button {
         @media (max-width: 991px) {
             position: fixed;
+            z-index: 100000;
             bottom: 20px;
             left: 20px;
             right: 20px;
@@ -119,6 +121,20 @@
             margin-left: auto;
             padding: 150px 50px 105px;
             width: 50%;
+        }
+
+        .card-top__right {
+            padding: 0;
+            width: 100%;
+
+            border: none;
+        }
+
+        .basecontent {
+            margin: 0;
+            padding: 0;
+
+            border: none;
         }
     }
 }

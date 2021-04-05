@@ -391,7 +391,7 @@
   .card-popup__container
     .card-popup__show
       .card-popup__show-top
-        figure.card-popup__logo-image
+        figure.card-popup__logo-image(data-aos="fade-up")
           img.card-popup__logo-img(src='assets/images/card/elkron.svg' alt='')
         .card-popup__show-top-buttons.landing__top-slider-buttons(data-aos="fade-up")
           .landing__top-slider-button.landing__top-slider-button--left
@@ -403,7 +403,7 @@
           .card-popup__slider-container
             .swiper-wrapper
               each slide in [1, 2, 3]
-                .swiper-slide.card-popup__slider-slide
+                .swiper-slide.card-popup__slider-slide(data-aos="fade-up")
                   figure.card-popup__slider-image
                     img.card-popup__slider-img(src='assets/images/landing/card-1.png')
         .card-popup__show-content-buttons.landing__top-slider-buttons(data-aos="fade-up")
@@ -411,10 +411,94 @@
             i.icon-arrow-right
           .landing__top-slider-button.landing__top-slider-button--right
             i.icon-arrow-right
-        a.card-popup__button.btn.btn--primary.btn-arrow.btn--full(href='#')
+        a.card-popup__button.btn.btn--primary.btn-arrow.btn--full(href='#' data-aos="fade-up")
           i.icons-left.icon-arrow-med-right
           span Пробная сепарация
           i.icons-right.icon-arrow-mini-right
     .card-popup__info
       .card-popup__info-content
-        |info
+        .card-top__right(data-aos="fade-up")
+          h1
+            +reveal(['ELKRON ESS electrostatic separators '])
+          p
+            |Electrostatic corona drum separator for separation of materials with different electrical properties.
+          hr
+          ul.list--unstyled
+            li
+              .image: +img('icons/ico-slide-1 1.svg')
+              span Separation/cleaning efficiency up to 99.8%
+            li
+              .image: +img('icons/ico-slide-2 2.svg')
+              span High capacity
+            li
+              .image: +img('icons/ico-slide-3 3.svg')
+              span Fine adjustment of separation mode
+            li
+              .image: +img('icons/ico-slide-4.svg')
+              span Automatic cleaning of electrodes
+            li
+              .image: +img('icons/ico-slide-5.svg')
+              span Touch Screen intuitive control
+            li
+              .image: +img('icons/ico-slide-6.svg')
+              span Reliable components from the world leading manufacturers (Japan, Germany)
+            li
+              .image: +img('icons/ico-slide-1 1.svg')
+              span Low power consumption (from 0,25 kW)
+            li
+              .image: +img('icons/ico-slide-2 2.svg')
+              span Dry separation method
+        .basecontent(data-aos="fade-up")
+          h5
+            |Separation/cleaning efficiency up to 99.8%
+          p
+            |Required separation mode is selected depending on feed material. Fine adjustment of the roll rotation frequency, position of the corona discharge and collecting electrodes, splitters and voltage of the corona electrode ensure up to 99.8% efficiency of separation and cleaning of the feed material.
+          h5
+            |High capacity
+          p
+            |High capacity of ELKRON ESS machine is ensured by the enlarged diameter of collecting electrode (320 mm).
+          h5
+            |Automatic cleaning of electrodes
+          p
+            |Automatic cleaning of collecting and corona discharge electrodes allows for downtime elimination.
+          h5
+            |Touch Screen intuitive control
+          p
+            |The control panel is a 7-inch high-definition touch screen with user-friendly interface: 3 levels of access to settings (operator, engineer, service specialist). In addition to settings of main operating parameters of the product, it is possible to save settings of separation parameters for every type of material.
+          h5
+            |Dry separation method: pure economy!
+          p
+            |ELKRON ESS electrostatic corona drum separator allows for replacement or supplement existing equipment, improving the quality of material separation with less power consumption and no time and money spent on water and drying**.
+            br
+            br
+            |** comparing to wet separation method
+          h5
+            |Applications
+          ul.list--dots
+            li
+              |Separation of plastic from metal;
+            li
+              |Recycling of electric appliances;
+            li
+              |Recycling of LED lamps;
+            li
+              |Cable recycling;
+            li
+              |Recycling of PET bottles;
+            li
+              |Recycling of printed circuit boards;
+            li
+              |Recycling of plastic window profiles;
+            li
+              |Recycling of used tires.
+          h5
+            |Materials for dry concentration
+          ul.list--dots
+            li
+              |Precious metal ores of (Au, Ag);
+            li
+              |Non-metallic ores and materials (quartz sand, feldspar, etc.);
+            li
+              |Non-ferrous and rare metal ores of (titanium-zirconium, tin-tungsten, columbite-tantalite, etc.);
+            li
+              |Diamond-bearing ores.

@@ -1,0 +1,124 @@
+.card-popup {
+    padding-top: 0;
+
+    &__container {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    &__show {
+        @media (min-width: 992px) {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 50%;
+        }
+        padding-top: 20px;
+        @media (min-width: 992px) {
+            padding-top: 70px;
+        }
+
+        @media (min-width: 992px) {
+            border-right: 1px solid #DADADA;
+        }
+    }
+
+    &__show-top {
+        @media (min-width: 992px) {
+            padding-right: 50px;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__show-top-buttons {
+        position: static !important;
+        transform: none !important;
+        @media (max-width: 991px) {
+            display: none !important;
+        }
+    } 
+
+    &__show-content {
+        margin-top: 20px;
+        padding: 0 20px;
+        @media (min-width: 992px) {
+            padding: 0 50px 70px;
+        }
+    }
+    &__show-content-buttons {
+        margin-top: 10px !important;
+        position: static !important;
+        transform: none !important;
+        justify-content: space-between !important;
+        @media (min-width: 992px) {
+            display: none !important;
+        }
+    }
+
+    &__logo-image {
+        margin: 0;
+        display: flex;
+        align-items: flex-start;
+    }
+    &__logo-img {
+        max-width: 105px;
+        @media (min-width: 992px) {
+            max-width: none;
+        }
+    }
+
+    &__close {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        @media (min-width: 992px) {
+            top: 70px;
+            right: 95px;
+        }
+        z-index: 100000;
+    }
+
+    &__button {
+        @media (max-width: 991px) {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            width: auto;
+        }
+        @media (min-width: 992px) {
+            margin-top: 20px;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+    }
+    &__slider-container {}
+    &__slider-slide {
+        display: flex;
+        justify-content: center;
+    }
+    &__slider-image {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__slider-img {}
+    
+    &__info {
+        margin-top: 20px;
+        padding: 0 20px 40px;
+        @media (min-width: 992px) {
+            margin-top: 0;
+            margin-left: auto;
+            padding: 150px 50px 105px;
+            width: 50%;
+        }
+    }
+}

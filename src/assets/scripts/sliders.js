@@ -37,6 +37,18 @@ landingTopSlider.on('slideNextTransitionEnd', () => {
   console.log(currentIndex);
 });
 
+$('.popup-modal').one('click', () => {
+  new Swiper('.card-popup__slider-container', {
+    loop: true,
+    spaceBetween: 20,
+    slidesPerView: 1,
+    navigation: {
+      prevEl: '.landing__top-slider-button--left',
+      nextEl: '.landing__top-slider-button--right',
+    },
+  });
+});
+
 export const swiper = new Swiper('.swiper-container', {
   effect: browser.name === 'safari' ? 'slide' : 'coverflow',
   grabCursor: true,

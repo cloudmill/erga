@@ -384,3 +384,37 @@
           input(type="checkbox", id='mailToFaq')
           label.label(for='mailToFaq')
             span Вы даете согласие на обработку Ваших персональных данных #[br]  в соответствии с #[a(href='#') регламентирующими документами сайта]
+
+#card-1.card-popup.mfp-hide.popup-block.zoom-anim-dialog
+  .background
+  .card-popup__close.close-popup.popup-modal-dismiss: i.icon-close
+  .card-popup__container
+    .card-popup__show
+      .card-popup__show-top
+        figure.card-popup__logo-image
+          img.card-popup__logo-img(src='assets/images/card/elkron.svg' alt='')
+        .card-popup__show-top-buttons.landing__top-slider-buttons(data-aos="fade-up")
+          .landing__top-slider-button.landing__top-slider-button--left
+            i.icon-arrow-right
+          .landing__top-slider-button.landing__top-slider-button--right
+            i.icon-arrow-right
+      .card-popup__show-content
+        .card-popup__slider
+          .card-popup__slider-container
+            .swiper-wrapper
+              each slide in [1, 2, 3]
+                .swiper-slide.card-popup__slider-slide
+                  figure.card-popup__slider-image
+                    img.card-popup__slider-img(src='assets/images/landing/card-1.png')
+        .card-popup__show-content-buttons.landing__top-slider-buttons(data-aos="fade-up")
+          .landing__top-slider-button.landing__top-slider-button--left
+            i.icon-arrow-right
+          .landing__top-slider-button.landing__top-slider-button--right
+            i.icon-arrow-right
+        a.card-popup__button.btn.btn--primary.btn-arrow.btn--full(href='#')
+          i.icons-left.icon-arrow-med-right
+          span Пробная сепарация
+          i.icons-right.icon-arrow-mini-right
+    .card-popup__info
+      .card-popup__info-content
+        |info

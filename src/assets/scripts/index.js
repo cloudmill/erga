@@ -27,12 +27,25 @@ $(document).on('click', '#filters a', function () {
 
 // popup
 $('.popup-modal').magnificPopup({
-  type: 'inline',
+  callbacks: {
+    elementParse: function() {
+      this.st.ajax.settings.data = {
+          itemId: this.st.el.attr('data-id')
+      }
+    }
+  },
+  type: 'ajax',
+  ajax: {
+    settings: {
+      type: 'POST',
+    }
+  },
   removalDelay: 1300,
   mainClass: 'my-mfp-zoom-in',
   showCloseBtn: false,
   fixedContentPos: true,
 });
+
 $(document).on('click', '.popup-modal-dismiss', function (e) {
   e.preventDefault();
   $.magnificPopup.close();

@@ -33,9 +33,6 @@ $('.popup-modal').magnificPopup({
           itemId: this.st.el.attr('data-id')
       }
     },
-    ajaxContentAdded: function() {
-      this.content;
-    }
   },
   type: 'ajax',
   ajax: {
@@ -43,10 +40,8 @@ $('.popup-modal').magnificPopup({
       type: 'POST',
     }
   },
-  removalDelay: 1300,
-  mainClass: 'my-mfp-zoom-in',
-  showCloseBtn: false,
-  fixedContentPos: true,
+  alignTop: true,
+  overflowY: 'scroll'
 });
 
 $(document).on('click', '.popup-modal-dismiss', function (e) {

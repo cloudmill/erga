@@ -32,6 +32,9 @@ $('.popup-modal').magnificPopup({
       this.st.ajax.settings.data = {
           itemId: this.st.el.attr('data-id')
       }
+    },
+    ajaxContentAdded: function() {
+      this.content;
     }
   },
   type: 'ajax',

@@ -30,8 +30,25 @@ header.header-plain
               a.header-plain__nav-link(href='#')
                 |Contact
       .header-plain__bar-col
-        button.header-plain__button
-          span
-          span
-          span
+        a.header-plain__button(href='#')
+          - for (let i = 0; i < 3; i++)
+            span
   section.header-plain__dropdown
+    .header-plain__dropdown-row
+      .header-plain__dropdown-col
+        nav.header-plain__dropdown-nav
+          ul.header-plain__dropdown-nav-list
+            li.header-plain__dropdown-nav-item
+              a.header-plain__dropdown-nav-link(href='#')
+                |About ERGA
+            li.header-plain__dropdown-nav-item
+              a.header-plain__dropdown-nav-link(href='#')
+                |Products
+            li.header-plain__dropdown-nav-item
+              a.header-plain__dropdown-nav-link(href='#')
+                |Industries
+            li.header-plain__dropdown-nav-item
+              a.header-plain__dropdown-nav-link(href='#')
+                |Contact
+      .header-plain__dropdown-col
+        +arrowLine('Go global')

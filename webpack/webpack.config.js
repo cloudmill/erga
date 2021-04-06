@@ -29,8 +29,7 @@ module.exports = env => {
     devServer: {
       contentBase: path.resolve(__dirname, '../dist'),
     },
-    devtool: 'source-map',
-    // devtool: (env.NODE_ENV === 'development') ? 'source-map' : false,
+    devtool: (env.NODE_ENV === 'development') ? 'source-map' : false,
     resolve: {
       extensions: ['.js', '.css', '.scss'],
       alias: {

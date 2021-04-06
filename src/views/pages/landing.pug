@@ -31,6 +31,11 @@ block content
                 i.icon-arrow-right
               .landing__top-slider-button.landing__top-slider-button--right
                 i.icon-arrow-right
+            //- 
+              .landing__top-slider-pagination(data-aos="fade-up")
+                .landing__top-slider-pagination-item.landing__top-slider-pagination-item--active
+                .landing__top-slider-pagination-item
+                .landing__top-slider-pagination-item
             .landing__top-slider-container
               .swiper-wrapper
                 - for (let i = 0; i < 3; i++)
@@ -186,6 +191,12 @@ block content
                 |products
                 br
                 |catalog
+              .landing__interesting-bottom-download-wrapper
+                a.landing__interesting-bottom-download-link(href='#')
+                  span.landing__interesting-bottom-download-text
+                    |Download
+                  i.icon-download.landing__interesting-bottom-download-icon
+              .landing__interesting-bottom-download-wrapper
 
     //- trademarks
     section.landing__trademarks-section

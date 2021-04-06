@@ -545,10 +545,11 @@ $font-family-title: 'HalvarBreit-XBd';
     }
     &__interesting-bottom-row {
         display: flex;
+        justify-content: space-between;
         align-items: stretch;
     }
     &__interesting-bottom-col {
-        width: 50%;
+        width: calc((100% - 30px) / 2);
 
         &:first-child {
             position: relative;
@@ -564,12 +565,62 @@ $font-family-title: 'HalvarBreit-XBd';
             }
         }
     }
+    &__interesting-bottom-title {
+        margin: 0;
+        
+        font-family: $font-family-title;
+        font-size: 16px;
+        line-height: 24px;
+        @media (min-width: $breakpoint-main) {
+            font-size: 30px;
+            line-height: 140%;
+        }
+        text-transform: uppercase;
+    }
+
+    &__interesting-bottom-download {
+        &-wrapper {
+            margin-top: 10px;
+            @media (min-width: $breakpoint-main) {
+                margin-top: 40px;
+            }
+            display: flex;
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+
+            color: #0000BD;
+
+            &:hover {
+                color: #DF0112;
+            }
+        }
+
+        &-text {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &-icon {
+            margin-left: 10px;
+
+            font-size: 13px;
+        }
+    }
+
     &__interesting-background {
         position: absolute;
+        z-index: -1;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, calc(-50% + 150px));
-        max-width: 630px;
+        transform: translate(calc(-50% - 10px), calc(-50% + 90px));
+        max-width: 265px;
+        @media (min-width: $breakpoint-main) {
+            transform: translate(-50%, calc(-50% + 160px));
+            max-width: 630px;
+        }
     }
     // #
 
@@ -820,6 +871,42 @@ $font-family-title: 'HalvarBreit-XBd';
                 &--left {
                     .icon-arrow-right {
                         transform: rotate(180deg);
+                    }
+                }
+            }
+
+            &-pagination {
+                position: absolute;
+                left: 100%;
+            }
+            &-pagination-item {
+                position: relative;
+                padding: 10px 0;
+                width: 17px;
+
+                transition: 0.5;
+
+                &::before {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    transform: translateY(-50%);
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+
+                    background-color: #313131;
+                    transition: inherit;
+                }
+
+                &--active {
+                    &::before {
+                        height: 3px;
+                        transform: scaleX(2);
+
+                        background-color: #DF0112;
                     }
                 }
             }

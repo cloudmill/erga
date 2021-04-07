@@ -731,13 +731,25 @@ $font-family-title: 'HalvarBreit-XBd';
         @media (min-width: $breakpoint-main) {
             padding: 80px 0 160px;
         }
+
+        .swiper-slide {
+            &:not(:first-of-type) {
+                .landing__partners-slide-block {
+                    border-left: none;
+                }
+            }
+        }
+
+        .trademark-carousel {
+            margin-left: 0 !important;
+        }
     }
     // 
     &__partners-slider-block {
         margin: 0 !important;
         margin-top: 40px !important;
         @media (min-width: $breakpoint-main) {
-            margin-top: 80px;
+            margin-top: 80px !important;
         }
 
         .swiper-slide {
@@ -747,8 +759,24 @@ $font-family-title: 'HalvarBreit-XBd';
             }
         }
     }
-    &__partners-slider-slide {
-        
+    &__partners-slider-slide {}
+    &__partners-slider-buttons {
+        top: auto !important;
+        bottom: calc(100% + 90px) !important;
+
+        @media (max-width: #{768 - 1}px) {
+            display: none;
+        }
+
+        & > div {
+            &:first-child {
+                padding-right: 5px;
+            }
+
+            &:last-child {
+                padding-left: 5px;
+            }
+        }
     }
     // 
     &__partners-slide-block {
@@ -775,10 +803,10 @@ $font-family-title: 'HalvarBreit-XBd';
         max-height: 100%;
     }
     &__partners-slide-title {
-        margin: 0;
-        margin-top: 10px;
+        margin: 0 !important;
+        margin-top: 10px !important;
         @media (min-width: $breakpoint-main) {
-            margin-top: 15px;
+            margin-top: 15px !important;
         }
 
         font-family: $font-family-title;

@@ -40,12 +40,44 @@ $font-family-title: 'HalvarBreit-XBd';
     // link
     &__select-link {
         @include filter-checkbox();
+        position: relative;
+        z-index: 0;
         @media (min-width: $breakpoint-main) {
             justify-content: center;
         }
 
+        &::before {
+            position: absolute;
+            z-index: -1;
+            top: -1.5px;
+            bottom: -1.5px;
+            left: -1.5px;
+            right: -1.5px;
+            transform-origin: center top;
+            transform: scaleY(0);
+            content: '';
+    
+            background-color: $base-color-main;
+            transition-property: all;
+            transition-duration: inherit;
+        }
+
+        &:hover {
+            border: 1.5px dashed transparent;
+            color: white;
+
+            &::before {
+                transform: scaleY(1);
+            }
+        }
+
         &:active {
-            @include filter-checkbox--active();
+            border: 1.5px dashed transparent;
+            color: white;
+
+            &::before {
+                transform: scaleY(1);
+            }
         }
     }
     // #

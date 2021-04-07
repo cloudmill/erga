@@ -31,14 +31,13 @@ block content
                 i.icon-arrow-right
               .landing__top-slider-button.landing__top-slider-button--right
                 i.icon-arrow-right
-            //- 
-              .landing__top-slider-pagination(data-aos="fade-up")
-                .landing__top-slider-pagination-item.landing__top-slider-pagination-item--active
-                .landing__top-slider-pagination-item
-                .landing__top-slider-pagination-item
+            - const slidesCount = 3;
+            .landing__top-slider-pagination(data-aos="fade-up")
+              - for (let i = 0; i < slidesCount; i++)
+                .landing__top-slider-pagination-item(class = (!i) ? 'landing__top-slider-pagination-item--active' : '')
             .landing__top-slider-container
               .swiper-wrapper
-                - for (let i = 0; i < 3; i++)
+                - for (let i = 0; i < slidesCount; i++)
                   .swiper-slide.landing__top-slider-slide
                     figure.landing__top-slider-image
                       img.landing__top-slider-img(src='assets/images/landing/top-slide-1.png' alt='')

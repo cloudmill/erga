@@ -181,22 +181,23 @@ block content
           .landing__interesting-title-col(data-aos="fade-up")
             +arrowLine('Show other equipment')
         .landing__interesting-slider.trademark-tabs(data-aos="fade-up")
-          include ../components/_trademark-carousel
+          include ../components/_trademark-carousel-landing
+        .landing__interesting-mid(data-aos="fade-up")
+          +arrowLine('Show other equipment')
         .landing__interesting-bottom
           .landing__interesting-bottom-row
-            .landing__interesting-bottom-col
+            .landing__interesting-bottom-col(data-aos="fade-up")
               img.landing__interesting-background(src='assets/images/landing/interesting-background.png' arl='')
             .landing__interesting-bottom-col
-              h3.landing__interesting-bottom-title
+              h3.landing__interesting-bottom-title(data-aos="fade-up")
                 |products
                 br
                 |catalog
-              .landing__interesting-bottom-download-wrapper
+              .landing__interesting-bottom-download-wrapper(data-aos="fade-up")
                 a.landing__interesting-bottom-download-link(href='#')
                   span.landing__interesting-bottom-download-text
                     |Download
                   i.icon-download.landing__interesting-bottom-download-icon
-              .landing__interesting-bottom-download-wrapper
 
     //- trademarks
     section.landing__trademarks-section

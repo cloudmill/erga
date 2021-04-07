@@ -238,11 +238,19 @@ $font-family-title: 'HalvarBreit-XBd';
         align-items: stretch;
 
         background-color: $color-gray;
+
+        &:hover {
+            background-color: #E7E7E7;
+        }
     }
     &__industries-image {
         display: flex;
+        align-items: flex-start;
     }
-    &__industries-img {}
+    &__industries-img {
+        max-width: 100%;
+        max-height: 75px;
+    }
     &__industries-title {
         margin: 0;
 
@@ -883,6 +891,7 @@ $font-family-title: 'HalvarBreit-XBd';
                     background-image: url('../images/landing/top-slider-background.svg');
                     background-repeat: no-repeat;
                     background-position: center center;
+                    background-size: 100% auto;
                 }
             }
 

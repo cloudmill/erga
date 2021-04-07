@@ -1,18 +1,17 @@
 extends ../layouts/master-landing.pug
 
-block pageName
-  - var pageName = "plain";
+
 
 block header
+
   include ../partials/_header-plain.pug
 
-block footer
-  include ../partials/_footer-plain
+
 
 block content
+
   .landing
 
-    //- top
     section.landing__top-section
       .landing__top-first-block
         .landing__top-first-background-layout
@@ -56,7 +55,6 @@ block content
               +img('video.svg')
             +img('about/video.jpg')
 
-    //- features
     section.landing__features-section
       .landing__features-decoration-block(data-aos="fade-up")
         ul.landing__features-decoration-list
@@ -107,7 +105,6 @@ block content
               p.landing__features2-text
                 |Successful experience in export deliveries
 
-    //- industries
     section.landing__industries-section
       .container
         h2.landing__section-title(data-aos="fade-up")
@@ -132,7 +129,6 @@ block content
               h3.landing__industries-title
                 |Recycling
 
-    //- select
     section.landing__select-section
       .container
         h2.landing__section-title(data-aos="fade-up")
@@ -170,7 +166,6 @@ block content
             .col.col__xs-12(data-aos="fade-up")
               a.landing__select-link.popup-modal.popup-with-zoom-anim(href='#notFoundProduct') Haven’t found your material?
 
-    //- interesting
     section.landing__interesting-section
       .container
         .landing__interesting-title-row
@@ -198,7 +193,6 @@ block content
                     |Download
                   i.icon-download.landing__interesting-bottom-download-icon
 
-    //- trademarks
     section.landing__trademarks-section
       .container
         h2.landing__section-title(data-aos="fade-up")
@@ -206,7 +200,6 @@ block content
         .landing__trademarks-tabs
           include ../components/_landing-tabs
 
-    //- partners
     section.landing__partners-section
       .container
         h2.landing__section-title(data-aos="fade-up")
@@ -226,7 +219,6 @@ block content
                     h3.landing__partners-slide-title
                       |Cimaghand
 
-    //- sertificates
     section.landing__sertificates-section
       .container
         h2.landing__section-title(data-aos="fade-up")
@@ -245,14 +237,12 @@ block content
           div(data-aos='fade-up')
             .marquee.marquees #{'ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System'}
 
-    //- gallery
     section
       .container(data-aos="fade-up")
         h2
           +reveal(['GALLERY'])
         include ../components/_landing-gallery
 
-    //- contacts
     section.landing__contacts-section
       .container
         .landing__contacts-row
@@ -381,7 +371,6 @@ block content
                           br
                           |THU, FRI — days off
 
-    //- questions
     section
       .container(data-aos="fade-up")
         form.contacts-form(action='')
@@ -396,3 +385,9 @@ block content
               i.icons-left.icon-arrow-med-right
               span Send more
               i.icons-right.icon-arrow-mini-right
+
+
+
+block footer
+
+  include ../partials/_footer-plain

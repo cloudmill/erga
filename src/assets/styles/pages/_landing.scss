@@ -68,7 +68,6 @@ $font-family-title: 'HalvarBreit-XBd';
     // section
     &__features-section {
         background-color: $color-gray;
-        border-top: 1px dashed $color-black;
     }
 
     // wrapper
@@ -950,7 +949,6 @@ $font-family-title: 'HalvarBreit-XBd';
                 padding: 10px 0;
                 width: 20px;
 
-                cursor: pointer;
                 transition: 0.5s;
 
                 &::before {
@@ -1069,6 +1067,8 @@ $font-family-title: 'HalvarBreit-XBd';
 
             &-block {
                 position: relative;
+
+                border-top: 1px dashed $color-black;
             }
             &-list {
                 position: absolute;

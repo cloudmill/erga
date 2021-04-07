@@ -41,14 +41,6 @@ if ($('.landing__top-slider-container').length !== 0) {
     updatePagination(currentIndex);
   });
 
-  $('.landing__top-slider-pagination-item').on('click', function () {
-    const clickedIndex = $(this).index();
-
-    if (clickedIndex !== currentIndex) {
-      landingTopSlider.slideTo(clickedIndex);
-    }
-  })
-
   function updatePagination(index) {
     $('.landing__top-slider-pagination-item').removeClass('landing__top-slider-pagination-item--active');
     $('.landing__top-slider-pagination-item').eq(index).addClass('landing__top-slider-pagination-item--active');

@@ -25,6 +25,7 @@ $border-width: 1px;
     }
     &-panel-item {
         position: relative;
+        z-index: 0;
         margin-bottom: -#{$border-width};
         padding: 10px 15px;
         width: calc((100% / 4) + #{$border-width});
@@ -39,6 +40,26 @@ $border-width: 1px;
         border: #{$border-width} solid $color-border;
         cursor: pointer;
 
+        &::before {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            display: flex;
+            width: 13px;
+            height: 4px;
+            @media (min-width: $breakpoint-1) {
+                width: 40px;
+                height: 11px;
+            }
+
+            background-image: url('../images/landing/tab-arrow.svg');
+            background-size: 100% auto;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
         &:not(:first-child) {
             margin-left: -#{$border-width};
         }
@@ -46,7 +67,11 @@ $border-width: 1px;
         &--active {
             z-index: 1;
 
-            border-color: $color-active;  
+            border-color: $color-active;
+
+            &::before {
+                opacity: 1;
+            }
         }
     }
     &-panel-img {

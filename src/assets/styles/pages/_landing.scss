@@ -324,7 +324,7 @@ $font-family-title: 'HalvarBreit-XBd';
         }
         
         background-color: $color-background;
-        background-image: url('../images/landing/contacts-background.svg');
+        // background-image: url('../images/landing/contacts-background.svg');
         background-repeat: no-repeat;
         background-position: left 20px bottom -80px;
         background-size: 310px auto;
@@ -603,6 +603,15 @@ $font-family-title: 'HalvarBreit-XBd';
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        .arrowLine-main {
+            font-size: 16px;
+            line-height: 20px;
+            @media (min-width: $breakpoint-main) {
+                font-size: 18px;
+                line-height: 23px;
+            }
+        }
     }
     &__interesting-title-col {
         &:last-child {
@@ -931,7 +940,7 @@ $font-family-title: 'HalvarBreit-XBd';
                     right: 0;
 
 
-                    background-image: url('../images/landing/top-background.png');
+                    // background-image: url('../images/landing/top-background.png');
                     background-repeat: no-repeat;
                     background-position: center top 25px;
                     background-size: 930px auto;

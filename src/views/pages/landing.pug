@@ -15,7 +15,7 @@ block content
     section.landing__top-section
       .landing__top-first-block
         .landing__top-first-background-layout
-          .landing__top-first-background-image(data-aos="fade-up")
+          .landing__top-first-background-image(data-aos="fade-up" style="background-image: url('../images/top-background.png')")
         .container
           h1.landing__top-title(data-aos="fade-up")
             |#{'Research & Production Company ERGA'}
@@ -107,8 +107,12 @@ block content
 
     section.landing__industries-section
       .container
-        h2.landing__section-title(data-aos="fade-up")
-          |Industries
+        .landing__interesting-title-row
+          .landing__interesting-title-col(data-aos="fade-up")
+            h2.landing__section-title
+              |Industries
+          .landing__interesting-title-col(data-aos="fade-up")
+            +arrowLine('Show all industries')
         ul.landing__industries-list
           li.landing__industries-item(data-aos="fade-up")
             a.landing__industries-link(href='https://rusmagnet.com/config/')
@@ -128,6 +132,8 @@ block content
                 img.landing__industries-img(src='assets/images/landing/industry-3.svg' alt='')
               h3.landing__industries-title
                 |Recycling
+        .landing__interesting-mid(data-aos="fade-up")
+          +arrowLine('Show all industries')
 
     section.landing__select-section
       .container
@@ -243,7 +249,7 @@ block content
           +reveal(['GALLERY'])
         include ../components/_landing-gallery
 
-    section.landing__contacts-section
+    section.landing__contacts-section(style="background-image: url('../images/contacts-background.svg')")
       .container
         .landing__contacts-row
           .landing__contacts-col

@@ -3,39 +3,49 @@ const { detect } = require('detect-browser');
 
 const browser = detect();
 
-export const landingTopSlider = new Swiper('.landing__top-slider-container', {
-  loop: true,
-  spaceBetween: 100,
-  slidesPerView: 1,
-  breakpoints: {
-    768: {
-      spaceBetween: 10,
-    }
-  },
-  navigation: {
-    prevEl: '.landing__top-slider-button--left',
-    nextEl: '.landing__top-slider-button--right',
-  },
-});
+if ($('.landing__top-slider-container').length !== 0) {
+  const slidesCount = $('.landing__top-slider-slide').length;
+  let currentIndex = 0;
 
-const slidesCount = $('.landing__top-slider-slide').length;
-let currentIndex = 0;
-landingTopSlider.on('slidePrevTransitionEnd', () => {
-  if (currentIndex === 0) {
-    currentIndex = slidesCount - 1;
-  } else {
-    currentIndex--;
+  const landingTopSlider = new Swiper('.landing__top-slider-container', {
+    loop: true,
+    spaceBetween: 100,
+    slidesPerView: 1,
+    breakpoints: {
+      768: {
+        spaceBetween: 10,
+      }
+    },
+    navigation: {
+      prevEl: '.landing__top-slider-button--left',
+      nextEl: '.landing__top-slider-button--right',
+    },
+  });
+
+  landingTopSlider.on('slidePrevTransitionEnd', () => {
+    if (currentIndex === 0) {
+      currentIndex = slidesCount - 1;
+    } else {
+      currentIndex--;
+    }
+
+    updatePagination(currentIndex);
+  });
+  landingTopSlider.on('slideNextTransitionEnd', () => {
+    if (currentIndex >= slidesCount - 1) {
+      currentIndex = 0;
+    } else {
+      currentIndex++;
+    }
+
+    updatePagination(currentIndex);
+  });
+
+  function updatePagination(index) {
+    $('.landing__top-slider-pagination-item').removeClass('landing__top-slider-pagination-item--active');
+    $('.landing__top-slider-pagination-item').eq(index).addClass('landing__top-slider-pagination-item--active');
   }
-  console.log(currentIndex);
-});
-landingTopSlider.on('slideNextTransitionEnd', () => {
-  if (currentIndex >= slidesCount) {
-    currentIndex = 0;
-  } else {
-    currentIndex++;
-  }
-  console.log(currentIndex);
-});
+}
 
 $('.popup-modal').one('click', () => {
   new Swiper('.card-popup__slider-container', {

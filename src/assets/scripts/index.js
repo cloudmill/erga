@@ -40,8 +40,10 @@ $('.popup-modal').magnificPopup({
       type: 'POST',
     }
   },
-  alignTop: true,
-  overflowY: 'scroll'
+  removalDelay: 1300,
+  mainClass: 'my-mfp-zoom-in',
+  showCloseBtn: false,
+  fixedContentPos: true,
 });
 
 $(document).on('click', '.popup-modal-dismiss', function (e) {

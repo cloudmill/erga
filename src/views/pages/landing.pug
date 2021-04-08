@@ -1,18 +1,17 @@
-extends ../layouts/master.pug
+extends ../layouts/master-landing.pug
 
-block pageName
-  - var pageName = "plain";
+
 
 block header
+
   include ../partials/_header-plain.pug
 
-block footer
-  include ../partials/_footer-plain
+
 
 block content
+
   .landing
 
-    //- top
     section.landing__top-section
       .landing__top-first-block
         .landing__top-first-background-layout
@@ -31,14 +30,13 @@ block content
                 i.icon-arrow-right
               .landing__top-slider-button.landing__top-slider-button--right
                 i.icon-arrow-right
-            //- 
-              .landing__top-slider-pagination(data-aos="fade-up")
-                .landing__top-slider-pagination-item.landing__top-slider-pagination-item--active
-                .landing__top-slider-pagination-item
-                .landing__top-slider-pagination-item
+            - const slidesCount = 3;
+            .landing__top-slider-pagination(data-aos="fade-up")
+              - for (let i = 0; i < slidesCount; i++)
+                .landing__top-slider-pagination-item(class = (!i) ? 'landing__top-slider-pagination-item--active' : '')
             .landing__top-slider-container
               .swiper-wrapper
-                - for (let i = 0; i < 3; i++)
+                - for (let i = 0; i < slidesCount; i++)
                   .swiper-slide.landing__top-slider-slide
                     figure.landing__top-slider-image
                       img.landing__top-slider-img(src='assets/images/landing/top-slide-1.png' alt='')
@@ -57,9 +55,8 @@ block content
               +img('video.svg')
             +img('about/video.jpg')
 
-    //- features
     section.landing__features-section
-      .landing__features-decoration-block
+      .landing__features-decoration-block(data-aos="fade-up")
         ul.landing__features-decoration-list
           - for (let i = 0; i < 60; i++)
             li.landing__features-decoration-item
@@ -108,14 +105,13 @@ block content
               p.landing__features2-text
                 |Successful experience in export deliveries
 
-    //- industries
     section.landing__industries-section
       .container
         h2.landing__section-title(data-aos="fade-up")
           |Industries
         ul.landing__industries-list
           li.landing__industries-item(data-aos="fade-up")
-            a.landing__industries-link(href='#')
+            a.landing__industries-link(href='https://rusmagnet.com/config/')
               figure.landing__industries-image
                 img.landing__industries-img(src='assets/images/landing/industry-1.svg' alt='')
               h3.landing__industries-title
@@ -123,7 +119,7 @@ block content
           li.landing__industries-item(data-aos="fade-up")
             a.landing__industries-link(href='#')
               figure.landing__industries-image
-                img.landing__industries-img(src='assets/images/landing/industry-2.svg' alt='')
+                img.landing__industries-img(src='assets/images/landing/industry-2.png' alt='')
               h3.landing__industries-title
                 |Food
           li.landing__industries-item(data-aos="fade-up")
@@ -133,7 +129,6 @@ block content
               h3.landing__industries-title
                 |Recycling
 
-    //- select
     section.landing__select-section
       .container
         h2.landing__section-title(data-aos="fade-up")
@@ -171,7 +166,6 @@ block content
             .col.col__xs-12(data-aos="fade-up")
               a.landing__select-link.popup-modal.popup-with-zoom-anim(href='#notFoundProduct') Haven’t found your material?
 
-    //- interesting
     section.landing__interesting-section
       .container
         .landing__interesting-title-row
@@ -181,24 +175,24 @@ block content
           .landing__interesting-title-col(data-aos="fade-up")
             +arrowLine('Show other equipment')
         .landing__interesting-slider.trademark-tabs(data-aos="fade-up")
-          include ../components/_trademark-carousel
+          include ../components/_trademark-carousel-landing
+        .landing__interesting-mid(data-aos="fade-up")
+          +arrowLine('Show other equipment')
         .landing__interesting-bottom
           .landing__interesting-bottom-row
-            .landing__interesting-bottom-col
+            .landing__interesting-bottom-col(data-aos="fade-up")
               img.landing__interesting-background(src='assets/images/landing/interesting-background.png' arl='')
             .landing__interesting-bottom-col
-              h3.landing__interesting-bottom-title
+              h3.landing__interesting-bottom-title(data-aos="fade-up")
                 |products
                 br
                 |catalog
-              .landing__interesting-bottom-download-wrapper
+              .landing__interesting-bottom-download-wrapper(data-aos="fade-up")
                 a.landing__interesting-bottom-download-link(href='#')
                   span.landing__interesting-bottom-download-text
                     |Download
                   i.icon-download.landing__interesting-bottom-download-icon
-              .landing__interesting-bottom-download-wrapper
 
-    //- trademarks
     section.landing__trademarks-section
       .container
         h2.landing__section-title(data-aos="fade-up")
@@ -206,13 +200,12 @@ block content
         .landing__trademarks-tabs
           include ../components/_landing-tabs
 
-    //- partners
     section.landing__partners-section
       .container
         h2.landing__section-title(data-aos="fade-up")
           |Our partners
         .landing__partners-slider-block.trademark-tabs(data-aos="fade-up")
-          .swiper-button
+          .swiper-button.landing__partners-slider-buttons
             .swiper-btnS-prev: i.icon-arrow-right
             .swiper-btnS-next: i.icon-arrow-right
           .trademark-carousel.trademark-carousel--js
@@ -226,7 +219,6 @@ block content
                     h3.landing__partners-slide-title
                       |Cimaghand
 
-    //- sertificates
     section.landing__sertificates-section
       .container
         h2.landing__section-title(data-aos="fade-up")
@@ -245,14 +237,12 @@ block content
           div(data-aos='fade-up')
             .marquee.marquees #{'ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System'}
 
-    //- gallery
     section
       .container(data-aos="fade-up")
         h2
           +reveal(['GALLERY'])
         include ../components/_landing-gallery
 
-    //- contacts
     section.landing__contacts-section
       .container
         .landing__contacts-row
@@ -396,7 +386,6 @@ block content
                           br
                           |THU, FRI — days off
 
-    //- questions
     section
       .container(data-aos="fade-up")
         form.contacts-form(action='')
@@ -411,3 +400,9 @@ block content
               i.icons-left.icon-arrow-med-right
               span Send more
               i.icons-right.icon-arrow-mini-right
+
+
+
+block footer
+
+  include ../partials/_footer-plain

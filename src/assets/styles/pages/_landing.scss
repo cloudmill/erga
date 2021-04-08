@@ -285,6 +285,14 @@ $font-family-title: 'HalvarBreit-XBd';
         }
         
         background-color: $color-background;
+        background-image: url('../images/landing/contacts-background.svg');
+        background-repeat: no-repeat;
+        background-position: left 20px bottom -80px;
+        background-size: 310px auto;
+        @media (min-width: $breakpoint-main) {
+            background-position: left calc(50% + 355px + 10px) bottom -160px;
+            background-size: 710px auto;
+        }
         color: white;
     }
 

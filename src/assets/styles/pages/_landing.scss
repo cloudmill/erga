@@ -505,7 +505,15 @@ $font-family-title: 'HalvarBreit-XBd';
         align-items: center;
 
         &:hover {
-            color: $color-red;
+            .landing__contacts-social-title {
+                color: $color-red;
+            }
+
+            .landing__contacts-social-img {
+                path {
+                    fill: $color-red;
+                }
+            }
         }
     }
     &__contacts-social-image {
@@ -516,6 +524,10 @@ $font-family-title: 'HalvarBreit-XBd';
         $size: 17px;
         max-width: $size;
         max-height: $size;
+
+        path {
+            transition: 0.5s;
+        }
     }
     &__contacts-social-title {
         margin-left: 10px;
@@ -524,6 +536,7 @@ $font-family-title: 'HalvarBreit-XBd';
         font-size: 12px;
         line-height: 46px;
         color: white;
+        transition: 0.5s;
     }
 
 

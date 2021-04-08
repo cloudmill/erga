@@ -464,6 +464,10 @@ $font-family-title: 'HalvarBreit-XBd';
     &__contacts-social-link {
         display: flex;
         align-items: center;
+
+        &:hover {
+            color: $color-red;
+        }
     }
     &__contacts-social-image {
         display: flex;

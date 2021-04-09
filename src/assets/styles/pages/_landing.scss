@@ -597,6 +597,12 @@ $font-family-title: 'HalvarBreit-XBd';
         overflow: hidden;
 
         background-color: $color-gray;
+
+        .catalog-content__item-inner {
+            .row {
+                height: 100%;
+            }
+        }
     }
     // title block
     &__interesting-title-row {

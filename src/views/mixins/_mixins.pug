@@ -83,7 +83,7 @@ mixin fieldInput(type, name, id, label, required)
   label(for=id)= label
   input.control(type=type, name=name, id=id, required=required)
 
-mixin fieldLabelInput(type, name, id, label, required, errorMessage)
+mixin fieldLabelInput(type, name, id, label, required)
   - let className = ''
   - if(required !== false) className='required'
   .relative
@@ -92,9 +92,9 @@ mixin fieldLabelInput(type, name, id, label, required, errorMessage)
       label.input__label(for=id)
         span.input__label-content.input__label-content= label
     .input-error
-      |#{errorMessage ? errorMessage : 'Пожалуйста, заполните поле'}
+      |#{'Please, fill in the field correctly'}
 
-mixin fieldLabelInputId(id, label, required, mainClass, errorMessage)
+mixin fieldLabelInputId(id, label, required, mainClass)
   - let className = ''
   - if(required !== false) className='required'
   .relative
@@ -103,7 +103,7 @@ mixin fieldLabelInputId(id, label, required, mainClass, errorMessage)
       label.input__label(for=id)
         span.input__label-content.input__label-content= label
     .input-error
-      |#{errorMessage ? errorMessage : 'Пожалуйста, заполните поле'}
+      |#{'Please, fill in the field correctly'}
 
 mixin fieldLabelTextarea(name, id, label, required, modifier)
   - const className = 'textarea';

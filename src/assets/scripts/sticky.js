@@ -269,12 +269,12 @@ function validateFields(element, func, isFinish) {
         jItem.parent().removeClass('error');
       } else {
         jItem.parent().addClass('error');
-        jItem.parent().find('.input-error').text('Неверно введен номер телефона');
+        jItem.parent().find('.input-error').text('Please, fill in the field correctly');
       }
     } else {
       if (!value) {
         jItem.parent().addClass('error');
-        jItem.parent().find('.input-error').text('Пожалуйста, заполните поле');
+        jItem.parent().find('.input-error').text('Please, fill in the field correctly');
       } else {
         jItem.parent().removeClass('error');
       }
@@ -364,7 +364,7 @@ if (lang == 'ru') {
 }
 
 // mask phone {maskedinput}
-$("[name=phone]").inputmask({
-  mask: phoneMask,
-  showMaskOnHover: false,
-});
+// $("[name=phone]").inputmask({
+//   mask: phoneMask,
+//   showMaskOnHover: false,
+// });

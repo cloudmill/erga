@@ -1268,27 +1268,80 @@ $font-family-title: 'HalvarBreit-XBd';
 }
 
 .landing__sert {
-    &-section {
-        
-    }
+    &-section {}
 
-    &-marquee {
-
-    }
-
-    &-slider {
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-
-    &-background {
+    &-container {
         position: relative;
+        z-index: 0;
+        padding-top: 80px;
+        @media (min-width: 768px) {
+            padding-top: 160px;
+        }
+        height: 600px;
+        @media (min-width: 768px) {
+            height: 670px;
+        }
 
         background-color: #F5F5F5;
+    }
+
+    &-subslider {
+        margin-top: 40px;
+        @media (min-width: 768px) {
+            margin-top: 30px;
+        }
+    }
+
+    &-subslider-text {
+        position: relative;
+        z-index: 0;
+        margin: 0;
+        padding-left: 65px;
+        max-width: 290px;
+        @media (min-width: 768px) {
+            padding-left: 110px;
+            max-width: 550px;
+        }
+
+        font-size: 14px;
+        line-height: 21px;
+        @media (min-width: 768px) {
+            font-size: 24px;
+            line-height: 140%;
+        }
+
+        &::before {
+            position: absolute;
+            top: 12px;
+            left: 0;
+            @media (min-width: 768px) {
+                top: 19px;
+            }
+            content: '';
+            width: 45px;
+            height: 1.5px;
+            @media (min-width: 768px) {
+                width: 90px;
+            }
+
+            background-color: #DF0112;
+        }
+    }
+
+    &-control-wrapper {
+        position: absolute;
+        z-index: 0;
+        bottom: 345px;
+        left: 0;
+        right: 0;
+        @media (min-width: 768px) {
+            bottom: 70px;
+        }
+        pointer-events: none;
+
+        .swiper-button {
+            pointer-events: all;
+        }
     }
 
     &-control {
@@ -1315,4 +1368,46 @@ $font-family-title: 'HalvarBreit-XBd';
             display: none !important;
         }
     }
+
+    &-slider {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        .swiper-slide-active {
+            z-index: 1;
+        }
+    }
+
+    &-slider-swiper {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    &-slider-image {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    
+    &-slider-img {
+        &--mobile {
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        &--desktop {
+            min-width: 1600px;
+            @media (max-width: #{768 - 1}px) {
+                display: none;
+            }
+        }
+    }
+
+    &-marquee {}
 }

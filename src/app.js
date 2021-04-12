@@ -12,6 +12,7 @@ const { detect } = require("detect-browser");
 import AOS from "aos";
 import Rellax from "rellax";
 import './assets/scripts/landing-tabs.js';
+import Swiper from "swiper";
 
 $(document).ready(() => {
   const noop = () => { };
@@ -176,5 +177,20 @@ $(window).on('load', () => {
         $(window).on('scroll.header-plain', scrollHandler);
       }, intervalTime);
     }
+  }
+});
+
+// landing sert
+$(window).on('load', () => {
+  if ($('.landing__sert-section').length !== 0) {
+    const thumbs = new Swiper('.landing__sert-section .landing__sert-subslider-swiper', {
+      allowTouchMove: false
+    });
+
+    const slider = new Swiper('.landing__sert-section .landing__sert-slider-swiper', {
+      thumbs: {
+        swiper: thumbs
+      }
+    });
   }
 });

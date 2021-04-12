@@ -11,40 +11,7 @@ block header
 block content
 
   .landing
-
-    section.landing__sert-section
-      - const count = 3;
-      .landing__sert-container
-        .container
-          h2.landing__section-title(data-aos="fade-up")
-            |Certificates
-        .landing__sert-subslider
-          .landing__sert-subslider-swiper
-            .swiper-wrapper
-              - for (let i = 0; i < count; i++)
-                .swiper-slide
-                  .container
-                    p.landing__sert-subslider-text
-                      |Certificate of Conformity to ISO 9001:2015 Quality Management System
-        .landing__sert-control-wrapper
-          .container
-            .newsOne-slider.landing__sert-control
-              .swiper-pagination--js.swiper-pagination(data-aos='fade-up')
-              .swiper-button(data-aos='fade-up')
-                .swiper-btnSN-next: i.icon-arrow-right
-                .swiper-btnSN-prev: i.icon-arrow-left
-        .landing__sert-slider
-          .landing__sert-slider-swiper
-            .swiper-wrapper
-              - for (let i = 0; i < count; i++)
-                .swiper-slide
-                  figure.landing__sert-slider-image
-                    img.landing__sert-slider-img.landing__sert-slider-img--mobile(src='assets/images/landing/sert-mobile.png' alt='')
-                    img.landing__sert-slider-img.landing__sert-slider-img--desktop(src='assets/images/landing/sert-desktop.png' alt='')
-      .landing__sert-marquee(data-aos="fade-up")
-        .marquee.marquees
-          |ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System
-
+  
     section.landing__top-section
       .landing__top-first-block
         .landing__top-first-background-layout
@@ -73,7 +40,7 @@ block content
                   .swiper-slide.landing__top-slider-slide
                     figure.landing__top-slider-image
                       img.landing__top-slider-img(src='assets/images/landing/top-slide-1.png' alt='')
-      .container
+      .container(id = 'about')
         .landing__top-about-block(data-aos="fade-up")
           .landing__top-about-row
             .landing__top-about-col
@@ -138,7 +105,7 @@ block content
               p.landing__features2-text
                 |Successful experience in export deliveries
 
-    section.landing__industries-section
+    section.landing__industries-section(id = 'industries')
       .container
         .landing__interesting-title-row
           .landing__interesting-title-col(data-aos="fade-up")
@@ -156,7 +123,7 @@ block content
           li.landing__industries-item(data-aos="fade-up")
             a.landing__industries-link(href='#')
               figure.landing__industries-image
-                img.landing__industries-img(src='assets/images/landing/industry-2.png' alt='')
+                img.landing__industries-img(src='assets/images/landing/industry-2.svg' alt='')
               h3.landing__industries-title
                 |Food
           li.landing__industries-item(data-aos="fade-up")
@@ -205,7 +172,7 @@ block content
             .col.col__xs-12(data-aos="fade-up")
               a.landing__select-link.popup-modal.popup-with-zoom-anim(href='#notFoundProduct') Haven’t found your material?
 
-    section.landing__interesting-section
+    section.landing__interesting-section(id = 'products')
       .container
         .landing__interesting-title-row
           .landing__interesting-title-col(data-aos="fade-up")
@@ -258,23 +225,38 @@ block content
                     h3.landing__partners-slide-title
                       |Cimaghand
 
-    section.landing__sertificates-section
-      .container
-        h2.landing__section-title(data-aos="fade-up")
-          |Certificates
-        .newsOne-slider
-          .swiper-carousel(data-aos='fade-up')
+    section.landing__sert-section
+      - const count = 18;
+      .landing__sert-container
+        .container
+          h2.landing__section-title(data-aos="fade-up")
+            |Certificates
+        .landing__sert-subslider
+          .landing__sert-subslider-swiper
             .swiper-wrapper
-              - for (let x = 1; x < 3; x++)
-                .swiper-slide.t--mask
-                  .t__content
-                    +img('landing/sertificate-1.jpg')
-          .swiper-pagination--js.swiper-pagination(data-aos='fade-up')
-          .swiper-button(data-aos='fade-up')
-            .swiper-btnSN-next: i.icon-arrow-right
-            .swiper-btnSN-prev: i.icon-arrow-left
-          div(data-aos='fade-up')
-            .marquee.marquees #{'ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System'}
+              - for (let i = 0; i < count; i++)
+                .swiper-slide
+                  .container
+                    p.landing__sert-subslider-text(data-aos='fade-up')
+                      |Certificate of Conformity to ISO 9001:2015 Quality Management System
+        .landing__sert-control-wrapper
+          .container
+            .newsOne-slider.landing__sert-control
+              .swiper-pagination--js.swiper-pagination(data-aos='fade-up')
+              .swiper-button(data-aos='fade-up')
+                .swiper-btnSN-next: i.icon-arrow-right
+                .swiper-btnSN-prev: i.icon-arrow-left
+        .landing__sert-slider
+          .landing__sert-slider-swiper
+            .swiper-wrapper
+              - for (let i = 0; i < count; i++)
+                .swiper-slide
+                  figure.landing__sert-slider-image(data-aos='fade-up')
+                    img.landing__sert-slider-img.landing__sert-slider-img--mobile(src='assets/images/landing/sert-mobile.png' alt='')
+                    img.landing__sert-slider-img.landing__sert-slider-img--desktop(src='assets/images/landing/sert-desktop.png' alt='')
+      .landing__sert-marquee(data-aos="fade-up")
+        .marquee.marquees
+          |ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System
 
     section
       .container(data-aos="fade-up")
@@ -282,7 +264,7 @@ block content
           +reveal(['GALLERY'])
         include ../components/_landing-gallery
 
-    section.landing__contacts-section(style="background-image: url('images/contacts-background.svg')")
+    section.landing__contacts-section(id = 'contact' style="background-image: url('images/contacts-background.svg')")
       .container
         .landing__contacts-row
           .landing__contacts-col

@@ -2,7 +2,7 @@ import StickySidebar from 'sticky-sidebar';
 import AOS from 'aos';
 import '../../../src/assets/scripts/plugins/jquery.steps.min';
 import {
-  carousel,
+  // carousel,
   carousel1,
   tradeCarousel1,
   tradeCarousel,

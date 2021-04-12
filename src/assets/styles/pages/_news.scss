@@ -262,11 +262,23 @@
         &:before{
           content: "0"
         }
+
+        &--short {
+          &::before {
+            content: '';
+          }
+        }
       }
       &-total {
         color: $black;
         &:before{
           content: "0"
+        }
+
+        &--short {
+          &::before {
+            content: '';
+          }
         }
       }
     }

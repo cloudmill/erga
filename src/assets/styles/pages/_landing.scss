@@ -211,6 +211,8 @@ $font-family-title: 'HalvarBreit-XBd';
     // # industries
     // section
     &__industries-section {
+        position: relative;
+        z-index: 0;
         padding: 80px 0 40px;
         @media (min-width: $breakpoint-main) {
             padding: 160px 0 80px;
@@ -590,6 +592,8 @@ $font-family-title: 'HalvarBreit-XBd';
     // # interesting
     // section
     &__interesting-section {
+        position: relative;
+        z-index: 0;
         padding: 60px 0 90px;
         @media (min-width: $breakpoint-main) {
             padding: 160px 0;
@@ -891,6 +895,15 @@ $font-family-title: 'HalvarBreit-XBd';
 }
 
 .landing {
+    &__mark {
+        position: absolute;
+        top: -310px;
+        @media (min-width: #{992 + 1}px) {
+            top: -150px;
+        }
+        pointer-events: none;
+    }
+
     &__top {
         &-section {
             padding-bottom: 30px;
@@ -1110,6 +1123,8 @@ $font-family-title: 'HalvarBreit-XBd';
 
         &-about {
             &-block {
+                position: relative;
+                z-index: 0;
                 margin-top: 110px;
                 padding-top: 10px;
                 @media (min-width: $breakpoint-main) {
@@ -1118,6 +1133,11 @@ $font-family-title: 'HalvarBreit-XBd';
                 }
     
                 border-top: 1px solid $color-black;
+            }
+            &-mark {
+                position: absolute;
+                top: -150px;
+                pointer-events: none;
             }
             &-row {
                 @media (min-width: $breakpoint-main) {
@@ -1268,7 +1288,40 @@ $font-family-title: 'HalvarBreit-XBd';
 }
 
 .landing__sert {
-    &-section {}
+    &-section {
+        .swiper-slide {
+            .landing__sert-subslider-text {
+                @keyframes fade-down {
+                    from {
+                        opacity: 1;
+                    }
+                    
+                    to {
+                        opacity: 0;
+                    }
+                }
+                animation-name: fade-down;
+                animation-timing-function: ease-in-out;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+
+            &-active {
+                .landing__sert-subslider-text {
+                    @keyframes fade-up {
+                        from {
+                            opacity: 0;
+                        }
+                        
+                        to {
+                            opacity: 1;
+                        }
+                    }
+                    animation-name: fade-up;
+                }
+            }
+        }
+    }
 
     &-container {
         position: relative;
@@ -1281,6 +1334,7 @@ $font-family-title: 'HalvarBreit-XBd';
         @media (min-width: 768px) {
             height: 670px;
         }
+        overflow: hidden;
 
         background-color: #F5F5F5;
     }
@@ -1311,6 +1365,7 @@ $font-family-title: 'HalvarBreit-XBd';
             font-size: 24px;
             line-height: 140%;
         }
+        transition: 0.5s;
 
         &::before {
             position: absolute;
@@ -1344,6 +1399,10 @@ $font-family-title: 'HalvarBreit-XBd';
         .swiper-button {
             pointer-events: all;
         }
+
+        .swiper-pagination {
+            pointer-events: all;
+        }
     }
 
     &-control {
@@ -1364,10 +1423,39 @@ $font-family-title: 'HalvarBreit-XBd';
             @media (max-width: #{768 - 1}px) {
                 bottom: 0 !important;
             }
+
+            & > * {
+                @media (min-width: 768px) {
+                    border-color: $color-black !important;
+                    color: $color-black !important;
+                    transition: 0.5s;
+
+                    &::after {
+                        background-color: $color-black !important;
+                    }
+
+                    &:hover {
+                        color: white !important;
+                    }
+                }
+            }
         }
 
         &::after {
             display: none !important;
+        }
+
+        .icon-arrow-left,
+        .icon-arrow-right {
+            @media (max-width: #{768 - 1}px) {
+                color: $color-black;
+
+                transition: 0.5s;
+
+                &:hover {
+                    color: $color-red;
+                }
+            }
         }
     }
 

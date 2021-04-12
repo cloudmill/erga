@@ -177,20 +177,96 @@ $(window).on('load', () => {
         $(window).on('scroll.header-plain', scrollHandler);
       }, intervalTime);
     }
+
+    const BREAKPOINT = 993;
+
+    function getOffset() {
+      if ($(window).width() >= BREAKPOINT) {
+        return 148;
+      }
+
+      return 318;
+    }
+
+    $('[href="#about"').on('click', event => {
+      const timeout = setTimeout(() => {
+        $(window).scrollTop($('#about').offset().top - getOffset());
+
+        AOS.refresh({ offset: -80 });
+
+        clearTimeout(timeout);
+      }, 0);
+    });
+    $('[href="#products"').on('click', event => {
+      const timeout = setTimeout(() => {
+        $(window).scrollTop($('#products').offset().top - getOffset());
+
+        AOS.refresh({ offset: -80 });
+
+        clearTimeout(timeout);
+      }, 0);
+    });
+    $('[href="#industries"').on('click', event => {
+      const timeout = setTimeout(() => {
+        $(window).scrollTop($('#industries').offset().top - getOffset());
+
+        AOS.refresh({ offset: -80 });
+
+        clearTimeout(timeout);
+      }, 0);
+    });
+    $('[href="#contact"').on('click', event => {
+      const timeout = setTimeout(() => {
+        $(window).scrollTop($('#contact').offset().top - getOffset());
+
+        AOS.refresh({ offset: -80 });
+
+        clearTimeout(timeout);
+      }, 0);
+    });
   }
 });
 
 // landing sert
 $(window).on('load', () => {
   if ($('.landing__sert-section').length !== 0) {
+    const SLIDER_SPEED = 500;
+
     const thumbs = new Swiper('.landing__sert-section .landing__sert-subslider-swiper', {
-      allowTouchMove: false
+      allowTouchMove: false,
+      speed: 0,
     });
 
     const slider = new Swiper('.landing__sert-section .landing__sert-slider-swiper', {
-      thumbs: {
-        swiper: thumbs
-      }
+      speed: SLIDER_SPEED,
+
+      on: {
+        slideChange: function () {
+          thumbs.slideTo(this.activeIndex);
+        },
+      },
+      
+      pagination: {
+        el: '.landing__sert-section .swiper-pagination--js',
+        type: 'fraction',
+      },
+      
+      navigation: {
+        nextEl: '.landing__sert-section .swiper-btnSN-next',
+        prevEl: '.landing__sert-section .swiper-btnSN-prev',
+      },
     });
+    
+    if (String(slider.slides.length).length > 1) {
+      $('.landing__sert-section .swiper-pagination-total').addClass('swiper-pagination-total--short');
+
+      slider.on('slideChange', () => {
+        if ($('.swiper-pagination-current').text().length > 1) {
+          $('.swiper-pagination-current').addClass('swiper-pagination-current--short');
+        } else {
+          $('.swiper-pagination-current').removeClass('swiper-pagination-current--short');
+        }
+      });
+    }
   }
 });

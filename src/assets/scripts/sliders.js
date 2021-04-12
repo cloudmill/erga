@@ -119,20 +119,20 @@ export const publications = new Swiper('.publ-container', {
   }
 });
 
-export const carousel = new Swiper('.swiper-carousel', {
-  centeredSlides: true,
-  loop: true,
-  slidesPerView: 'auto',
-  spaceBetween: 10,
-  pagination: {
-    el: '.swiper-pagination--js',
-    type: 'fraction',
-  },
-  navigation: {
-    nextEl: '.swiper-btnSN-next',
-    prevEl: '.swiper-btnSN-prev',
-  },
-});
+// export const carousel = new Swiper('.swiper-carousel', {
+//   centeredSlides: true,
+//   loop: true,
+//   slidesPerView: 'auto',
+//   spaceBetween: 10,
+//   pagination: {
+//     el: '.swiper-pagination--js',
+//     type: 'fraction',
+//   },
+//   navigation: {
+//     nextEl: '.swiper-btnSN-next',
+//     prevEl: '.swiper-btnSN-prev',
+//   },
+// });
 export const carousel1 = new Swiper('.swiper-carousel1', {
   centeredSlides: true,
   loop: false,

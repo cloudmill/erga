@@ -1266,3 +1266,53 @@ $font-family-title: 'HalvarBreit-XBd';
         }
     }
 }
+
+.landing__sert {
+    &-section {
+        
+    }
+
+    &-marquee {
+
+    }
+
+    &-slider {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &-background {
+        position: relative;
+
+        background-color: #F5F5F5;
+    }
+
+    &-control {
+        margin: 0 !important;
+        padding: 0 !important;
+
+        @media (min-width: 768px) {
+            height: 210px !important;
+        }
+
+        .swiper-pagination {
+            @media (max-width: #{768 - 1}px) {
+                margin: 0 !important;
+            }
+        }
+
+        .swiper-button {
+            @media (max-width: #{768 - 1}px) {
+                bottom: 0 !important;
+            }
+        }
+
+        &::after {
+            display: none !important;
+        }
+    }
+}

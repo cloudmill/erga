@@ -12,6 +12,28 @@ block content
 
   .landing
 
+    section.landing__sert-section
+      .landing__sert-background
+        .container
+          h2.landing__section-title(data-aos="fade-up")
+            |Certificates
+          .landing__sert-subslider
+          .newsOne-slider.landing__sert-control
+            .swiper-pagination--js.swiper-pagination(data-aos='fade-up')
+            .swiper-button(data-aos='fade-up')
+              .swiper-btnSN-next: i.icon-arrow-right
+              .swiper-btnSN-prev: i.icon-arrow-left
+        .landing__sert-slider
+          .swiper-container
+            .swiper-wrapper
+              each item in [1, 2, 3]
+                .swiper-slide
+                  img.landing__sert-img.landing__sert-img--mobile(src='assets/images/landing/sert-mobile.png' alt='')
+                  img.landing__sert-img.landing__sert-img--desktop(src='assets/images/landing/sert-desktop.png' alt='')
+      .landing__sert-marquee(data-aos="fade-up")
+        .marquee.marquees
+          |ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System
+
     section.landing__top-section
       .landing__top-first-block
         .landing__top-first-background-layout

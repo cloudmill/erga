@@ -1290,6 +1290,7 @@ $font-family-title: 'HalvarBreit-XBd';
         @media (min-width: 768px) {
             margin-top: 30px;
         }
+        pointer-events: none;
     }
 
     &-subslider-text {
@@ -1302,6 +1303,7 @@ $font-family-title: 'HalvarBreit-XBd';
             padding-left: 110px;
             max-width: 550px;
         }
+        pointer-events: all;
 
         font-size: 14px;
         line-height: 21px;

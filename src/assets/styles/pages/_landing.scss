@@ -389,6 +389,12 @@ $font-family-title: 'HalvarBreit-XBd';
         &:not(:first-child) {
             margin-top: 30px;
         }
+
+        &--desktop--min-height--50 {
+            @media (min-width: 768px) {
+                min-height: 50px;
+            }
+        }
     }
     &__contacts-info-col {
         $proportion: 0.25;

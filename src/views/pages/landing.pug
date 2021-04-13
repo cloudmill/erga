@@ -258,11 +258,30 @@ block content
         .marquee.marquees
           |ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System — ISO 9001:2015 Quality Management System
 
-    section
+    section.landing__gallery-section
       .container(data-aos="fade-up")
-        h2
-          +reveal(['GALLERY'])
-        include ../components/_landing-gallery
+        h2.landing__section-title(data-aos="fade-up")
+          |GALLERY
+        .landing__gallery-slider.newsOne-slider
+          .landing__gallery-swiper(data-aos='fade-up')
+            .swiper-wrapper
+              - for (let x = 1; x < 9; x++)
+                .swiper-slide.t--mask
+                  .t__content
+                    +img('news/slide-1.jpg')
+                .swiper-slide.t--mask
+                  .t__content
+                    +img('news/slide-2.jpg')
+                .swiper-slide.t--mask
+                  .t__content
+                    +img('news/slide-3.jpg')
+          .swiper-pagination--js.swiper-pagination(data-aos='fade-up')
+          .swiper-button(data-aos='fade-up')
+            .swiper-btn-next: i.icon-arrow-right
+            .swiper-btn-prev: i.icon-arrow-left
+      .landing__gallery-marquee(data-aos="fade-up")
+        .marquee.marquees
+          |#{'Research & Production Company ERGA — Research & Production Company ERGA — Research & Production Company ERGA — Research & Production Company ERGA — Research & Production Company ERGA — Research & Production Company ERGA — Research & Production Company ERGA'}
 
     section.landing__contacts-section(id = 'contact' style="background-image: url('images/contacts-background.svg')")
       .container

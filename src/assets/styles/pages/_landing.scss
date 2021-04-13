@@ -1501,3 +1501,66 @@ $font-family-title: 'HalvarBreit-XBd';
 
     &-marquee {}
 }
+
+.landing__gallery {
+    &-section {
+        padding: 70px 0 80px;
+        @media (min-width: 768px) {
+            padding: 160px 0 175px;
+        }
+    }
+
+    &-slider {
+        margin: 0 !important;
+        margin-top: 40px !important;
+        @media (min-width: 768px) {
+            margin-top: 80px !important;
+        }
+        padding-bottom: 0 !important;
+        overflow: visible !important;
+
+        &::after {
+            display: none !important;
+        }
+
+        .swiper-button {
+            bottom: 0 !important;
+
+            & > * {
+                @media (min-width: 768px) {
+                    border-color: $color-black !important;
+                    color: $color-black !important;
+                    transition: 0.5s;
+
+                    &::after {
+                        background-color: $color-black !important;
+                    }
+
+                    &:hover {
+                        color: white !important;
+                    }
+                }
+            }
+        }
+
+        .icon-arrow-left,
+        .icon-arrow-right {
+            @media (max-width: #{768 - 1}px) {
+                color: $color-black;
+
+                transition: 0.5s;
+
+                &:hover {
+                    color: $color-red;
+                }
+            }
+        }
+    }
+
+    &-marquee {
+        margin-top: 20px;
+        @media (max-width: #{768 - 1}px) {
+            display: none;
+        }
+    }
+}

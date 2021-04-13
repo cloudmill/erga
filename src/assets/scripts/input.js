@@ -8,6 +8,8 @@ export function validateEmail(email) {
 }
 
 export function validatePhone(phone) {
+    console.log('qwe');
+
     if (lang == 'en') {
         const re = /^\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
     } else {

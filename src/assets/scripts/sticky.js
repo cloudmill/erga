@@ -363,7 +363,6 @@ if (lang == 'ru') {
   phoneMask = '+7 (999) 999-9999';
 }
 
-// mask phone {maskedinput}
 // $("[name=phone]").inputmask({
 //   mask: phoneMask,
 //   showMaskOnHover: false,

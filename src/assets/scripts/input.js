@@ -8,8 +8,6 @@ export function validateEmail(email) {
 }
 
 export function validatePhone(phone) {
-    console.log('qwe');
-
     if (lang == 'en') {
         const re = /^\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
     } else {
@@ -41,14 +39,15 @@ function validateField(element, event) {
                 element.closest('.input').removeClass('error');
             } else {
                 element.closest('.input').addClass('error');
-                element.closest('.input').next().text('Неверно введен формат адреса');
+                element.closest('.input').next().text('Please, fill in the field correctly');
             }
         } else if (element.prop('name') === 'phone') {
-            if (validatePhone(value)) {
+            console.log(value, tmpval);
+            if (value) {
                 element.closest('.input').removeClass('error');
             } else {
                 element.closest('.input').addClass('error');
-                element.closest('.input').next().text('Неверно введен номер телефона');
+                element.closest('.input').next().text('Please, fill in the field correctly');
             }
         } else {
             element.closest('.input').removeClass('error');
@@ -56,7 +55,7 @@ function validateField(element, event) {
     }
     if (!value && isRequired) {
         element.closest('.input').addClass('error');
-        element.closest('.input').next().text('Пожалуйста, заполните поле');
+        element.closest('.input').next().text('Please, fill in the field correctly');
     }
 }
 

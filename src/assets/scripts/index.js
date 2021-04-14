@@ -301,6 +301,35 @@ $(function() {
   $('[data-type=submit-form]').on('click', function (e) {
     e.preventDefault();
 
+    // validation
+    let formValidated = true;
+
+    const formContainer = $(this).closest('#download, #get-quote, #not-found');
+    const requiredFields = formContainer.find('[required]');
+    
+    requiredFields.each(function () {
+      if (formValidated) {
+        const fieldType = $(this).attr('name');
+        const fieldValue = $(this).val().trim();
+
+        if (fieldType === 'email') {
+          formValidated = validateEmail(fieldValue);
+        } else {
+          formValidated = String(fieldValue) !== '';
+        }
+      }
+    });
+
+    function validateEmail(email) {
+      const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+
+    if (!formValidated) {
+      return;
+    }
+
+    // send
     let form = $(this).parents('[data-type=container-form]'),
       material = form.attr('data-select-value'),
       data = {};

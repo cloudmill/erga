@@ -135,7 +135,6 @@ function forms() {
                     $('#callback_form input[name=checkbox]').prop("checked", false);
                 }
             });
-
         }
     });
 

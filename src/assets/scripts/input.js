@@ -42,7 +42,6 @@ function validateField(element, event) {
                 element.closest('.input').next().text('Please, fill in the field correctly');
             }
         } else if (element.prop('name') === 'phone') {
-            console.log(value, tmpval);
             if (value) {
                 element.closest('.input').removeClass('error');
             } else {

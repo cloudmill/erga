@@ -63,7 +63,20 @@ $('.popup-plain').magnificPopup({
     open: function() {
       $('#get-quote').attr('data-select-value', selectValue);
     },
+    close: function() {
+      $('.mfp-wrap #download, .mfp-wrap #get-quote, .mfp-wrap #not-found').removeAttr('data-type-form');
+    },
   },
+});
+
+$('.popup-plain').on('click', function () {
+  const typeForm = $(this).data('type-form');
+
+  if (String(typeForm).trim() !== '' && String(typeForm).trim() !== 'null' && String(typeForm).trim() !== 'undefined') {
+    $('.mfp-wrap #download, .mfp-wrap #get-quote, .mfp-wrap #not-found').attr('data-type-form', typeForm);
+  } else {
+    $('.mfp-wrap #download, .mfp-wrap #get-quote, .mfp-wrap #not-found').removeAttr('data-type-form');
+  }
 });
 
 $('[href="#download"]').on('click', function () {
@@ -320,13 +333,19 @@ $(function() {
       }
     });
 
-    function validateEmail(email) {
-      const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(email);
+    if (formValidated) {
+      const formCheckbox = formContainer.find('[type="checkbox"]');
+      
+      formValidated = formCheckbox.prop('checked');
     }
 
     if (!formValidated) {
       return;
+    }
+
+    function validateEmail(email) {
+      const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
     }
 
     // send

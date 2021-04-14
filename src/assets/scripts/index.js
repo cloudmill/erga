@@ -296,3 +296,32 @@ $(document).ready(function () {
   if ($('body').hasClass('index'))
     $('.header-content__hidden').addClass('header-content__hidden--index');
 });
+
+$(function() {
+  $('[data-type=submit-form]').on('click', function (e) {
+    e.preventDefault();
+
+    let form = $(this).parents('[data-type=container-form]'),
+      data = {};
+
+    form.find('input[type=text], input[type=email], textarea').each(function () {
+      data[$(this).attr('data-name')] = $(this).val();
+    });
+
+    data['UF_TYPE'] = form.attr('data-type-form');
+
+    $.ajax({
+      type: 'post',
+      url: '/local/templates/landing/include/ajax/forms/pop_up_forms.php',
+      dataType: 'json',
+      data: data,
+      success: function(r) {
+        if (r.success === true) {
+          console.log('Форма успешно отправлена!');
+        } else {
+          console.log('Ошибка отправки формы');
+        }
+      }
+    });
+  });
+});

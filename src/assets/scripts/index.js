@@ -46,12 +46,24 @@ $('.popup-modal').magnificPopup({
   fixedContentPos: true,
 });
 
+let selectValue = null;
+
+$('.filtersBody-checkbox').on('click', function () {
+  selectValue = $(this).find('label').text().trim();
+});
+
 $('.popup-plain').magnificPopup({
   type: 'inline',
   mainClass: 'my-mfp-zoom-in',
   showCloseBtn: false,
   fixedContentPos: true,
   removalDelay: 1300,
+
+  callbacks: {
+    open: function() {
+      $('#get-quote').attr('data-select-value', selectValue);
+    },
+  },
 });
 
 $('[href="#download"]').on('click', function () {

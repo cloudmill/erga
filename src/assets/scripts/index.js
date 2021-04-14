@@ -302,13 +302,18 @@ $(function() {
     e.preventDefault();
 
     let form = $(this).parents('[data-type=container-form]'),
+      material = form.attr('data-select-value'),
       data = {};
+
+    data['UF_TYPE'] = form.attr('data-type-form');
+
+    if (material) {
+      data['UF_MATERIAL'] = material;
+    }
 
     form.find('input[type=text], input[type=email], textarea').each(function () {
       data[$(this).attr('data-name')] = $(this).val();
     });
-
-    data['UF_TYPE'] = form.attr('data-type-form');
 
     $.ajax({
       type: 'post',

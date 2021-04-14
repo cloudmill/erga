@@ -46,6 +46,14 @@ $('.popup-modal').magnificPopup({
   fixedContentPos: true,
 });
 
+$('.popup-plain').magnificPopup({
+  type: 'inline',
+  mainClass: 'my-mfp-zoom-in',
+  showCloseBtn: false,
+  fixedContentPos: true,
+  removalDelay: 1300,
+});
+
 $(document).on('click', '.popup-modal-dismiss', function (e) {
   e.preventDefault();
   $.magnificPopup.close();

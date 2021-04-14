@@ -191,7 +191,7 @@ $(window).on('load', () => {
       }, intervalTime);
     }
 
-    $('.header-plain nav [href^="#"]').on('click', function () {
+    $('.header-plain nav [href^="#"], .landing__industries-list [href="#select"]').on('click', function () {
       const timeout = setTimeout(() => {
         $(window).scrollTop($($(this).attr('href')).offset().top - getOffset());
 

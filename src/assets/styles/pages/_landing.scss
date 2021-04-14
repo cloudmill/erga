@@ -6,6 +6,18 @@ $color-blue: #0000BD;
 $font-family-title: 'HalvarBreit-XBd';
 
 .landing {
+    .textarea--small {
+        $height: 160px;
+        @media screen and (min-width: $screen-md) {
+        height: $height !important;
+        }
+        textarea {
+        @media screen and (min-width: $screen-md) {
+            height: $height !important;
+        }
+        }
+    }
+
     // # select
     // section
     &__select-section {

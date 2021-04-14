@@ -54,6 +54,13 @@ $('.popup-plain').magnificPopup({
   removalDelay: 1300,
 });
 
+$('[href="#download"]').on('click', function () {
+  const title = $('#download h2 span');
+  const titleText = $(this).data('popup-title');
+
+  title.text(titleText);
+});
+
 $(document).on('click', '.popup-modal-dismiss', function (e) {
   e.preventDefault();
   $.magnificPopup.close();

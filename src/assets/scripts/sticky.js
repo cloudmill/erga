@@ -190,7 +190,7 @@ $(".tabs-list").on("click", ".tab", function (e) {
   }, 500);
 
   AOS.init({
-    offset: -80
+    offset: -80,
   });
   $('.swiper-carousel').length && carousel.update();
   $('.swiper-carousel1').length && carousel1.update();

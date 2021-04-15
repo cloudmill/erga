@@ -314,6 +314,8 @@ $(function() {
   $('[data-type=submit-form]').on('click', function (e) {
     e.preventDefault();
 
+    console.log('submit');
+
     // validation
     let formValidated = true;
 
@@ -364,8 +366,13 @@ $(function() {
 
     // send
     let form = $(this).parents('[data-type=container-form]'),
-      material = form.attr('data-select-value'),
-      data = {};
+        industries = form.attr('data-industries'),
+        material = form.attr('data-select-value'),
+        data = {};
+
+    if (industries) {
+      data['UF_INDUSTRIES'] = industries;
+    }
 
     data['UF_TYPE'] = form.attr('data-type-form');
 

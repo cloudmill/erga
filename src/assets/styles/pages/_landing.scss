@@ -358,6 +358,13 @@ $font-family-title: 'HalvarBreit-XBd';
         }
     }
     &__contacts-col {
+        @media (max-width: #{$breakpoint-main - 1px}) {
+            margin-top: 40px;
+            padding-top: 40px;
+
+            border-top: 1px solid white;
+        }
+
         @media (min-width: $breakpoint-main) {
             padding-left: 85px;
             width: calc((100% - 20px) / 2);

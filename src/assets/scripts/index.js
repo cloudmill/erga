@@ -35,7 +35,7 @@ $('.popup-modal').magnificPopup({
       }
     },
     open: function () {
-      console.log($('test', '.mfp-wrap .card-popup__slider-container').length);
+      console.log('test', $('.mfp-wrap .card-popup__slider-container').length);
 
       new Swiper('.card-popup__slider-container', {
         loop: true,

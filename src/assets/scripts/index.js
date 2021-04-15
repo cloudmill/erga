@@ -400,9 +400,15 @@ $(function() {
       data: data,
       success: function(r) {
         if (r.success === true) {
-          window.open(redirectPdf, '_blank');
+          if (redirectPdf) {
+            window.open(redirectPdf, '_blank');
+          } else {
+            console.log('Форма успешно отправлена');
+           //ответ об успешной отправке формы
+          }
         } else {
-          console.log('Ошибка отправки формы');
+          console.log('Ошибка');
+          //ответ ошибки
         }
       }
     });

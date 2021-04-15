@@ -250,7 +250,7 @@ $items: ok;
 .close-popup {
   cursor: pointer;
   position: absolute;
-  top: -43px;
+  top: -20px;
   right: 20px;
   height: 45px;
   width: 45px;
@@ -259,7 +259,7 @@ $items: ok;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: $white;
+  background-color: #DF0112;
   @media screen and (min-width: $screen-md-min) {
     top: 10px;
     right: 15px;
@@ -267,7 +267,7 @@ $items: ok;
     width: 65px;
   }
   i {
-    color: $black;
+    color: white;
     position: relative;
     z-index: 9;
   }

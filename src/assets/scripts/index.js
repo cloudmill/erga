@@ -44,6 +44,8 @@ $('.popup-modal').magnificPopup({
           nextEl: '.landing__top-slider-button--right',
         },
       });
+
+      popupPlainInit();
     }
   },
   type: 'ajax',
@@ -58,44 +60,48 @@ $('.popup-modal').magnificPopup({
   fixedContentPos: true,
 });
 
-$('.popup-plain').magnificPopup({
-  type: 'inline',
-  mainClass: 'my-mfp-zoom-in',
-  showCloseBtn: false,
-  fixedContentPos: true,
-  removalDelay: 1300,
+popupPlainInit();
 
-  callbacks: {
-    open: function() {
-      let magnificPopup = $.magnificPopup.instance,
-          container = magnificPopup.content[0],
-          elem = magnificPopup.st.el[0],
-          industries = elem.getAttribute('data-industries'),
-          material = elem.getAttribute('data-material');
-
-      if (industries) {
-        container.setAttribute('data-industries', industries);
-      }
-
-      if (material) {
-        container.setAttribute('data-select-value', material);
-      }
-
-      new Swiper('.card-popup__slider-container', {
-        loop: true,
-        spaceBetween: 20,
-        slidesPerView: 1,
-        navigation: {
-          prevEl: '.landing__top-slider-button--left',
-          nextEl: '.landing__top-slider-button--right',
-        },
-      });
+function popupPlainInit() {
+  $('.popup-plain').magnificPopup({
+    type: 'inline',
+    mainClass: 'my-mfp-zoom-in',
+    showCloseBtn: false,
+    fixedContentPos: true,
+    removalDelay: 1300,
+  
+    callbacks: {
+      open: function() {
+        let magnificPopup = $.magnificPopup.instance,
+            container = magnificPopup.content[0],
+            elem = magnificPopup.st.el[0],
+            industries = elem.getAttribute('data-industries'),
+            material = elem.getAttribute('data-material');
+  
+        if (industries) {
+          container.setAttribute('data-industries', industries);
+        }
+  
+        if (material) {
+          container.setAttribute('data-select-value', material);
+        }
+  
+        new Swiper('.card-popup__slider-container', {
+          loop: true,
+          spaceBetween: 20,
+          slidesPerView: 1,
+          navigation: {
+            prevEl: '.landing__top-slider-button--left',
+            nextEl: '.landing__top-slider-button--right',
+          },
+        });
+      },
+      close: function() {
+        $('.mfp-wrap #download, .mfp-wrap #get-quote, .mfp-wrap #not-found').removeAttr('data-type-form');
+      },
     },
-    close: function() {
-      $('.mfp-wrap #download, .mfp-wrap #get-quote, .mfp-wrap #not-found').removeAttr('data-type-form');
-    },
-  },
-});
+  });
+}
 
 $('.popup-plain').on('click', function () {
   const typeForm = $(this).data('type-form');

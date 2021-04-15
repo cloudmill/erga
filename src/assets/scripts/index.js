@@ -368,10 +368,19 @@ $(function() {
     let form = $(this).parents('[data-type=container-form]'),
         industries = form.attr('data-industries'),
         material = form.attr('data-select-value'),
+        redirectPdf = null,
         data = {};
 
     if (industries) {
       data['UF_INDUSTRIES'] = industries;
+
+      if (industries == 'Mining') {
+        redirectPdf = '/upload/landing_pdf/mining.pdf';
+      } else if (industries == 'Food') {
+        redirectPdf = '/upload/landing_pdf/food.pdf';
+      } else {
+        redirectPdf = '/upload/landing_pdf/recycling.pdf';
+      }
     }
 
     data['UF_TYPE'] = form.attr('data-type-form');
@@ -391,7 +400,7 @@ $(function() {
       data: data,
       success: function(r) {
         if (r.success === true) {
-          console.log('Форма успешно отправлена!');
+          window.open(redirectPdf, '_blank');
         } else {
           console.log('Ошибка отправки формы');
         }

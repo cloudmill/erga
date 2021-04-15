@@ -76,6 +76,7 @@ function popupPlainInit() {
             container = magnificPopup.content[0],
             elem = magnificPopup.st.el[0],
             industries = elem.getAttribute('data-industries'),
+            leaflet = elem.getAttribute('path-pdf'),
             material = elem.getAttribute('data-material');
   
         if (industries) {
@@ -84,6 +85,10 @@ function popupPlainInit() {
   
         if (material) {
           container.setAttribute('data-select-value', material);
+        }
+
+        if (leaflet) {
+          container.setAttribute('data-leaflet', leaflet);
         }
   
         new Swiper('.card-popup__slider-container', {
@@ -402,6 +407,7 @@ $(function() {
     let form = $(this).parents('[data-type=container-form]'),
         industries = form.attr('data-industries'),
         material = form.attr('data-select-value'),
+        leaflet = form.attr('data-leaflet'),
         redirectPdf = null,
         data = {};
 
@@ -415,6 +421,10 @@ $(function() {
       } else {
         redirectPdf = '/upload/landing_pdf/recycling.pdf';
       }
+    }
+
+    if (leaflet) {
+      redirectPdf = leaflet;
     }
 
     data['UF_TYPE'] = form.attr('data-type-form');

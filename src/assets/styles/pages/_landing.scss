@@ -1276,6 +1276,23 @@ $font-family-title: 'HalvarBreit-XBd';
 
     &__slide {
         &-btns {
+            a {
+                z-index: 0;
+
+                &::before {
+                    display: none !important;
+                }
+
+                &::after {
+                    z-index: -1;
+                }
+
+                & > * {
+                    position: static !important;
+                    z-index: auto !important;
+                }
+            }
+
             .btn {
                 margin: 0;
                 min-width: auto;

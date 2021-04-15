@@ -46,12 +46,6 @@ $('.popup-modal').magnificPopup({
   fixedContentPos: true,
 });
 
-let selectValue = null;
-
-$('.filtersBody-checkbox').on('click', function () {
-  selectValue = $(this).find('label').text().trim();
-});
-
 $('.popup-plain').magnificPopup({
   type: 'inline',
   mainClass: 'my-mfp-zoom-in',
@@ -61,7 +55,19 @@ $('.popup-plain').magnificPopup({
 
   callbacks: {
     open: function() {
-      $('#get-quote').attr('data-select-value', selectValue);
+      let magnificPopup = $.magnificPopup.instance,
+          container = magnificPopup.content[0],
+          elem = magnificPopup.st.el[0],
+          industries = elem.getAttribute('data-industries'),
+          material = elem.getAttribute('data-material');
+
+      if (industries) {
+        container.setAttribute('data-industries', industries);
+      }
+
+      if (material) {
+        container.setAttribute('data-select-value', material);
+      }
     },
     close: function() {
       $('.mfp-wrap #download, .mfp-wrap #get-quote, .mfp-wrap #not-found').removeAttr('data-type-form');

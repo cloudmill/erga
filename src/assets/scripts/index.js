@@ -321,27 +321,41 @@ $(function() {
     const requiredFields = formContainer.find('[required]');
     
     requiredFields.each(function () {
-      if (formValidated) {
-        const fieldType = $(this).attr('name');
-        const fieldValue = $(this).val().trim();
+      const fieldType = $(this).attr('name');
+      const fieldValue = $(this).val().trim();
 
-        if (fieldType === 'email') {
-          formValidated = validateEmail(fieldValue);
-        } else {
-          formValidated = String(fieldValue) !== '';
+      if (fieldType === 'email') {
+        const fieldValidated = validateEmail(fieldValue);
+
+        if (!fieldValidated) {
+          formValidated = false;
+
+          $(this).parent().addClass('error');
+        }
+      } else {
+        const fieldValidated = String(fieldValue) !== '';
+
+        if (!fieldValidated) {
+          formValidated = false;
+
+          $(this).parent().addClass('error');
         }
       }
     });
 
-    if (formValidated) {
-      const formCheckbox = formContainer.find('[type="checkbox"]');
-      
-      formValidated = formCheckbox.prop('checked');
-    }
+    const formCheckbox = formContainer.find('[type="checkbox"]');
+    
+    if (!formCheckbox.prop('checked')) {
+      formValidated = false;
 
+      formCheckbox.parent().addClass('error');
+    }
+    
     if (!formValidated) {
       return;
     }
+
+    console.log('success');
 
     function validateEmail(email) {
       const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

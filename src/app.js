@@ -90,10 +90,10 @@ function complateLoading() {
 
   AOS.init({
     offset: -80,
-    disable: function () {
-      var maxWidth = 600;
-      return window.innerWidth < maxWidth;
-    },
+    // disable: function () {
+    //   var maxWidth = 600;
+    //   return window.innerWidth < maxWidth;
+    // },
   });
   if (screen_width > 767 && $(".rellax").length) {
     const rellax = new Rellax(".rellax", {

@@ -2,6 +2,7 @@ import 'jquery.marquee';
 import 'select2';
 import "magnific-popup";
 import AOS from "aos";
+import Swiper from 'swiper';
 
 
 $('.share--js').click(function () {
@@ -33,6 +34,56 @@ $('.popup-modal').magnificPopup({
           itemId: this.st.el.attr('data-id')
       }
     },
+    open: function () {
+      new Swiper('.card-popup__slider-container', {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        navigation: {
+          prevEl: '.landing__top-slider-button--left',
+          nextEl: '.landing__top-slider-button--right',
+        },
+      });
+
+      $('.popup-plain').magnificPopup({
+        type: 'inline',
+        mainClass: 'my-mfp-zoom-in',
+        showCloseBtn: false,
+        fixedContentPos: true,
+        removalDelay: 1300,
+      
+        callbacks: {
+          open: function() {
+            let magnificPopup = $.magnificPopup.instance,
+                container = magnificPopup.content[0],
+                elem = magnificPopup.st.el[0],
+                industries = elem.getAttribute('data-industries'),
+                material = elem.getAttribute('data-material');
+      
+            if (industries) {
+              container.setAttribute('data-industries', industries);
+            }
+      
+            if (material) {
+              container.setAttribute('data-select-value', material);
+            }
+      
+            new Swiper('.card-popup__slider-container', {
+              loop: true,
+              spaceBetween: 20,
+              slidesPerView: 1,
+              navigation: {
+                prevEl: '.landing__top-slider-button--left',
+                nextEl: '.landing__top-slider-button--right',
+              },
+            });
+          },
+          close: function() {
+            $('.mfp-wrap #download, .mfp-wrap #get-quote, .mfp-wrap #not-found').removeAttr('data-type-form');
+          },
+        },
+      });
+    }
   },
   type: 'ajax',
   ajax: {
@@ -68,6 +119,16 @@ $('.popup-plain').magnificPopup({
       if (material) {
         container.setAttribute('data-select-value', material);
       }
+
+      new Swiper('.card-popup__slider-container', {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        navigation: {
+          prevEl: '.landing__top-slider-button--left',
+          nextEl: '.landing__top-slider-button--right',
+        },
+      });
     },
     close: function() {
       $('.mfp-wrap #download, .mfp-wrap #get-quote, .mfp-wrap #not-found').removeAttr('data-type-form');

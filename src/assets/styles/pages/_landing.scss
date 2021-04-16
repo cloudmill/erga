@@ -1528,6 +1528,8 @@ $font-family-title: 'HalvarBreit-XBd';
     
     &-slider-img {
         &--mobile {
+            max-width: 360px;
+
             @media (min-width: 768px) {
                 display: none;
             }

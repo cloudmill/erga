@@ -16,6 +16,11 @@
     // модификаторы
     &--scroll {
         #{$component}__bar {
+            height: 100px;
+            @media (max-width: 992px) {
+                height: 66px;
+            }
+
             border-color: #DADADA;
         }
     }

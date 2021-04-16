@@ -77,18 +77,31 @@ function popupPlainInit() {
             elem = magnificPopup.st.el[0],
             industries = elem.getAttribute('data-industries'),
             leaflet = elem.getAttribute('path-pdf'),
+            nameEquipment = elem.getAttribute('data-name-equipment'),
             material = elem.getAttribute('data-material');
   
-        if (industries) {
+        if (industries != null) {
           container.setAttribute('data-industries', industries);
+        } else {
+          container.removeAttribute('data-industries');
         }
   
-        if (material) {
+        if (material != null) {
           container.setAttribute('data-select-value', material);
+        } else {
+          container.removeAttribute('data-select-value');
         }
 
-        if (leaflet) {
+        if (leaflet != null) {
           container.setAttribute('data-leaflet', leaflet);
+        } else {
+          container.removeAttribute('data-leaflet');
+        }
+
+        if (nameEquipment != null) {
+          container.setAttribute('data-name-equipment', nameEquipment);
+        } else {
+          container.removeAttribute('data-name-equipment');
         }
   
         new Swiper('.card-popup__slider-container', {
@@ -404,10 +417,11 @@ $(function() {
         industries = form.attr('data-industries'),
         material = form.attr('data-select-value'),
         leaflet = form.attr('data-leaflet'),
+        nameEquipment = form.attr('data-name-equipment'),
         redirectPdf = null,
         data = {};
 
-    if (industries) {
+    if (industries != null) {
       data['UF_INDUSTRIES'] = industries;
 
       if (industries == 'Mining') {
@@ -419,8 +433,12 @@ $(function() {
       }
     }
 
-    if (leaflet) {
+    if (leaflet != null) {
       redirectPdf = leaflet;
+    }
+
+    if (nameEquipment != null) {
+      data['UF_NAME_EQUIPMENT'] = 'Name equipment: ' + nameEquipment;
     }
 
     data['UF_TYPE'] = form.attr('data-type-form');

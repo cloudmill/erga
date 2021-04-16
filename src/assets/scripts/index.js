@@ -353,12 +353,10 @@ $(function() {
   $('[data-type=submit-form]').on('click', function (e) {
     e.preventDefault();
 
-    console.log('submit');
-
     // validation
     let formValidated = true;
 
-    const formContainer = $(this).closest('#download, #get-quote, #not-found');
+    const formContainer = $(this).closest('#download, #get-quote, #not-found, .contacts-form:not(.return-form)');
     const requiredFields = formContainer.find('[required]');
     
     requiredFields.each(function () {
@@ -395,8 +393,6 @@ $(function() {
     if (!formValidated) {
       return;
     }
-
-    console.log('success');
 
     function validateEmail(email) {
       const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -448,7 +444,14 @@ $(function() {
             window.open(redirectPdf, '_blank');
           } else {
             console.log('Форма успешно отправлена');
-           //ответ об успешной отправке формы
+
+            if (formContainer.hasClass('contacts-form')) {
+              formContainer.hide(500);
+              formContainer.next().show();
+              setTimeout(() => AOS.refresh({
+                  offset: -80
+              }), 500);
+            }
           }
         } else {
           console.log('Ошибка');

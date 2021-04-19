@@ -490,9 +490,9 @@ $(function() {
           } else {
             console.log('Форма успешно отправлена');
 
-            if (button.closest('#get-quote[data-type-form="Get a quote. Product card"]').length !== 0) {
-              button.closest('#get-quote[data-type-form="Get a quote. Product card"]').find('.form-request').css('display', 'none');
-              button.closest('#get-quote[data-type-form="Get a quote. Product card"]').find('.form-response').css('display', 'block');
+            if (button.closest('#get-quote').length !== 0) {
+              button.closest('#get-quote').find('.form-request').css('display', 'none');
+              button.closest('#get-quote').find('.form-response').css('display', 'block');
             } else {
               if (formContainer.hasClass('contacts-form')) {
                 formContainer.hide(500);

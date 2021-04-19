@@ -81,6 +81,7 @@ function cardPopUp() {
 
     $('#get-quote').removeAttr('data-industries');
     $('#get-quote').attr('data-name-equipment', nameEquipment);
+    $('#get-quote').attr('data-type-form', 'Get a quote. Product card');
   });
 }
 

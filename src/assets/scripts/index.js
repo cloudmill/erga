@@ -56,7 +56,6 @@ $('.popup-modal').magnificPopup({
       type: 'POST',
     }
   },
-  midClick: false,
   removalDelay: 1300,
   mainClass: 'my-mfp-zoom-in',
   showCloseBtn: false,
@@ -64,10 +63,24 @@ $('.popup-modal').magnificPopup({
 });
 
 function cardPopUp() {
-  $('.card-popup').on('click', function (e) {
+  $('.open-get-quote').on('click', function (e) {
     e.preventDefault();
 
-    console.log('click');
+    let nameEquipment = $(this).attr('data-name-equipment');
+
+    $.magnificPopup.open({
+      items: {
+        src: '#get-quote',
+        type: 'inline'
+      },
+      removalDelay: 1300,
+      mainClass: 'my-mfp-zoom-in',
+      showCloseBtn: false,
+      fixedContentPos: true,
+    });
+
+    $('#get-quote').removeAttr('data-industries');
+    $('#get-quote').attr('data-name-equipment', nameEquipment);
   });
 }
 

@@ -29,9 +29,12 @@ $(document).on('click', '#filters a', function () {
 // popup
 $('.popup-modal').magnificPopup({
   callbacks: {
+    open: function () {
+      cardPopUp();
+    },
     elementParse: function() {
       this.st.ajax.settings.data = {
-          itemId: this.st.el.attr('data-id')
+        itemId: this.st.el.attr('data-id')
       }
     },
     ajaxContentAdded: function () {
@@ -45,7 +48,7 @@ $('.popup-modal').magnificPopup({
         },
       });
 
-      popupPlainInit();
+      cardPopUp();
     }
   },
   type: 'ajax',
@@ -54,13 +57,20 @@ $('.popup-modal').magnificPopup({
       type: 'POST',
     }
   },
+  midClick: false,
   removalDelay: 1300,
   mainClass: 'my-mfp-zoom-in',
   showCloseBtn: false,
   fixedContentPos: true,
 });
 
-popupPlainInit();
+function cardPopUp() {
+  $('.card-popup').on('click', function (e) {
+    e.preventDefault();
+
+    console.log('click');
+  });
+}
 
 function popupPlainInit() {
   $('.popup-plain').magnificPopup({

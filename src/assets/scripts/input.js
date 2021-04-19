@@ -67,9 +67,9 @@ $(document).on("blur", '.input input, .textarea textarea', function (event) {
 
 
 $('.return--js').click(function () {
-    if ($(this).closest('#get-quote').length !== 0) {
-        $(this).closest('#get-quote').find('.form-request').css('display', '');
-        $(this).closest('#get-quote').find('.form-response').css('display', '');
+    if ($(this).closest('#get-quote[data-type-form="Get a quote. Product card"]').length !== 0) {
+        $(this).closest('#get-quote[data-type-form="Get a quote. Product card"]').find('.form-request').css('display', '');
+        $(this).closest('#get-quote[data-type-form="Get a quote. Product card"]').find('.form-response').css('display', '');
         
         return false;
     }

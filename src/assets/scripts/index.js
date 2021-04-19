@@ -30,7 +30,6 @@ $(document).on('click', '#filters a', function () {
 $('.popup-modal').magnificPopup({
   callbacks: {
     open: function () {
-      cardPopUp();
     },
     elementParse: function() {
       this.st.ajax.settings.data = {

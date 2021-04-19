@@ -119,8 +119,20 @@
             width: 50%;
         }
 
-        @media (min-width: 992px) {
-            border-left: 1px solid #DADADA;
+        &::before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            display: none;
+            @media (min-width: 992px) {
+                display: block;
+            }
+            width: 1px;
+            min-height: 100vh;
+
+            background-color: #DADADA;
         }
 
         .card-top__right {

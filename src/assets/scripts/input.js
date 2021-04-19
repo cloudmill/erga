@@ -67,6 +67,13 @@ $(document).on("blur", '.input input, .textarea textarea', function (event) {
 
 
 $('.return--js').click(function () {
+    if ($(this).closest('#get-quote').length !== 0) {
+        $(this).closest('#get-quote').find('.form-request').css('display', '');
+        $(this).closest('#get-quote').find('.form-response').css('display', '');
+        
+        return false;
+    }
+
     $(this).closest('.contacts-form').hide(500);
     $(this).closest('.contacts-form').prev().show();
     setTimeout(() => AOS.refresh({

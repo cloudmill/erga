@@ -475,6 +475,8 @@ $(function() {
       data[$(this).attr('data-name')] = $(this).val();
     });
 
+    const button = $(this);
+
     $.ajax({
       type: 'post',
       url: '/local/templates/landing/include/ajax/forms/pop_up_forms.php',
@@ -487,12 +489,17 @@ $(function() {
           } else {
             console.log('Форма успешно отправлена');
 
-            if (formContainer.hasClass('contacts-form')) {
-              formContainer.hide(500);
-              formContainer.next().show();
-              setTimeout(() => AOS.refresh({
-                  offset: -80
-              }), 500);
+            if (button.closest('#get-quote').length !== 0) {
+              button.closest('#get-quote').find('.form-request').css('display', 'none');
+              button.closest('#get-quote').find('.form-response').css('display', 'block');
+            } else {
+              if (formContainer.hasClass('contacts-form')) {
+                formContainer.hide(500);
+                formContainer.next().show();
+                setTimeout(() => AOS.refresh({
+                    offset: -80
+                }), 500);
+              }
             }
           }
         } else {

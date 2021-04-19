@@ -1608,3 +1608,13 @@ $font-family-title: 'HalvarBreit-XBd';
         }
     }
 }
+
+#get-quote {
+    .form {
+        &-request {}
+
+        &-response {
+            display: none;
+        }
+    }
+}

@@ -71,6 +71,8 @@ function cardPopUp() {
   });
 }
 
+popupPlainInit();
+
 function popupPlainInit() {
   $('.popup-plain').magnificPopup({
     type: 'inline',

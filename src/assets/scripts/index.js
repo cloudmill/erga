@@ -166,6 +166,11 @@ $('[href="#download"]').on('click', function () {
 $(document).on('click', '.popup-modal-dismiss', function (e) {
   e.preventDefault();
   $.magnificPopup.close();
+
+  if ($(this).closest('#get-quote').length !== 0) {
+    $(this).closest('#get-quote').find('.form-request').css('display', '');
+    $(this).closest('#get-quote').find('.form-response').css('display', '');
+  }
 });
 
 //filter

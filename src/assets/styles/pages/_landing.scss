@@ -164,6 +164,10 @@ $font-family-title: 'HalvarBreit-XBd';
             font-size: 30px;
         }
         text-transform: uppercase;
+
+        &-red {
+            color: #DF0112;
+        }
     }
     &__features1-text {
         @include feature-text;

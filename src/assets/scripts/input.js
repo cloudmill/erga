@@ -8,13 +8,7 @@ export function validateEmail(email) {
 }
 
 export function validatePhone(phone) {
-    if (lang == 'en') {
-        const re = /^\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-    } else {
-        const re = /^(\+7)[\s\-]\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-    }
-    
-    return re.test(phone);
+    return phone.trim() !== '';
 }
 
 

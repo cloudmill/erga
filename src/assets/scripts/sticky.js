@@ -363,7 +363,6 @@ if (lang == 'ru') {
   phoneMask = '+7 (999) 999-9999';
 }
 
-// $("[name=phone]").inputmask({
-//   mask: phoneMask,
-//   showMaskOnHover: false,
-// });
+$("[name=phone]").on('input', function () {
+  $(this).val($(this).val().replace(/[^\d()-]/g, ''));
+});

@@ -27,6 +27,15 @@ $(document).on('click', '#filters a', function () {
 });
 
 // popup
+
+$('.popup-modal').magnificPopup({
+  type: 'inline',
+  removalDelay: 1300,
+  mainClass: 'my-mfp-zoom-in',
+  showCloseBtn: false,
+  fixedContentPos: true,
+});
+
 $('.popup-modal-ajax').magnificPopup({
   callbacks: {
     open: function () {

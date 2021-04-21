@@ -27,7 +27,7 @@ $(document).on('click', '#filters a', function () {
 });
 
 // popup
-$('.popup-modal').magnificPopup({
+$('.popup-modal-ajax').magnificPopup({
   callbacks: {
     open: function () {
     },
@@ -94,7 +94,7 @@ function popupPlainInit() {
     showCloseBtn: false,
     fixedContentPos: true,
     removalDelay: 1300,
-  
+
     callbacks: {
       open: function() {
         let magnificPopup = $.magnificPopup.instance,
@@ -104,13 +104,13 @@ function popupPlainInit() {
             leaflet = elem.getAttribute('path-pdf'),
             nameEquipment = elem.getAttribute('data-name-equipment'),
             material = elem.getAttribute('data-material');
-  
+
         if (industries != null) {
           container.setAttribute('data-industries', industries);
         } else {
           container.removeAttribute('data-industries');
         }
-  
+
         if (material != null) {
           container.setAttribute('data-select-value', material);
         } else {
@@ -128,7 +128,7 @@ function popupPlainInit() {
         } else {
           container.removeAttribute('data-name-equipment');
         }
-  
+
         new Swiper('.card-popup__slider-container', {
           loop: true,
           spaceBetween: 20,
@@ -401,7 +401,7 @@ $(function() {
 
     const formContainer = $(this).closest('#download, #get-quote, #not-found, .contacts-form:not(.return-form)');
     const requiredFields = formContainer.find('[required]');
-    
+
     requiredFields.each(function () {
       const fieldType = $(this).attr('name');
       const fieldValue = $(this).val().trim();
@@ -426,13 +426,13 @@ $(function() {
     });
 
     const formCheckbox = formContainer.find('[type="checkbox"]');
-    
+
     if (!formCheckbox.prop('checked')) {
       formValidated = false;
 
       formCheckbox.parent().addClass('error');
     }
-    
+
     if (!formValidated) {
       return;
     }

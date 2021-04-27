@@ -2,7 +2,7 @@ import StickySidebar from 'sticky-sidebar';
 import AOS from 'aos';
 import '../../../src/assets/scripts/plugins/jquery.steps.min';
 import {
-  // carousel,
+  carousel,
   carousel1,
   tradeCarousel1,
   tradeCarousel,
@@ -14,7 +14,7 @@ import {
   tradeCarousel7
 } from '../../../src/assets/scripts/sliders';
 import 'inputmask/dist/jquery.inputmask.min';
-import {validateEmail, validatePhone} from "./input";
+import { validateEmail, validatePhone } from "./input";
 
 let card, catalog, tabs, news, sert, screen_width;
 let lang = $('input:hidden[name=lang]').val();
@@ -192,7 +192,7 @@ $(".tabs-list").on("click", ".tab", function (e) {
   AOS.init({
     offset: -80,
   });
-  $('.swiper-carousel').length && carousel.update();
+  // $('.swiper-carousel').length && carousel.update();
   $('.swiper-carousel1').length && carousel1.update();
   $('.trademark-carousel--js').length && tradeCarousel.update();
   $('.trademark-carousel1--js').length && tradeCarousel1.update();
@@ -264,7 +264,7 @@ function validateFields(element, func, isFinish) {
       } else {
         jItem.parent().addClass('error');
       }
-    } else if(jItem.prop('name') === 'phone') {
+    } else if (jItem.prop('name') === 'phone') {
       if (validatePhone(value)) {
         jItem.parent().removeClass('error');
       } else {
